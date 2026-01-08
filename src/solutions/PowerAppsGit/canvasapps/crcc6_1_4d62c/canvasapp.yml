@@ -1,0 +1,41 @@
+CanvasApp:
+  Name: crcc6_1_4d62c
+  AppVersion: 2026-01-08T01:33:27.0000000Z
+  Status: Ready
+  CreatedByClientVersion: 3.25123.13.0
+  MinClientVersion: 3.25123.13.0
+  Tags: '{"primaryDeviceWidth":"640","primaryDeviceHeight":"640","supportsPortrait":"true","supportsLandscape":"true","primaryFormFactor":"Phone","showStatusBar":"false","publisherVersion":"3.25123.13","minimumRequiredApiVersion":"2.2.0","hasComponent":"true","hasUnlockedComponent":"true","isUnifiedRootApp":"false"}'
+  IsCdsUpgraded: 0
+  GalleryItemId:
+    '@xsi:nil': true
+    '@xmlns:xsi': http://www.w3.org/2001/XMLSchema-instance
+  BackgroundColor: RGBA(251,101,60,1)
+  DisplayName: 테스트1
+  Description:
+    '@xsi:nil': true
+    '@xmlns:xsi': http://www.w3.org/2001/XMLSchema-instance
+  CommitMessage:
+    '@xsi:nil': true
+    '@xmlns:xsi': http://www.w3.org/2001/XMLSchema-instance
+  Publisher:
+    '@xsi:nil': true
+    '@xmlns:xsi': http://www.w3.org/2001/XMLSchema-instance
+  AuthorizationReferences: '[]'
+  ConnectionReferences: '{}'
+  DatabaseReferences: '{}'
+  AppComponents: '[{"appComponentName":"fd3c4796a6f94d1a981405279b6121b8","displayName":"Component1","appName":"55af9de6-6875-4322-ad74-90fdcd1c68c4","appVersion":"2026-01-08T01:33:27Z","appComponentLibraryLogicalName":"crcc6_1_4d62c","appDisplayName":"테스트1","environmentName":"default-41f16629-0724-427c-91d9-ee438c4f60a6","owner":{"id":"1612d724-5f99-4de0-ade5-1b14271ea64e","displayName":"JungYong Seok","email":"JungYongSeok@JungFoodKorea.onmicrosoft.com","type":"User","tenantId":"41f16629-0724-427c-91d9-ee438c4f60a6","userPrincipalName":"JungYongSeok@JungFoodKorea.onmicrosoft.com"},"allowCustomization":true,"createdOn":"2026-01-08T01:33:24.964Z","lastModifiedOn":"2026-01-08T01:33:24.964Z","connectionReferences":{},"databaseReferences":{}}]'
+  AppComponentDependencies: '[]'
+  CanConsumeAppPass: 1
+  CanvasAppType: 1
+  BypassConsent: 0
+  AdminControlBypassConsent: 0
+  EmbeddedApp:
+    '@xsi:nil': true
+    '@xmlns:xsi': http://www.w3.org/2001/XMLSchema-instance
+  IntroducedVersion: 1.0
+  CdsDependencies: '{"cdsdependencies":[]}'
+  IsCustomizable: 1
+  BackgroundImageUri: /canvasapps/crcc6_1_4d62c/crcc6_1_4d62c_BackgroundImageUri
+  DocumentUri: /canvasapps/crcc6_1_4d62c/crcc6_1_4d62c_DocumentUri.msapp
+  AdditionalUris:
+    AdditionalUri: /canvasapps/crcc6_1_4d62c/crcc6_1_4d62c_AdditionalUris0_identity.json
