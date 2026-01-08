@@ -1,0 +1,17 @@
+ImportExportXml:
+  '@version': 9.2.25122.145
+  '@SolutionPackageVersion': 9.2
+  '@languagecode': 1042
+  '@generatedBy': CrmLive
+  '@xmlns:xsi': http://www.w3.org/2001/XMLSchema-instance
+  SolutionManifest:
+    UniqueName: PowerAppsGit
+    LocalizedNames:
+      LocalizedName:
+        '@description': PowerAppsGit
+        '@languagecode': 1042
+    Descriptions: 
+    Version: 1.0.0.0
+    Managed: 0
+    Publisher:
+      UniqueName: Cra7109
