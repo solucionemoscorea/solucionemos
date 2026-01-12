@@ -1,0 +1,18 @@
+{
+  "Components": [
+    {
+      "Name": "Component1",
+      "TemplateName": "f201ca7b95974e09b5590684d2b48963",
+      "Description": "",
+      "AllowCustomization": true,
+      "AllowAccessToGlobals": false
+    },
+    {
+      "Name": "chart_bar_items_v",
+      "TemplateName": "f248512b685d4cabaf53d08d11d6bdd9",
+      "Description": "",
+      "AllowCustomization": true,
+      "AllowAccessToGlobals": false
+    }
+  ]
+}

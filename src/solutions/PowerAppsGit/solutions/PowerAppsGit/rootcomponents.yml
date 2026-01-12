@@ -1,5 +1,8 @@
 RootComponents:
   RootComponent:
-    '@type': 300
+  - '@type': 300
     '@schemaName': crcc6_1_4d62c
+    '@behavior': 0
+  - '@type': 300
+    '@schemaName': crcc6__da74b
     '@behavior': 0
