@@ -1,0 +1,11 @@
+{
+  "Components": [
+    {
+      "Name": "comp_header_only",
+      "TemplateName": "cc7d24a1e15f4fc9b9a3afb22ef78393",
+      "Description": "",
+      "AllowCustomization": true,
+      "AllowAccessToGlobals": false
+    }
+  ]
+}

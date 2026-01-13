@@ -1,0 +1,11 @@
+{
+  "Components": [
+    {
+      "Name": "comp_footer_only",
+      "TemplateName": "59c5ad6a420f4fb2ae39544b49b24126",
+      "Description": "",
+      "AllowCustomization": true,
+      "AllowAccessToGlobals": false
+    }
+  ]
+}

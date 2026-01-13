@@ -1,0 +1,1696 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps should only be used to review changes made within Power Apps Studio and for minor edits (Preview).
+# Use the maker portal to create and edit your Power Apps.
+# 
+# The schema file for Canvas Apps is available at https://go.microsoft.com/fwlink/?linkid=2304907
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+ComponentDefinitions:
+  comp_table1_v01:
+    DefinitionType: CanvasComponent
+    AllowCustomization: true
+    CustomProperties:
+      Color_Container_Front:
+        PropertyKind: Input
+        DisplayName: Color_Container_Front
+        Description: 사용자 지정 속성
+        DataType: Text
+        Default: ="#ffffff"
+      Color_Container_Rear:
+        PropertyKind: Input
+        DisplayName: Color_Container_Rear
+        Description: 사용자 지정 속성
+        DataType: Text
+        Default: ="#6a6a6a"
+      Color_Status:
+        PropertyKind: Input
+        DisplayName: Color_Status
+        Description: 사용자 지정 속성
+        DataType: Color
+        Default: =RGBA(0, 0, 0, 1)
+      Footer_1:
+        PropertyKind: Input
+        DisplayName: Footer_1
+        Description: 사용자 지정 속성
+        DataType: Text
+        Default: ="텍스트"
+      Footer_10:
+        PropertyKind: Input
+        DisplayName: Footer_10
+        Description: 사용자 지정 속성
+        DataType: Text
+        Default: ="텍스트"
+      Footer_2:
+        PropertyKind: Input
+        DisplayName: Footer_2
+        Description: 사용자 지정 속성
+        DataType: Text
+        Default: ="텍스트"
+      Footer_3:
+        PropertyKind: Input
+        DisplayName: Footer_3
+        Description: 사용자 지정 속성
+        DataType: Text
+        Default: ="텍스트"
+      Footer_4:
+        PropertyKind: Input
+        DisplayName: Footer_4
+        Description: 사용자 지정 속성
+        DataType: Text
+        Default: ="텍스트"
+      Footer_5:
+        PropertyKind: Input
+        DisplayName: Footer_5
+        Description: 사용자 지정 속성
+        DataType: Text
+        Default: ="텍스트"
+      Footer_6:
+        PropertyKind: Input
+        DisplayName: Footer_6
+        Description: 사용자 지정 속성
+        DataType: Text
+        Default: ="텍스트"
+      Footer_7:
+        PropertyKind: Input
+        DisplayName: Footer_7
+        Description: 사용자 지정 속성
+        DataType: Text
+        Default: ="텍스트"
+      Footer_8:
+        PropertyKind: Input
+        DisplayName: Footer_8
+        Description: 사용자 지정 속성
+        DataType: Text
+        Default: ="텍스트"
+      Footer_9:
+        PropertyKind: Input
+        DisplayName: Footer_9
+        Description: 사용자 지정 속성
+        DataType: Text
+        Default: ="텍스트"
+      Header_1:
+        PropertyKind: Input
+        DisplayName: Header_1
+        Description: 사용자 지정 속성
+        DataType: Text
+        Default: ="텍스트"
+      Header_10:
+        PropertyKind: Input
+        DisplayName: Header_10
+        Description: 사용자 지정 속성
+        DataType: Text
+        Default: ="텍스트"
+      Header_2:
+        PropertyKind: Input
+        DisplayName: Header_2
+        Description: 사용자 지정 속성
+        DataType: Text
+        Default: ="텍스트"
+      Header_3:
+        PropertyKind: Input
+        DisplayName: Header_3
+        Description: 사용자 지정 속성
+        DataType: Text
+        Default: ="텍스트"
+      Header_4:
+        PropertyKind: Input
+        DisplayName: Header_4
+        Description: 사용자 지정 속성
+        DataType: Text
+        Default: ="텍스트"
+      Header_5:
+        PropertyKind: Input
+        DisplayName: Header_5
+        Description: 사용자 지정 속성
+        DataType: Text
+        Default: ="텍스트"
+      Header_6:
+        PropertyKind: Input
+        DisplayName: Header_6
+        Description: 사용자 지정 속성
+        DataType: Text
+        Default: ="텍스트"
+      Header_7:
+        PropertyKind: Input
+        DisplayName: Header_7
+        Description: 사용자 지정 속성
+        DataType: Text
+        Default: ="텍스트"
+      Header_8:
+        PropertyKind: Input
+        DisplayName: Header_8
+        Description: 사용자 지정 속성
+        DataType: Text
+        Default: ="텍스트"
+      Header_9:
+        PropertyKind: Input
+        DisplayName: Header_9
+        Description: 사용자 지정 속성
+        DataType: Text
+        Default: ="텍스트"
+      Header_Width_1:
+        PropertyKind: Input
+        DisplayName: Header_Width_1
+        Description: 사용자 지정 속성
+        DataType: Number
+        Default: =100
+      Header_Width_10:
+        PropertyKind: Input
+        DisplayName: Header_Width_10
+        Description: 사용자 지정 속성
+        DataType: Number
+        Default: =100
+      Header_Width_2:
+        PropertyKind: Input
+        DisplayName: Header_Width_2
+        Description: 사용자 지정 속성
+        DataType: Number
+        Default: =100
+      Header_Width_3:
+        PropertyKind: Input
+        DisplayName: Header_Width_3
+        Description: 사용자 지정 속성
+        DataType: Number
+        Default: =100
+      Header_Width_4:
+        PropertyKind: Input
+        DisplayName: Header_Width_4
+        Description: 사용자 지정 속성
+        DataType: Number
+        Default: =100
+      Header_Width_5:
+        PropertyKind: Input
+        DisplayName: Header_Width_5
+        Description: 사용자 지정 속성
+        DataType: Number
+        Default: =100
+      Header_Width_6:
+        PropertyKind: Input
+        DisplayName: Header_Width_6
+        Description: 사용자 지정 속성
+        DataType: Number
+        Default: =100
+      Header_Width_7:
+        PropertyKind: Input
+        DisplayName: Header_Width_7
+        Description: 사용자 지정 속성
+        DataType: Number
+        Default: =100
+      Header_Width_8:
+        PropertyKind: Input
+        DisplayName: Header_Width_8
+        Description: 사용자 지정 속성
+        DataType: Number
+        Default: =100
+      Header_Width_9:
+        PropertyKind: Input
+        DisplayName: Header_Width_9
+        Description: 사용자 지정 속성
+        DataType: Number
+        Default: =100
+      IsTrue_DarkMode:
+        PropertyKind: Input
+        DisplayName: IsTrue_DarkMode
+        Description: 사용자 지정 속성
+        DataType: Boolean
+        Default: =true
+      IsTrue_DropShadow:
+        PropertyKind: Input
+        DisplayName: IsTrue_DropShadow
+        Description: 사용자 지정 속성
+        DataType: Boolean
+        Default: =false
+      Items_Sub:
+        PropertyKind: Input
+        DisplayName: Items_Sub
+        Description: A custom property
+        DataType: Table
+        Default: |-
+          =Table(
+              {
+                  No: "01",
+                  Status: "SampleText1",
+                  Title:"",
+                  ID:1,
+                  column_1:"",
+                  column_2:"",
+                  column_3:"",
+                  column_4:"",
+                  column_5:"",
+                  column_6:"",
+                  column_7:"",
+                  column_8:"",
+                  column_9:"",
+                  column_10:""
+              }
+              ,
+              {
+                  No: "02",
+                  Status: "SampleText1",
+                  Title:"",
+                  ID:2,
+                  column_1:"",
+                  column_2:"",
+                  column_3:"",
+                  column_4:"",
+                  column_5:"",
+                  column_6:"",
+                  column_7:"",
+                  column_8:"",
+                  column_9:"",
+                  column_10:""
+              }
+              )
+      Items_Table:
+        PropertyKind: Input
+        DisplayName: Items_Table
+        Description: 사용자 지정 속성
+        DataType: Table
+        Default: |-
+          =Table(
+              {
+                  No: "01",
+                  Status: "SampleText1",
+                  Title:"",
+                  ID:1,
+                  column_1:"",
+                  column_2:"",
+                  column_3:"",
+                  column_4:"",
+                  column_5:"",
+                  column_6:"",
+                  column_7:"",
+                  column_8:"",
+                  column_9:"",
+                  column_10:""
+              }
+              ,
+              {
+                  No: "02",
+                  Status: "SampleText1",
+                  Title:"",
+                  ID:2,
+                  column_1:"",
+                  column_2:"",
+                  column_3:"",
+                  column_4:"",
+                  column_5:"",
+                  column_6:"",
+                  column_7:"",
+                  column_8:"",
+                  column_9:"",
+                  column_10:""
+              }
+              )
+      Num_Page_Last_Output:
+        PropertyKind: Output
+        DisplayName: Num_Page_Last_Output
+        Description: 사용자 지정 속성
+        DataType: Number
+      Number_Page_Output:
+        PropertyKind: Output
+        DisplayName: Number_Page_Output
+        Description: 사용자 지정 속성
+        DataType: Number
+      OnSelect_Checkbox:
+        PropertyKind: Event
+        DisplayName: OnSelect_Checkbox
+        Description: 사용자 지정 속성
+        ReturnType: None
+        Default: =
+      OnSelect_Item:
+        PropertyKind: Event
+        DisplayName: OnSelect_Item
+        Description: A custom property
+        ReturnType: None
+        Default: =
+      OnTimer_Timer_Setting:
+        PropertyKind: Event
+        DisplayName: OnTimer_Timer_Setting
+        Description: 사용자 지정 속성
+        ReturnType: None
+        Default: =
+      Selected_Check:
+        PropertyKind: Output
+        DisplayName: Selected_Check
+        Description: 사용자 지정 속성
+        DataType: Record
+      Selected_Item_Output:
+        PropertyKind: Output
+        DisplayName: Selected_Item_Output
+        Description: 사용자 지정 속성
+        DataType: Record
+      Size_Font:
+        PropertyKind: Input
+        DisplayName: Size_Font
+        Description: 사용자 지정 속성
+        DataType: Number
+        Default: =13
+      Start_Timer:
+        PropertyKind: Output
+        DisplayName: Start_Timer
+        Description: 사용자 지정 속성
+        DataType: Boolean
+      Table_Checkbox:
+        PropertyKind: Input
+        DisplayName: Table_Checkbox
+        Description: 사용자 지정 속성
+        DataType: Table
+        Default: |
+          =Table(
+              { No: 1,  On: 0 },
+              { No: 2,  On: 0 },
+              { No: 3,  On: 0 },
+              { No: 4,  On: 0 },
+              { No: 5,  On: 0 },
+              { No: 6,  On: 0 },
+              { No: 7,  On: 0 },
+              { No: 8,  On: 0 },
+              { No: 9,  On: 0 },
+              { No: 10, On: 0 },
+              { No: 11, On: 0 },
+              { No: 12, On: 0 },
+              { No: 13, On: 0 },
+              { No: 14, On: 0 },
+              { No: 15, On: 0 },
+              { No: 16, On: 0 },
+              { No: 17, On: 0 },
+              { No: 18, On: 0 },
+              { No: 19, On: 0 },
+              { No: 20, On: 0 },
+              { No: 21, On: 0 },
+              { No: 22, On: 0 },
+              { No: 23, On: 0 },
+              { No: 24, On: 0 },
+              { No: 25, On: 0 },
+              { No: 26, On: 0 },
+              { No: 27, On: 0 },
+              { No: 28, On: 0 },
+              { No: 29, On: 0 },
+              { No: 30, On: 0 },
+              { No: 31, On: 0 },
+              { No: 32, On: 0 }
+          )
+      Text_Title:
+        PropertyKind: Input
+        DisplayName: Text_Title
+        Description: 사용자 지정 속성
+        DataType: Text
+        Default: ="텍스트"
+      Value_DropDown:
+        PropertyKind: Output
+        DisplayName: Value_DropDown
+        Description: 사용자 지정 속성
+        DataType: Number
+    Properties:
+      Height: =App.DesignHeight
+      Num_Page_Last_Output: =_comp_num_last_page
+      Number_Page_Output: =_comp_number_page
+      Selected_Check: =_comp_selected_box
+      Selected_Item_Output: =_comp_selected_item
+      Start_Timer: =true
+      Value_DropDown: =Dropdown1_39.Selected.Value
+      Width: =App.DesignWidth
+    Children:
+      - Timer_Settings_1:
+          Control: Timer@2.1.0
+          Properties:
+            AutoPause: =false
+            AutoStart: =true
+            BorderColor: =ColorFade(Self.Fill, -15%)
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =ColorFade(Self.BorderColor, 70%)
+            DisabledColor: =ColorFade(Self.Fill, 90%)
+            DisabledFill: =ColorFade(Self.Fill, 70%)
+            Duration: =100
+            Fill: =RGBA(56, 96, 178, 1)
+            Font: =Font.'Open Sans'
+            HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(56, 96, 178, 1), -20%)
+            OnSelect: =
+            OnTimerEnd: "=\r\nSet(\r\n    _comp_number_page,\r\n    1\r\n);\r\nSet(\r\n    _comp_num_last_page,\r\n    IfError(\r\n        RoundUp(\r\n            IfError(\r\n            CountRows(comp_table1_v01.Items_Table) /Dropdown1_39.Selected.Value,0),\r\n            0\r\n        ),\r\n        0\r\n    )\r\n) ; \r\n\r\nSet( _col_paginated,\r\n        FirstN(\r\n            comp_table1_v01.Items_Table,\r\n            Dropdown1_39.Selected.Value\r\n        )\r\n);\r\n\r\n\r\nSet(_col_paginated,\r\n   ForAll(\r\n        Sequence(\r\n            CountRows(_col_paginated)\r\n        ),\r\n        Patch( \r\n            Last(\r\n                FirstN(\r\n                _col_paginated,\r\n                Value)\r\n            )\r\n            ,\r\n            {\r\n                No:Text( If( _comp_number_page = 1 ,Value, (_comp_number_page-1)*Dropdown1_39.Selected.Value+Value) , \"00\")\r\n            }\r\n        )\r\n    ) \r\n);\r\n\r\nParent.OnTimer_Timer_Setting() ; \r\nSet(_comp_selected_item,Blank()) ; \r\n\r\nForAll(\r\n        Sequence(\r\n            CountRows(comp_table1_v01.Items_Table)\r\n        ),\r\n        Patch( \r\n            Last(\r\n                FirstN(\r\n                comp_table1_v01.Items_Table,\r\n                Value)\r\n            )\r\n            ,\r\n            {\r\n                No:Text( Value, \"00\")\r\n            }\r\n        )\r\n    ) "
+            PressedBorderColor: =Self.Fill
+            PressedColor: =Self.Fill
+            PressedFill: =Self.Color
+            Start: =_comp_start_timer
+            Visible: =false
+            X: =Parent.Width- Self.Width
+            Y: =Parent.Height - Self.Height
+      - Label11:
+          Control: Label@2.5.1
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Font: =Font.'Open Sans'
+            FontWeight: =FontWeight.Semibold
+            Height: =If( Or( IsBlank(Self.Text) , Self.Text = "" ) , 0 , Self.Size*2 )
+            Size: =comp_table1_v01.Size_Font*1.1
+            Text: =comp_table1_v01.Text_Title
+            Width: =Parent.Width- Self.X*2
+            X: =10
+            Y: =Self.X/2
+      - cont_rear:
+          Control: GroupContainer@1.4.0
+          Variant: ManualLayout
+          Properties:
+            BorderColor: =RGBA(116, 116, 116, 1)
+            BorderThickness: =If( Parent.IsTrue_DropShadow , 0  , 1 )
+            DropShadow: =DropShadow.None
+            Fill: =ColorValue(comp_table1_v01.Color_Container_Rear)
+            Height: =cont_front.Height
+            RadiusBottomLeft: =10
+            RadiusBottomRight: =10
+            RadiusTopLeft: =10
+            RadiusTopRight: =10
+            Width: =cont_front.Width
+            X: =cont_front.X + 5
+            Y: '=cont_front.Y + 5 '
+      - cont_front:
+          Control: GroupContainer@1.4.0
+          Variant: ManualLayout
+          Properties:
+            BorderColor: =RGBA(116, 116, 116, 1)
+            BorderThickness: =If( Parent.IsTrue_DropShadow , 0  , 1 )
+            DropShadow: =DropShadow.Regular
+            Fill: =ColorValue(comp_table1_v01.Color_Container_Front)
+            Height: =Parent.Height - Self.Y - Self.X
+            RadiusBottomLeft: =10
+            RadiusBottomRight: =10
+            RadiusTopLeft: =10
+            RadiusTopRight: =10
+            Width: =Label11.Width
+            X: =Label11.X
+            Y: =Container26.Y + Container26.Height + Self.X
+          Children:
+            - Container1_4_1_1_2_19:
+                Control: GroupContainer@1.4.0
+                Variant: ManualLayout
+                Properties:
+                  DropShadow: =DropShadow.None
+                  Fill: =Color.Transparent
+                  Height: =cont_header.Height/1.5
+                  RadiusBottomLeft: =0
+                  RadiusBottomRight: =0
+                  RadiusTopLeft: =0
+                  RadiusTopRight: =0
+                  Visible: '=true '
+                  Width: =Parent.Width - Self.X*2
+                  X: =Container9.X
+                  Y: =Parent.Height - Self.Height -10
+                Children:
+                  - Dropdown1_39:
+                      Control: Classic/DropDown@2.3.1
+                      Properties:
+                        BorderColor: =RGBA(166, 166, 166, 1)
+                        BorderThickness: =0
+                        ChevronBackground: =RGBA(0, 0, 0, 0)
+                        ChevronFill: =RGBA(246, 88, 16, 1)
+                        ChevronHoverBackground: =ColorFade(RGBA(56, 96, 178, 1), -20%)
+                        ChevronHoverFill: =RGBA(255, 255, 255, 1)
+                        Default: =
+                        Font: =Font.'Open Sans'
+                        Height: =Parent.Height*0.9
+                        HoverFill: =RGBA(186, 202, 226, 1)
+                        Items: =[5,10,15,20,50]
+                        Items.Value: =Value
+                        OnChange: |+
+                          =
+                          Set(
+                              _comp_number_page,
+                              1
+                          );
+                          Set(
+                              _comp_num_last_page,
+                              IfError(
+                                  RoundUp(
+                                      IfError(
+                                      CountRows(comp_table1_v01.Items_Table) /Self.Selected.Value,0),
+                                      0
+                                  ),
+                                  0
+                              )
+                          ) ; 
+                          /*
+                          ClearCollect(_filtered_col_master_data, 
+                          ForAll(Sequence(CountRows(_filtered_col_master_data)), Patch(Last(FirstN(_filtered_col_master_data,Value)),{_50_:Text( Value , "00" ) }))
+                           ) ; 
+                           */
+
+
+                          Set(_col_paginated,
+                             ForAll(
+                                  Sequence(
+                                      CountRows(_col_paginated)
+                                  ),
+                                  Patch( 
+                                      Last(
+                                          FirstN(
+                                          _col_paginated,
+                                          Value)
+                                      )
+                                      ,
+                                      {
+                                          No:Text( If( _comp_number_page = 1 ,Value, (_comp_number_page-1)*Dropdown1_39.Selected.Value+Value) , "00")
+                                      }
+                                  )
+                              ) 
+                          );
+
+                        PaddingBottom: =5
+                        PaddingLeft: =5
+                        PaddingRight: =5
+                        PaddingTop: =5
+                        PressedColor: =RGBA(255, 255, 255, 1)
+                        PressedFill: =RGBA(0, 18, 107, 1)
+                        SelectionColor: =RGBA(255, 255, 255, 1)
+                        SelectionFill: =RGBA(56, 96, 178, 1)
+                        Size: =comp_table1_v01.Size_Font
+                        Width: =Self.Height*3
+                        X: =Parent.Width/100
+                        Y: =Parent.Height/2 - Self.Height/2
+                  - Label6_36:
+                      Control: Label@2.5.1
+                      Properties:
+                        BorderColor: =RGBA(0, 18, 107, 1)
+                        Font: =Font.'Open Sans'
+                        Height: =Dropdown1_39.Height
+                        Size: =comp_table1_v01.Size_Font
+                        Text: ="개씩 보기"
+                        Width: =Dropdown1_39.Width*2
+                        X: =Dropdown1_39.X + Dropdown1_39.Width
+                        Y: =Dropdown1_39.Y
+                  - Gallery1_52:
+                      Control: Gallery@2.15.0
+                      Variant: Horizontal
+                      Properties:
+                        BorderColor: =RGBA(0, 18, 107, 1)
+                        Height: =Parent.Height*0.9
+                        Items: =Sequence(9)
+                        ShowScrollbar: =false
+                        TemplatePadding: =0
+                        TemplateSize: =Self.Width/Self.AllItemsCount
+                        Width: =Parent.Width/10*3.5
+                        X: =Parent.Width/2 - Self.Width/2
+                        Y: =Parent.Height/2 - Self.Height/2
+                      Children:
+                        - TextInput1_31:
+                            Control: Classic/TextInput@2.3.2
+                            Properties:
+                              Align: =Align.Center
+                              BorderColor: =RGBA(0, 18, 107, 1)
+                              BorderThickness: =0
+                              Default: |-
+                                =If( ThisItem.Value = 1 , "<<" ,  If( ThisItem.Value = 3 , "<" ,
+
+                                 If( ThisItem.Value = 5 , Text(_comp_number_page) & " / " & _comp_num_last_page ,  
+
+
+                                If( ThisItem.Value = 7 , ">" ,  If( ThisItem.Value = 9 , ">>" )))))
+                              DisplayMode: |-
+                                =If( _comp_number_page = 1 &&  ThisItem.Value = 3 , DisplayMode.Disabled ,  
+                                If( Text(_comp_number_page) = Text(_comp_num_last_page) && ThisItem.Value = 7 , DisplayMode.Disabled   ,  
+                                DisplayMode.Edit ))
+                              Font: =Font.'Open Sans'
+                              FontWeight: |-
+                                =If( ThisItem.Value = 5 , FontWeight.Bold ,
+                                FontWeight.Normal 
+                                )
+                              Height: =Parent.TemplateHeight
+                              HoverBorderColor: =RGBA(0, 18, 107, 1)
+                              HoverFill: =RGBA(186, 202, 226, 1)
+                              OnSelect: "=If( ThisItem.Value = 1 , Set( _comp_number_page , 1  ) ,\nIf( ThisItem.Value = 3 , Set( _comp_number_page , _comp_number_page - 1  ) , \nIf( ThisItem.Value = 7 , Set( _comp_number_page , _comp_number_page + 1  ) ,\nIf( ThisItem.Value = 9 , Set( _comp_number_page , _comp_num_last_page  ) \n))))\n\n;\n\nSet(_comp_rows_to_subtract,Dropdown1_39.Selected.Value*(_comp_number_page-1)) ; "
+                              PaddingBottom: =0
+                              PaddingLeft: =0
+                              PaddingRight: =0
+                              PaddingTop: =0
+                              Size: =comp_table1_v01.Size_Font
+                              Width: =Parent.TemplateWidth
+                              X: =Parent.TemplateWidth/2 - Self.Width/2
+                              Y: =Parent.TemplateHeight/2 - Self.Height/2
+                        - Rectangle3_31:
+                            Control: Rectangle@2.3.0
+                            Properties:
+                              BorderColor: =RGBA(0, 18, 107, 1)
+                              Fill: =RGBA(0, 0, 0, 0)
+                              Height: =Parent.TemplateHeight
+                              OnSelect: "=\n\nIf( ThisItem.Value = 1 , \n    Set( _comp_number_page , 1  );\n    Set( _col_paginated,\n        FirstN(\n            comp_table1_v01.Items_Table,\n            Dropdown1_39.Selected.Value\n        )\n    );\n\n ,\n// 현재 페이지 번호가 1이 아니라면 \nIf( ThisItem.Value = 3 && Text(_comp_number_page) <> \"1\" , \n    \n    Set( _comp_number_page , _comp_number_page - 1  );\n    Set( _col_paginated,\n        LastN(\n                FirstN(\n                    comp_table1_v01.Items_Table,\n                    Dropdown1_39.Selected.Value * _comp_number_page\n                ),\n                Dropdown1_39.Selected.Value\n            )\n    );\n    , \n// 현재 페이지 번호와 마지막 페이지 번호가 다르면 현재 페이지 번호 + 1 \nIf( ThisItem.Value = 7 && Text(_comp_number_page) <> Text(_comp_num_last_page) ,\n\n    Set( _comp_number_page , _comp_number_page + 1  );\n    Set( _col_paginated,    \n        LastN(\n                FirstN(\n                    comp_table1_v01.Items_Table,\n                    Dropdown1_39.Selected.Value * _comp_number_page\n                ),\n                Dropdown1_39.Selected.Value\n            )\n        );\n    ,\n\nIf( ThisItem.Value = 9 , Set( _comp_number_page , _comp_num_last_page  ) ;\n    Set( _col_paginated,\n        LastN(\n                comp_table1_v01.Items_Table,\n                CountRows(comp_table1_v01.Items_Table) - (Dropdown1_39.Selected.Value * (_comp_number_page - 1))\n            )\n    );\n))))\n;\n\nSet(_comp_rows_to_subtract,Dropdown1_39.Selected.Value*(_comp_number_page-1)) ; \n\n\nSet(_col_paginated,\n   ForAll(\n        Sequence(\n            CountRows(_col_paginated)\n        ),\n        Patch( \n            Last(\n                FirstN(\n                _col_paginated,\n                Value)\n            )\n            ,\n            {\n                No:Text( If( _comp_number_page = 1 ,Value, (_comp_number_page-1)*Dropdown1_39.Selected.Value+Value) , \"00\")\n            }\n        )\n    ) \n);\n"
+                              Width: =Parent.TemplateWidth
+                              X: =Parent.TemplateWidth/2 - Self.Width/2
+                              Y: =Parent.TemplateHeight/2 - Self.Height/2
+            - Container9:
+                Control: GroupContainer@1.4.0
+                Variant: AutoLayout
+                Properties:
+                  DropShadow: =DropShadow.None
+                  Height: =Parent.Height - Self.Y - Container1_4_1_1_2_19.Height
+                  LayoutAlignItems: =LayoutAlignItems.Center
+                  LayoutDirection: =LayoutDirection.Horizontal
+                  LayoutOverflowX: =LayoutOverflow.Scroll
+                  RadiusBottomLeft: =10
+                  RadiusBottomRight: =10
+                  RadiusTopLeft: =10
+                  RadiusTopRight: =10
+                  Width: =Parent.Width- Self.X*2
+                  X: =10
+                  Y: =Self.X
+                Children:
+                  - Container12:
+                      Control: GroupContainer@1.4.0
+                      Variant: ManualLayout
+                      Properties:
+                        DropShadow: =DropShadow.None
+                        LayoutMinHeight: =16
+                        LayoutMinWidth: =cont_header.X + cont_header.Width
+                        RadiusBottomLeft: =0
+                        RadiusBottomRight: =0
+                        RadiusTopLeft: =0
+                        RadiusTopRight: =0
+                      Children:
+                        - cont_header:
+                            Control: GroupContainer@1.4.0
+                            Variant: ManualLayout
+                            Properties:
+                              DropShadow: =DropShadow.None
+                              Height: =comp_table1_v01.Size_Font*4.5
+                              RadiusBottomLeft: =0
+                              RadiusBottomRight: =0
+                              RadiusTopLeft: =0
+                              RadiusTopRight: =0
+                              Width: =header_10.X+header_10.Width + comp_table1_v01.Size_Font
+                            Children:
+                              - Checkbox1:
+                                  Control: Classic/CheckBox@2.1.0
+                                  Properties:
+                                    BorderColor: =RGBA(0, 18, 107, 1)
+                                    CheckboxBackgroundFill: =RGBA(0, 0, 0, 0)
+                                    CheckboxBorderColor: =RGBA(202, 202, 202, 1)
+                                    CheckboxSize: =Self.Height*0.6
+                                    CheckmarkFill: =RGBA(0, 0, 0, 1)
+                                    Font: =Font.'Open Sans'
+                                    Height: =Parent.Height
+                                    HoverColor: =RGBA(0, 18, 107, 1)
+                                    Size: =comp_table1_v01.Size_Font
+                                    Text: =
+                                    Width: =Self.Height
+                              - header_1:
+                                  Control: Label@2.5.1
+                                  Properties:
+                                    Align: =Align.Center
+                                    BorderColor: =RGBA(0, 18, 107, 1)
+                                    Color: '=If( comp_table1_v01.IsTrue_DarkMode, Color.White, Color.Black ) '
+                                    Font: =Font.'Open Sans'
+                                    FontWeight: =FontWeight.Bold
+                                    Height: =Parent.Height*0.98
+                                    Size: =comp_table1_v01.Size_Font
+                                    Text: =comp_table1_v01.Header_1
+                                    Width: =If( LookUp( comp_table1_v01.Table_Checkbox, No = 1 ).On = 1 ,  comp_table1_v01.Header_Width_1 , 0 )
+                                    X: =Checkbox1.X + Checkbox1.Width
+                                    Y: =Parent.Height/2 - Self.Height/2
+                              - header_2:
+                                  Control: Label@2.5.1
+                                  Properties:
+                                    Align: =Align.Center
+                                    BorderColor: =RGBA(0, 18, 107, 1)
+                                    Color: '=If( comp_table1_v01.IsTrue_DarkMode, Color.White, Color.Black ) '
+                                    Font: =Font.'Open Sans'
+                                    FontWeight: =FontWeight.Bold
+                                    Height: =Parent.Height*0.98
+                                    Size: =comp_table1_v01.Size_Font
+                                    Text: =comp_table1_v01.Header_2
+                                    Width: =If( LookUp( comp_table1_v01.Table_Checkbox, No = 2 ).On = 1 ,  comp_table1_v01.Header_Width_2 , 0 )
+                                    X: =header_1.X + header_1.Width
+                                    Y: =Parent.Height/2 - Self.Height/2
+                              - header_3:
+                                  Control: Label@2.5.1
+                                  Properties:
+                                    Align: =Align.Center
+                                    BorderColor: =RGBA(0, 18, 107, 1)
+                                    Color: '=If( comp_table1_v01.IsTrue_DarkMode, Color.White, Color.Black ) '
+                                    Font: =Font.'Open Sans'
+                                    FontWeight: =FontWeight.Bold
+                                    Height: =Parent.Height*0.98
+                                    Size: =comp_table1_v01.Size_Font
+                                    Text: =comp_table1_v01.Header_3
+                                    Width: =If( LookUp( comp_table1_v01.Table_Checkbox, No = 3 ).On = 1 ,  comp_table1_v01.Header_Width_3 , 0 )
+                                    X: =header_2.X + header_2.Width
+                                    Y: =Parent.Height/2 - Self.Height/2
+                              - header_4:
+                                  Control: Label@2.5.1
+                                  Properties:
+                                    Align: =Align.Center
+                                    BorderColor: =RGBA(0, 18, 107, 1)
+                                    Color: '=If( comp_table1_v01.IsTrue_DarkMode, Color.White, Color.Black ) '
+                                    Font: =Font.'Open Sans'
+                                    FontWeight: =FontWeight.Bold
+                                    Height: =Parent.Height*0.98
+                                    Size: =comp_table1_v01.Size_Font
+                                    Text: =comp_table1_v01.Header_4
+                                    Width: =If( LookUp( comp_table1_v01.Table_Checkbox, No = 4 ).On = 1 ,  comp_table1_v01.Header_Width_4 , 0 )
+                                    X: =header_3.X + header_3.Width
+                                    Y: =Parent.Height/2 - Self.Height/2
+                              - header_5:
+                                  Control: Label@2.5.1
+                                  Properties:
+                                    Align: =Align.Center
+                                    BorderColor: =RGBA(0, 18, 107, 1)
+                                    Color: '=If( comp_table1_v01.IsTrue_DarkMode, Color.White, Color.Black ) '
+                                    Font: =Font.'Open Sans'
+                                    FontWeight: =FontWeight.Bold
+                                    Height: =Parent.Height*0.98
+                                    Size: =comp_table1_v01.Size_Font
+                                    Text: =comp_table1_v01.Header_5
+                                    Width: =If( LookUp( comp_table1_v01.Table_Checkbox, No = 5 ).On = 1 ,  comp_table1_v01.Header_Width_5 , 0 )
+                                    X: =header_4.X + header_4.Width
+                                    Y: =Parent.Height/2 - Self.Height/2
+                              - header_6:
+                                  Control: Label@2.5.1
+                                  Properties:
+                                    Align: =Align.Center
+                                    BorderColor: =RGBA(0, 18, 107, 1)
+                                    Color: '=If( comp_table1_v01.IsTrue_DarkMode, Color.White, Color.Black ) '
+                                    Font: =Font.'Open Sans'
+                                    FontWeight: =FontWeight.Bold
+                                    Height: =Parent.Height*0.98
+                                    Size: =comp_table1_v01.Size_Font
+                                    Text: =comp_table1_v01.Header_6
+                                    Width: =If( LookUp( comp_table1_v01.Table_Checkbox, No = 6 ).On = 1 ,  comp_table1_v01.Header_Width_6 , 0 )
+                                    X: =header_5.X + header_5.Width
+                                    Y: =Parent.Height/2 - Self.Height/2
+                              - header_7:
+                                  Control: Label@2.5.1
+                                  Properties:
+                                    Align: =Align.Center
+                                    BorderColor: =RGBA(0, 18, 107, 1)
+                                    Color: '=If( comp_table1_v01.IsTrue_DarkMode, Color.White, Color.Black ) '
+                                    Font: =Font.'Open Sans'
+                                    FontWeight: =FontWeight.Bold
+                                    Height: =Parent.Height*0.98
+                                    Size: =comp_table1_v01.Size_Font
+                                    Text: =comp_table1_v01.Header_7
+                                    Width: =If( LookUp( comp_table1_v01.Table_Checkbox, No = 7 ).On = 1 ,  comp_table1_v01.Header_Width_7 , 0 )
+                                    X: =header_6.X + header_6.Width
+                                    Y: =Parent.Height/2 - Self.Height/2
+                              - header_8:
+                                  Control: Label@2.5.1
+                                  Properties:
+                                    Align: =Align.Center
+                                    BorderColor: =RGBA(0, 18, 107, 1)
+                                    Color: '=If( comp_table1_v01.IsTrue_DarkMode, Color.White, Color.Black ) '
+                                    Font: =Font.'Open Sans'
+                                    FontWeight: =FontWeight.Bold
+                                    Height: =Parent.Height*0.98
+                                    Size: =comp_table1_v01.Size_Font
+                                    Text: =comp_table1_v01.Header_8
+                                    Width: =If( LookUp( comp_table1_v01.Table_Checkbox, No = 8 ).On = 1 ,  comp_table1_v01.Header_Width_8 , 0 )
+                                    X: =header_7.X + header_7.Width
+                                    Y: =Parent.Height/2 - Self.Height/2
+                              - header_9:
+                                  Control: Label@2.5.1
+                                  Properties:
+                                    Align: =Align.Center
+                                    BorderColor: =RGBA(0, 18, 107, 1)
+                                    Color: '=If( comp_table1_v01.IsTrue_DarkMode, Color.White, Color.Black ) '
+                                    Font: =Font.'Open Sans'
+                                    FontWeight: =FontWeight.Bold
+                                    Height: =Parent.Height*0.98
+                                    Size: =comp_table1_v01.Size_Font
+                                    Text: =comp_table1_v01.Header_9
+                                    Width: =If( LookUp( comp_table1_v01.Table_Checkbox, No = 9 ).On = 1 ,  comp_table1_v01.Header_Width_9 , 0 )
+                                    X: =header_8.X + header_8.Width
+                                    Y: =Parent.Height/2 - Self.Height/2
+                              - header_10:
+                                  Control: Label@2.5.1
+                                  Properties:
+                                    Align: =Align.Center
+                                    BorderColor: =RGBA(0, 18, 107, 1)
+                                    Color: '=If( comp_table1_v01.IsTrue_DarkMode, Color.White, Color.Black ) '
+                                    Font: =Font.'Open Sans'
+                                    FontWeight: =FontWeight.Bold
+                                    Height: =Parent.Height*0.98
+                                    Size: =comp_table1_v01.Size_Font
+                                    Text: =comp_table1_v01.Header_10
+                                    Width: =If( LookUp( comp_table1_v01.Table_Checkbox, No = 10 ).On = 1 ,  comp_table1_v01.Header_Width_10 , 0 )
+                                    X: =header_9.X + header_9.Width
+                                    Y: =Parent.Height/2 - Self.Height/2
+                              - Rectangle7_3:
+                                  Control: Rectangle@2.3.0
+                                  Properties:
+                                    BorderColor: =RGBA(0, 0, 0, 1)
+                                    BorderStyle: =BorderStyle.None
+                                    BorderThickness: =0.3
+                                    Fill: '=If( comp_table1_v01.IsTrue_DarkMode, Color.White, Color.Black ) '
+                                    Height: =3
+                                    Width: =Parent.Width
+                                    X: =Parent.Width/2 - Self.Width/2
+                                    Y: =Self.X
+                              - Rectangle7_4:
+                                  Control: Rectangle@2.3.0
+                                  Properties:
+                                    BorderColor: =RGBA(0, 0, 0, 1)
+                                    BorderStyle: =BorderStyle.None
+                                    BorderThickness: =0.3
+                                    Fill: '=If( comp_table1_v01.IsTrue_DarkMode, Color.White, Color.Black ) '
+                                    Height: =1
+                                    Width: =Parent.Width
+                                    X: =Parent.Width/2 - Self.Width/2
+                                    Y: =Parent.Height- Self.Height
+                        - cont_footer:
+                            Control: GroupContainer@1.4.0
+                            Variant: ManualLayout
+                            Properties:
+                              DropShadow: =DropShadow.None
+                              Height: =cont_header.Height
+                              RadiusBottomLeft: =0
+                              RadiusBottomRight: =0
+                              RadiusTopLeft: =0
+                              RadiusTopRight: =0
+                              Width: =cont_header.Width
+                              Y: =Parent.Height- Self.Height
+                            Children:
+                              - Rectangle7_5:
+                                  Control: Rectangle@2.3.0
+                                  Properties:
+                                    BorderColor: =RGBA(0, 0, 0, 1)
+                                    BorderStyle: =BorderStyle.None
+                                    BorderThickness: =0.3
+                                    Fill: =RGBA(0, 0, 0, 1)
+                                    Height: =2
+                                    Width: =Parent.Width
+                                    X: =Parent.Width/2 - Self.Width/2
+                                    Y: =Self.X
+                              - footer_0:
+                                  Control: Label@2.5.1
+                                  Properties:
+                                    Align: =Align.Center
+                                    BorderColor: =RGBA(0, 18, 107, 1)
+                                    Font: =Font.'Open Sans'
+                                    Height: =Parent.Height
+                                    Size: =comp_table1_v01.Size_Font
+                                    Text: =CountRows(Gallery2.AllItems)
+                                    Width: =Checkbox1.Width
+                                    X: =Checkbox1.X
+                                    Y: =Parent.Height/2 - Self.Height/2
+                              - footer_1:
+                                  Control: Label@2.5.1
+                                  Properties:
+                                    Align: =Align.Center
+                                    BorderColor: =RGBA(0, 18, 107, 1)
+                                    Font: =Font.'Open Sans'
+                                    Height: =Parent.Height
+                                    Size: =comp_table1_v01.Size_Font
+                                    Text: =CountRows(comp_table1_v01.Items_Table)
+                                    Width: =header_1.Width
+                                    X: =header_1.X
+                                    Y: =Parent.Height/2 - Self.Height/2
+                              - footer_2:
+                                  Control: Label@2.5.1
+                                  Properties:
+                                    Align: =Align.Center
+                                    BorderColor: =RGBA(0, 18, 107, 1)
+                                    Font: =Font.'Open Sans'
+                                    Height: =Parent.Height
+                                    Size: =comp_table1_v01.Size_Font
+                                    Text: =comp_table1_v01.Footer_2
+                                    Width: =header_2.Width
+                                    X: =header_2.X
+                                    Y: =Parent.Height/2 - Self.Height/2
+                              - footer_3:
+                                  Control: Label@2.5.1
+                                  Properties:
+                                    Align: =Align.Center
+                                    BorderColor: =RGBA(0, 18, 107, 1)
+                                    Font: =Font.'Open Sans'
+                                    Height: =Parent.Height
+                                    Size: =comp_table1_v01.Size_Font
+                                    Text: =comp_table1_v01.Footer_3
+                                    Width: =header_3.Width
+                                    X: =header_3.X
+                                    Y: =Parent.Height/2 - Self.Height/2
+                              - footer_4:
+                                  Control: Label@2.5.1
+                                  Properties:
+                                    Align: =Align.Center
+                                    BorderColor: =RGBA(0, 18, 107, 1)
+                                    Font: =Font.'Open Sans'
+                                    Height: =Parent.Height
+                                    Size: =comp_table1_v01.Size_Font
+                                    Text: =comp_table1_v01.Footer_4
+                                    Width: =header_4.Width
+                                    X: =header_4.X
+                                    Y: =Parent.Height/2 - Self.Height/2
+                              - footer_5:
+                                  Control: Label@2.5.1
+                                  Properties:
+                                    Align: =Align.Center
+                                    BorderColor: =RGBA(0, 18, 107, 1)
+                                    Font: =Font.'Open Sans'
+                                    Height: =Parent.Height
+                                    Size: =comp_table1_v01.Size_Font
+                                    Text: =comp_table1_v01.Footer_5
+                                    Width: =header_5.Width
+                                    X: =header_5.X
+                                    Y: =Parent.Height/2 - Self.Height/2
+                              - footer_6:
+                                  Control: Label@2.5.1
+                                  Properties:
+                                    Align: =Align.Center
+                                    BorderColor: =RGBA(0, 18, 107, 1)
+                                    Font: =Font.'Open Sans'
+                                    Height: =Parent.Height
+                                    Size: =comp_table1_v01.Size_Font
+                                    Text: =comp_table1_v01.Footer_6
+                                    Width: =header_6.Width
+                                    X: =header_6.X
+                                    Y: =Parent.Height/2 - Self.Height/2
+                              - footer_7:
+                                  Control: Label@2.5.1
+                                  Properties:
+                                    Align: =Align.Center
+                                    BorderColor: =RGBA(0, 18, 107, 1)
+                                    Font: =Font.'Open Sans'
+                                    Height: =Parent.Height
+                                    Size: =comp_table1_v01.Size_Font
+                                    Text: =comp_table1_v01.Footer_7
+                                    Width: =header_7.Width
+                                    X: =header_7.X
+                                    Y: =Parent.Height/2 - Self.Height/2
+                              - footer_8:
+                                  Control: Label@2.5.1
+                                  Properties:
+                                    Align: =Align.Center
+                                    BorderColor: =RGBA(0, 18, 107, 1)
+                                    Font: =Font.'Open Sans'
+                                    Height: =Parent.Height
+                                    Size: =comp_table1_v01.Size_Font
+                                    Text: =comp_table1_v01.Footer_8
+                                    Width: =header_8.Width
+                                    X: =header_8.X
+                                    Y: =Parent.Height/2 - Self.Height/2
+                              - footer_9:
+                                  Control: Label@2.5.1
+                                  Properties:
+                                    Align: =Align.Center
+                                    BorderColor: =RGBA(0, 18, 107, 1)
+                                    Font: =Font.'Open Sans'
+                                    Height: =Parent.Height
+                                    Size: =comp_table1_v01.Size_Font
+                                    Text: =comp_table1_v01.Footer_9
+                                    Width: =header_9.Width
+                                    X: =header_9.X
+                                    Y: =Parent.Height/2 - Self.Height/2
+                              - footer_10:
+                                  Control: Label@2.5.1
+                                  Properties:
+                                    Align: =Align.Center
+                                    BorderColor: =RGBA(0, 18, 107, 1)
+                                    Font: =Font.'Open Sans'
+                                    Height: =Parent.Height
+                                    Size: =comp_table1_v01.Size_Font
+                                    Text: =comp_table1_v01.Footer_10
+                                    Width: =header_10.Width
+                                    X: =header_10.X
+                                    Y: =Parent.Height/2 - Self.Height/2
+                        - Gallery2:
+                            Control: Gallery@2.15.0
+                            Variant: VariableHeight
+                            Properties:
+                              BorderColor: =RGBA(0, 18, 107, 1)
+                              Height: =Parent.Height - Self.Y - cont_footer.Height
+                              Items: |+
+                                =
+
+                                If(
+                                    _comp_number_page = 1,
+                                    FirstN(
+                                        comp_table1_v01.Items_Table,
+                                        Dropdown1_39.Selected.Value
+                                    ),
+                                    // 현재 페이지가 마지막 페이지인 경우
+                                    // 또는 현재 페이지가 1페이지가 아니면서 마지막 페이지도 아닌 경우 (중간 페이지)
+                                    If(
+                                        _comp_number_page = _comp_num_last_page,
+                                        // 마지막 페이지: 전체 항목 수에서 (페이지당 행 수 * (마지막 페이지 - 1)) 만큼 뺀 개수만큼만 가져옴
+                                        LastN(
+                                            comp_table1_v01.Items_Table,
+                                            CountRows(comp_table1_v01.Items_Table) - (Dropdown1_39.Selected.Value * (_comp_number_page - 1))
+                                        ),
+                                        // 중간 페이지: 기존 로직과 동일 (페이지당 Dropdown1_39.Selected.Value 개수만큼 가져옴)
+                                        LastN(
+                                            FirstN(
+                                                comp_table1_v01.Items_Table,
+                                                Dropdown1_39.Selected.Value * _comp_number_page
+                                            ),
+                                            Dropdown1_39.Selected.Value
+                                        )
+                                    )
+                                )
+
+
+                                //_col_paginated
+
+                              ShowScrollbar: =false
+                              TemplatePadding: =0
+                              TemplateSize: =comp_table1_v01.Size_Font*5
+                              Width: =Parent.Width
+                              X: =cont_header.X
+                              Y: =cont_header.Y + cont_header.Height
+                            Children:
+                              - Container16:
+                                  Control: GroupContainer@1.4.0
+                                  Variant: ManualLayout
+                                  Properties:
+                                    DropShadow: =DropShadow.None
+                                    Height: =If( IsBlank(_comp_selected_item), Parent.TemplateHeight , If( _comp_selected_item.ID = ThisItem.ID , Parent.TemplateHeight , 0 ) )
+                                    RadiusBottomLeft: =0
+                                    RadiusBottomRight: =0
+                                    RadiusTopLeft: =0
+                                    RadiusTopRight: =0
+                                    Width: =Parent.TemplateWidth
+                                    X: =Parent.TemplateWidth/2 - Self.Width/2
+                                    Y: =rect_spacer_top.Y+rect_spacer_top.Height
+                                  Children:
+                                    - Container18_1:
+                                        Control: GroupContainer@1.4.0
+                                        Variant: ManualLayout
+                                        Properties:
+                                          DropShadow: =DropShadow.Regular
+                                          Fill: =If( Checkbox1_1.Value , ColorValue("#f65810") , Color.White )
+                                          Height: =Parent.Height/10*7
+                                          RadiusBottomLeft: =10
+                                          RadiusBottomRight: =10
+                                          RadiusTopLeft: =10
+                                          RadiusTopRight: =10
+                                          Width: =Self.Height
+                                          X: =Checkbox1.X + Self.Width/30
+                                          Y: =Parent.Height/2 - Self.Height/2
+                                        Children:
+                                          - Checkbox1_1:
+                                              Control: Classic/CheckBox@2.1.0
+                                              Properties:
+                                                BorderColor: =RGBA(0, 18, 107, 1)
+                                                CheckboxBackgroundFill: =RGBA(0, 0, 0, 0)
+                                                CheckboxBorderColor: =RGBA(0, 0, 0, 0)
+                                                CheckboxSize: =If( Self.Value ,Self.Height , 0)
+                                                CheckmarkFill: =RGBA(255, 255, 255, 1)
+                                                Default: '=_comp_selected_item.ID = ThisItem.ID '
+                                                Font: =Font.'Open Sans'
+                                                FontWeight: =FontWeight.Bold
+                                                Height: =Parent.Height
+                                                HoverColor: =RGBA(0, 18, 107, 1)
+                                                Size: =comp_table1_v01.Size_Font
+                                                Text: '=If(     _comp_selected_item.ID = ThisItem.ID , Blank() , ThisItem.No ) '
+                                                Width: =Parent.Width
+                                                X: =Parent.Width/2 - Self.Width/2
+                                                Y: =Parent.Height/2 - Self.Height/2
+                                    - Container18:
+                                        Control: GroupContainer@1.4.0
+                                        Variant: ManualLayout
+                                        Properties:
+                                          DropShadow: =DropShadow.None
+                                          Fill: =Color.Transparent //ColorFade(value_1.Color,90%)
+                                          Height: =Parent.Height/10*9
+                                          RadiusBottomLeft: =0
+                                          RadiusBottomRight: =0
+                                          RadiusTopLeft: =0
+                                          RadiusTopRight: =0
+                                          Width: =header_1.Width/10*9
+                                          X: =header_1.X
+                                          Y: =Parent.Height/2 - Self.Height/2
+                                        Children:
+                                          - value_1:
+                                              Control: Label@2.5.1
+                                              Properties:
+                                                Align: =Align.Center
+                                                BorderColor: =RGBA(0, 18, 107, 1)
+                                                Color: =If( comp_table1_v01.IsTrue_DarkMode , Color.White , Color.Black )
+                                                Font: =Font.'Open Sans'
+                                                FontWeight: =FontWeight.Bold
+                                                Height: =Parent.Height
+                                                Size: =comp_table1_v01.Size_Font
+                                                Text: =ThisItem.column_1
+                                                Width: =Parent.Width
+                                                X: =Parent.Width/2 - Self.Width/2
+                                                Y: =Parent.Height/2 - Self.Height/2
+                                    - value_2:
+                                        Control: Label@2.5.1
+                                        Properties:
+                                          Align: =Align.Center
+                                          BorderColor: =RGBA(0, 18, 107, 1)
+                                          Color: =value_1.Color
+                                          Font: =Font.'Open Sans'
+                                          FontWeight: =FontWeight.Bold
+                                          Height: =Parent.Height
+                                          Size: =comp_table1_v01.Size_Font
+                                          Text: =ThisItem.column_2
+                                          Width: =header_2.Width
+                                          X: =header_2.X
+                                          Y: =Parent.Height/2 - Self.Height/2
+                                    - value_3:
+                                        Control: Label@2.5.1
+                                        Properties:
+                                          Align: =Align.Center
+                                          BorderColor: =RGBA(0, 18, 107, 1)
+                                          Color: =value_1.Color
+                                          Font: =Font.'Open Sans'
+                                          FontWeight: =FontWeight.Bold
+                                          Height: =Parent.Height
+                                          Size: =comp_table1_v01.Size_Font
+                                          Text: =ThisItem.column_3
+                                          Width: =header_3.Width
+                                          X: =header_3.X
+                                          Y: =Parent.Height/2 - Self.Height/2
+                                    - value_4:
+                                        Control: Label@2.5.1
+                                        Properties:
+                                          Align: =Align.Center
+                                          BorderColor: =RGBA(0, 18, 107, 1)
+                                          Color: =value_1.Color
+                                          Font: =Font.'Open Sans'
+                                          FontWeight: =FontWeight.Bold
+                                          Height: =Parent.Height
+                                          Size: =comp_table1_v01.Size_Font
+                                          Text: =ThisItem.column_4
+                                          Width: =header_4.Width
+                                          X: =header_4.X
+                                          Y: =Parent.Height/2 - Self.Height/2
+                                    - value_5:
+                                        Control: Label@2.5.1
+                                        Properties:
+                                          Align: =Align.Center
+                                          BorderColor: =RGBA(0, 18, 107, 1)
+                                          Color: =value_1.Color
+                                          Font: =Font.'Open Sans'
+                                          FontWeight: =FontWeight.Bold
+                                          Height: =Parent.Height
+                                          Size: =comp_table1_v01.Size_Font
+                                          Text: =ThisItem.column_5
+                                          Width: =header_5.Width
+                                          X: =header_5.X
+                                          Y: =Parent.Height/2 - Self.Height/2
+                                    - value_6:
+                                        Control: Label@2.5.1
+                                        Properties:
+                                          Align: =Align.Center
+                                          BorderColor: =RGBA(0, 18, 107, 1)
+                                          Color: =value_1.Color
+                                          Font: =Font.'Open Sans'
+                                          FontWeight: =FontWeight.Bold
+                                          Height: =Parent.Height
+                                          Size: =comp_table1_v01.Size_Font
+                                          Text: =ThisItem.column_6
+                                          Width: =header_6.Width
+                                          X: =header_6.X
+                                          Y: =Parent.Height/2 - Self.Height/2
+                                    - value_7:
+                                        Control: Label@2.5.1
+                                        Properties:
+                                          Align: =Align.Center
+                                          BorderColor: =RGBA(0, 18, 107, 1)
+                                          Color: =value_1.Color
+                                          Font: =Font.'Open Sans'
+                                          FontWeight: =FontWeight.Bold
+                                          Height: =Parent.Height
+                                          Size: =comp_table1_v01.Size_Font
+                                          Text: =ThisItem.column_7
+                                          Width: =header_7.Width
+                                          X: =header_7.X
+                                          Y: =Parent.Height/2 - Self.Height/2
+                                    - value_8:
+                                        Control: Label@2.5.1
+                                        Properties:
+                                          Align: =Align.Center
+                                          BorderColor: =RGBA(0, 18, 107, 1)
+                                          Color: =value_1.Color
+                                          Font: =Font.'Open Sans'
+                                          FontWeight: =FontWeight.Bold
+                                          Height: =Parent.Height
+                                          Size: =comp_table1_v01.Size_Font
+                                          Text: =ThisItem.column_8
+                                          Width: =header_8.Width
+                                          X: =header_8.X
+                                          Y: =Parent.Height/2 - Self.Height/2
+                                    - value_9:
+                                        Control: Label@2.5.1
+                                        Properties:
+                                          Align: =Align.Center
+                                          BorderColor: =RGBA(0, 18, 107, 1)
+                                          Font: =Font.'Open Sans'
+                                          FontWeight: =FontWeight.Bold
+                                          Height: =Parent.Height
+                                          Size: =comp_table1_v01.Size_Font
+                                          Text: =ThisItem.column_9
+                                          Width: =header_9.Width
+                                          X: =header_9.X
+                                          Y: =Parent.Height/2 - Self.Height/2
+                                    - Container18_2:
+                                        Control: GroupContainer@1.4.0
+                                        Variant: ManualLayout
+                                        Properties:
+                                          DropShadow: =DropShadow.Regular
+                                          Fill: =ColorFade(value_1.Color,90%)
+                                          Height: =Parent.Height/10*9
+                                          RadiusBottomLeft: =10
+                                          RadiusBottomRight: =10
+                                          RadiusTopLeft: =10
+                                          RadiusTopRight: =10
+                                          Visible: =!IsBlank(value_10.Text)
+                                          Width: =header_10.Width/10*9
+                                          X: =header_10.X + header_10.Width/2 - Self.Width/2
+                                          Y: =Parent.Height/2 - Self.Height/2
+                                        Children:
+                                          - value_10:
+                                              Control: Label@2.5.1
+                                              Properties:
+                                                Align: =Align.Center
+                                                BorderColor: =RGBA(0, 18, 107, 1)
+                                                Font: =Font.'Open Sans'
+                                                FontWeight: =FontWeight.Bold
+                                                Height: =Parent.Height
+                                                Size: =comp_table1_v01.Size_Font
+                                                Text: =ThisItem.Status
+                                                Width: =header_10.Width
+                                                X: =header_10.X
+                                                Y: =Parent.Height/2 - Self.Height/2
+                                    - rect_select:
+                                        Control: Rectangle@2.3.0
+                                        Properties:
+                                          BorderColor: =RGBA(0, 18, 107, 1)
+                                          Fill: =RGBA(0, 0, 0, 0)
+                                          Height: =Parent.Height
+                                          OnSelect: "=\r\nIf(     _comp_selected_item.ID = ThisItem.ID ,\r\n    Set( _comp_selected_item , Blank() );\r\n    \r\n    , \r\n    Set( _comp_selected_item , ThisItem );\r\n    \r\n);\r\n\r\ncomp_table1_v01.OnSelect_Item() ; "
+                                          Visible: =!_comp_mode_edit
+                                          Width: =Parent.Width
+                                          X: =Parent.Width/2 - Self.Width/2
+                                          Y: =Parent.Height/2 - Self.Height/2
+                              - rect_spacer_top:
+                                  Control: Rectangle@2.3.0
+                                  Properties:
+                                    BorderColor: =RGBA(0, 18, 107, 1)
+                                    Fill: =RGBA(0, 0, 0, 0)
+                                    Height: |-
+                                      =
+
+                                      If( IsBlank(_comp_selected_item), comp_table1_v01.Size_Font/2 , If( _comp_selected_item.ID = ThisItem.ID , comp_table1_v01.Size_Font/2 , 0 ) )
+                                    Width: =Parent.TemplateWidth
+                                    X: =Parent.TemplateWidth/2 - Self.Width/2
+                                    Y: =Self.X
+                              - rect_spacer_bottom:
+                                  Control: Rectangle@2.3.0
+                                  Properties:
+                                    BorderColor: =RGBA(0, 18, 107, 1)
+                                    Fill: =RGBA(0, 0, 0, 0)
+                                    Height: |-
+                                      =
+
+                                      If( IsBlank(_comp_selected_item), comp_table1_v01.Size_Font/2 , If( _comp_selected_item.ID = ThisItem.ID , comp_table1_v01.Size_Font/2 , 0 ) )
+                                    Width: =Parent.TemplateWidth
+                                    X: =Parent.TemplateWidth/2 - Self.Width/2
+                                    Y: =Container16.Y+ Container16.Height
+                              - ret_select_2:
+                                  Control: Rectangle@2.3.0
+                                  Properties:
+                                    BorderColor: =RGBA(0, 0, 0, 1)
+                                    BorderStyle: =BorderStyle.None
+                                    Fill: |
+                                      =If( comp_table1_v01.IsTrue_DarkMode, ColorValue("#9a9a9a") , ColorValue("#e0e0e0") ) 
+                                    Height: =If( IsBlank(_comp_selected_item), 0.5 , If( _comp_selected_item.ID = ThisItem.ID , 0.5 , 0 ) )
+                                    Width: =Parent.TemplateWidth
+                                    X: =Parent.TemplateWidth/2 - Self.Width/2
+                                    Y: =rect_spacer_bottom.Y+ rect_spacer_bottom.Height
+                              - Gallery2_1:
+                                  Control: Gallery@2.15.0
+                                  Variant: VariableHeight
+                                  Properties:
+                                    BorderColor: =RGBA(0, 18, 107, 1)
+                                    Height: |-
+                                      =
+                                      If( IsBlank(_comp_selected_item), Parent.Height - Self.Y , If( _comp_selected_item.ID = ThisItem.ID , Parent.Height - Self.Y , 0 ) )
+                                    Items: =comp_table1_v01.Items_Sub
+                                    ShowScrollbar: =false
+                                    TemplatePadding: =0
+                                    TemplateSize: =comp_table1_v01.Size_Font*5
+                                    Visible: =!IsBlank(_comp_selected_item)
+                                    Width: =cont_header.X + cont_header.Width
+                                    X: =Parent.Width/2 - Self.Width/2
+                                    Y: =rect_spacer_bottom.Y + rect_spacer_bottom.Height
+                                  Children:
+                                    - Container16_2:
+                                        Control: GroupContainer@1.4.0
+                                        Variant: ManualLayout
+                                        Properties:
+                                          DropShadow: =DropShadow.None
+                                          Height: =Parent.TemplateHeight
+                                          RadiusBottomLeft: =0
+                                          RadiusBottomRight: =0
+                                          RadiusTopLeft: =0
+                                          RadiusTopRight: =0
+                                          Width: =Parent.TemplateWidth
+                                          X: =Parent.TemplateWidth/2 - Self.Width/2
+                                          Y: =rect_spacer_top_1.Y+rect_spacer_top_1.Height
+                                        Children:
+                                          - Container18_5:
+                                              Control: GroupContainer@1.4.0
+                                              Variant: ManualLayout
+                                              Properties:
+                                                DropShadow: =DropShadow.Regular
+                                                Fill: =Container18_11.Fill
+                                                Height: =Parent.Height/10*7
+                                                RadiusBottomLeft: =10
+                                                RadiusBottomRight: =10
+                                                RadiusTopLeft: =10
+                                                RadiusTopRight: =10
+                                                Width: =Self.Height
+                                                X: =Checkbox1.X + Self.Width/30
+                                                Y: =Parent.Height/2 - Self.Height/2
+                                              Children:
+                                                - Checkbox1_2:
+                                                    Control: Classic/CheckBox@2.1.0
+                                                    Properties:
+                                                      BorderColor: =RGBA(0, 18, 107, 1)
+                                                      CheckboxBackgroundFill: =RGBA(0, 0, 0, 0)
+                                                      CheckboxBorderColor: =RGBA(202, 202, 202, 1)
+                                                      CheckboxSize: =If( Self.Value ,Self.Height*0.6 , 0)
+                                                      CheckmarkFill: =RGBA(0, 0, 0, 1)
+                                                      Font: =Font.'Open Sans'
+                                                      FontWeight: =FontWeight.Semibold
+                                                      Height: =Parent.Height
+                                                      HoverColor: =RGBA(0, 18, 107, 1)
+                                                      Size: =comp_table1_v01.Size_Font
+                                                      Text: =ThisItem.No
+                                                      Width: =Parent.Width
+                                                      X: =Parent.Width/2 - Self.Width/2
+                                                      Y: =Parent.Height/2 - Self.Height/2
+                                          - Container18_10:
+                                              Control: GroupContainer@1.4.0
+                                              Variant: ManualLayout
+                                              Properties:
+                                                DropShadow: =DropShadow.None
+                                                Fill: =Color.Transparent //ColorFade(value_1.Color,90%)
+                                                Height: =Parent.Height/10*9
+                                                RadiusBottomLeft: =0
+                                                RadiusBottomRight: =0
+                                                RadiusTopLeft: =0
+                                                RadiusTopRight: =0
+                                                Width: =header_1.Width/10*9
+                                                X: =header_1.X
+                                                Y: =Parent.Height/2 - Self.Height/2
+                                              Children:
+                                                - value_11:
+                                                    Control: Label@2.5.1
+                                                    Properties:
+                                                      Align: =Align.Center
+                                                      BorderColor: =RGBA(0, 18, 107, 1)
+                                                      Color: =value_1.Color
+                                                      Font: =Font.'Open Sans'
+                                                      FontWeight: =FontWeight.Semibold
+                                                      Height: =Parent.Height
+                                                      Size: =comp_table1_v01.Size_Font
+                                                      Text: =ThisItem.column_1
+                                                      Width: =Parent.Width
+                                                      X: =Parent.Width/2 - Self.Width/2
+                                                      Y: =Parent.Height/2 - Self.Height/2
+                                          - value_12:
+                                              Control: Label@2.5.1
+                                              Properties:
+                                                Align: =Align.Center
+                                                BorderColor: =RGBA(0, 18, 107, 1)
+                                                Color: =value_1.Color
+                                                Font: =Font.'Open Sans'
+                                                FontWeight: =FontWeight.Semibold
+                                                Height: =Parent.Height
+                                                Size: =comp_table1_v01.Size_Font
+                                                Text: =ThisItem.column_2
+                                                Width: =header_2.Width
+                                                X: =header_2.X
+                                                Y: =Parent.Height/2 - Self.Height/2
+                                          - value_13:
+                                              Control: Label@2.5.1
+                                              Properties:
+                                                Align: =Align.Center
+                                                BorderColor: =RGBA(0, 18, 107, 1)
+                                                Color: =value_1.Color
+                                                Font: =Font.'Open Sans'
+                                                FontWeight: =FontWeight.Semibold
+                                                Height: =Parent.Height
+                                                Size: =comp_table1_v01.Size_Font
+                                                Text: =ThisItem.column_3
+                                                Width: =header_3.Width
+                                                X: =header_3.X
+                                                Y: =Parent.Height/2 - Self.Height/2
+                                          - value_14:
+                                              Control: Label@2.5.1
+                                              Properties:
+                                                Align: =Align.Center
+                                                BorderColor: =RGBA(0, 18, 107, 1)
+                                                Color: =value_1.Color
+                                                Font: =Font.'Open Sans'
+                                                FontWeight: =FontWeight.Semibold
+                                                Height: =Parent.Height
+                                                Size: =comp_table1_v01.Size_Font
+                                                Text: =ThisItem.column_4
+                                                Width: =header_4.Width
+                                                X: =header_4.X
+                                                Y: =Parent.Height/2 - Self.Height/2
+                                          - value_15:
+                                              Control: Label@2.5.1
+                                              Properties:
+                                                Align: =Align.Center
+                                                BorderColor: =RGBA(0, 18, 107, 1)
+                                                Color: =value_1.Color
+                                                Font: =Font.'Open Sans'
+                                                FontWeight: =FontWeight.Semibold
+                                                Height: =Parent.Height
+                                                Size: =comp_table1_v01.Size_Font
+                                                Text: =ThisItem.column_5
+                                                Width: =header_5.Width
+                                                X: =header_5.X
+                                                Y: =Parent.Height/2 - Self.Height/2
+                                          - value_16:
+                                              Control: Label@2.5.1
+                                              Properties:
+                                                Align: =Align.Center
+                                                BorderColor: =RGBA(0, 18, 107, 1)
+                                                Color: =value_1.Color
+                                                Font: =Font.'Open Sans'
+                                                FontWeight: =FontWeight.Semibold
+                                                Height: =Parent.Height
+                                                Size: =comp_table1_v01.Size_Font
+                                                Text: =ThisItem.column_6
+                                                Width: =header_6.Width
+                                                X: =header_6.X
+                                                Y: =Parent.Height/2 - Self.Height/2
+                                          - value_17:
+                                              Control: Label@2.5.1
+                                              Properties:
+                                                Align: =Align.Center
+                                                BorderColor: =RGBA(0, 18, 107, 1)
+                                                Color: =value_1.Color
+                                                Font: =Font.'Open Sans'
+                                                FontWeight: =FontWeight.Semibold
+                                                Height: =Parent.Height
+                                                Size: =comp_table1_v01.Size_Font
+                                                Text: =ThisItem.column_7
+                                                Width: =header_7.Width
+                                                X: =header_7.X
+                                                Y: =Parent.Height/2 - Self.Height/2
+                                          - value_18:
+                                              Control: Label@2.5.1
+                                              Properties:
+                                                Align: =Align.Center
+                                                BorderColor: =RGBA(0, 18, 107, 1)
+                                                Color: =value_1.Color
+                                                Font: =Font.'Open Sans'
+                                                FontWeight: =FontWeight.Semibold
+                                                Height: =Parent.Height
+                                                Size: =comp_table1_v01.Size_Font
+                                                Text: =ThisItem.column_8
+                                                Width: =header_8.Width
+                                                X: =header_8.X
+                                                Y: =Parent.Height/2 - Self.Height/2
+                                          - value_19:
+                                              Control: Label@2.5.1
+                                              Properties:
+                                                Align: =Align.Center
+                                                BorderColor: =RGBA(0, 18, 107, 1)
+                                                Color: =value_1.Color
+                                                Font: =Font.'Open Sans'
+                                                FontWeight: =FontWeight.Semibold
+                                                Height: =Parent.Height
+                                                Size: =comp_table1_v01.Size_Font
+                                                Text: =ThisItem.column_9
+                                                Width: =header_9.Width
+                                                X: =header_9.X
+                                                Y: =Parent.Height/2 - Self.Height/2
+                                          - Container18_11:
+                                              Control: GroupContainer@1.4.0
+                                              Variant: ManualLayout
+                                              Properties:
+                                                DropShadow: =DropShadow.Regular
+                                                Fill: =ColorFade(value_20.Color,90%)
+                                                Height: =Parent.Height/10*9
+                                                RadiusBottomLeft: =10
+                                                RadiusBottomRight: =10
+                                                RadiusTopLeft: =10
+                                                RadiusTopRight: =10
+                                                Width: =header_10.Width/10*9
+                                                X: =header_10.X + header_10.Width/2 - Self.Width/2
+                                                Y: =Parent.Height/2 - Self.Height/2
+                                              Children:
+                                                - value_20:
+                                                    Control: Label@2.5.1
+                                                    Properties:
+                                                      Align: =Align.Center
+                                                      BorderColor: =RGBA(0, 18, 107, 1)
+                                                      Color: |-
+                                                        =Switch(
+                                                            ThisItem.Status
+                                                            , 
+                                                            "미사용" , 
+                                                            ColorValue("#147df5") , 
+                                                            "사용중" , 
+                                                            ColorValue("#f65810") , 
+                                                            "재고없음" , 
+                                                            ColorValue("#e63946") 
+                                                        )
+                                                      Font: =Font.'Open Sans'
+                                                      FontWeight: =FontWeight.Semibold
+                                                      Height: =Parent.Height
+                                                      Size: =comp_table1_v01.Size_Font
+                                                      Text: =ThisItem.Status
+                                                      Width: =Parent.Width
+                                                      X: =(Parent.Width/2 - Self.Width/2)*0
+                                                      Y: =Parent.Height/2 - Self.Height/2
+                                          - Rectangle8_1:
+                                              Control: Rectangle@2.3.0
+                                              Properties:
+                                                BorderColor: =RGBA(0, 18, 107, 1)
+                                                Fill: =RGBA(0, 0, 0, 0)
+                                                Height: =Parent.Height
+                                                OnSelect: =
+                                                Width: =Parent.Width
+                                                X: =Parent.Width/2 - Self.Width/2
+                                                Y: =Parent.Height/2 - Self.Height/2
+                                    - rect_spacer_top_1:
+                                        Control: Rectangle@2.3.0
+                                        Properties:
+                                          BorderColor: =RGBA(0, 18, 107, 1)
+                                          Fill: =RGBA(0, 0, 0, 0)
+                                          Height: =comp_table1_v01.Size_Font/2
+                                          Width: =Parent.TemplateWidth
+                                          X: =Parent.TemplateWidth/2 - Self.Width/2
+                                          Y: =Self.X
+                                    - rect_spacer_bottom_1:
+                                        Control: Rectangle@2.3.0
+                                        Properties:
+                                          BorderColor: =RGBA(0, 18, 107, 1)
+                                          Fill: =RGBA(0, 0, 0, 0)
+                                          Height: =comp_table1_v01.Size_Font/2
+                                          Width: =Parent.TemplateWidth
+                                          X: =Parent.TemplateWidth/2 - Self.Width/2
+                                          Y: =Container16_2.Y+ Container16_2.Height
+                                    - ret_select_1:
+                                        Control: Rectangle@2.3.0
+                                        Properties:
+                                          BorderColor: =RGBA(0, 0, 0, 1)
+                                          BorderStyle: =BorderStyle.None
+                                          Fill: |
+                                            =If( comp_table1_v01.IsTrue_DarkMode, ColorValue("#9a9a9a") , ColorValue("#e0e0e0") ) 
+                                          Height: =0.5
+                                          Width: =Parent.TemplateWidth
+                                          X: =Parent.TemplateWidth/2 - Self.Width/2
+                                          Y: =rect_spacer_bottom_1.Y+ rect_spacer_bottom_1.Height
+      - Icon3:
+          Control: Classic/Icon@2.5.0
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(0, 18, 107, 1)
+            Height: =34
+            Icon: =Icon.Reload
+            OnSelect: '=Set(_comp_start_timer, false) ; Set(_comp_start_timer, true) ; '
+            Width: =34
+            X: =1292
+      - Checkbox1_3:
+          Control: Classic/CheckBox@2.1.0
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            BorderStyle: =BorderStyle.None
+            CheckboxBorderColor: =RGBA(77, 77, 77, 1)
+            CheckmarkFill: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(0, 0, 0, 0)
+            Font: =Font.'Open Sans'
+            Height: =Self.Size*3
+            HoverColor: =RGBA(0, 0, 0, 1)
+            OnCheck: =//Set(_comp_option_checkbox , true);
+            OnUncheck: =//Set(_comp_option_checkbox , false);
+            PressedColor: =RGBA(0, 0, 0, 1)
+            Size: =comp_table1_v01.Size_Font
+            Text: ="항목"
+            Width: =100
+            X: =Parent.Width - Self.Width
+            Y: =20
+      - Container26:
+          Control: GroupContainer@1.4.0
+          Variant: ManualLayout
+          Properties:
+            DropShadow: =DropShadow.Bold
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =If(Self.Visible , 200, 0)
+            RadiusBottomLeft: =15
+            RadiusBottomRight: =15
+            RadiusTopLeft: =15
+            RadiusTopRight: =15
+            Visible: =Checkbox1_3.Value
+            Width: =Parent.Width - Self.X*2
+            X: =10
+            Y: =Checkbox1_3.Height + Checkbox1_3.Y + 5
+          Children:
+            - Gallery2_2:
+                Control: Gallery@2.15.0
+                Variant: Vertical
+                Properties:
+                  BorderColor: =RGBA(0, 18, 107, 1)
+                  Height: =Parent.Height
+                  Items: =comp_table1_v01.Table_Checkbox
+                  ShowScrollbar: =false
+                  TemplatePadding: =0
+                  TemplateSize: =Self.Height/4
+                  Width: =Parent.Width
+                  WrapCount: =4
+                  X: =Parent.Width/2-Self.Width/2
+                  Y: =Parent.Height/2- Self.Height/2 + 5
+                Children:
+                  - CheckboxCanvas1:
+                      Control: CheckBox@0.0.30
+                      Properties:
+                        Checked: '=If( ThisItem.On = 1 , true , false) '
+                        Label: |-
+                          =Switch(
+                              ThisItem.No,
+                              1,comp_table1_v01.Header_1,
+                              2,comp_table1_v01.Header_2,
+                              3,comp_table1_v01.Header_3,
+                              4,comp_table1_v01.Header_4,
+                              5,comp_table1_v01.Header_5,
+                              6,comp_table1_v01.Header_6,
+                              7,comp_table1_v01.Header_7,
+                              8,comp_table1_v01.Header_8,
+                              9,comp_table1_v01.Header_9,
+                              10,comp_table1_v01.Header_10
+                          )
+                        OnSelect: =Select(Parent)
+                  - Rectangle11:
+                      Control: Rectangle@2.3.0
+                      Properties:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =Parent.TemplateHeight
+                        OnSelect: '=Set(_comp_selected_box , ThisItem) ; comp_table1_v01.OnSelect_Checkbox() ; '
+                        Width: =Parent.TemplateWidth
+                        X: =Parent.TemplateWidth/2- Self.Width/2
+      - ButtonCanvas2:
+          Control: Button@0.0.45
+          Properties:
+            OnSelect: '=Set(_comp_mode_edit, !_comp_mode_edit) ; '
+            X: =214
+            Y: =20

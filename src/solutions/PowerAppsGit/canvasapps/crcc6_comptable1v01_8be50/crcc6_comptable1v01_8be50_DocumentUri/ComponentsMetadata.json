@@ -1,0 +1,11 @@
+{
+  "Components": [
+    {
+      "Name": "comp_table1_v01",
+      "TemplateName": "5810ce3190ee4b7a84fa723f339e6336",
+      "Description": "",
+      "AllowCustomization": true,
+      "AllowAccessToGlobals": false
+    }
+  ]
+}

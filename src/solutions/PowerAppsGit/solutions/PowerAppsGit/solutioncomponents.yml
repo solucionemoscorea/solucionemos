@@ -16,11 +16,14 @@ SolutionComponents:
   - '@path': /canvasapps/crcc6_compcard1v01_140aa
   - '@path': /canvasapps/crcc6_compcard2v01_ddf71
   - '@path': /canvasapps/crcc6_compchartline1v01_1bb4c
+  - '@path': /canvasapps/crcc6_compfooteronly_f2d63
+  - '@path': /canvasapps/crcc6_compheaderonly_2286f
   - '@path': /canvasapps/crcc6_compmonthselection1v01_d3195
   - '@path': /canvasapps/crcc6_componentdefaultv2601_07a99
   - '@path': /canvasapps/crcc6_comppopupleft_0e907
   - '@path': /canvasapps/crcc6_comppopupright_0e0a0
   - '@path': /canvasapps/crcc6_comppopuptopsettings_839f5
+  - '@path': /canvasapps/crcc6_comptable1v01_8be50
   - '@path': /canvasapps/crcc6_deletedial_a57c1
   - '@path': /canvasapps/crcc6_prevnext_60bdd
   - '@path': /canvasapps/crcc6_tab9menu1hv01_06ad8

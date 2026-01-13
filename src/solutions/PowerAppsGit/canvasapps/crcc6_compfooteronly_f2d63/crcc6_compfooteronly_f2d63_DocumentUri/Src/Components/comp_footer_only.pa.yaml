@@ -1,0 +1,316 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps should only be used to review changes made within Power Apps Studio and for minor edits (Preview).
+# Use the maker portal to create and edit your Power Apps.
+# 
+# The schema file for Canvas Apps is available at https://go.microsoft.com/fwlink/?linkid=2304907
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+ComponentDefinitions:
+  comp_footer_only:
+    DefinitionType: CanvasComponent
+    AllowCustomization: true
+    CustomProperties:
+      Footer_1:
+        PropertyKind: Input
+        DisplayName: Footer_1
+        Description: 사용자 지정 속성
+        DataType: Text
+        Default: ="텍스트"
+      Footer_10:
+        PropertyKind: Input
+        DisplayName: Footer_10
+        Description: 사용자 지정 속성
+        DataType: Text
+        Default: ="텍스트"
+      Footer_2:
+        PropertyKind: Input
+        DisplayName: Footer_2
+        Description: 사용자 지정 속성
+        DataType: Text
+        Default: ="텍스트"
+      Footer_3:
+        PropertyKind: Input
+        DisplayName: Footer_3
+        Description: 사용자 지정 속성
+        DataType: Text
+        Default: ="텍스트"
+      Footer_4:
+        PropertyKind: Input
+        DisplayName: Footer_4
+        Description: 사용자 지정 속성
+        DataType: Text
+        Default: ="텍스트"
+      Footer_5:
+        PropertyKind: Input
+        DisplayName: Footer_5
+        Description: 사용자 지정 속성
+        DataType: Text
+        Default: ="텍스트"
+      Footer_6:
+        PropertyKind: Input
+        DisplayName: Footer_6
+        Description: 사용자 지정 속성
+        DataType: Text
+        Default: ="텍스트"
+      Footer_7:
+        PropertyKind: Input
+        DisplayName: Footer_7
+        Description: 사용자 지정 속성
+        DataType: Text
+        Default: ="텍스트"
+      Footer_8:
+        PropertyKind: Input
+        DisplayName: Footer_8
+        Description: 사용자 지정 속성
+        DataType: Text
+        Default: ="텍스트"
+      Footer_9:
+        PropertyKind: Input
+        DisplayName: Footer_9
+        Description: 사용자 지정 속성
+        DataType: Text
+        Default: ="텍스트"
+      Footer_Width_0:
+        PropertyKind: Input
+        DisplayName: Footer_Width_0
+        Description: 사용자 지정 속성
+        DataType: Number
+        Default: =100
+      Footer_Width_1:
+        PropertyKind: Input
+        DisplayName: Footer_Width_1
+        Description: 사용자 지정 속성
+        DataType: Number
+        Default: =100
+      Footer_Width_10:
+        PropertyKind: Input
+        DisplayName: Footer_Width_10
+        Description: 사용자 지정 속성
+        DataType: Number
+        Default: =100
+      Footer_Width_2:
+        PropertyKind: Input
+        DisplayName: Footer_Width_2
+        Description: 사용자 지정 속성
+        DataType: Number
+        Default: =100
+      Footer_Width_3:
+        PropertyKind: Input
+        DisplayName: Footer_Width_3
+        Description: 사용자 지정 속성
+        DataType: Number
+        Default: =100
+      Footer_Width_4:
+        PropertyKind: Input
+        DisplayName: Footer_Width_4
+        Description: 사용자 지정 속성
+        DataType: Number
+        Default: =100
+      Footer_Width_5:
+        PropertyKind: Input
+        DisplayName: Footer_Width_5
+        Description: 사용자 지정 속성
+        DataType: Number
+        Default: =100
+      Footer_Width_6:
+        PropertyKind: Input
+        DisplayName: Footer_Width_6
+        Description: 사용자 지정 속성
+        DataType: Number
+        Default: =100
+      Footer_Width_7:
+        PropertyKind: Input
+        DisplayName: Footer_Width_7
+        Description: 사용자 지정 속성
+        DataType: Number
+        Default: =100
+      Footer_Width_8:
+        PropertyKind: Input
+        DisplayName: Footer_Width_8
+        Description: 사용자 지정 속성
+        DataType: Number
+        Default: =100
+      Footer_Width_9:
+        PropertyKind: Input
+        DisplayName: Footer_Width_9
+        Description: 사용자 지정 속성
+        DataType: Number
+        Default: =100
+      IsTrue_DarkMode:
+        PropertyKind: Input
+        DisplayName: IsTrue_DarkMode
+        Description: 사용자 지정 속성
+        DataType: Boolean
+        Default: =true
+      IsTrue_DropShadow:
+        PropertyKind: Input
+        DisplayName: IsTrue_DropShadow
+        Description: 사용자 지정 속성
+        DataType: Boolean
+        Default: =true
+      Size_Font:
+        PropertyKind: Input
+        DisplayName: Size_Font
+        Description: 사용자 지정 속성
+        DataType: Number
+        Default: =13
+    Properties:
+      Height: =App.DesignHeight/10
+      Width: =App.DesignWidth
+    Children:
+      - cont_footer_1:
+          Control: GroupContainer@1.4.0
+          Variant: ManualLayout
+          Properties:
+            DropShadow: =DropShadow.None
+            Height: =Parent.Height
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Width: =Parent.Width
+            X: =Parent.Width/2- Self.Width/2
+            Y: =Parent.Height/2- Self.Height/2
+          Children:
+            - Rectangle7_8:
+                Control: Rectangle@2.3.0
+                Properties:
+                  BorderColor: =RGBA(0, 0, 0, 1)
+                  BorderStyle: =BorderStyle.None
+                  BorderThickness: =0.3
+                  Fill: =RGBA(0, 0, 0, 1)
+                  Height: =2
+                  Width: =Parent.Width
+                  X: =Parent.Width/2 - Self.Width/2
+                  Y: =Self.X
+            - footer_11:
+                Control: Label@2.5.1
+                Properties:
+                  Align: =Align.Center
+                  BorderColor: =RGBA(0, 18, 107, 1)
+                  Font: =Font.'Open Sans'
+                  Height: =Parent.Height
+                  Size: =comp_footer_only.Size_Font
+                  Text: =
+                  Width: =comp_footer_only.Footer_Width_0
+                  Y: =Parent.Height/2 - Self.Height/2
+            - footer_12:
+                Control: Label@2.5.1
+                Properties:
+                  Align: =Align.Center
+                  BorderColor: =RGBA(0, 18, 107, 1)
+                  Font: =Font.'Open Sans'
+                  Height: =Parent.Height
+                  Size: =comp_footer_only.Size_Font
+                  Text: =comp_footer_only.Footer_1
+                  Width: =comp_footer_only.Footer_Width_1
+                  X: =footer_11.X + footer_11.Width
+                  Y: =Parent.Height/2 - Self.Height/2
+            - footer_13:
+                Control: Label@2.5.1
+                Properties:
+                  Align: =Align.Center
+                  BorderColor: =RGBA(0, 18, 107, 1)
+                  Font: =Font.'Open Sans'
+                  Height: =Parent.Height
+                  Size: =comp_footer_only.Size_Font
+                  Text: =comp_footer_only.Footer_2
+                  Width: =comp_footer_only.Footer_Width_2
+                  X: =footer_12.X + footer_12.Width
+                  Y: =Parent.Height/2 - Self.Height/2
+            - footer_14:
+                Control: Label@2.5.1
+                Properties:
+                  Align: =Align.Center
+                  BorderColor: =RGBA(0, 18, 107, 1)
+                  Font: =Font.'Open Sans'
+                  Height: =Parent.Height
+                  Size: =comp_footer_only.Size_Font
+                  Width: =comp_footer_only.Footer_Width_3
+                  X: =footer_13.X + footer_13.Width
+                  Y: =Parent.Height/2 - Self.Height/2
+            - footer_15:
+                Control: Label@2.5.1
+                Properties:
+                  Align: =Align.Center
+                  BorderColor: =RGBA(0, 18, 107, 1)
+                  Font: =Font.'Open Sans'
+                  Height: =Parent.Height
+                  Size: =comp_footer_only.Size_Font
+                  Text: =comp_footer_only.Footer_4
+                  Width: =comp_footer_only.Footer_Width_4
+                  X: =footer_14.X + footer_14.Width
+                  Y: =Parent.Height/2 - Self.Height/2
+            - footer_16:
+                Control: Label@2.5.1
+                Properties:
+                  Align: =Align.Center
+                  BorderColor: =RGBA(0, 18, 107, 1)
+                  Font: =Font.'Open Sans'
+                  Height: =Parent.Height
+                  Size: =comp_footer_only.Size_Font
+                  Text: =comp_footer_only.Footer_5
+                  Width: =comp_footer_only.Footer_Width_5
+                  X: =footer_15.X + footer_15.Width
+                  Y: =Parent.Height/2 - Self.Height/2
+            - footer_17:
+                Control: Label@2.5.1
+                Properties:
+                  Align: =Align.Center
+                  BorderColor: =RGBA(0, 18, 107, 1)
+                  Font: =Font.'Open Sans'
+                  Height: =Parent.Height
+                  Size: =comp_footer_only.Size_Font
+                  Text: =comp_footer_only.Footer_6
+                  Width: =comp_footer_only.Footer_Width_6
+                  X: =footer_16.X + footer_16.Width
+                  Y: =Parent.Height/2 - Self.Height/2
+            - footer_18:
+                Control: Label@2.5.1
+                Properties:
+                  Align: =Align.Center
+                  BorderColor: =RGBA(0, 18, 107, 1)
+                  Font: =Font.'Open Sans'
+                  Height: =Parent.Height
+                  Size: =comp_footer_only.Size_Font
+                  Text: =comp_footer_only.Footer_7
+                  Width: =comp_footer_only.Footer_Width_7
+                  X: =footer_17.X + footer_17.Width
+                  Y: =Parent.Height/2 - Self.Height/2
+            - footer_19:
+                Control: Label@2.5.1
+                Properties:
+                  Align: =Align.Center
+                  BorderColor: =RGBA(0, 18, 107, 1)
+                  Font: =Font.'Open Sans'
+                  Height: =Parent.Height
+                  Size: =comp_footer_only.Size_Font
+                  Text: =comp_footer_only.Footer_8
+                  Width: =comp_footer_only.Footer_Width_8
+                  X: =footer_18.X + footer_18.Width
+                  Y: =Parent.Height/2 - Self.Height/2
+            - footer_20:
+                Control: Label@2.5.1
+                Properties:
+                  Align: =Align.Center
+                  BorderColor: =RGBA(0, 18, 107, 1)
+                  Font: =Font.'Open Sans'
+                  Height: =Parent.Height
+                  Size: =comp_footer_only.Size_Font
+                  Text: =comp_footer_only.Footer_9
+                  Width: =comp_footer_only.Footer_Width_9
+                  X: =footer_19.X + footer_19.Width
+                  Y: =Parent.Height/2 - Self.Height/2
+            - footer_21:
+                Control: Label@2.5.1
+                Properties:
+                  Align: =Align.Center
+                  BorderColor: =RGBA(0, 18, 107, 1)
+                  Font: =Font.'Open Sans'
+                  Height: =Parent.Height
+                  Size: =comp_footer_only.Size_Font
+                  Text: =comp_footer_only.Footer_10
+                  Width: =comp_footer_only.Footer_Width_10
+                  X: =footer_20.X+footer_20.Width
+                  Y: =Parent.Height/2 - Self.Height/2

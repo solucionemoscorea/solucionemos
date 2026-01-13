@@ -46,6 +46,12 @@ RootComponents:
     '@schemaName': crcc6_compchartline1v01_1bb4c
     '@behavior': 0
   - '@type': 300
+    '@schemaName': crcc6_compfooteronly_f2d63
+    '@behavior': 0
+  - '@type': 300
+    '@schemaName': crcc6_compheaderonly_2286f
+    '@behavior': 0
+  - '@type': 300
     '@schemaName': crcc6_compmonthselection1v01_d3195
     '@behavior': 0
   - '@type': 300
@@ -59,6 +65,9 @@ RootComponents:
     '@behavior': 0
   - '@type': 300
     '@schemaName': crcc6_comppopuptopsettings_839f5
+    '@behavior': 0
+  - '@type': 300
+    '@schemaName': crcc6_comptable1v01_8be50
     '@behavior': 0
   - '@type': 300
     '@schemaName': crcc6_deletedial_a57c1
