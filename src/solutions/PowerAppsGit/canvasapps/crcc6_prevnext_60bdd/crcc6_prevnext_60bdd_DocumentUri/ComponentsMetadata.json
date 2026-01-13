@@ -1,0 +1,11 @@
+{
+  "Components": [
+    {
+      "Name": "PrevNext",
+      "TemplateName": "1bbc8d9d82704b5a9bf817f922d0f2f6",
+      "Description": "",
+      "AllowCustomization": true,
+      "AllowAccessToGlobals": false
+    }
+  ]
+}

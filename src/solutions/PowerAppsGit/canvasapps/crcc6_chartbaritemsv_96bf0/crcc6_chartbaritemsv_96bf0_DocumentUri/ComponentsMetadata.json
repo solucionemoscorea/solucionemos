@@ -1,0 +1,11 @@
+{
+  "Components": [
+    {
+      "Name": "chart_bar_items_v",
+      "TemplateName": "8bf285337b1344cb9aee83550cbfe3c5",
+      "Description": "",
+      "AllowCustomization": true,
+      "AllowAccessToGlobals": false
+    }
+  ]
+}

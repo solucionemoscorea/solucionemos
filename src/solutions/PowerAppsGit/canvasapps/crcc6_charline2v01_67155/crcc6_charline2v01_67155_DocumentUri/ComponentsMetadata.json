@@ -1,0 +1,11 @@
+{
+  "Components": [
+    {
+      "Name": "char_line_2_v01",
+      "TemplateName": "79d5bef3f7d743eabc4967583d1089ce",
+      "Description": "",
+      "AllowCustomization": true,
+      "AllowAccessToGlobals": false
+    }
+  ]
+}

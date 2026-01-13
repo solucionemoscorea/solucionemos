@@ -1,0 +1,197 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps should only be used to review changes made within Power Apps Studio and for minor edits (Preview).
+# Use the maker portal to create and edit your Power Apps.
+# 
+# The schema file for Canvas Apps is available at https://go.microsoft.com/fwlink/?linkid=2304907
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+ComponentDefinitions:
+  tab_menu_style_horizontal:
+    DefinitionType: CanvasComponent
+    AllowCustomization: true
+    CustomProperties:
+      Color_Fill_Normal:
+        PropertyKind: Input
+        DisplayName: Color_Fill_Normal
+        Description: 사용자 지정 속성
+        DataType: Color
+        Default: =RGBA(0, 0, 0, 1)
+      Color_Fill_NotSelected:
+        PropertyKind: Input
+        DisplayName: Color_Fill_NotSelected
+        Description: A custom property
+        DataType: Color
+        Default: =RGBA(0, 0, 0, 1)
+      Color_Fill_Selected:
+        PropertyKind: Input
+        DisplayName: Color_Fill_Selected
+        Description: A custom property
+        DataType: Color
+        Default: =RGBA(0, 0, 0, 1)
+      Color_Font_Normal:
+        PropertyKind: Input
+        DisplayName: Color_Font_Normal
+        Description: 사용자 지정 속성
+        DataType: Color
+        Default: =RGBA(0, 0, 0, 1)
+      Color_Font_NotSelected:
+        PropertyKind: Input
+        DisplayName: Color_Font_NotSelected
+        Description: A custom property
+        DataType: Color
+        Default: =RGBA(0, 0, 0, 1)
+      Color_Font_Selected:
+        PropertyKind: Input
+        DisplayName: Color_Font_Selected
+        Description: A custom property
+        DataType: Color
+        Default: =RGBA(0, 0, 0, 1)
+      Height_Component:
+        PropertyKind: Input
+        DisplayName: Height_Component
+        Description: A custom property
+        DataType: Number
+        Default: =100
+      Item_Selected:
+        PropertyKind: Output
+        DisplayName: Item_Selected
+        Description: A custom property
+        DataType: Text
+      Item_Selected_Input:
+        PropertyKind: Input
+        DisplayName: Item_Selected_Input
+        Description: 사용자 지정 속성
+        DataType: Text
+        Default: ="텍스트"
+      Items_Tab_Gallery:
+        PropertyKind: Input
+        DisplayName: Items_Tab_Gallery
+        Description: A custom property
+        DataType: Table
+        Default: |-
+          =Table({Result: "SampleText"})
+      OnSelect_TabMenu:
+        PropertyKind: Event
+        DisplayName: OnSelect_TabMenu
+        Description: A custom property
+        ReturnType: None
+        Default: =
+      Size_Font:
+        PropertyKind: Input
+        DisplayName: Size_Font
+        Description: A custom property
+        DataType: Number
+        Default: =14
+      Width_Component:
+        PropertyKind: Input
+        DisplayName: Width_Component
+        Description: A custom property
+        DataType: Number
+        Default: =App.DesignWidth
+    Properties:
+      Height: =Self.Height_Component
+      Item_Selected: =_var_comp_selected_item
+      Width: =Self.Width_Component
+    Children:
+      - Container14:
+          Control: GroupContainer@1.4.0
+          Variant: ManualLayout
+          Properties:
+            DropShadow: =DropShadow.None
+            Height: =Parent.Height - Self.Y*2
+            Width: =Parent.Width - Self.X*2
+            X: =5
+            Y: |
+              =5
+          Children:
+            - Gallery5:
+                Control: Gallery@2.15.0
+                Variant: Horizontal
+                Properties:
+                  BorderColor: =RGBA(0, 18, 107, 1)
+                  Height: =Parent.Height - Self.Y*1.5
+                  Items: =tab_menu_style_horizontal.Items_Tab_Gallery
+                  ShowScrollbar: =false
+                  TemplatePadding: =0
+                  TemplateSize: =Self.Width/ Min( Max( 5.5 , (Self.AllItemsCount + 0.5)) , 7.5)
+                  Width: =Parent.Width - Self.X*2
+                Children:
+                  - Container35_1:
+                      Control: GroupContainer@1.4.0
+                      Variant: ManualLayout
+                      Properties:
+                        BorderColor: |-
+                          =If( tab_menu_style_horizontal.Item_Selected_Input = ThisItem.Result , 
+                          ColorFade( tab_menu_style_horizontal.Color_Font_Selected , 10% ) , ColorFade( tab_menu_style_horizontal.Color_Font_NotSelected , 10%) )
+                        BorderThickness: =1
+                        DropShadow: =DropShadow.None
+                        Fill: '=If( tab_menu_style_horizontal.Item_Selected_Input = ThisItem.Result , ColorFade(tab_menu_style_horizontal.Color_Font_Selected,50%) , ColorFade(tab_menu_style_horizontal.Color_Font_NotSelected , 50% ) ) '
+                        Height: =Container35.Height
+                        RadiusBottomLeft: =Container35.RadiusBottomLeft
+                        RadiusBottomRight: =Container35.RadiusBottomRight
+                        RadiusTopLeft: =Container35.RadiusTopLeft
+                        RadiusTopRight: =Container35.RadiusTopRight
+                        Width: =Container35.Width
+                        X: =Container35.X+4
+                        Y: =Container35.Y+4
+                  - Container35:
+                      Control: GroupContainer@1.4.0
+                      Variant: ManualLayout
+                      Properties:
+                        BorderColor: |-
+                          =If( IsBlank(tab_menu_style_horizontal.Item_Selected_Input) , ColorValue("#222222") , 
+                          If( tab_menu_style_horizontal.Item_Selected_Input = ThisItem.Result , 
+                          tab_menu_style_horizontal.Color_Font_Selected , tab_menu_style_horizontal.Color_Font_NotSelected ))
+                        BorderThickness: |-
+                          =If( IsBlank(tab_menu_style_horizontal.Item_Selected_Input) , 1 , 
+                          If( _var_comp_selected_item = ThisItem.Result , 2 , 1 ))
+                        DropShadow: =DropShadow.None
+                        Fill: =RGBA(255, 255, 255, 1)
+                        Height: =Parent.TemplateHeight - Self.Y*2
+                        RadiusBottomLeft: =7
+                        RadiusBottomRight: =7
+                        RadiusTopLeft: =7
+                        RadiusTopRight: =7
+                        Width: '=Parent.TemplateWidth - Self.X*2 '
+                        X: =5
+                        Y: =5
+                      Children:
+                        - Label1:
+                            Control: Label@2.5.1
+                            Properties:
+                              Align: =Align.Center
+                              BorderColor: =RGBA(0, 18, 107, 1)
+                              Color: |-
+                                =If( IsBlank(tab_menu_style_horizontal.Item_Selected_Input) , ColorValue("#222222") , 
+                                If( _var_comp_selected_item = ThisItem.Result , tab_menu_style_horizontal.Color_Font_Selected , tab_menu_style_horizontal.Color_Font_NotSelected ))
+                              Font: =Font.'Open Sans'
+                              FontWeight: |-
+                                =If( IsBlank(tab_menu_style_horizontal.Item_Selected_Input) , FontWeight.Semibold , 
+                                If( _var_comp_selected_item = ThisItem.Result , FontWeight.Bold , FontWeight.Normal ))
+                              Height: =Parent.Height - Self.Y*2
+                              Size: =tab_menu_style_horizontal.Size_Font
+                              Text: =ThisItem.Result
+                              Width: =Parent.Width - Self.X*2
+                              X: =5
+                              Y: =5
+                        - Rectangle21:
+                            Control: Rectangle@2.3.0
+                            Properties:
+                              BorderColor: =RGBA(0, 18, 107, 1)
+                              Fill: =RGBA(0, 0, 0, 0)
+                              Height: =Parent.Height
+                              OnSelect: |-
+                                =// 콤포넌트 환경
+                                If( tab_menu_style_horizontal.Item_Selected = ThisItem.Result , 
+                                Set( _var_comp_selected_item , Blank() ) ; ,
+                                Set( _var_comp_selected_item , ThisItem.Result ) ;
+                                );
+
+                                // App 환경
+                                tab_menu_style_horizontal.OnSelect_TabMenu()
+                                // 1 컬렉션 생성
+                                // 2 아래 그룹 변수들 초기화
+                              Width: =Parent.Width
+                              X: =Parent.X*0
+                              Y: =Self.X

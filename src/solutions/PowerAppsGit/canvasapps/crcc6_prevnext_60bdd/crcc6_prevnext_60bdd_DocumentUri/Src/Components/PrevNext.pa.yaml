@@ -1,0 +1,485 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps should only be used to review changes made within Power Apps Studio and for minor edits (Preview).
+# Use the maker portal to create and edit your Power Apps.
+# 
+# The schema file for Canvas Apps is available at https://go.microsoft.com/fwlink/?linkid=2304907
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+ComponentDefinitions:
+  PrevNext:
+    DefinitionType: CanvasComponent
+    AllowCustomization: true
+    CustomProperties:
+      Fill_Selected_1:
+        PropertyKind: Input
+        DisplayName: Fill_Selected_1
+        Description: 사용자 지정 속성
+        DataType: Color
+        Default: =RGBA(0, 0, 0, 1)
+      Fill_Selected_2:
+        PropertyKind: Input
+        DisplayName: Fill_Selected_2
+        Description: 사용자 지정 속성
+        DataType: Color
+        Default: =RGBA(0, 0, 0, 1)
+      Item_Gal1:
+        PropertyKind: Input
+        DisplayName: Item_Gal1
+        Description: 사용자 지정 속성
+        DataType: Table
+        Default: |-
+          =Sort( 
+          Table(
+              {
+                  Result: "",
+                  /*
+                  Title: Blank(),
+                  ID: Blank(),
+                  field_1: Blank(),
+                  field_2: Blank(),
+                  field_3: Blank(),
+                  */
+                  field_4: ""
+                  /*
+                  ,
+                  field_5: Blank(),
+                  field_6: Blank(),
+                  field_7: Blank(),
+                  field_8: Blank(),
+                  field_9: Blank(),
+                  field_10: Blank(),
+                  field_11: Blank(),
+                  field_12: Blank(),
+                  field_13: Blank(),
+                  field_14: Blank(),
+                  field_15: Blank(),
+                  field_16: Blank(),
+                  field_17: Blank(),
+                  field_18: Blank(),
+                  field_19: Blank(),
+                  field_20: Blank(),
+                  field_21: Blank(),
+                  field_22: Blank(),
+                  field_23: Blank(),
+                  field_24: Blank(),
+                  field_25: Blank(),
+                  field_26: Blank(),
+                  field_27: Blank(),
+                  field_28: Blank(),
+                  field_29: Blank(),
+                  field_30: Blank(),
+                  field_31: Blank(),
+                  field_32: Blank(),
+                  field_33: Blank(),
+                  field_34: Blank(),
+                  field_35: Blank(),
+                  field_36: Blank(),
+                  field_37: Blank(),
+                  field_38: Blank(),
+                  field_39: Blank(),
+                  field_40: Blank(),
+                  field_41: Blank(),
+                  field_42: Blank(),
+                  field_43: Blank(),
+                  field_44: Blank(),
+                  field_45: Blank(),
+                  field_46: Blank(),
+                  field_47: Blank(),
+                  field_48: Blank(),
+                  field_49: Blank(),
+                  field_50: Blank()
+                  */
+              }
+          ),Result)
+      Item_Gal2:
+        PropertyKind: Input
+        DisplayName: Item_Gal2
+        Description: 사용자 지정 속성
+        DataType: Table
+        Default: |
+          =Table(
+              {
+                  Title: "",
+                  ID: "",
+                  field_1: "",
+                  field_2: "",
+                  field_3: "",
+                  field_4: "",
+                  field_5: "",
+                  field_6: "",
+                  field_7: "",
+                  field_8: "",
+                  field_9: "",
+                  field_10: "",
+                  field_11: "",
+                  field_12: "",
+                  field_13: "",
+                  field_14: "",
+                  field_15: "",
+                  field_16: "",
+                  field_17: "",
+                  field_18: "",
+                  field_19: "",
+                  field_20: "",
+                  field_21: "",
+                  field_22: "",
+                  field_23: "",
+                  field_24: "",
+                  field_25: "",
+                  field_26: "",
+                  field_27: "",
+                  field_28: "",
+                  field_29: "",
+                  field_30: "",
+                  field_31: "",
+                  field_32: "",
+                  field_33: "",
+                  field_34: "",
+                  field_35: "",
+                  field_36: "",
+                  field_37: "",
+                  field_38: "",
+                  field_39: "",
+                  field_40: "",
+                  field_41: "",
+                  field_42: "",
+                  field_43: "",
+                  field_44: "",
+                  field_45: "",
+                  field_46: "",
+                  field_47: "",
+                  field_48: "",
+                  field_49: "",
+                  field_50: ""
+              }
+          )
+      Item_Selected:
+        PropertyKind: Output
+        DisplayName: Item_Selected
+        Description: 사용자 지정 속성
+        DataType: Record
+      OnSelect_Cancel:
+        PropertyKind: Event
+        DisplayName: OnSelect_Cancel
+        Description: 사용자 지정 속성
+        ReturnType: None
+        Default: =
+      OnSelect_Down:
+        PropertyKind: Event
+        DisplayName: OnSelect_Down
+        Description: 사용자 지정 속성
+        ReturnType: None
+        Default: =
+      OnSelect_Item:
+        PropertyKind: Event
+        DisplayName: OnSelect_Item
+        Description: 사용자 지정 속성
+        ReturnType: None
+        Default: =
+      OnSelect_Reload:
+        PropertyKind: Event
+        DisplayName: OnSelect_Reload
+        Description: 사용자 지정 속성
+        ReturnType: None
+        Default: =
+      OnSelect_Save:
+        PropertyKind: Event
+        DisplayName: OnSelect_Save
+        Description: 사용자 지정 속성
+        ReturnType: None
+        Default: =
+      OnSelect_Up:
+        PropertyKind: Event
+        DisplayName: OnSelect_Up
+        Description: 사용자 지정 속성
+        ReturnType: None
+        Default: =
+      SelectedItem_1:
+        PropertyKind: Output
+        DisplayName: SelectedItem_1
+        Description: 사용자 지정 속성
+        DataType: Table
+      SelfItem_Gal1:
+        PropertyKind: Input
+        DisplayName: SelfItem_Gal1
+        Description: 사용자 지정 속성
+        DataType: Record
+        Default: |-
+          ={ field_4: "" , Result: "" }
+      Size_Font:
+        PropertyKind: Input
+        DisplayName: Size_Font
+        Description: 사용자 지정 속성
+        DataType: Number
+        Default: =15
+      Spacing:
+        PropertyKind: Input
+        DisplayName: Spacing
+        Description: 사용자 지정 속성
+        DataType: Number
+        Default: =30
+    Properties:
+      Height: =422.4
+      Item_Selected: =item_selected
+      SelectedItem_1: =
+      Width: =1092.8
+    Children:
+      - Container26:
+          Control: GroupContainer@1.4.0
+          Variant: ManualLayout
+          Properties:
+            DropShadow: =DropShadow.Bold
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =Parent.Height - Self.Y*3
+            RadiusBottomLeft: =20
+            RadiusBottomRight: =20
+            RadiusTopLeft: =20
+            RadiusTopRight: =20
+            Width: =Parent.Width - Self.X*2
+            X: =PrevNext.Spacing/2
+            Y: =Self.X
+          Children:
+            - Container28:
+                Control: GroupContainer@1.4.0
+                Variant: ManualLayout
+                Properties:
+                  DropShadow: =DropShadow.None
+                  Height: =PrevNext.Spacing*2.5
+                  RadiusBottomLeft: =15
+                  RadiusBottomRight: =15
+                  RadiusTopLeft: =15
+                  RadiusTopRight: =15
+                  Width: =Parent.Width - Self.X*2
+                  X: =PrevNext.Spacing/2
+                  Y: =Self.X
+                Children:
+                  - Gallery2:
+                      Control: Gallery@2.15.0
+                      Variant: Horizontal
+                      Properties:
+                        BorderColor: =RGBA(0, 18, 107, 1)
+                        Height: =Parent.Height - Self.Y*2
+                        Items: '=Sequence(5) '
+                        ShowScrollbar: =false
+                        TemplatePadding: =
+                        TemplateSize: =Self.Width/Self.AllItemsCount
+                        Width: =Parent.Width - Self.X*2
+                        X: =PrevNext.Spacing/3
+                        Y: =Self.X
+                      Children:
+                        - Container29:
+                            Control: GroupContainer@1.4.0
+                            Variant: ManualLayout
+                            Properties:
+                              DropShadow: =DropShadow.Regular
+                              Height: =Parent.TemplateHeight - Self.Y*4
+                              RadiusBottomLeft: =10
+                              RadiusBottomRight: =10
+                              RadiusTopLeft: =10
+                              RadiusTopRight: =10
+                              Width: '=Parent.TemplateWidth - Self.X*2 '
+                              X: =PrevNext.Spacing/3
+                              Y: =Self.X/2
+                            Children:
+                              - Label15:
+                                  Control: Label@2.5.1
+                                  Properties:
+                                    Align: =Align.Center
+                                    BorderColor: =RGBA(0, 18, 107, 1)
+                                    Color: =Switch( ThisItem.Value , 1 , ColorValue("#000000") , 2 , ColorValue("#ffffff") , 3 , ColorValue("#ffffff"), 4 , ColorValue("#ffffff"),5 , ColorValue("#000000")   )
+                                    Fill: =Switch( ThisItem.Value , 1 , ColorValue("#e5e5e5") , 2 , ColorValue("#66AAA0") , 3 , ColorValue("#66AAA0"), 4 , ColorValue("#337D73"),5 , ColorValue("#e5e5e5")   )
+                                    Font: =Font.'Open Sans'
+                                    FontWeight: =FontWeight.Bold
+                                    Height: =Parent.Height
+                                    Size: =PrevNext.Size_Font
+                                    Text: =Switch( ThisItem.Value , 1 , "새로고침" , 2 , "위로" , 3 , "아래로" , 4 , "저장" , 5 , "닫기"  )
+                                    Width: '=Parent.Width '
+                              - Rectangle22:
+                                  Control: Rectangle@2.3.0
+                                  Properties:
+                                    BorderColor: =RGBA(0, 18, 107, 1)
+                                    Fill: =RGBA(0, 0, 0, 0)
+                                    Height: =Parent.Height
+                                    OnSelect: |-
+                                      =Switch(
+                                          ThisItem.Value,
+                                          1,
+                                          PrevNext.OnSelect_Reload(),
+                                          2,
+                                          PrevNext.OnSelect_Up(),
+                                          3,
+                                          PrevNext.OnSelect_Down(),
+                                          4,
+                                          PrevNext.OnSelect_Save(),
+                                          5,
+                                          PrevNext.OnSelect_Cancel()
+                                      )
+                                    Width: =Parent.Width
+                                    X: =Parent.Width/2 - Self.Width/2
+                                    Y: =Parent.Height/2 - Self.Height/2
+            - Container28_1:
+                Control: GroupContainer@1.4.0
+                Variant: ManualLayout
+                Properties:
+                  DropShadow: =DropShadow.Regular
+                  Height: =Parent.Height - Self.Y - PrevNext.Spacing/2
+                  RadiusBottomLeft: =15
+                  RadiusBottomRight: =15
+                  RadiusTopLeft: =15
+                  RadiusTopRight: =15
+                  Width: =Parent.Width/2.5 - PrevNext.Spacing
+                  X: =PrevNext.Spacing
+                  Y: =Container28.Y + Container28.Height + PrevNext.Spacing/2
+                Children:
+                  - Gallery12:
+                      Control: Gallery@2.15.0
+                      Variant: VariableHeight
+                      Properties:
+                        BorderColor: =RGBA(0, 18, 107, 1)
+                        Height: =Parent.Height - Self.Y*2
+                        Items: |-
+                          =
+                          PrevNext.Item_Gal1
+                        ShowScrollbar: =false
+                        TemplatePadding: |
+                          =0
+                        TemplateSize: =PrevNext.Size_Font*3*1.5
+                        Width: =Parent.Width - Self.X*2
+                        X: =PrevNext.Spacing/3
+                        Y: =Self.X
+                      Children:
+                        - Container30:
+                            Control: GroupContainer@1.4.0
+                            Variant: ManualLayout
+                            Properties:
+                              DropShadow: =DropShadow.Regular
+                              Fill: =If( ThisItem.field_4 = PrevNext.SelfItem_Gal1.field_4  , ColorValue("#e5e5e5") , Color.Transparent )
+                              Height: =(Parent.TemplateHeight - Self.Y*2)
+                              RadiusBottomLeft: =10
+                              RadiusBottomRight: =10
+                              RadiusTopLeft: =10
+                              RadiusTopRight: =10
+                              Width: =Parent.TemplateWidth - Self.X*2
+                              X: =PrevNext.Spacing/3
+                              Y: =Self.X/2
+                            Children:
+                              - Label13:
+                                  Control: Label@2.5.1
+                                  Properties:
+                                    BorderColor: =RGBA(0, 18, 107, 1)
+                                    Fill: =If( ThisItem.field_4 = PrevNext.SelfItem_Gal1.field_4  , ColorValue("#e5e5e5") , Color.Transparent )
+                                    Font: =Font.'Open Sans'
+                                    FontWeight: |
+                                      =If( ThisItem.field_4 = PrevNext.SelfItem_Gal1.field_4  , FontWeight.Bold , FontWeight.Normal )
+                                    Height: =Parent.Height - Self.Y*2
+                                    OnSelect: =
+                                    Size: =PrevNext.Size_Font
+                                    Text: =ThisItem.Result & "." & ThisItem.field_4
+                                    Width: =Parent.Width - Self.X*2
+                                    X: =PrevNext.Spacing/6
+                                    Y: =Self.X
+                              - Rectangle23_1:
+                                  Control: Rectangle@2.3.0
+                                  Properties:
+                                    BorderColor: =RGBA(0, 18, 107, 1)
+                                    Fill: =RGBA(0, 0, 0, 0)
+                                    Height: =Parent.Height
+                                    OnSelect: "=Set( item_selected , ThisItem );\nPrevNext.OnSelect_Item() ; "
+                                    Width: =Parent.Width
+                                    X: '=Parent.Width/2 - Self.Width/2 '
+                                    Y: =Parent.Height/2 - Self.Height/2
+                        - Rectangle5:
+                            Control: Rectangle@2.3.0
+                            Properties:
+                              BorderColor: =RGBA(0, 18, 107, 1)
+                              Fill: =RGBA(0, 0, 0, 0)
+                              Height: =5
+                              Width: =Parent.TemplateWidth
+                              X: =Parent.TemplateWidth/2 - Self.Width/2
+                              Y: =Container30.Y + Container30.Height
+            - Container28_2:
+                Control: GroupContainer@1.4.0
+                Variant: ManualLayout
+                Properties:
+                  DropShadow: =DropShadow.Regular
+                  Height: =Container28_1.Height
+                  RadiusBottomLeft: =15
+                  RadiusBottomRight: =15
+                  RadiusTopLeft: =15
+                  RadiusTopRight: =15
+                  Width: '=Container28.X + Container28.Width - Self.X '
+                  X: =Container28_1.X + Container28_1.Width + PrevNext.Spacing/2
+                  Y: =Container28_1.Y
+                Children:
+                  - Gallery12_1:
+                      Control: Gallery@2.15.0
+                      Variant: VariableHeight
+                      Properties:
+                        BorderColor: =RGBA(0, 18, 107, 1)
+                        Height: =Parent.Height - Self.Y*2
+                        Items: |-
+                          =
+                          PrevNext.Item_Gal2
+                        ShowScrollbar: =false
+                        TemplatePadding: |
+                          =0
+                        TemplateSize: =PrevNext.Size_Font*3*1
+                        Width: =Parent.Width - Self.X*2
+                        X: =PrevNext.Spacing/3
+                        Y: =Self.X
+                      Children:
+                        - Container30_1:
+                            Control: GroupContainer@1.4.0
+                            Variant: ManualLayout
+                            Properties:
+                              DropShadow: =DropShadow.Regular
+                              Fill: =If( ThisItem.field_4 = item_selected.field_4 , ColorValue("#e5e5e5") , Color.Transparent)
+                              Height: =Label13_1.Y*2 + Label13_1.Height
+                              RadiusBottomLeft: =7
+                              RadiusBottomRight: =7
+                              RadiusTopLeft: =7
+                              RadiusTopRight: =7
+                              Width: =Parent.TemplateWidth - Self.X*2
+                              X: =PrevNext.Spacing/3
+                              Y: =Self.X/2
+                            Children:
+                              - Label13_1:
+                                  Control: Label@2.5.1
+                                  Properties:
+                                    AutoHeight: =true
+                                    BorderColor: =RGBA(0, 18, 107, 1)
+                                    Fill: =If( ThisItem.field_4 = item_selected.field_4 , ColorValue("#e5e5e5") , Color.Transparent)
+                                    Font: =Font.'Open Sans'
+                                    FontWeight: |
+                                      =If( ThisItem.field_4 = item_selected.field_4 , FontWeight.Bold , FontWeight.Normal )
+                                    Height: |-
+                                      =Max( 
+                                          Self.Size*2 , 
+                                          Self.Size*2 + Self.PaddingTop + Self.PaddingBottom + (Self.Size + Self.LineHeight*2) * ( Len(Self.Text) - Len(Substitute(Self.Text, Char(10), "")) ) 
+                                      )
+                                    OnSelect: =
+                                    Size: =PrevNext.Size_Font
+                                    Text: =ThisItem.field_7 & "." & ThisItem.field_9
+                                    Width: =Parent.Width - Self.X*2
+                                    X: =PrevNext.Spacing/6
+                                    Y: =PrevNext.Spacing/6
+                              - Rectangle23_2:
+                                  Control: Rectangle@2.3.0
+                                  Properties:
+                                    BorderColor: =RGBA(0, 18, 107, 1)
+                                    Fill: =RGBA(0, 0, 0, 0)
+                                    Height: =Parent.Height
+                                    OnSelect: =
+                                    Width: =Parent.Width
+                                    X: '=Parent.Width/2 - Self.Width/2 '
+                                    Y: =Parent.Height/2 - Self.Height/2
+                        - Rectangle5_8:
+                            Control: Rectangle@2.3.0
+                            Properties:
+                              BorderColor: =RGBA(0, 18, 107, 1)
+                              Fill: =RGBA(0, 0, 0, 0)
+                              Height: =5
+                              Width: =Parent.TemplateWidth
+                              X: =Parent.TemplateWidth/2 - Self.Width/2
+                              Y: =Container30_1.Y + Container30_1.Height

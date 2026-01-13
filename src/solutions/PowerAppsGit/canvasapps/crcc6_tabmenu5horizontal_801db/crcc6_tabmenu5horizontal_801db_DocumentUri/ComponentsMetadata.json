@@ -1,0 +1,18 @@
+{
+  "Components": [
+    {
+      "Name": "Component1",
+      "TemplateName": "8b48454a49d64dc8a081992f3b6be586",
+      "Description": "",
+      "AllowCustomization": true,
+      "AllowAccessToGlobals": false
+    },
+    {
+      "Name": "tab_menu_5_horizontal",
+      "TemplateName": "a7a9a7ed00e24b6e88f28bdc4935d5dd",
+      "Description": "",
+      "AllowCustomization": true,
+      "AllowAccessToGlobals": false
+    }
+  ]
+}

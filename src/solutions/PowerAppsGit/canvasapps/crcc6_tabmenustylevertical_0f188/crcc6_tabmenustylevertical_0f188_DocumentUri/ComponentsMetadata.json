@@ -1,0 +1,11 @@
+{
+  "Components": [
+    {
+      "Name": "tab_menu_style_vertical",
+      "TemplateName": "f86b557d21c248bcb4e8114bede96916",
+      "Description": "",
+      "AllowCustomization": true,
+      "AllowAccessToGlobals": false
+    }
+  ]
+}

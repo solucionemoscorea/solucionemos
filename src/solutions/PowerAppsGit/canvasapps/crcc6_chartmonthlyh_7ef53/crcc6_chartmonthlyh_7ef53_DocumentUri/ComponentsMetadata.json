@@ -1,0 +1,11 @@
+{
+  "Components": [
+    {
+      "Name": "chart_monthly_h",
+      "TemplateName": "f6c0647a3494499f889f30efbbe84afd",
+      "Description": "",
+      "AllowCustomization": true,
+      "AllowAccessToGlobals": false
+    }
+  ]
+}

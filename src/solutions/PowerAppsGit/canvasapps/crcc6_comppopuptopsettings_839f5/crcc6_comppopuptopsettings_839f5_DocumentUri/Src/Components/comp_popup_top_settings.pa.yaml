@@ -1,0 +1,407 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps should only be used to review changes made within Power Apps Studio and for minor edits (Preview).
+# Use the maker portal to create and edit your Power Apps.
+# 
+# The schema file for Canvas Apps is available at https://go.microsoft.com/fwlink/?linkid=2304907
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+ComponentDefinitions:
+  comp_popup_top_settings:
+    DefinitionType: CanvasComponent
+    AllowCustomization: true
+    CustomProperties:
+      Duration_Timer:
+        PropertyKind: Input
+        DisplayName: Duration_Timer
+        Description: 사용자 지정 속성
+        DataType: Number
+        Default: =500
+      Fill_BackGround:
+        PropertyKind: Input
+        DisplayName: Fill_BackGround
+        Description: 사용자 지정 속성
+        DataType: Color
+        Default: '=ColorValue("#6a6a6a") '
+      Font_Size_Max:
+        PropertyKind: Input
+        DisplayName: Font_Size_Max
+        Description: 사용자 지정 속성
+        DataType: Number
+        Default: =13
+      Font_Size_Min:
+        PropertyKind: Input
+        DisplayName: Font_Size_Min
+        Description: 사용자 지정 속성
+        DataType: Number
+        Default: =8
+      IsTrue_DarkMode:
+        PropertyKind: Input
+        DisplayName: IsTrue_DarkMode
+        Description: 사용자 지정 속성
+        DataType: Boolean
+        Default: =true
+      IsTrue_DropShadow:
+        PropertyKind: Input
+        DisplayName: IsTrue_DropShadow
+        Description: 사용자 지정 속성
+        DataType: Boolean
+        Default: =true
+      OnSelect_Cancel:
+        PropertyKind: Event
+        DisplayName: OnSelect_Cancel
+        Description: 사용자 지정 속성
+        ReturnType: None
+        Default: =
+      OnSelect_DarkMode:
+        PropertyKind: Event
+        DisplayName: OnSelect_DarkMode
+        Description: 사용자 지정 속성
+        ReturnType: None
+        Default: =
+      OnSelect_DropShadow:
+        PropertyKind: Event
+        DisplayName: OnSelect_DropShadow
+        Description: 사용자 지정 속성
+        ReturnType: None
+        Default: =
+      OnSelect_FontSizeDown:
+        PropertyKind: Event
+        DisplayName: OnSelect_FontSizeDown
+        Description: 사용자 지정 속성
+        ReturnType: None
+        Default: =
+      OnSelect_FontSizeUp:
+        PropertyKind: Event
+        DisplayName: OnSelect_FontSizeUp
+        Description: 사용자 지정 속성
+        ReturnType: None
+        Default: =
+      Show_Drawer_Input:
+        PropertyKind: Input
+        DisplayName: Show_Drawer_Input
+        Description: 사용자 지정 속성
+        DataType: Boolean
+        Default: =true
+      Show_Drawer_OutPut:
+        PropertyKind: Output
+        DisplayName: Show_Drawer_OutPut
+        Description: 사용자 지정 속성
+        DataType: Boolean
+      Size_Font:
+        PropertyKind: Input
+        DisplayName: Size_Font
+        Description: 사용자 지정 속성
+        DataType: Number
+        Default: =13
+      Start_Timer:
+        PropertyKind: Input
+        DisplayName: Start_Timer
+        Description: 사용자 지정 속성
+        DataType: Boolean
+        Default: =true
+      Value_Timer:
+        PropertyKind: Output
+        DisplayName: Value_Timer
+        Description: 사용자 지정 속성
+        DataType: Number
+    Properties:
+      Height: =App.DesignHeight/10*3
+      Show_Drawer_OutPut: =
+      Value_Timer: =Timer_4_Animation_2.Value
+      Width: =App.DesignWidth
+    Children:
+      - Timer_4_Animation_2:
+          Control: Timer@2.1.0
+          Properties:
+            AutoPause: =false
+            BorderColor: =ColorFade(Self.Fill, -15%)
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =ColorFade(Self.BorderColor, 70%)
+            DisabledColor: =ColorFade(Self.Fill, 90%)
+            DisabledFill: =ColorFade(Self.Fill, 70%)
+            Duration: =Parent.Duration_Timer
+            Fill: =RGBA(56, 96, 178, 1)
+            Font: =Font.'Open Sans'
+            HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(56, 96, 178, 1), -20%)
+            PressedBorderColor: =Self.Fill
+            PressedColor: =Self.Fill
+            PressedFill: =Self.Color
+            Start: =comp_popup_top_settings.Start_Timer
+            Visible: =false
+      - Timer_Setting_1:
+          Control: Timer@2.1.0
+          Properties:
+            AutoPause: =false
+            AutoStart: =true
+            BorderColor: =ColorFade(Self.Fill, -15%)
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =ColorFade(Self.BorderColor, 70%)
+            DisabledColor: =ColorFade(Self.Fill, 90%)
+            DisabledFill: =ColorFade(Self.Fill, 70%)
+            Duration: =100
+            Fill: =RGBA(56, 96, 178, 1)
+            Font: =Font.'Open Sans'
+            HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(56, 96, 178, 1), -20%)
+            OnTimerEnd: |
+              =
+            PressedBorderColor: =Self.Fill
+            PressedColor: =Self.Fill
+            PressedFill: =Self.Color
+            Start: =comp_popup_top_settings.Start_Timer
+            Visible: =false
+            X: =40
+            Y: =40
+      - Container49_1:
+          Control: GroupContainer@1.4.0
+          Variant: ManualLayout
+          Properties:
+            DropShadow: =DropShadow.Semibold
+            Fill: =If( comp_popup_top_settings.IsTrue_DarkMode , ColorFade(comp_popup_top_settings.Fill_BackGround , -40% ) , Color.White )
+            Height: =Parent.Height- Self.Y*2 - 30
+            RadiusBottomLeft: =15
+            RadiusBottomRight: =15
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Width: =Parent.Width - Self.X
+          Children:
+            - Container51_1:
+                Control: GroupContainer@1.4.0
+                Variant: ManualLayout
+                Properties:
+                  DropShadow: =DropShadow.None
+                  Height: =comp_popup_top_settings.Size_Font*4
+                  Width: =Parent.Width - Self.X*2
+                  Y: =Self.X/2
+                Children:
+                  - Label2_17:
+                      Control: Label@2.5.1
+                      Properties:
+                        BorderColor: =RGBA(0, 18, 107, 1)
+                        Color: =If( comp_popup_top_settings.IsTrue_DarkMode , ColorValue("#ffffff") , ColorValue("#222222") )
+                        DisplayMode: =DisplayMode.View
+                        Font: =Font.'Open Sans'
+                        FontWeight: =FontWeight.Bold
+                        Height: =Parent.Height
+                        PaddingBottom: =0
+                        PaddingLeft: =12
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =comp_popup_top_settings.Size_Font*1.5
+                        Text: ="환경설정"
+                        Width: =Parent.Width
+                        X: |
+                          =0
+                        Y: =Self.X/2
+                  - Rectangle34_1:
+                      Control: Rectangle@2.3.0
+                      Properties:
+                        BorderColor: =RGBA(0, 18, 107, 1)
+                        Fill: =RGBA(102, 102, 102, 1)
+                        Height: =2
+                        Width: =Parent.Width
+                        X: =Parent.Width*0
+                        Y: =Parent.Height - Self.Height
+            - Button1_34:
+                Control: Classic/Button@2.2.0
+                Properties:
+                  BorderColor: =ColorFade(Self.Fill, -15%)
+                  Color: =If( comp_popup_top_settings.IsTrue_DarkMode , ColorValue("#ffffff") , ColorValue("#6a6a6a") )
+                  DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                  Fill: =RGBA(0, 0, 0, 0)
+                  Font: =Font.'Open Sans'
+                  FontWeight: =FontWeight.Normal
+                  Height: =Parent.Height*0.3
+                  HoverBorderColor: =//ColorFade(Self.BorderColor, 20%)
+                  HoverColor: |-
+                    =Self.Color
+                    //ColorValue("#fef9ef")
+                  HoverFill: |-
+                    =//ColorValue("#00796B") 
+                    //ColorFade( ColorValue(myTheme.DarkColor) , 30% )
+                  OnSelect: |-
+                    =If(  _comp_size_font - 1  < comp_popup_top_settings.Font_Size_Min , Set(_comp_size_font , comp_popup_top_settings.Font_Size_Min ) ,
+                    Set(_comp_size_font , _comp_size_font - 1 )) ; 
+
+                    comp_popup_top_settings.OnSelect_FontSizeDown();
+                  PaddingBottom: =0
+                  PaddingLeft: =0
+                  PaddingRight: =0
+                  PaddingTop: =0
+                  PressedBorderColor: =Self.Fill
+                  PressedColor: '=ColorValue("#ffffff") '
+                  PressedFill: =ColorFade(ColorValue("#f65810") , 10%)
+                  Size: =comp_popup_top_settings.Size_Font*0.8
+                  Text: ="작게"
+                  Width: =Self.Height*2
+                  X: =Slider1_17.X - Self.Width
+                  Y: '=Container51_1.Y + Container51_1.Height '
+            - Button1_35:
+                Control: Classic/Button@2.2.0
+                Properties:
+                  BorderColor: =ColorFade(Self.Fill, -15%)
+                  Color: =If( comp_popup_top_settings.IsTrue_DarkMode , ColorValue("#ffffff") , ColorValue("#6a6a6a") )
+                  DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                  Fill: =RGBA(0, 0, 0, 0)
+                  Font: =Font.'Open Sans'
+                  FontWeight: =FontWeight.Bold
+                  Height: =Parent.Height*0.3
+                  HoverBorderColor: =//ColorFade(Self.BorderColor, 20%)
+                  HoverColor: |-
+                    =Self.Color
+                    //ColorValue("#fef9ef")
+                  HoverFill: |-
+                    =//ColorValue("#00796B") 
+                    //ColorFade( ColorValue(myTheme.DarkColor) , 30% )
+                  OnSelect: |-
+                    =If(  _comp_size_font + 1 > comp_popup_top_settings.Font_Size_Max , Set(_comp_size_font , comp_popup_top_settings.Font_Size_Max ) ,
+                    Set(_comp_size_font , _comp_size_font  + 1 )) ; 
+
+                    comp_popup_top_settings.OnSelect_FontSizeUp();
+                  PaddingBottom: =0
+                  PaddingLeft: =0
+                  PaddingRight: =0
+                  PaddingTop: =0
+                  PressedBorderColor: =Self.Fill
+                  PressedColor: '=ColorValue("#ffffff") '
+                  PressedFill: =ColorFade(ColorValue("#f65810") , 10%)
+                  Size: =comp_popup_top_settings.Size_Font*1.2
+                  Text: ="크게"
+                  Width: =Self.Height*2
+                  X: =Parent.Width - Self.Width - Parent.Width/30
+                  Y: =Button1_34.Y
+            - Slider1_17:
+                Control: Classic/Slider@2.1.0
+                Properties:
+                  BorderColor: =RGBA(0, 18, 107, 1)
+                  Default: =comp_popup_top_settings.Size_Font
+                  HandleSize: =comp_popup_top_settings.Size_Font*2
+                  Height: =Button1_34.Height
+                  Max: =comp_popup_top_settings.Font_Size_Max
+                  Min: =comp_popup_top_settings.Font_Size_Min
+                  RailFill: =RGBA(166, 166, 166, 1)
+                  RailThickness: =1
+                  ValueFill: =ColorValue("#00514a")
+                  Width: =Parent.Width/20*1
+                  X: '=Button1_35.X - Self.Width '
+                  Y: =Button1_35.Y
+            - Rectangle3_21:
+                Control: Rectangle@2.3.0
+                Properties:
+                  BorderColor: =RGBA(0, 18, 107, 1)
+                  Fill: =RGBA(0, 0, 0, 0)
+                  Height: =Slider1_17.Height
+                  Width: =Slider1_17.Width
+                  X: =Slider1_17.X
+                  Y: =Slider1_17.Y
+            - Container53_1:
+                Control: GroupContainer@1.4.0
+                Variant: ManualLayout
+                Properties:
+                  BorderColor: =RGBA(149, 149, 149, 1)
+                  BorderThickness: =If( comp_popup_top_settings.IsTrue_DropShadow , 0 , 1 )
+                  DropShadow: =DropShadow.Regular
+                  Height: =comp_popup_top_settings.Size_Font*3
+                  RadiusBottomLeft: =5
+                  RadiusBottomRight: =5
+                  RadiusTopLeft: =5
+                  RadiusTopRight: =5
+                  Visible: =!comp_popup_top_settings.IsTrue_DarkMode
+                  Width: =Self.Height*5
+                  X: =Parent.Width/30
+                  Y: =Parent.Height/2 - Self.Height/2
+                Children:
+                  - Label22_2:
+                      Control: Label@2.5.1
+                      Properties:
+                        Align: =Align.Center
+                        BorderColor: =RGBA(0, 18, 107, 1)
+                        Color: =RGBA(116, 116, 116, 1)
+                        Font: =Font.'Open Sans'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =Parent.Height
+                        Size: =comp_popup_top_settings.Size_Font
+                        Text: =If( comp_popup_top_settings.IsTrue_DropShadow , "DropShadow Off" , "DropShadow On" )
+                        Width: =Parent.Width
+                  - Rectangle40_2:
+                      Control: Rectangle@2.3.0
+                      Properties:
+                        BorderColor: =RGBA(0, 18, 107, 1)
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =Parent.Height
+                        OnSelect: "=Set( _comp_dropshadow , !_comp_dropshadow ) ; \ncomp_popup_top_settings.OnSelect_DropShadow() ; "
+                        Visible: =!comp_popup_top_settings.IsTrue_DarkMode
+                        Width: =Parent.Width
+                        X: =Parent.Width/2 - Self.Width/2
+                        Y: =Parent.Height/2 - Self.Height/2
+            - Container53_3:
+                Control: GroupContainer@1.4.0
+                Variant: ManualLayout
+                Properties:
+                  BorderColor: =RGBA(149, 149, 149, 1)
+                  BorderThickness: =0 //If( bar_menu_top.IsTrue_DropShadow , 0 , 1 )
+                  DropShadow: =DropShadow.None
+                  Fill: =If( comp_popup_top_settings.IsTrue_DarkMode , ColorValue("#222222") , ColorFade(comp_popup_top_settings.Fill_BackGround,-40%) )
+                  Height: =comp_popup_top_settings.Size_Font*3
+                  RadiusBottomLeft: =5
+                  RadiusBottomRight: =5
+                  RadiusTopLeft: =5
+                  RadiusTopRight: =5
+                  Width: =Self.Height*5
+                  X: =Parent.Width - Self.Width - Parent.Width/30
+                  Y: '=Button1_35.Y + Button1_35.Height '
+                Children:
+                  - Label22_3:
+                      Control: Label@2.5.1
+                      Properties:
+                        Align: =Align.Center
+                        BorderColor: =RGBA(0, 18, 107, 1)
+                        Color: =If( comp_popup_top_settings.IsTrue_DarkMode , ColorValue("#ffd500") , ColorValue("#4ADE80")   )
+                        Font: =Font.'Open Sans'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =Parent.Height
+                        Size: =comp_popup_top_settings.Size_Font
+                        Text: =If( comp_popup_top_settings.IsTrue_DarkMode , "Dark Mode"  , "Light Mode " )
+                        Width: =Parent.Width
+                  - Rectangle40_3:
+                      Control: Rectangle@2.3.0
+                      Properties:
+                        BorderColor: =RGBA(0, 18, 107, 1)
+                        Fill: =Color.Transparent
+                        Height: =Parent.Height
+                        OnSelect: |
+                          =Set( _comp_darkmode , !_comp_darkmode ) ; comp_popup_top_settings.OnSelect_DarkMode() ; 
+                          If( _comp_darkmode, Set( _comp_dropshadow , false )) ;
+                        Width: =Parent.Width
+                        X: =Parent.Width/2 - Self.Width/2
+                        Y: =Parent.Height/2 - Self.Height/2
+            - Image7_4:
+                Control: Image@2.2.3
+                Properties:
+                  BorderColor: =RGBA(0, 18, 107, 1)
+                  Height: =Parent.Height/10*2
+                  Image: |-
+                    ="data:image/svg+xml;utf8;," 
+                    & 
+                    EncodeUrl(
+                        Substitute(
+                        "
+                        <svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'><path fill='currentColor' d='M21 3H3c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m0 15c0 .55-.45 1-1 1H4c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h16c.55 0 1 .45 1 1zm-5.71-9.3a.996.996 0 0 0-1.41 0L12 10.59L10.11 8.7a.996.996 0 1 0-1.41 1.41L10.59 12L8.7 13.89a.996.996 0 1 0 1.41 1.41L12 13.41l1.89 1.89a.996.996 0 1 0 1.41-1.41L13.41 12l1.89-1.89c.38-.38.38-1.02-.01-1.41'/></svg>
+                        "
+                        ,
+                        "currentColor", 
+                         If(
+                            comp_popup_top_settings.IsTrue_DarkMode , 
+                                "#ffffff" , 
+                                "#222222"
+                         )
+                        )
+                    )
+                  OnSelect: =comp_popup_top_settings.OnSelect_Cancel()
+                  Width: =Self.Height
+                  X: =Parent.Width/2 - Self.Width/2
+                  Y: =Parent.Height - Self.Height - Parent.Height/30

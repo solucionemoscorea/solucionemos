@@ -1,0 +1,11 @@
+{
+  "Components": [
+    {
+      "Name": "comp_popup_right",
+      "TemplateName": "d7ff0436aad94f589b5e96530302057d",
+      "Description": "",
+      "AllowCustomization": true,
+      "AllowAccessToGlobals": false
+    }
+  ]
+}

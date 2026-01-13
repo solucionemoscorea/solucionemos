@@ -1,0 +1,294 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps should only be used to review changes made within Power Apps Studio and for minor edits (Preview).
+# Use the maker portal to create and edit your Power Apps.
+# 
+# The schema file for Canvas Apps is available at https://go.microsoft.com/fwlink/?linkid=2304907
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+ComponentDefinitions:
+  chart_monthly_h:
+    DefinitionType: CanvasComponent
+    AllowCustomization: true
+    CustomProperties:
+      Item_Chart:
+        PropertyKind: Input
+        DisplayName: Item_Chart
+        Description: 사용자 지정 속성
+        DataType: Table
+        Default: |-
+          =// ForAll & Distinct 로 Key - Value 형식을 맞추세요
+
+          /*
+          DropColumns(
+              Groupby(
+                  ForAll(
+                  "사용자DB" , 
+                  {
+                      Year : Year(DateValue(ThisRecord."날짜열")) , 
+                      ChartValue : Value(ThisRecord."숫자열")
+                  }
+                  ), 
+                  Year,ChartValue, _group
+              ), 
+          _group
+          )
+           ;
+          */ 
+
+          Table({
+              MonthValue : 1 , 
+              ItemFilter1 : "",
+              ItemFilter2 : "", 
+              ChartValue: 10})
+      Item_Filter_1:
+        PropertyKind: Input
+        DisplayName: Item_Filter_1
+        Description: 사용자 지정 속성
+        DataType: Text
+        Default: ="텍스트"
+      Item_Filter_2:
+        PropertyKind: Input
+        DisplayName: Item_Filter_2
+        Description: 사용자 지정 속성
+        DataType: Text
+        Default: ="텍스트"
+      OnSelect_Year:
+        PropertyKind: Event
+        DisplayName: OnSelect_Year
+        Description: 사용자 지정 속성
+        ReturnType: None
+        Default: =
+      Size_Font:
+        PropertyKind: Input
+        DisplayName: Size_Font
+        Description: 사용자 지정 속성
+        DataType: Number
+        Default: =12
+      StartYear:
+        PropertyKind: Input
+        DisplayName: StartYear
+        Description: 사용자 지정 속성
+        DataType: Number
+        Default: =2025
+      _selected_item_input:
+        PropertyKind: Input
+        DisplayName: _selected_item_input
+        Description: 사용자 지정 속성
+        DataType: Number
+        Default: =100
+      _selected_item_output:
+        PropertyKind: Output
+        DisplayName: _selected_item_output
+        Description: 사용자 지정 속성
+        DataType: Number
+    Properties:
+      Fill: =Color.Transparent
+      Height: =App.DesignHeight/10*4
+      Width: =App.DesignWidth
+      _selected_item_output: =_cmpt_selected_item
+    Children:
+      - Container44_3:
+          Control: GroupContainer@1.4.0
+          Variant: ManualLayout
+          Properties:
+            BorderColor: =RGBA(116, 116, 116, 1)
+            BorderThickness: =1
+            DropShadow: =DropShadow.None
+            Fill: '=ColorFade( ColorValue("#f65810") , 30% ) '
+            Height: =Container44_2.Height
+            RadiusBottomLeft: =10
+            RadiusBottomRight: =10
+            RadiusTopLeft: =10
+            RadiusTopRight: =10
+            Width: =Container44_2.Width
+            X: =Container44_2.X + 5
+            Y: '=Container44_2.Y + 5 '
+      - Container44_2:
+          Control: GroupContainer@1.4.0
+          Variant: ManualLayout
+          Properties:
+            BorderColor: =RGBA(116, 116, 116, 1)
+            BorderThickness: =1
+            DropShadow: =DropShadow.None
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =Parent.Height - Self.Y*2
+            RadiusBottomLeft: =10
+            RadiusBottomRight: =10
+            RadiusTopLeft: =10
+            RadiusTopRight: =10
+            Width: =Parent.Width - Self.X*2
+            X: =7.5
+            Y: =Self.X/2
+          Children:
+            - Gallery17_1:
+                Control: Gallery@2.15.0
+                Variant: Horizontal
+                Properties:
+                  BorderColor: =RGBA(0, 18, 107, 1)
+                  Height: =Parent.Height - Self.Y*2
+                  Items: "=\nForAll(\n    Sequence(12) , \n    {\n        MonthValue:ThisRecord.Value\n    }\n)   "
+                  ShowScrollbar: =false
+                  TemplatePadding: =
+                  TemplateSize: =Self.Width/Self.AllItemsCount
+                  Width: =Parent.Width - Self.X*2
+                Children:
+                  - Rectangle27_1:
+                      Control: Rectangle@2.3.0
+                      Properties:
+                        BorderColor: =RGBA(0, 18, 107, 1)
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =Parent.TemplateHeight
+                        OnSelect: "=\nIf( _cmpt_selected_item = ThisItem.MonthValue , \n    Set(_cmpt_selected_item , Blank() )   ,\n    Set(_cmpt_selected_item , ThisItem.MonthValue) \n) ; \n\nchart_monthly_h.OnSelect_Year() "
+                        Width: =Parent.TemplateWidth
+                        X: =Parent.Width*0
+                        Y: =Self.X
+                  - Label11_3:
+                      Control: Label@2.5.1
+                      Properties:
+                        Align: =Align.Center
+                        BorderColor: =RGBA(0, 18, 107, 1)
+                        Color: =If( TextInput6_3.Fill = ColorValue("#f65810") , ColorValue("#222222") , ColorValue("#959595") )
+                        Font: =Font.'Open Sans'
+                        FontWeight: |-
+                          =If( IsBlank(chart_monthly_h._selected_item_input) , FontWeight.Semibold , 
+                          If( chart_monthly_h._selected_item_input = ThisItem.MonthValue , FontWeight.Bold , 
+                          FontWeight.Normal
+                          ))
+                        Height: =Self.Size*2
+                        OnSelect: =Select(Parent)
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: |
+                          =If( IsBlank(chart_monthly_h._selected_item_input) , chart_monthly_h.Size_Font , 
+                          If( chart_monthly_h._selected_item_input = ThisItem.MonthValue , chart_monthly_h.Size_Font*1.2 , 
+                          chart_monthly_h.Size_Font*0.9
+                          ))
+                        Text: "=Text( Sum(Filter( chart_monthly_h.Item_Chart , \n    If( \n        !IsBlank(chart_monthly_h.Item_Filter_2) , \n        ItemFilter2 =  chart_monthly_h.Item_Filter_2  && ItemFilter1 =  chart_monthly_h.Item_Filter_1 && MonthValue = ThisItem.MonthValue , \n        If( IsBlank(chart_monthly_h.Item_Filter_2) , \n        ItemFilter1 =  chart_monthly_h.Item_Filter_1 && MonthValue = ThisItem.MonthValue ,\n        If( IsBlank(chart_monthly_h.Item_Filter_1) , MonthValue = ThisItem.MonthValue)\n    )))\n                , ChartValue \n \n    ) , \"#,# \") "
+                        VerticalAlign: =VerticalAlign.Bottom
+                        Visible: =TextInput6_3.Visible
+                        Width: =Parent.TemplateWidth - Self.X*2
+                        X: =20
+                        Y: =Label11_4.Y - Self.Height - 5
+                  - Label11_4:
+                      Control: Label@2.5.1
+                      Properties:
+                        Align: =Align.Center
+                        BorderColor: =RGBA(0, 18, 107, 1)
+                        Color: =If( TextInput6_3.Fill = ColorValue("#f65810") , ColorValue("#222222") , ColorValue("#959595") )
+                        Font: =Font.'Open Sans'
+                        FontWeight: |-
+                          =If( IsBlank(chart_monthly_h._selected_item_input) , FontWeight.Semibold , 
+                          If( chart_monthly_h._selected_item_input = ThisItem.MonthValue , FontWeight.Bold , 
+                          FontWeight.Normal
+                          ))
+                        Height: =Self.Size*1.5
+                        OnSelect: =Select(Parent)
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: |
+                          =If( IsBlank(chart_monthly_h._selected_item_input) , chart_monthly_h.Size_Font*0.8 , 
+                          If( chart_monthly_h._selected_item_input = ThisItem.MonthValue , chart_monthly_h.Size_Font*0.8*1.2 , 
+                          chart_monthly_h.Size_Font*0.8*0.9
+                          ))
+                        Text: "=Text( IfError( \n    Sum(\n        Filter(chart_monthly_h.Item_Chart,\n        If( \n            !IsBlank(chart_monthly_h.Item_Filter_2) , \n            ItemFilter2 =  chart_monthly_h.Item_Filter_2  && ItemFilter1 =  chart_monthly_h.Item_Filter_1 && MonthValue = ThisItem.MonthValue , \n            If( IsBlank(chart_monthly_h.Item_Filter_2) , \n            ItemFilter1 =  chart_monthly_h.Item_Filter_1 && MonthValue = ThisItem.MonthValue ,\n            If( IsBlank(chart_monthly_h.Item_Filter_1) , MonthValue = ThisItem.MonthValue\n            ))))\n            \n    , ChartValue )/Sum(chart_monthly_h.Item_Chart,ChartValue) , 0) *100 , \"(0.00%)\")"
+                        VerticalAlign: =VerticalAlign.Top
+                        Visible: =TextInput6_3.Visible
+                        Width: =Parent.TemplateWidth - Self.X*2
+                        X: =10
+                        Y: =Circle3_1.Y - Self.Height - 5
+                  - Circle3_1:
+                      Control: Circle@2.3.0
+                      Properties:
+                        BorderColor: =RGBA(0, 18, 107, 1)
+                        Fill: =If( TextInput6_3.Fill = ColorValue("#f65810") , ColorValue("#222222") , ColorValue("#959595") )
+                        Height: =Self.Width
+                        OnSelect: =Select(Parent)
+                        Visible: =TextInput6_3.Visible
+                        Width: =Parent.TemplateWidth/20
+                        X: =Rectangle26_1.X + Rectangle26_1.Width/2 - Self.Width/2
+                        Y: =Rectangle26_1.Y -Self.Height
+                  - TextInput6_2:
+                      Control: Classic/TextInput@2.3.2
+                      Properties:
+                        BorderColor: '=ColorValue("#181818") '
+                        BorderThickness: =1
+                        Default: =
+                        Fill: |
+                          =If( IsBlank(chart_monthly_h._selected_item_input) , ColorFade( ColorValue("#F65810") , 30%) , 
+                          If( chart_monthly_h._selected_item_input = ThisItem.MonthValue , ColorFade( ColorValue("#F65810") , 30%) , 
+                          ColorFade( ColorValue("#959595") , 30% )
+                          ))
+                        Font: =Font.'Open Sans'
+                        Height: =TextInput6_3.Height
+                        HoverBorderColor: =RGBA(0, 18, 107, 1)
+                        HoverFill: =RGBA(186, 202, 226, 1)
+                        OnSelect: =Select(Parent)
+                        RadiusBottomLeft: =0
+                        RadiusBottomRight: =0
+                        RadiusTopLeft: =3
+                        RadiusTopRight: =3
+                        Visible: =!(Self.Height = 0)
+                        Width: =TextInput6_3.Width
+                        X: =TextInput6_3.X + 1.5
+                        Y: =Label11_5.Y - Self.Height - 1.5
+                  - Label11_5:
+                      Control: Label@2.5.1
+                      Properties:
+                        Align: =Align.Center
+                        BorderColor: =RGBA(0, 18, 107, 1)
+                        Font: =Font.'Open Sans'
+                        FontWeight: |-
+                          =If( IsBlank(chart_monthly_h._selected_item_input) , FontWeight.Semibold , 
+                          If( chart_monthly_h._selected_item_input = ThisItem.MonthValue , FontWeight.Bold , 
+                          FontWeight.Normal
+                          ))
+                        Height: =Self.Size*2
+                        OnSelect: =Select(Parent)
+                        Size: |
+                          =If( IsBlank(chart_monthly_h._selected_item_input) , chart_monthly_h.Size_Font*1.1 , 
+                          If( chart_monthly_h._selected_item_input = ThisItem.MonthValue , chart_monthly_h.Size_Font*1.1*1.2 , 
+                          chart_monthly_h.Size_Font*1.1*0.9
+                          ))
+                        Text: =ThisItem.MonthValue & "월"
+                        Width: =Parent.TemplateWidth - Self.X*2
+                        X: =5
+                        Y: =Parent.TemplateHeight - Self.Height
+                  - TextInput6_3:
+                      Control: Classic/TextInput@2.3.2
+                      Properties:
+                        BorderColor: '=ColorValue("#181818") '
+                        BorderThickness: =1
+                        Default: =
+                        Fill: |
+                          =If( IsBlank(chart_monthly_h._selected_item_input) , ColorValue("#F65810") , 
+                          If( chart_monthly_h._selected_item_input = ThisItem.MonthValue , ColorValue("#F65810") , 
+                          ColorValue("#959595") 
+                          ))
+                        Font: =Font.'Open Sans'
+                        Height: "=IfError( \n    Sum(Filter( chart_monthly_h.Item_Chart , \n\n        If( \n            !IsBlank(chart_monthly_h.Item_Filter_2) && !IsBlank(chart_monthly_h.Item_Filter_1) , \n            ItemFilter2 =  chart_monthly_h.Item_Filter_2  && ItemFilter1 =  chart_monthly_h.Item_Filter_1 && MonthValue = ThisItem.MonthValue , \n            \n            If( IsBlank(chart_monthly_h.Item_Filter_2) && !IsBlank(chart_monthly_h.Item_Filter_1)  , \n            ItemFilter1 =  chart_monthly_h.Item_Filter_1 && MonthValue = ThisItem.MonthValue ,\n            \n            If( IsBlank(chart_monthly_h.Item_Filter_2) && IsBlank(chart_monthly_h.Item_Filter_1) , \n            MonthValue = ThisItem.MonthValue\n            \n        )\n        )\n        )\n\n\n), ChartValue )/Sum(chart_monthly_h.Item_Chart,ChartValue) , 0) * (Parent.Height - Label11_5.Height*4)"
+                        HoverBorderColor: =RGBA(0, 18, 107, 1)
+                        HoverFill: =RGBA(186, 202, 226, 1)
+                        OnSelect: =Select(Parent)
+                        RadiusBottomLeft: =0
+                        RadiusBottomRight: =0
+                        RadiusTopLeft: =3
+                        RadiusTopRight: =3
+                        Visible: =!(Self.Height = 0)
+                        Width: =Parent.TemplateWidth/15
+                        X: =Label11_5.X + Label11_5.Width/2 - Self.Width/2
+                        Y: =Label11_5.Y - Self.Height
+                  - Rectangle26_1:
+                      Control: Rectangle@2.3.0
+                      Properties:
+                        BorderColor: =RGBA(0, 18, 107, 1)
+                        Fill: =If( TextInput6_3.Fill = ColorValue("#f65810") , ColorValue("#222222") , ColorValue("#959595") )
+                        Height: =TextInput6_3.Height/10*4
+                        OnSelect: =Select(Parent)
+                        Width: =1
+                        X: =TextInput6_3.X + TextInput6_3.Width/2 - Self.Width/2
+                        Y: =TextInput6_3.Y - Self.Height

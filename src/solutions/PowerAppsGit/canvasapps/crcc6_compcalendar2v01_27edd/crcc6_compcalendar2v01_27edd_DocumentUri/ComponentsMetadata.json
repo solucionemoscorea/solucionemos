@@ -1,0 +1,11 @@
+{
+  "Components": [
+    {
+      "Name": "comp_calendar2_v01",
+      "TemplateName": "60ff54ade1a3495c825ee0186a9b8267",
+      "Description": "",
+      "AllowCustomization": true,
+      "AllowAccessToGlobals": false
+    }
+  ]
+}

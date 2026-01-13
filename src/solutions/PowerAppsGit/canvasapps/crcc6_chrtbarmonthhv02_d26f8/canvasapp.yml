@@ -1,0 +1,41 @@
+CanvasApp:
+  Name: crcc6_chrtbarmonthhv02_d26f8
+  AppVersion: 2026-01-13T02:37:23.0000000Z
+  Status: Ready
+  CreatedByClientVersion: 3.26011.4.0
+  MinClientVersion: 3.26011.4.0
+  Tags: '{"primaryDeviceWidth":"640","primaryDeviceHeight":"454.4","supportsPortrait":"true","supportsLandscape":"true","primaryFormFactor":"Phone","showStatusBar":"false","publisherVersion":"3.26011.4","minimumRequiredApiVersion":"2.2.0","hasComponent":"true","hasUnlockedComponent":"true","isUnifiedRootApp":"false"}'
+  IsCdsUpgraded: 0
+  GalleryItemId:
+    '@xsi:nil': true
+    '@xmlns:xsi': http://www.w3.org/2001/XMLSchema-instance
+  BackgroundColor: RGBA(251,101,60,1)
+  DisplayName: chrt_bar_month_h_v02
+  Description:
+    '@xsi:nil': true
+    '@xmlns:xsi': http://www.w3.org/2001/XMLSchema-instance
+  CommitMessage:
+    '@xsi:nil': true
+    '@xmlns:xsi': http://www.w3.org/2001/XMLSchema-instance
+  Publisher:
+    '@xsi:nil': true
+    '@xmlns:xsi': http://www.w3.org/2001/XMLSchema-instance
+  AuthorizationReferences: '[]'
+  ConnectionReferences: '{}'
+  DatabaseReferences: '{}'
+  AppComponents: '[{"appComponentName":"f7477fed0c8e4605a2bb6ecd56001dd0","displayName":"chrt_bar_month_h_v02","appName":"ccf5d655-653b-4fc2-916f-1b8747dd1fe9","appVersion":"2026-01-13T02:37:23Z","appComponentLibraryLogicalName":"crcc6_chrtbarmonthhv02_d26f8","appDisplayName":"chrt_bar_month_h_v02","environmentName":"default-41f16629-0724-427c-91d9-ee438c4f60a6","owner":{"id":"1612d724-5f99-4de0-ade5-1b14271ea64e","displayName":"JungYong Seok","email":"JungYongSeok@JungFoodKorea.onmicrosoft.com","type":"User","tenantId":"41f16629-0724-427c-91d9-ee438c4f60a6","userPrincipalName":"JungYongSeok@JungFoodKorea.onmicrosoft.com"},"allowCustomization":true,"createdOn":"2026-01-13T02:37:21.958Z","lastModifiedOn":"2026-01-13T02:37:21.958Z","connectionReferences":{},"databaseReferences":{}}]'
+  AppComponentDependencies: '[]'
+  CanConsumeAppPass: 1
+  CanvasAppType: 1
+  BypassConsent: 0
+  AdminControlBypassConsent: 0
+  EmbeddedApp:
+    '@xsi:nil': true
+    '@xmlns:xsi': http://www.w3.org/2001/XMLSchema-instance
+  IntroducedVersion: 1.0
+  CdsDependencies: '{"cdsdependencies":[]}'
+  IsCustomizable: 1
+  BackgroundImageUri: /canvasapps/crcc6_chrtbarmonthhv02_d26f8/crcc6_chrtbarmonthhv02_d26f8_BackgroundImageUri
+  DocumentUri: /canvasapps/crcc6_chrtbarmonthhv02_d26f8/crcc6_chrtbarmonthhv02_d26f8_DocumentUri.msapp
+  AdditionalUris:
+    AdditionalUri: /canvasapps/crcc6_chrtbarmonthhv02_d26f8/crcc6_chrtbarmonthhv02_d26f8_AdditionalUris0_identity.json

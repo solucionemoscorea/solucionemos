@@ -1,0 +1,398 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps should only be used to review changes made within Power Apps Studio and for minor edits (Preview).
+# Use the maker portal to create and edit your Power Apps.
+# 
+# The schema file for Canvas Apps is available at https://go.microsoft.com/fwlink/?linkid=2304907
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+ComponentDefinitions:
+  chrt_bar_month_h_v01:
+    DefinitionType: CanvasComponent
+    AllowCustomization: true
+    CustomProperties:
+      Fill_BackGround:
+        PropertyKind: Input
+        DisplayName: Fill_BackGround
+        Description: 사용자 지정 속성
+        DataType: Color
+        Default: '=ColorValue("#222222") '
+      IsTrue_DarkMode:
+        PropertyKind: Input
+        DisplayName: IsTrue_DarkMode
+        Description: 사용자 지정 속성
+        DataType: Boolean
+        Default: =true
+      IsTrue_DropShadow:
+        PropertyKind: Input
+        DisplayName: IsTrue_DropShadow
+        Description: 사용자 지정 속성
+        DataType: Boolean
+        Default: =true
+      Items_2_Show:
+        PropertyKind: Input
+        DisplayName: Items_2_Show
+        Description: 사용자 지정 속성
+        DataType: Table
+        Default: |
+          =Table(
+              { ChartItem: 1 , ChartValue: 120 },
+              { ChartItem: 2 , ChartValue: 85 },
+              { ChartItem: 3 , ChartValue: 150 },
+              { ChartItem: 4 , ChartValue: 60 }, 
+              { ChartItem: 5 , ChartValue: 120 },
+              { ChartItem: 6 , ChartValue: 85 },
+              { ChartItem: 7 , ChartValue: 150 },
+              { ChartItem: 8 , ChartValue: 60 }, 
+              { ChartItem: 9 , ChartValue: 120 },
+              { ChartItem: 10 , ChartValue: 85 },
+              { ChartItem: 11 , ChartValue: 150 },
+              { ChartItem: 12 , ChartValue: 60 }
+          )
+      OnSelect_Chart:
+        PropertyKind: Event
+        DisplayName: OnSelect_Chart
+        Description: 사용자 지정 속성
+        ReturnType: None
+        Default: =
+      Size_Font:
+        PropertyKind: Input
+        DisplayName: Size_Font
+        Description: 사용자 지정 속성
+        DataType: Number
+        Default: =13
+      Title_Chart:
+        PropertyKind: Input
+        DisplayName: Title_Chart
+        Description: 사용자 지정 속성
+        DataType: Text
+        Default: ="텍스트"
+      Width_Bar:
+        PropertyKind: Input
+        DisplayName: Width_Bar
+        Description: 사용자 지정 속성
+        DataType: Number
+        Default: =100
+      Width_Item:
+        PropertyKind: Input
+        DisplayName: Width_Item
+        Description: 사용자 지정 속성
+        DataType: Number
+        Default: =100
+      _selected_item_input:
+        PropertyKind: Input
+        DisplayName: _selected_item_input
+        Description: 사용자 지정 속성
+        DataType: Number
+        Default: =12
+      _selected_item_output:
+        PropertyKind: Output
+        DisplayName: _selected_item_output
+        Description: 사용자 지정 속성
+        DataType: Number
+    Properties:
+      Fill: =If( chrt_bar_month_h_v01.IsTrue_DarkMode , ColorFade(chrt_bar_month_h_v01.Fill_BackGround,-20%) , Color.White )
+      Height: =App.DesignHeight/10*4
+      _selected_item_output: =_var_selected_item_chart
+    Children:
+      - Container3_15:
+          Control: GroupContainer@1.4.0
+          Variant: ManualLayout
+          Properties:
+            BorderColor: =RGBA(116, 116, 116, 1)
+            BorderThickness: =1
+            Fill: =RGBA(246, 88, 16, 0.7)
+            Height: =Container3_7.Height
+            RadiusBottomLeft: =10
+            RadiusBottomRight: =10
+            RadiusTopLeft: =10
+            RadiusTopRight: =10
+            Visible: |-
+              =If( chrt_bar_month_h_v01.IsTrue_DarkMode , false , 
+                  If( chrt_bar_month_h_v01.IsTrue_DropShadow , false,  true ))
+            Width: =Container3_7.Width
+            X: =Container3_7.X + 5
+            Y: =Container3_7.Y + 5
+      - Container3_7:
+          Control: GroupContainer@1.4.0
+          Variant: ManualLayout
+          Properties:
+            BorderColor: =RGBA(116, 116, 116, 1)
+            BorderThickness: =If( chrt_bar_month_h_v01.IsTrue_DropShadow , 0 , 1 )
+            DropShadow: =DropShadow.Regular
+            Fill: =If( chrt_bar_month_h_v01.IsTrue_DarkMode , ColorFade(chrt_bar_month_h_v01.Fill_BackGround,-40%) , Color.White )
+            Height: =Parent.Height - Self.Y - Self.X
+            RadiusBottomLeft: =10
+            RadiusBottomRight: =10
+            RadiusTopLeft: =10
+            RadiusTopRight: =10
+            Width: =Parent.Width - Self.X*2
+            X: =7.5
+            Y: =Label7_1.Y+ Label7_1.Height
+          Children:
+            - Gallery15_1:
+                Control: Gallery@2.15.0
+                Variant: VariableHeight
+                Properties:
+                  BorderColor: =RGBA(0, 18, 107, 1)
+                  Height: =Parent.Height - Self.Y*2
+                  Items: =chrt_bar_month_h_v01.Items_2_Show
+                  ShowScrollbar: =false
+                  TemplatePadding: =0
+                  TemplateSize: =Self.Height/12
+                  Width: =Parent.Width - Self.X*2
+                  X: =5
+                  Y: =5
+                Children:
+                  - Rectangle37_1:
+                      Control: Rectangle@2.3.0
+                      Properties:
+                        BorderColor: =RGBA(0, 18, 107, 1)
+                        Fill: |-
+                          =If( chrt_bar_month_h_v01.IsTrue_DarkMode ,
+                              If(
+                                  IsBlank(chrt_bar_month_h_v01._selected_item_input), 
+                                  Color.Transparent ,
+                                  If(
+                                      chrt_bar_month_h_v01._selected_item_input = ThisItem.ChartItem , ColorFade(chrt_bar_month_h_v01.Fill_BackGround,-60%), Color.Transparent
+                                  )
+                              )
+                              ,
+                              If(
+                                  IsBlank(chrt_bar_month_h_v01._selected_item_input), 
+                                  Color.Transparent ,
+                                  If(
+                                      chrt_bar_month_h_v01._selected_item_input = ThisItem.ChartItem , ColorFade(ColorValue("#f65810"),95%), ColorFade(ColorValue("#e0e0e0"),95%)
+                                  )
+                              )
+                          )
+                        Height: =Parent.TemplateHeight
+                        OnSelect: =
+                        Width: =Parent.TemplateWidth
+                  - chart_month:
+                      Control: Label@2.5.1
+                      Properties:
+                        BorderColor: =RGBA(0, 18, 107, 1)
+                        Color: |+
+                          =If( chrt_bar_month_h_v01.IsTrue_DarkMode ,
+                              If( IsBlank(chrt_bar_month_h_v01._selected_item_input) , 
+                                  ColorValue("#ffffff")
+                                  ,
+                                  If( chrt_bar_month_h_v01._selected_item_input = ThisItem.ChartItem , 
+                                  ColorValue("#ffffff")
+                                  ,
+                                  ColorValue("#959595")
+                                  )
+                              )
+                              ,
+                              If( IsBlank(chrt_bar_month_h_v01._selected_item_input) , 
+                                  ColorValue("#222222")
+                                  ,
+                                  If( chrt_bar_month_h_v01._selected_item_input = ThisItem.ChartItem , 
+                                  ColorValue("#000000")
+                                  ,
+                                  ColorValue("#959595")
+                                  )
+                              )
+                          )
+
+                        Font: =Font.'Open Sans'
+                        FontWeight: |-
+                          =
+                          If( IsBlank(chrt_bar_month_h_v01._selected_item_input) , 
+                              FontWeight.Semibold,
+                              If( chrt_bar_month_h_v01._selected_item_input = ThisItem.ChartItem , 
+                              FontWeight.Bold,
+                              FontWeight.Normal
+                              )
+                          )
+                        Height: =Parent.TemplateHeight
+                        OnSelect: =Select(Parent)
+                        Size: |-
+                          =If( IsBlank(chrt_bar_month_h_v01._selected_item_input) , 
+                              chrt_bar_month_h_v01.Size_Font*0.9,
+                              If( chrt_bar_month_h_v01._selected_item_input = ThisItem.ChartItem , 
+                              chrt_bar_month_h_v01.Size_Font,
+                              chrt_bar_month_h_v01.Size_Font*0.8
+                              )
+                          )
+                        Text: =ThisItem.ChartItem & "월"
+                        Width: =chrt_bar_month_h_v01.Width_Item
+                        X: =Parent.X*0
+                        Y: =Parent.TemplateHeight/2 - Self.Height/2
+                  - bar_rear_1:
+                      Control: Classic/TextInput@2.3.2
+                      Properties:
+                        BorderColor: =RGBA(116, 116, 116, 1)
+                        BorderThickness: =1
+                        Default: =
+                        Fill: =ColorFade(bar_front_1.Fill, 50%)
+                        Font: =Font.'Open Sans'
+                        Height: =bar_front_1.Height
+                        HoverBorderColor: =RGBA(0, 18, 107, 1)
+                        HoverFill: =RGBA(186, 202, 226, 1)
+                        OnSelect: =Select(Parent)
+                        RadiusBottomLeft: =0
+                        RadiusBottomRight: =bar_front_1.RadiusBottomRight
+                        RadiusTopLeft: =0
+                        RadiusTopRight: =bar_front_1.RadiusTopRight
+                        Visible: |-
+                          =If( Or( chrt_bar_month_h_v01.IsTrue_DarkMode , chrt_bar_month_h_v01.IsTrue_DropShadow ) , false ,
+                          If( bar_front_1.Width=0 , false , true))
+                        Width: =bar_front_1.Width
+                        X: =bar_front_1.X+1
+                        Y: =bar_front_1.Y - 1
+                  - bar_front_1:
+                      Control: Classic/TextInput@2.3.2
+                      Properties:
+                        BorderColor: =If( chrt_bar_month_h_v01.IsTrue_DarkMode , ColorValue("#ffffff") , ColorValue("#6a6a6a") )
+                        BorderThickness: =1
+                        Default: =
+                        Fill: |-
+                          =If( chrt_bar_month_h_v01.IsTrue_DarkMode , 
+                              If( IsBlank(chrt_bar_month_h_v01._selected_item_input) , 
+                                  ColorValue("#00E676")
+                                  ,
+                                  If( chrt_bar_month_h_v01._selected_item_input = ThisItem.ChartItem , 
+                                  ColorValue("#00E676")
+                                  ,
+                                  ColorValue("#959595")
+                                  )
+                              ), 
+                              If( IsBlank(chrt_bar_month_h_v01._selected_item_input) , 
+                                  ColorValue("#f65810")
+                                  ,
+                                  If( chrt_bar_month_h_v01._selected_item_input = ThisItem.ChartItem , 
+                                  ColorValue("#f65810")
+                                  ,
+                                  ColorValue("#959595")
+                                  )
+                              )
+
+                          )
+                        Font: =Font.'Open Sans'
+                        Height: |-
+                          =If( IsBlank(chrt_bar_month_h_v01._selected_item_input) , 
+                              Parent.TemplateHeight/6*2
+                              ,
+                              If( chrt_bar_month_h_v01._selected_item_input = ThisItem.ChartItem , 
+                              Parent.TemplateHeight/6*2*1.2
+                              ,
+                              Parent.TemplateHeight/6*2*0.8
+                              )
+                          )
+                        HoverBorderColor: =RGBA(0, 18, 107, 1)
+                        HoverFill: =RGBA(186, 202, 226, 1)
+                        OnSelect: =Select(Parent)
+                        RadiusBottomLeft: =0
+                        RadiusBottomRight: =3
+                        RadiusTopLeft: =0
+                        RadiusTopRight: =3
+                        Visible: =!(Self.Width=0)
+                        Width: =IfError(ThisItem.ChartValue/Sum(chrt_bar_month_h_v01.Items_2_Show,ChartValue),0)*(chrt_bar_month_h_v01.Width_Bar/10*2.5)
+                        X: '=chart_month.X + chart_month.Width '
+                        Y: =chart_month.Y + chart_month.Height/2 - Self.Height/2
+                  - line_1:
+                      Control: Classic/TextInput@2.3.2
+                      Properties:
+                        BorderColor: =RGBA(0, 18, 107, 1)
+                        BorderThickness: =0
+                        Default: =
+                        Fill: =If( chrt_bar_month_h_v01.IsTrue_DarkMode , Color.White , Color.Black )
+                        Font: =Font.'Open Sans'
+                        Height: =1
+                        HoverBorderColor: =RGBA(0, 18, 107, 1)
+                        HoverFill: =RGBA(186, 202, 226, 1)
+                        OnSelect: =Select(Parent)
+                        RadiusBottomLeft: =0
+                        RadiusBottomRight: =0
+                        RadiusTopLeft: =0
+                        RadiusTopRight: =0
+                        Width: =bar_front_1.Width/10*4
+                        X: '=bar_front_1.X + bar_front_1.Width '
+                        Y: =chart_month.Y + chart_month.Height/2 - Self.Height/2
+                  - Circle1_1:
+                      Control: Circle@2.3.0
+                      Properties:
+                        BorderColor: =RGBA(0, 18, 107, 1)
+                        Fill: =If( chrt_bar_month_h_v01.IsTrue_DarkMode , Color.White , Color.Black )
+                        Height: =chrt_bar_month_h_v01.Size_Font*0.7
+                        OnSelect: =
+                        Width: =Self.Height
+                        X: =line_1.X + line_1.Width
+                        Y: =line_1.Y + line_1.Height/2 - Self.Height/2
+                  - Label7_4:
+                      Control: Label@2.5.1
+                      Properties:
+                        Align: =Align.Right
+                        BorderColor: =RGBA(0, 18, 107, 1)
+                        Color: =chart_month.Color
+                        Font: =Font.'Open Sans'
+                        FontWeight: =chart_month.FontWeight
+                        Height: =Parent.TemplateHeight
+                        OnSelect: =Select(Parent)
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =chart_month.Size*0.9
+                        Text: =Text( ThisItem.ChartValue , "#,# ")
+                        Visible: =!(bar_front_1.Width=0)
+                        Width: =Parent.TemplateWidth/10*2.5
+                        X: =Circle1_1.X + Circle1_1.Width*1.5
+                  - Label7_5:
+                      Control: Label@2.5.1
+                      Properties:
+                        BorderColor: =RGBA(0, 18, 107, 1)
+                        Color: =chart_month.Color
+                        Font: =Font.'Open Sans'
+                        FontWeight: =chart_month.FontWeight
+                        Height: =Label7_4.Height
+                        OnSelect: =Select(Parent)
+                        Size: =chart_month.Size*0.8
+                        Text: =Text(IfError(ThisItem.ChartValue/Sum(chrt_bar_month_h_v01.Items_2_Show,ChartValue)*100,0),"(0.00%)")
+                        Visible: =!(bar_front_1.Width=0)
+                        Width: =Parent.TemplateWidth/10*2.5
+                        X: =Label7_4.X + Label7_4.Width
+                  - Rectangle36_1:
+                      Control: Rectangle@2.3.0
+                      Properties:
+                        BorderColor: =RGBA(0, 18, 107, 1)
+                        Fill: |-
+                          =If( chrt_bar_month_h_v01.IsTrue_DarkMode , 
+                              ColorFade( chrt_bar_month_h_v01.Fill_BackGround , 10%) , ColorFade( chrt_bar_month_h_v01.Fill_BackGround , 80%)
+                          )
+                        Height: =1
+                        OnSelect: =Select(Parent)
+                        Width: =Parent.TemplateWidth
+                        Y: =chart_month.Y + chart_month.Height - Self.Height
+                  - Rectangle25_1:
+                      Control: Rectangle@2.3.0
+                      Properties:
+                        BorderColor: =RGBA(0, 18, 107, 1)
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =Parent.TemplateHeight
+                        OnSelect: |-
+                          =If( _var_selected_item_chart = ThisItem.ChartItem , 
+                              Set( _var_selected_item_chart , Blank() ) , 
+                              Set( _var_selected_item_chart , ThisItem.ChartItem )
+                          );
+
+                          chrt_bar_month_h_v01.OnSelect_Chart() ;
+                        Width: =Parent.TemplateWidth
+                        X: =Parent.Height*0
+                        Y: =Parent.Height*0
+      - Label7_1:
+          Control: Label@2.5.1
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =If( chrt_bar_month_h_v01.IsTrue_DarkMode , Color.White , Color.Black )
+            Fill: =Color.Transparent
+            Font: =Font.'Open Sans'
+            FontWeight: =FontWeight.Bold
+            Height: =Self.Size*2
+            Size: =Parent.Size_Font*1.1
+            Text: =Parent.Title_Chart
+            Width: =Parent.Width - Self.X*2
+            X: =7.5
+            Y: =Self.X/2

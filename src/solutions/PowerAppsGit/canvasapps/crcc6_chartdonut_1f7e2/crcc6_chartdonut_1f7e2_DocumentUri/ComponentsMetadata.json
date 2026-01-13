@@ -1,0 +1,11 @@
+{
+  "Components": [
+    {
+      "Name": "chart_donut",
+      "TemplateName": "c7aac5db27d54cbf92306290a10025c3",
+      "Description": "",
+      "AllowCustomization": true,
+      "AllowAccessToGlobals": false
+    }
+  ]
+}

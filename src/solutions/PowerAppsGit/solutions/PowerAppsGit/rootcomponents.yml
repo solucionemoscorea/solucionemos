@@ -4,5 +4,86 @@ RootComponents:
     '@schemaName': crcc6_1_4d62c
     '@behavior': 0
   - '@type': 300
+    '@schemaName': crcc6_barmenutop_28ac8
+    '@behavior': 0
+  - '@type': 300
+    '@schemaName': crcc6_barpagination_79116
+    '@behavior': 0
+  - '@type': 300
+    '@schemaName': crcc6_charline1v01_c4da1
+    '@behavior': 0
+  - '@type': 300
+    '@schemaName': crcc6_charline2v01_67155
+    '@behavior': 0
+  - '@type': 300
+    '@schemaName': crcc6_chartbaritemsv_96bf0
+    '@behavior': 0
+  - '@type': 300
+    '@schemaName': crcc6_chartdonut_1f7e2
+    '@behavior': 0
+  - '@type': 300
+    '@schemaName': crcc6_chartmonthlyh_7ef53
+    '@behavior': 0
+  - '@type': 300
+    '@schemaName': crcc6_chartyearlyh_8edda
+    '@behavior': 0
+  - '@type': 300
+    '@schemaName': crcc6_chrtbarmonthhv01_70254
+    '@behavior': 0
+  - '@type': 300
+    '@schemaName': crcc6_chrtbarmonthhv02_d26f8
+    '@behavior': 0
+  - '@type': 300
+    '@schemaName': crcc6_compcalendar2v01_27edd
+    '@behavior': 0
+  - '@type': 300
+    '@schemaName': crcc6_compcard1v01_140aa
+    '@behavior': 0
+  - '@type': 300
+    '@schemaName': crcc6_compcard2v01_ddf71
+    '@behavior': 0
+  - '@type': 300
+    '@schemaName': crcc6_compchartline1v01_1bb4c
+    '@behavior': 0
+  - '@type': 300
+    '@schemaName': crcc6_compmonthselection1v01_d3195
+    '@behavior': 0
+  - '@type': 300
+    '@schemaName': crcc6_componentdefaultv2601_07a99
+    '@behavior': 0
+  - '@type': 300
+    '@schemaName': crcc6_comppopupleft_0e907
+    '@behavior': 0
+  - '@type': 300
+    '@schemaName': crcc6_comppopupright_0e0a0
+    '@behavior': 0
+  - '@type': 300
+    '@schemaName': crcc6_comppopuptopsettings_839f5
+    '@behavior': 0
+  - '@type': 300
+    '@schemaName': crcc6_deletedial_a57c1
+    '@behavior': 0
+  - '@type': 300
+    '@schemaName': crcc6_prevnext_60bdd
+    '@behavior': 0
+  - '@type': 300
+    '@schemaName': crcc6_tab9menu1hv01_06ad8
+    '@behavior': 0
+  - '@type': 300
+    '@schemaName': crcc6_tabmenu5horizontal_801db
+    '@behavior': 0
+  - '@type': 300
+    '@schemaName': crcc6_tabmenustylehmonthly_5048c
+    '@behavior': 0
+  - '@type': 300
+    '@schemaName': crcc6_tabmenustylehorizontal_ac832
+    '@behavior': 0
+  - '@type': 300
+    '@schemaName': crcc6_tabmenustylehweekly_c4886
+    '@behavior': 0
+  - '@type': 300
+    '@schemaName': crcc6_tabmenustylevertical_0f188
+    '@behavior': 0
+  - '@type': 300
     '@schemaName': crcc6__da74b
     '@behavior': 0

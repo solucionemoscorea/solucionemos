@@ -1,0 +1,11 @@
+{
+  "Components": [
+    {
+      "Name": "comp_popup_top_settings",
+      "TemplateName": "9ac9b8f916554a558443fadba03638bb",
+      "Description": "",
+      "AllowCustomization": true,
+      "AllowAccessToGlobals": false
+    }
+  ]
+}

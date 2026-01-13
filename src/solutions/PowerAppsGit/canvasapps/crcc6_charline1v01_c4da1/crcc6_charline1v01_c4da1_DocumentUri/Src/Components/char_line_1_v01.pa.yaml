@@ -1,0 +1,285 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps should only be used to review changes made within Power Apps Studio and for minor edits (Preview).
+# Use the maker portal to create and edit your Power Apps.
+# 
+# The schema file for Canvas Apps is available at https://go.microsoft.com/fwlink/?linkid=2304907
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+ComponentDefinitions:
+  char_line_1_v01:
+    DefinitionType: CanvasComponent
+    AllowCustomization: true
+    CustomProperties:
+      Color_Fill_DarkMode:
+        PropertyKind: Input
+        DisplayName: Color_Fill_DarkMode
+        Description: 사용자 지정 속성
+        DataType: Color
+        Default: =ColorValue("#6a6a6a")
+      Color_Fill_LightMode:
+        PropertyKind: Input
+        DisplayName: Color_Fill_LightMode
+        Description: 사용자 지정 속성
+        DataType: Color
+        Default: =Color.Transparent
+      Color_Font_DarkMode:
+        PropertyKind: Input
+        DisplayName: Color_Font_DarkMode
+        Description: 사용자 지정 속성
+        DataType: Table
+        Default: |-
+          =
+          Table(
+              { Color: "#ffffff" }
+          )
+      Color_Font_LightMode:
+        PropertyKind: Input
+        DisplayName: Color_Font_LightMode
+        Description: 사용자 지정 속성
+        DataType: Table
+        Default: |-
+          =
+          Table(
+              { Color: "#222222" }
+          )
+      Color_Grandient_Fill_Dark:
+        PropertyKind: Input
+        DisplayName: Color_Grandient_Fill_Dark
+        Description: A custom property
+        DataType: Table
+        Default: |
+          =Table(
+                  {
+                      Color: Concatenate(
+                                  First(char_line_1_v01.Color_Line_DarkMode_1).Color,
+                                  "B3"
+                              ) 
+                  }, 
+                  {    
+                      Color: Concatenate(
+                                  First(char_line_1_v01.Color_Line_DarkMode_1).Color,
+                                  "66"
+                              )
+                  }, 
+                  {        
+                      Color: "#00000000"
+                  }
+          )
+      Color_Grandient_Fill_Light:
+        PropertyKind: Input
+        DisplayName: Color_Grandient_Fill_Light
+        Description: A custom property
+        DataType: Table
+        Default: |
+          =Table(
+                  {
+                      Color: Concatenate(
+                                  First(char_line_1_v01.Color_Line_LightMode_1).Color,
+                                  "CC"
+                              ) 
+                  }, 
+                  {    
+                      Color: Concatenate(
+                                  First(char_line_1_v01.Color_Line_LightMode_1).Color,
+                                  "4d"
+                              )
+                  }, 
+                  {        
+                      Color: "#ffffff00"
+                  }
+          )
+      Color_Line_DarkMode_1:
+        PropertyKind: Input
+        DisplayName: Color_Line_DarkMode_1
+        Description: A custom property
+        DataType: Table
+        Default: |-
+          =
+          Table(
+              { Color: "#2a2a2a" }
+          )
+      Color_Line_DarkMode_2:
+        PropertyKind: Input
+        DisplayName: Color_Line_DarkMode_2
+        Description: A custom property
+        DataType: Table
+        Default: |-
+          =
+          Table(
+              { Color: "#6a6a6a" }
+          )
+      Color_Line_LightMode_1:
+        PropertyKind: Input
+        DisplayName: Color_Line_LightMode_1
+        Description: A custom property
+        DataType: Table
+        Default: |-
+          =
+          Table(
+              { Color: "#f65810" }
+          )
+      Color_Line_LightMode_2:
+        PropertyKind: Input
+        DisplayName: Color_Line_LightMode_2
+        Description: A custom property
+        DataType: Table
+        Default: |-
+          =
+          Table(
+              { Color: "#fef9ef" }
+          )
+      Fill_BackGround:
+        PropertyKind: Input
+        DisplayName: Fill_BackGround
+        Description: A custom property
+        DataType: Color
+        Default: =RGBA(0, 0, 0, 1)
+      IsTrue_DarkMode:
+        PropertyKind: Input
+        DisplayName: IsTrue_DarkMode
+        Description: 사용자 지정 속성
+        DataType: Boolean
+        Default: =false
+      IsTrue_DropShadow:
+        PropertyKind: Input
+        DisplayName: IsTrue_DropShadow
+        Description: 사용자 지정 속성
+        DataType: Boolean
+        Default: =false
+      Item_Chart:
+        PropertyKind: Input
+        DisplayName: Item_Chart
+        Description: 사용자 지정 속성
+        DataType: Table
+        Default: |
+          =Table(
+              { ChartDate: "1월",  ChartSum: 120, ChartItem: "A" },
+              { ChartDate: "1월",  ChartSum: 95,  ChartItem: "B" },
+
+              { ChartDate: "2월",  ChartSum: 110, ChartItem: "A" },
+              { ChartDate: "2월",  ChartSum: 100, ChartItem: "B" },
+
+              { ChartDate: "3월",  ChartSum: 130, ChartItem: "A" },
+              { ChartDate: "3월",  ChartSum: 105, ChartItem: "B" },
+
+              { ChartDate: "4월",  ChartSum: 125, ChartItem: "A" },
+              { ChartDate: "4월",  ChartSum: 115, ChartItem: "B" },
+
+              { ChartDate: "5월",  ChartSum: 140, ChartItem: "A" },
+              { ChartDate: "5월",  ChartSum: 120, ChartItem: "B" },
+
+              { ChartDate: "6월",  ChartSum: 150, ChartItem: "A" },
+              { ChartDate: "6월",  ChartSum: 135, ChartItem: "B" },
+
+              { ChartDate: "7월",  ChartSum: 160, ChartItem: "A" },
+              { ChartDate: "7월",  ChartSum: 140, ChartItem: "B" },
+
+              { ChartDate: "8월",  ChartSum: 155, ChartItem: "A" },
+              { ChartDate: "8월",  ChartSum: 145, ChartItem: "B" },
+
+              { ChartDate: "9월",  ChartSum: 170, ChartItem: "A" },
+              { ChartDate: "9월",  ChartSum: 150, ChartItem: "B" },
+
+              { ChartDate: "10월", ChartSum: 165, ChartItem: "A" },
+              { ChartDate: "10월", ChartSum: 155, ChartItem: "B" },
+
+              { ChartDate: "11월", ChartSum: 180, ChartItem: "A" },
+              { ChartDate: "11월", ChartSum: 160, ChartItem: "B" },
+
+              { ChartDate: "12월", ChartSum: 190, ChartItem: "A" },
+              { ChartDate: "12월", ChartSum: 170, ChartItem: "B" }
+          )
+      Size_Font:
+        PropertyKind: Input
+        DisplayName: Size_Font
+        Description: 사용자 지정 속성
+        DataType: Number
+        Default: =13
+      Title_Input:
+        PropertyKind: Input
+        DisplayName: Title_Input
+        Description: 사용자 지정 속성
+        DataType: Text
+        Default: ="제목을 입력하세요"
+    Properties:
+      Fill: =If(char_line_1_v01.IsTrue_DarkMode, ColorFade(char_line_1_v01.Color_Fill_DarkMode , -20%),  ColorFade(char_line_1_v01.Color_Fill_LightMode , -20%))
+    Children:
+      - container_rear_3:
+          Control: GroupContainer@1.4.0
+          Variant: ManualLayout
+          Properties:
+            BorderColor: =RGBA(106, 106, 106, 1)
+            BorderThickness: =1
+            DropShadow: =DropShadow.Regular
+            Fill: =RGBA(253, 222, 207, 1)
+            Height: =container_front_3.Height
+            RadiusBottomLeft: =10
+            RadiusBottomRight: =10
+            RadiusTopLeft: =10
+            RadiusTopRight: =10
+            Visible: =!char_line_1_v01.IsTrue_DropShadow
+            Width: =container_front_3.Width
+            X: =container_front_3.X + 5
+            Y: =container_front_3.Y + 5
+      - container_front_3:
+          Control: GroupContainer@1.4.0
+          Variant: ManualLayout
+          Properties:
+            BorderColor: =RGBA(106, 106, 106, 1)
+            BorderThickness: =If( char_line_1_v01.IsTrue_DropShadow , 0 , 1 )
+            DropShadow: =DropShadow.Regular
+            Fill: =If( char_line_1_v01.IsTrue_DarkMode , ColorFade(char_line_1_v01.Fill_BackGround , -40%) , Color.White )
+            Height: =Parent.Height - Self.Y*2
+            RadiusBottomLeft: =10
+            RadiusBottomRight: =10
+            RadiusTopLeft: =10
+            RadiusTopRight: =10
+            Width: =Parent.Width- Self.X*2
+            X: =7.5
+            Y: =7.5
+          Children:
+            - Container62_4:
+                Control: GroupContainer@1.4.0
+                Variant: ManualLayout
+                Properties:
+                  DropShadow: =DropShadow.None
+                  Height: =Parent.Height/10*1
+                  RadiusBottomLeft: =0
+                  RadiusBottomRight: =0
+                  RadiusTopLeft: =0
+                  RadiusTopRight: =0
+                  Width: =Parent.Width
+                  X: '=Parent.Width/2 - Self.Width/2 '
+                  Y: =Self.X*0
+            - Container62_5:
+                Control: GroupContainer@1.4.0
+                Variant: ManualLayout
+                Properties:
+                  DropShadow: =DropShadow.None
+                  Height: =Parent.Height - Self.Y
+                  RadiusBottomLeft: =0
+                  RadiusBottomRight: =0
+                  RadiusTopLeft: =0
+                  RadiusTopRight: =0
+                  Width: =Parent.Width
+                  X: '=Parent.Width/2  - Self.Width/2 '
+                  Y: =Container62_4.Y + Container62_4.Height
+                Children:
+                  - Image6_8:
+                      Control: Image@2.2.3
+                      Properties:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledFill: =RGBA(0, 0, 0, 0)
+                        FocusedBorderThickness: =4
+                        Height: =Parent.Height
+                        HoverBorderColor: =RGBA(0, 0, 0, 0)
+                        HoverFill: =RGBA(0, 0, 0, 0)
+                        Image: "=\"https://quickchart.io/chart?c=\" & EncodeUrl(\n\"\n{\n  type: 'bar',\n  data: {\n    labels: [\n                    '1월',  // 1\n                    '',     // 2\n                    '',     // 3\n                    '',     // 4\n                    '',     // 5\n                    '',     // 6\n                    '',     // 7\n                    '',     // 8\n                    '',     // 9\n                    '',     // 10\n                    '',     // 11\n                    '12월'  // 12\n            ],\n    datasets: [\n      {\n        type: 'line',\n        fill: true, \n        pointRadius : 0 , \n        backgroundColor:getGradientFillHelper('vertical', [\"&\n            If(char_line_1_v01.IsTrue_DarkMode , \n                Concat(char_line_1_v01.Color_Grandient_Fill_Dark,\"'\" & Color& \"',\") , \n                Concat(char_line_1_v01.Color_Grandient_Fill_Light,\"'\" & Color& \"',\")\n            )\n            \n            &\"]),\n        borderColor: '\"& \n        If( char_line_1_v01.IsTrue_DarkMode, \n        First(char_line_1_v01.Color_Line_DarkMode_1).Color , \n        First(char_line_1_v01.Color_Line_LightMode_1).Color \n        ) \n        &\"',\n        borderWidth: 1,\n        label: '',\n        data: [\" & Concat(Filter(char_line_1_v01.Item_Chart,ChartItem =\"A\" ),\"'\" & ChartSum & \"',\") & \"]\n      }, \n      {\n        type: 'line',\n        fill: false,\n        pointRadius : 0 ,\n        borderColor: '\"& \n        \n        If( char_line_1_v01.IsTrue_DarkMode, \n            First(char_line_1_v01.Color_Line_DarkMode_2).Color , \n            First(char_line_1_v01.Color_Line_LightMode_2).Color\n        ) \n        \n        &\"',\n        borderWidth: 1,\n        label: '',\n         \n        data: [\" & Concat(Filter(char_line_1_v01.Item_Chart,ChartItem =\"B\"  ),\"'\" & ChartSum & \"',\") & \"]\n      }\n    ]\n  },\n  options: {\n    scales: {\n      xAxes: \n      [\n        { ticks : \n            { \n        \n                fontColor: \n                \n                \"&\n                    If( char_line_1_v01.IsTrue_DarkMode , \n                        Concat(char_line_1_v01.Color_Font_DarkMode,\"'\"&Color&\"'\") , \n                        Concat(char_line_1_v01.Color_Font_LightMode,\"'\"&Color&\"'\")\n                    )\n                &\"\n                , \n                \n                fontSize: 12 ,\n               \n            },\n            gridLines : { display : false }\n        }\n      ],\n      yAxes: [{ ticks : {display : false } , gridLines : { display : false } }]\n    } , \n    legend : { \n        display : false  \n        \n    } \n  }\n}\n\"\n)\n"
+                        PressedBorderColor: =RGBA(0, 0, 0, 0)
+                        PressedFill: =RGBA(0, 0, 0, 0)
+                        Width: =Parent.Width
+                        X: =Parent.Width/2 - Self.Width/2
+                        Y: =Parent.Height/2 - Self.Height/2

@@ -1,0 +1,11 @@
+{
+  "Components": [
+    {
+      "Name": "tab_menu_style_h_monthly",
+      "TemplateName": "645286e2dcaa42d6975ccf8f2fcfaa41",
+      "Description": "",
+      "AllowCustomization": true,
+      "AllowAccessToGlobals": false
+    }
+  ]
+}

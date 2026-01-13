@@ -1,0 +1,11 @@
+{
+  "Components": [
+    {
+      "Name": "tab_menu_style_h_weekly",
+      "TemplateName": "3b33378062e84e9bbe9577e3147a4917",
+      "Description": "",
+      "AllowCustomization": true,
+      "AllowAccessToGlobals": false
+    }
+  ]
+}

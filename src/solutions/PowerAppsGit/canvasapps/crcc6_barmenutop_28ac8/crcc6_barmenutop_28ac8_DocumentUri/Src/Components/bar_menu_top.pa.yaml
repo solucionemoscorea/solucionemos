@@ -1,0 +1,366 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps should only be used to review changes made within Power Apps Studio and for minor edits (Preview).
+# Use the maker portal to create and edit your Power Apps.
+# 
+# The schema file for Canvas Apps is available at https://go.microsoft.com/fwlink/?linkid=2304907
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+ComponentDefinitions:
+  bar_menu_top:
+    DefinitionType: CanvasComponent
+    AllowCustomization: true
+    CustomProperties:
+      Fill_BackGround:
+        PropertyKind: Input
+        DisplayName: Fill_BackGround
+        Description: 사용자 지정 속성
+        DataType: Color
+        Default: =ColorValue("#6a6a6a")
+      Font_Size_Input:
+        PropertyKind: Input
+        DisplayName: Font_Size_Input
+        Description: 사용자 지정 속성
+        DataType: Number
+        Default: =9
+      Font_Size_Max:
+        PropertyKind: Input
+        DisplayName: Font_Size_Max
+        Description: 사용자 지정 속성
+        DataType: Number
+        Default: =18
+      Font_Size_Min:
+        PropertyKind: Input
+        DisplayName: Font_Size_Min
+        Description: 사용자 지정 속성
+        DataType: Number
+        Default: =8
+      Font_Size_Output:
+        PropertyKind: Output
+        DisplayName: Font_Size_Output
+        Description: 사용자 지정 속성
+        DataType: Text
+      IsTrue_DarkMode:
+        PropertyKind: Output
+        DisplayName: IsTrue_DarkMode
+        Description: 사용자 지정 속성
+        DataType: Boolean
+      IsTrue_DropShadow:
+        PropertyKind: Output
+        DisplayName: IsTrue_DropShadow
+        Description: 사용자 지정 속성
+        DataType: Boolean
+      IsTrue_Edit:
+        PropertyKind: Input
+        DisplayName: IsTrue_Edit
+        Description: 사용자 지정 속성
+        DataType: Boolean
+        Default: =false
+      Name_Screen:
+        PropertyKind: Input
+        DisplayName: Name_Screen
+        Description: 사용자 지정 속성
+        DataType: Text
+        Default: ="텍스트"
+      OnSelect_DarkMode:
+        PropertyKind: Event
+        DisplayName: OnSelect_DarkMode
+        Description: 사용자 지정 속성
+        ReturnType: None
+        Default: =
+      OnSelect_DropShadow:
+        PropertyKind: Event
+        DisplayName: OnSelect_DropShadow
+        Description: A custom property
+        ReturnType: Boolean
+        Default: =true
+      OnSelect_FontSizeDown:
+        PropertyKind: Event
+        DisplayName: OnSelect_FontSizeDown
+        Description: 사용자 지정 속성
+        ReturnType: None
+        Default: =
+      OnSelect_FontSizeUp:
+        PropertyKind: Event
+        DisplayName: OnSelect_FontSizeUp
+        Description: 사용자 지정 속성
+        ReturnType: None
+        Default: =
+      OnSelect_Settings:
+        PropertyKind: Event
+        DisplayName: OnSelect_Settings
+        Description: 사용자 지정 속성
+        ReturnType: None
+        Default: =
+      사용자지정속성1:
+        PropertyKind: Event
+        DisplayName: 사용자 지정 속성 1
+        Description: 사용자 지정 속성
+        ReturnType: None
+        Default: =
+    Properties:
+      Fill: '=If( Self.IsTrue_DarkMode , ColorFade(Self.Fill_BackGround, -40%) , Color.Transparent ) '
+      Font_Size_Output: =_comp_size_font
+      Height: =App.DesignHeight/10
+      IsTrue_DarkMode: =_comp_darkmode
+      IsTrue_DropShadow: =_comp_dropshadow
+      Width: =App.DesignWidth
+    Children:
+      - Container3_22:
+          Control: GroupContainer@1.4.0
+          Variant: ManualLayout
+          Properties:
+            DropShadow: =DropShadow.None
+            Height: =Parent.Height
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Width: =Parent.Width
+          Children:
+            - Button1_7:
+                Control: Classic/Button@2.2.0
+                Properties:
+                  BorderColor: =ColorFade(Self.Fill, -15%)
+                  Color: =If( _comp_darkmode , ColorValue("#ffffff") , ColorValue("#6a6a6a") )
+                  DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                  Fill: =RGBA(0, 0, 0, 0)
+                  Font: =Font.'Open Sans'
+                  FontWeight: =FontWeight.Normal
+                  Height: =Parent.Height*0.6
+                  HoverBorderColor: =//ColorFade(Self.BorderColor, 20%)
+                  HoverColor: |-
+                    =Self.Color
+                    //ColorValue("#fef9ef")
+                  HoverFill: |-
+                    =//ColorValue("#00796B") 
+                    //ColorFade( ColorValue(myTheme.DarkColor) , 30% )
+                  OnSelect: |-
+                    =If(  _comp_size_font - 1  < bar_menu_top.Font_Size_Min , Set(_comp_size_font , bar_menu_top.Font_Size_Min ) ,
+                    Set(_comp_size_font , _comp_size_font - 1 )) ; 
+
+                    bar_menu_top.OnSelect_FontSizeDown();
+                  PaddingBottom: =0
+                  PaddingLeft: =0
+                  PaddingRight: =0
+                  PaddingTop: =0
+                  PressedBorderColor: =Self.Fill
+                  PressedColor: '=ColorValue("#ffffff") '
+                  PressedFill: =ColorFade(ColorValue("#f65810") , 10%)
+                  Size: =bar_menu_top.Font_Size_Input*0.9
+                  Text: ="작게"
+                  Width: =Self.Height*2
+                  X: =Slider1_3.X - Self.Width
+                  Y: =Parent.Height/2 - Self.Height/2
+            - Button1_8:
+                Control: Classic/Button@2.2.0
+                Properties:
+                  BorderColor: =ColorFade(Self.Fill, -15%)
+                  Color: =If( _comp_darkmode , ColorValue("#ffffff") , ColorValue("#6a6a6a") )
+                  DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                  Fill: =RGBA(0, 0, 0, 0)
+                  Font: =Font.'Open Sans'
+                  FontWeight: =FontWeight.Bold
+                  Height: =Parent.Height*0.6
+                  HoverBorderColor: =//ColorFade(Self.BorderColor, 20%)
+                  HoverColor: |-
+                    =Self.Color
+                    //ColorValue("#fef9ef")
+                  HoverFill: |-
+                    =//ColorValue("#00796B") 
+                    //ColorFade( ColorValue(myTheme.DarkColor) , 30% )
+                  OnSelect: |-
+                    =If(  _comp_size_font + 1 > bar_menu_top.Font_Size_Max , Set(_comp_size_font , bar_menu_top.Font_Size_Max ) ,
+                    Set(_comp_size_font , _comp_size_font  + 1 )) ; 
+
+                    bar_menu_top.OnSelect_FontSizeUp();
+                  PaddingBottom: =0
+                  PaddingLeft: =0
+                  PaddingRight: =0
+                  PaddingTop: =0
+                  PressedBorderColor: =Self.Fill
+                  PressedColor: '=ColorValue("#ffffff") '
+                  PressedFill: =ColorFade(ColorValue("#f65810") , 10%)
+                  Size: =bar_menu_top.Font_Size_Input*0.9
+                  Text: ="크게"
+                  Width: =Self.Height*2
+                  X: =Parent.Width - Self.Width
+                  Y: =Button1_7.Y
+            - Slider1_3:
+                Control: Classic/Slider@2.1.0
+                Properties:
+                  BorderColor: =RGBA(0, 18, 107, 1)
+                  Default: =bar_menu_top.Font_Size_Input
+                  HandleSize: =bar_menu_top.Font_Size_Input*2
+                  Height: =Button1_7.Height
+                  Max: =bar_menu_top.Font_Size_Max
+                  Min: =bar_menu_top.Font_Size_Min
+                  RailFill: =RGBA(166, 166, 166, 1)
+                  RailThickness: =1
+                  ValueFill: =ColorValue("#00514a")
+                  Width: =Parent.Width/20*1
+                  X: '=Button1_8.X - Self.Width '
+                  Y: =Button1_8.Y
+            - Rectangle3_3:
+                Control: Rectangle@2.3.0
+                Properties:
+                  BorderColor: =RGBA(0, 18, 107, 1)
+                  Fill: =RGBA(0, 0, 0, 0)
+                  Height: =Slider1_3.Height
+                  Width: =Slider1_3.Width
+                  X: =Slider1_3.X
+                  Y: =Slider1_3.Y
+            - Label1_33:
+                Control: Label@2.5.1
+                Properties:
+                  Align: =Align.Center
+                  BorderColor: =RGBA(0, 18, 107, 1)
+                  Color: =If( _comp_darkmode , ColorValue("#ffffff") , ColorValue("#000000") )
+                  Font: =Font.'Open Sans'
+                  FontWeight: =FontWeight.Bold
+                  Height: =bar_menu_top.Font_Size_Input*3
+                  PaddingBottom: =0
+                  PaddingLeft: =0
+                  PaddingRight: =0
+                  PaddingTop: =0
+                  Size: =bar_menu_top.Font_Size_Input*1.2
+                  Text: |-
+                    =" 현재 화면 : " & bar_menu_top.Name_Screen
+                  Width: =bar_menu_top.Font_Size_Input*25
+                  X: =5
+                  Y: =Parent.Height/2 - Self.Height/2
+            - Label1_68:
+                Control: Label@2.5.1
+                Properties:
+                  Align: =Align.Center
+                  BorderColor: =RGBA(0, 18, 107, 1)
+                  Color: =If( _comp_darkmode , ColorValue("#ffffff") , ColorValue("#6a6a6a") )
+                  Font: =Font.'Open Sans'
+                  Height: =bar_menu_top.Font_Size_Input*3
+                  PaddingBottom: =0
+                  PaddingLeft: =0
+                  PaddingTop: =0
+                  Size: =bar_menu_top.Font_Size_Input
+                  Text: |-
+                    =" 글자크기 : " &  bar_menu_top.Font_Size_Input
+                  Width: =Self.Size * Len(Self.Text)
+                  X: '=Button1_7.X - Self.Width '
+                  Y: =Parent.Height/2 - Self.Height/2
+            - Label1_34:
+                Control: Label@2.5.1
+                Properties:
+                  Align: =Align.Center
+                  BorderColor: =RGBA(0, 18, 107, 1)
+                  Color: =If( _comp_darkmode , ColorValue("#ffffff") , ColorValue("#6a6a6a") )
+                  Font: =Font.'Open Sans'
+                  FontWeight: =FontWeight.Bold
+                  Height: =Self.Size*3
+                  PaddingBottom: =0
+                  PaddingLeft: =0
+                  PaddingRight: =0
+                  PaddingTop: =0
+                  Size: =bar_menu_top.Font_Size_Input*1.2
+                  Text: "=\" 현재 모드 : \" & If( bar_menu_top.IsTrue_Edit , \" ✒️ 편집 \" , \" \U0001F50D 조회 \" ) "
+                  Underline: =true
+                  Width: =Parent.Width/10*1.5
+                  X: '=Label1_33.X + Label1_33.Width '
+                  Y: =Parent.Height/2 - Self.Height/2
+            - Container53:
+                Control: GroupContainer@1.4.0
+                Variant: ManualLayout
+                Properties:
+                  BorderColor: =RGBA(149, 149, 149, 1)
+                  BorderThickness: =If( bar_menu_top.IsTrue_DropShadow , 0 , 1 )
+                  DropShadow: =DropShadow.Regular
+                  Height: =Parent.Height/10*5
+                  RadiusBottomLeft: =3
+                  RadiusBottomRight: =3
+                  RadiusTopLeft: =3
+                  RadiusTopRight: =3
+                  Visible: =!_comp_darkmode
+                  Width: =Parent.Width/15*1.5
+                  X: =Label1_34.X + Label1_34.Width*1.1
+                  Y: =Parent.Height/2 - Self.Height/2
+                Children:
+                  - Label22:
+                      Control: Label@2.5.1
+                      Properties:
+                        Align: =Align.Center
+                        BorderColor: =RGBA(0, 18, 107, 1)
+                        Color: =RGBA(116, 116, 116, 1)
+                        Font: =Font.'Open Sans'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =Parent.Height
+                        Size: =Self.Height/3
+                        Text: =If( bar_menu_top.IsTrue_DropShadow , "DropShadow Off" , "DropShadow On" )
+                        Width: =Parent.Width
+                  - Rectangle40:
+                      Control: Rectangle@2.3.0
+                      Properties:
+                        BorderColor: =RGBA(0, 18, 107, 1)
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =Parent.Height
+                        OnSelect: "=Set( _comp_dropshadow , !_comp_dropshadow ) ; \nbar_menu_top.OnSelect_DropShadow() ; "
+                        Width: =Parent.Width
+                        X: =Parent.Width/2 - Self.Width/2
+                        Y: =Parent.Height/2 - Self.Height/2
+            - Container53_2:
+                Control: GroupContainer@1.4.0
+                Variant: ManualLayout
+                Properties:
+                  BorderColor: =RGBA(149, 149, 149, 1)
+                  BorderThickness: =0 //If( bar_menu_top.IsTrue_DropShadow , 0 , 1 )
+                  DropShadow: =DropShadow.None
+                  Fill: =If( bar_menu_top.IsTrue_DarkMode , ColorValue("#959595") , ColorFade(bar_menu_top.Fill_BackGround,-40%) )
+                  Height: =Parent.Height/10*5
+                  RadiusBottomLeft: =3
+                  RadiusBottomRight: =3
+                  RadiusTopLeft: =3
+                  RadiusTopRight: =3
+                  Width: =Parent.Width/15
+                  X: =Label1_68.X - Self.Width*1.1
+                  Y: =Parent.Height/2 - Self.Height/2
+                Children:
+                  - Label22_1:
+                      Control: Label@2.5.1
+                      Properties:
+                        Align: =Align.Center
+                        BorderColor: =RGBA(0, 18, 107, 1)
+                        Color: =If( bar_menu_top.IsTrue_DarkMode , ColorValue("#e0e0e0") , ColorValue("#4ADE80")   )
+                        Font: =Font.'Open Sans'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =Parent.Height
+                        Size: =Self.Height/3
+                        Text: =If( bar_menu_top.IsTrue_DarkMode , "Dark Mode ✓ " , "Dark Mode" )
+                        Width: =Parent.Width
+                  - Rectangle40_1:
+                      Control: Rectangle@2.3.0
+                      Properties:
+                        BorderColor: =RGBA(0, 18, 107, 1)
+                        Fill: =Color.Transparent
+                        Height: =Parent.Height
+                        OnSelect: |
+                          =Set( _comp_darkmode , !_comp_darkmode ) ; bar_menu_top.OnSelect_DarkMode() ; 
+                          If( _comp_darkmode, Set( _comp_dropshadow , false )) ;
+                        Width: =Parent.Width
+                        X: =Parent.Width/2 - Self.Width/2
+                        Y: =Parent.Height/2 - Self.Height/2
+            - Image6:
+                Control: Image@2.2.3
+                Properties:
+                  BorderColor: =RGBA(0, 18, 107, 1)
+                  Height: =Parent.Height/10*8
+                  Image: |-
+                    ="data:image/svg+xml;utf8," & 
+                    EncodeUrl(
+                                        Substitute(
+                                        "<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'><path fill='currentColor' d='M19.5 12c0-.23-.01-.45-.03-.68l1.86-1.41c.4-.3.51-.86.26-1.3l-1.87-3.23a.987.987 0 0 0-1.25-.42l-2.15.91c-.37-.26-.76-.49-1.17-.68l-.29-2.31c-.06-.5-.49-.88-.99-.88h-3.73c-.51 0-.94.38-1 .88l-.29 2.31c-.41.19-.8.42-1.17.68l-2.15-.91c-.46-.2-1-.02-1.25.42L2.41 8.62c-.25.44-.14.99.26 1.3l1.86 1.41a7.3 7.3 0 0 0 0 1.35l-1.86 1.41c-.4.3-.51.86-.26 1.3l1.87 3.23c.25.44.79.62 1.25.42l2.15-.91c.37.26.76.49 1.17.68l.29 2.31c.06.5.49.88.99.88h3.73c.5 0 .93-.38.99-.88l.29-2.31c.41-.19.8-.42 1.17-.68l2.15.91c.46.2 1 .02 1.25-.42l1.87-3.23c.25-.44.14-.99-.26-1.3l-1.86-1.41c.03-.23.04-.45.04-.68m-7.46 3.5c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5s3.5 1.57 3.5 3.5s-1.57 3.5-3.5 3.5'/></svg>"
+                                        ,
+                                        "currentColor", 
+                                        "#6a6a6a"
+                                        )
+                                    )
+                  OnSelect: '=bar_menu_top.OnSelect_Settings() '
+                  Width: =82
+                  X: =762
+                  Y: =Parent.Height/2 - Self.Height/2

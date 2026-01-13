@@ -1,0 +1,11 @@
+{
+  "Components": [
+    {
+      "Name": "chart_yearly_h",
+      "TemplateName": "567bb0cb5ebc485293a432171821a3f9",
+      "Description": "",
+      "AllowCustomization": true,
+      "AllowAccessToGlobals": false
+    }
+  ]
+}

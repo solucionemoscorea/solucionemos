@@ -1,0 +1,191 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps should only be used to review changes made within Power Apps Studio and for minor edits (Preview).
+# Use the maker portal to create and edit your Power Apps.
+# 
+# The schema file for Canvas Apps is available at https://go.microsoft.com/fwlink/?linkid=2304907
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+ComponentDefinitions:
+  chart_donut:
+    DefinitionType: CanvasComponent
+    AllowCustomization: true
+    CustomProperties:
+      Color_DarkMode:
+        PropertyKind: Output
+        DisplayName: Color_DarkMode
+        Description: 사용자 지정 속성
+        DataType: Table
+      Color_Font_DarkMode:
+        PropertyKind: Input
+        DisplayName: Color_Font_DarkMode
+        Description: A custom property
+        DataType: Table
+        Default: |-
+          =
+          Table(
+              { Color: "#FFFFFF" },   // Neon Mint (Primary KPI)
+              { Color: "#FFFFFF" },   // Neon Cyan
+              { Color: "#FFFFFF" },   // Neon Green
+              { Color: "#FFFFFF" },   // Neon Yellow
+              { Color: "#FFFFFF" },   // Neon Orange
+              { Color: "#FFFFFF" },   // Neon Pink / Alert
+              { Color: "#FFFFFF" },   // Neon Purple (Accent)
+              { Color: "#FFFFFF" },   // High Contrast Text (제한적)
+              { Color: "#FFFFFF" },   // Dark Divider
+              { Color: "#FFFFFF" }    // Pure Black Background
+          )
+      Color_Font_LightMode:
+        PropertyKind: Input
+        DisplayName: Color_Font_LightMode
+        Description: A custom property
+        DataType: Table
+        Default: |-
+          =
+          Table(
+              { Color: "#333333" },   // Neon Mint (Primary KPI)
+              { Color: "#333333" },   // Neon Cyan
+              { Color: "#333333" },   // Neon Green
+              { Color: "#333333" },   // Neon Yellow
+              { Color: "#333333" },   // Neon Orange
+              { Color: "#333333" },   // Neon Pink / Alert
+              { Color: "#333333" },   // Neon Purple (Accent)
+              { Color: "#333333" },   // High Contrast Text (제한적)
+              { Color: "#333333" },   // Dark Divider
+              { Color: "#333333" }    // Pure Black Background
+          )
+      Color_LightMode:
+        PropertyKind: Output
+        DisplayName: Color_LightMode
+        Description: 사용자 지정 속성
+        DataType: Table
+      Fill_BackGround:
+        PropertyKind: Input
+        DisplayName: Fill_BackGround
+        Description: 사용자 지정 속성
+        DataType: Color
+        Default: '=ColorValue("#6a6a6a") '
+      IsTrue_DarkMode:
+        PropertyKind: Input
+        DisplayName: IsTrue_DarkMode
+        Description: 사용자 지정 속성
+        DataType: Boolean
+        Default: =true
+      IsTrue_DropShadow:
+        PropertyKind: Input
+        DisplayName: IsTrue_DropShadow
+        Description: 사용자 지정 속성
+        DataType: Boolean
+        Default: =true
+      Items_Chart:
+        PropertyKind: Input
+        DisplayName: Items_Chart
+        Description: A custom property
+        DataType: Table
+        Default: "=Table(\n        {\n            ChartItem : \"자사\", \n            ChartValue : 100\n        }\n        ,\n        {\n            ChartItem : \"OEM\", \n            ChartValue : 70\n        }\n        \n)"
+      Size_Font:
+        PropertyKind: Input
+        DisplayName: Size_Font
+        Description: A custom property
+        DataType: Number
+        Default: =13
+      Title_Chart:
+        PropertyKind: Input
+        DisplayName: Title_Chart
+        Description: A custom property
+        DataType: Text
+        Default: ="Text"
+    Properties:
+      Color_DarkMode: |-
+        =
+        Table(
+            { Color: "#00FF9C" },   // Neon Mint (Primary KPI)
+            { Color: "#00E5FF" },   // Neon Cyan
+            { Color: "#1EFF00" },   // Neon Green
+            { Color: "#FFD400" },   // Neon Yellow
+            { Color: "#FF7A00" },   // Neon Orange
+            { Color: "#FF2E63" },   // Neon Pink / Alert
+            { Color: "#B700FF" },   // Neon Purple (Accent)
+            { Color: "#FFFFFF" },   // High Contrast Text (제한적)
+            { Color: "#2A2A2A" },   // Dark Divider
+            { Color: "#000000" }    // Pure Black Background
+        )
+      Color_LightMode: |-
+        =Table(
+            { Color: "#9E3A14" },
+            { Color: "#C24E1E" },
+            { Color: "#D96A32" },
+            { Color: "#E88A55" },
+            { Color: "#F2A97A" },
+            { Color: "#F7C8A2" },
+            { Color: "#FBE0C8" },
+            { Color: "#FFF0E3" },
+            { Color: "#FFF7F0" },
+            { Color: "#FCFAF7" }
+        )
+      Fill: =
+    Children:
+      - container_rear_1_:
+          Control: GroupContainer@1.4.0
+          Variant: ManualLayout
+          Properties:
+            BorderColor: =RGBA(128, 128, 128, 1)
+            BorderThickness: =1
+            Fill: =ColorFade(ColorValue("#f65810"),30%)
+            Height: =container_front_1.Height
+            RadiusBottomLeft: =10
+            RadiusBottomRight: =10
+            RadiusTopLeft: =10
+            RadiusTopRight: =10
+            Visible: =!chart_donut.IsTrue_DropShadow
+            Width: =container_front_1.Width
+            X: =container_front_1.X + 5
+            Y: =container_front_1.Y + 5
+      - container_front_1:
+          Control: GroupContainer@1.4.0
+          Variant: ManualLayout
+          Properties:
+            BorderColor: =RGBA(128, 128, 128, 1)
+            BorderThickness: =If( chart_donut.IsTrue_DropShadow , 0  , 1 )
+            Fill: =If( chart_donut.IsTrue_DarkMode , ColorFade( chart_donut.Fill_BackGround , -40%) , Color.White )
+            Height: =Parent.Height - Self.Y - Self.X
+            RadiusBottomLeft: =10
+            RadiusBottomRight: =10
+            RadiusTopLeft: =10
+            RadiusTopRight: =10
+            Width: =Parent.Width - Self.X*2
+            X: =7.5
+            Y: =Label7_3.Y + Label7_3.Height
+          Children:
+            - Image7_5:
+                Control: Image@2.2.3
+                Properties:
+                  BorderColor: =RGBA(0, 18, 107, 1)
+                  Height: =Parent.Height
+                  Image: "=\"https://quickchart.io/chart?c=\"&EncodeUrl(\"{\n  'type': 'outlabeledPie',\n  'data': {\n    \n    'labels': [\"&Concat(chart_donut.Items_Chart,\"'\"&ChartItem&\"',\")&\"],\n    'datasets': [{\n        'backgroundColor': \n                        [\"&\n                         If( chart_donut.IsTrue_DarkMode ,\n                            Concat(chart_donut.Color_DarkMode,\"'\"&Color&\"',\"), \n                            Concat(chart_donut.Color_LightMode,\"'\"&Color&\"',\")\n                         )\n                        &\"]\n                        ,\n        'data': [\"&Concat(chart_donut.Items_Chart,\"'\"&ChartValue&\"',\")&\"] , \n        'borderColor' : ['#000000'] , \n        'borderWidth' : 1\n    }]\n  },\n  'options': {\n    'plugins': {\n      'legend': false,\n      'outlabels': {\n        'text': '%l',\n        'color': [\"& \n        If( chart_donut.IsTrue_DarkMode ,\n                            Concat(chart_donut.Color_Font_DarkMode,\"'\"&Color&\"',\"), \n                            Concat(chart_donut.Color_Font_LightMode,\"'\"&Color&\"',\")\n                         )\n        &\"],\n        'stretch': 20 ,\n        'backgroundColor' : false\n        ,\n        'font': {\n\n          'resizable': true,\n          'minSize': \" & chart_donut.Size_Font*1.8 & \" ,\n          'maxSize': \" & chart_donut.Size_Font*1.2 & \" ,\n          'fontFamily' : 'Noto Sans'\n        }\n      }\n    }\n  }\n}\n\")"
+                  Width: =Parent.Width
+                  X: =Parent.Width/2 - Self.Width/2
+                  Y: =Parent.Height/2 - Self.Height/2
+            - Circle1:
+                Control: Circle@2.3.0
+                Properties:
+                  BorderColor: '=ColorValue("#333333") '
+                  BorderThickness: =1
+                  Fill: =container_front_1.Fill
+                  Height: =Image7_5.Height/10*3
+                  Width: =Self.Height
+                  X: =Image7_5.X + Image7_5.Width/2 - Self.Width/2
+                  Y: =Image7_5.Y + Image7_5.Height/2 - Self.Height/2
+      - Label7_3:
+          Control: Label@2.5.1
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =If( chart_donut.IsTrue_DarkMode , ColorValue("#ffffff") , ColorValue("#6a6a6a") )
+            Font: =Font.'Open Sans'
+            FontWeight: =FontWeight.Bold
+            Height: =Self.Size*2
+            Size: =Parent.Size_Font*1.1
+            Text: =Parent.Title_Chart
+            Width: =Parent.Width - Self.X*2
+            X: =7
+            Y: =Self.X/2

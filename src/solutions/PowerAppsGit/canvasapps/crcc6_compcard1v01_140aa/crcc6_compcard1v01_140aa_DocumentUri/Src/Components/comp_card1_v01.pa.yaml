@@ -1,0 +1,225 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps should only be used to review changes made within Power Apps Studio and for minor edits (Preview).
+# Use the maker portal to create and edit your Power Apps.
+# 
+# The schema file for Canvas Apps is available at https://go.microsoft.com/fwlink/?linkid=2304907
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+ComponentDefinitions:
+  comp_card1_v01:
+    DefinitionType: CanvasComponent
+    AllowCustomization: true
+    CustomProperties:
+      Fill_BackGround:
+        PropertyKind: Input
+        DisplayName: Fill_BackGround
+        Description: A custom property
+        DataType: Color
+        Default: '=ColorValue("#6a6a6a") '
+      Height_Icon:
+        PropertyKind: Input
+        DisplayName: Height_Icon
+        Description: A custom property
+        DataType: Number
+        Default: =100
+      IsTrue_DarkMode:
+        PropertyKind: Input
+        DisplayName: IsTrue_DarkMode
+        Description: A custom property
+        DataType: Boolean
+        Default: =true
+      IsTrue_DropShadow:
+        PropertyKind: Input
+        DisplayName: IsTrue_DropShadow
+        Description: A custom property
+        DataType: Boolean
+        Default: =true
+      Label_1st:
+        PropertyKind: Input
+        DisplayName: Label_1st
+        Description: A custom property
+        DataType: Text
+        Default: ="텍스트"
+      Label_2nd:
+        PropertyKind: Input
+        DisplayName: Label_2nd
+        Description: A custom property
+        DataType: Text
+        Default: ="텍스트"
+      Size_Font:
+        PropertyKind: Input
+        DisplayName: Size_Font
+        Description: A custom property
+        DataType: Number
+        Default: =13
+      Title_Card:
+        PropertyKind: Input
+        DisplayName: Title_Card
+        Description: A custom property
+        DataType: Text
+        Default: ="텍스트"
+      Value_1st:
+        PropertyKind: Input
+        DisplayName: Value_1st
+        Description: A custom property
+        DataType: Number
+        Default: =100
+      Value_2nd:
+        PropertyKind: Input
+        DisplayName: Value_2nd
+        Description: A custom property
+        DataType: Number
+        Default: =100
+    Properties:
+      Width: =Self.Height*1.8
+    Children:
+      - container_rear:
+          Control: GroupContainer@1.4.0
+          Variant: ManualLayout
+          Properties:
+            BorderColor: =RGBA(106, 106, 106, 1)
+            BorderThickness: =1
+            DropShadow: =DropShadow.Regular
+            Fill: =RGBA(253, 222, 207, 1)
+            Height: =container_front.Height
+            RadiusBottomLeft: =10
+            RadiusBottomRight: =10
+            RadiusTopLeft: =10
+            RadiusTopRight: =10
+            Visible: =!comp_card1_v01.IsTrue_DropShadow
+            Width: =container_front.Width
+            X: =container_front.X + 5
+            Y: =container_front.Y + 5
+      - container_front:
+          Control: GroupContainer@1.4.0
+          Variant: ManualLayout
+          Properties:
+            BorderColor: =RGBA(106, 106, 106, 1)
+            BorderThickness: =If( comp_card1_v01.IsTrue_DropShadow , 0 , 1 )
+            DropShadow: =DropShadow.Regular
+            Fill: =If( comp_card1_v01.IsTrue_DarkMode , ColorFade(comp_card1_v01.Fill_BackGround , -40%) , Color.White )
+            Height: =Parent.Height - Self.Y*2
+            RadiusBottomLeft: =10
+            RadiusBottomRight: =10
+            RadiusTopLeft: =10
+            RadiusTopRight: =10
+            Width: =Parent.Width- Self.X*2
+            X: =7.5
+            Y: =7.5
+          Children:
+            - Container62:
+                Control: GroupContainer@1.4.0
+                Variant: ManualLayout
+                Properties:
+                  DropShadow: =DropShadow.None
+                  Height: =Parent.Height/10*4.5
+                  RadiusBottomLeft: =0
+                  RadiusBottomRight: =0
+                  RadiusTopLeft: =0
+                  RadiusTopRight: =0
+                  Width: =Parent.Width
+                  X: '=Parent.Width/2 - Self.Width/2 '
+                  Y: =Self.X*0
+                Children:
+                  - Label9:
+                      Control: Label@2.5.1
+                      Properties:
+                        Align: =Align.Center
+                        BorderColor: =RGBA(0, 18, 107, 1)
+                        Color: =If( comp_card1_v01.IsTrue_DarkMode , ColorValue("#ffffff") , ColorValue("#222222") )
+                        Font: =Font.'Open Sans'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =Self.Size*2
+                        Size: =comp_card1_v01.Size_Font*1.5
+                        Text: =comp_card1_v01.Title_Card
+                        Width: =Parent.Width - Self.X - Parent.Width/30
+                        X: =Image8.X + Image8.Width
+                        Y: =Image8.Y + Image8.Height/2 - Self.Height/2
+                  - Rectangle43:
+                      Control: Rectangle@2.3.0
+                      Properties:
+                        BorderColor: =RGBA(0, 18, 107, 1)
+                        Fill: =RGBA(106, 106, 106, 1)
+                        Height: =1
+                        Width: =Parent.Width/10*9
+                        X: =Parent.Width/2 - Self.Width/2
+                        Y: =Parent.Height - Self.Height
+                  - Image8:
+                      Control: Image@2.2.3
+                      Properties:
+                        BorderColor: =RGBA(166, 166, 166, 1)
+                        BorderThickness: =1
+                        Height: =Parent.Height/10*5
+                        Image: "=//\"data:image/svg+xml;utf8,\" & EncodeUrl(<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'><path fill='currentColor' d='M19 19H3c-.55 0-1 .45-1 1s.45 1 1 1h16c.55 0 1-.45 1-1s-.45-1-1-1m1-16H9v2.4l1.81 1.45c.12.09.19.24.19.39v4.26c0 .28-.22.5-.5.5h-4c-.28 0-.5-.22-.5-.5V7.24c0-.15.07-.3.19-.39L8 5.4V3H6c-1.1 0-2 .9-2 2v8c0 2.21 1.79 4 4 4h6c2.21 0 4-1.79 4-4v-3h2c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m0 5h-2V5h2z'/></svg>\n\n\"data:image/svg+xml;utf8,\" & EncodeUrl(\n    Substitute(\n    \"\n    <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='-12 -12 48 48'><path fill='currentColor' d='M19 19H3c-.55 0-1 .45-1 1s.45 1 1 1h16c.55 0 1-.45 1-1s-.45-1-1-1m1-16H9v2.4l1.81 1.45c.12.09.19.24.19.39v4.26c0 .28-.22.5-.5.5h-4c-.28 0-.5-.22-.5-.5V7.24c0-.15.07-.3.19-.39L8 5.4V3H6c-1.1 0-2 .9-2 2v8c0 2.21 1.79 4 4 4h6c2.21 0 4-1.79 4-4v-3h2c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m0 5h-2V5h2z'/></svg>\n    \"\n    ,\n    \"currentColor\" , \n     If(\n        comp_card1_v01.IsTrue_DarkMode , \n        \"#ffffff\" , \n        \"#222222\"\n     )\n    )\n) "
+                        RadiusBottomLeft: =180
+                        RadiusBottomRight: =180
+                        RadiusTopLeft: =180
+                        RadiusTopRight: =180
+                        Width: =Self.Height
+                        X: =Parent.Width/30
+                        Y: =Self.X*2
+            - Container62_1:
+                Control: GroupContainer@1.4.0
+                Variant: ManualLayout
+                Properties:
+                  DropShadow: =DropShadow.None
+                  Height: =Parent.Height - Self.Y
+                  RadiusBottomLeft: =0
+                  RadiusBottomRight: =0
+                  RadiusTopLeft: =0
+                  RadiusTopRight: =0
+                  Width: =Parent.Width
+                  X: '=Parent.Width/2  - Self.Width/2 '
+                  Y: =Container62.Y + Container62.Height
+                Children:
+                  - Label19:
+                      Control: Label@2.5.1
+                      Properties:
+                        BorderColor: =RGBA(0, 18, 107, 1)
+                        Color: =Label9.Color
+                        Font: =Font.'Open Sans'
+                        FontWeight: =FontWeight.Bold
+                        Height: =Parent.Height/10*5
+                        Size: =comp_card1_v01.Size_Font*2.5
+                        Text: =Text( comp_card1_v01.Value_1st , "#,# ")
+                        Width: =(Parent.Width - Self.X*3)/2
+                        X: =Image8.X
+                        Y: =Parent.Height/10
+                  - Label24:
+                      Control: Label@2.5.1
+                      Properties:
+                        BorderColor: =RGBA(0, 18, 107, 1)
+                        Color: =Label9.Color
+                        Font: =Font.'Open Sans'
+                        Height: =Parent.Height/10*3
+                        Size: =comp_card1_v01.Size_Font*1.1
+                        Text: =comp_card1_v01.Label_1st
+                        Width: =Label19.Width
+                        X: =Label19.X
+                        Y: =Label19.Y + Label19.Height
+                  - Label19_1:
+                      Control: Label@2.5.1
+                      Properties:
+                        BorderColor: =RGBA(0, 18, 107, 1)
+                        Color: =Label9.Color
+                        Font: =Font.'Open Sans'
+                        FontWeight: =FontWeight.Bold
+                        Height: =Label19.Height
+                        Size: =comp_card1_v01.Size_Font*2.5
+                        Text: =Text( comp_card1_v01.Value_2nd , "#,# ")
+                        Width: =Label19.Width
+                        X: '=Label19.X + Label19.Width + Parent.Width/30 '
+                        Y: '=Label19.Y '
+                  - Label24_1:
+                      Control: Label@2.5.1
+                      Properties:
+                        BorderColor: =RGBA(0, 18, 107, 1)
+                        Color: =Label9.Color
+                        Font: =Font.'Open Sans'
+                        Height: =Label24.Height
+                        Size: =comp_card1_v01.Size_Font*1.1
+                        Text: =comp_card1_v01.Label_2nd
+                        Width: =Label19_1.Width
+                        X: =Label19_1.X
+                        Y: =Label19_1.Y + Label19_1.Height

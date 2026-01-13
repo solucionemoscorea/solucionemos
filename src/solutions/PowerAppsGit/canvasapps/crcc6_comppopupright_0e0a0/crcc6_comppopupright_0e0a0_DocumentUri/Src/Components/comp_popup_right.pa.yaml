@@ -1,0 +1,1112 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps should only be used to review changes made within Power Apps Studio and for minor edits (Preview).
+# Use the maker portal to create and edit your Power Apps.
+# 
+# The schema file for Canvas Apps is available at https://go.microsoft.com/fwlink/?linkid=2304907
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+ComponentDefinitions:
+  comp_popup_right:
+    DefinitionType: CanvasComponent
+    AllowCustomization: true
+    CustomProperties:
+      Date_Selected_Input:
+        PropertyKind: Input
+        DisplayName: Date_Selected_Input
+        Description: 사용자 지정 속성
+        DataType: DateAndTime
+        Default: =Today()
+      Date_Selected_Output:
+        PropertyKind: Output
+        DisplayName: Date_Selected_Output
+        Description: 사용자 지정 속성
+        DataType: DateAndTime
+      Duration_Timer:
+        PropertyKind: Input
+        DisplayName: Duration_Timer
+        Description: 사용자 지정 속성
+        DataType: Number
+        Default: =500
+      Items_Gallery_Event:
+        PropertyKind: Input
+        DisplayName: Items_Gallery_Event
+        Description: 사용자 지정 속성
+        DataType: Table
+        Default: |-
+          =Table(
+              {
+                  Title: "Text" , 
+                  ID: 1 , 
+                  field_1 : "Text" ,
+                  field_2 : "Text" , 
+                  field_3 : "Text" ,
+                  field_4 : "Text" ,
+                  field_5 : "Text" ,
+                  field_6 : "Text" ,
+                  field_7 : "Text" ,
+                  field_8 : "Text" ,
+                  field_9 : "2025-12-25" ,
+                  field_10 : "2025-12-25" , 
+                  field_11 : "#f65810"   
+              }
+          )
+      Items_Gallery_Event_Month:
+        PropertyKind: Input
+        DisplayName: Items_Gallery_Event_Month
+        Description: 사용자 지정 속성
+        DataType: Table
+        Default: |-
+          =Table(
+              {
+                  field_9 : "2025-12-24" , 
+                  field_10 : "2025-12-26" , 
+                  field_11 : "#f65810"   
+              }
+          )
+      Month_Selected_Input:
+        PropertyKind: Input
+        DisplayName: Month_Selected_Input
+        Description: 사용자 지정 속성
+        DataType: Number
+        Default: =100
+      Month_Selected_Output:
+        PropertyKind: Output
+        DisplayName: Month_Selected_Output
+        Description: 사용자 지정 속성
+        DataType: Number
+      OnSelect_Add:
+        PropertyKind: Event
+        DisplayName: OnSelect_Add
+        Description: 사용자 지정 속성
+        ReturnType: None
+        Default: =
+      OnSelect_Cancel:
+        PropertyKind: Event
+        DisplayName: OnSelect_Cancel
+        Description: 사용자 지정 속성
+        ReturnType: None
+        Default: =
+      OnSelect_Date:
+        PropertyKind: Event
+        DisplayName: OnSelect_Date
+        Description: 사용자 지정 속성
+        ReturnType: None
+        Default: =
+      OnSelect_Edit:
+        PropertyKind: Event
+        DisplayName: OnSelect_Edit
+        Description: 사용자 지정 속성
+        ReturnType: None
+        Default: =
+      OnSelect_Month:
+        PropertyKind: Event
+        DisplayName: OnSelect_Month
+        Description: 사용자 지정 속성
+        ReturnType: None
+        Default: =
+      OnSelect_Remove:
+        PropertyKind: Event
+        DisplayName: OnSelect_Remove
+        Description: 사용자 지정 속성
+        ReturnType: None
+        Default: =
+      OnSelect_Year:
+        PropertyKind: Event
+        DisplayName: OnSelect_Year
+        Description: 사용자 지정 속성
+        ReturnType: None
+        Default: =
+      Show_Drawer_Input:
+        PropertyKind: Input
+        DisplayName: Show_Drawer_Input
+        Description: 사용자 지정 속성
+        DataType: Boolean
+        Default: =true
+      Show_Drawer_OutPut:
+        PropertyKind: Output
+        DisplayName: Show_Drawer_OutPut
+        Description: 사용자 지정 속성
+        DataType: Boolean
+      Size_Font:
+        PropertyKind: Input
+        DisplayName: Size_Font
+        Description: 사용자 지정 속성
+        DataType: Number
+        Default: =13
+      StartDate_Input:
+        PropertyKind: Input
+        DisplayName: StartDate_Input
+        Description: 사용자 지정 속성
+        DataType: DateAndTime
+        Default: =DateAdd(EOMonth(Today(),-1),1,TimeUnit.Days)
+      StartDate_Output:
+        PropertyKind: Output
+        DisplayName: StartDate_Output
+        Description: 사용자 지정 속성
+        DataType: DateAndTime
+      Start_Timer:
+        PropertyKind: Input
+        DisplayName: Start_Timer
+        Description: 사용자 지정 속성
+        DataType: Boolean
+        Default: =true
+      Value_Timer:
+        PropertyKind: Output
+        DisplayName: Value_Timer
+        Description: 사용자 지정 속성
+        DataType: Number
+      Year_Selected_Input:
+        PropertyKind: Input
+        DisplayName: Year_Selected_Input
+        Description: 사용자 지정 속성
+        DataType: Number
+        Default: =100
+      Year_Selected_Output:
+        PropertyKind: Output
+        DisplayName: Year_Selected_Output
+        Description: 사용자 지정 속성
+        DataType: Number
+    Properties:
+      Date_Selected_Output: =_comp_selected_date
+      Height: =App.DesignHeight
+      Month_Selected_Output: =_comp_selected_month
+      Show_Drawer_OutPut: =
+      StartDate_Output: =DateTime(2000, 1, 1, 0, 0, 0)
+      Value_Timer: =Timer_4_Animation.Value
+      Width: =App.DesignWidth/10*3
+      Year_Selected_Output: =_comp_selected_year
+    Children:
+      - Timer_Setting:
+          Control: Timer@2.1.0
+          Properties:
+            AutoPause: =false
+            AutoStart: =true
+            BorderColor: =ColorFade(Self.Fill, -15%)
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =ColorFade(Self.BorderColor, 70%)
+            DisabledColor: =ColorFade(Self.Fill, 90%)
+            DisabledFill: =ColorFade(Self.Fill, 70%)
+            Duration: =100
+            Fill: =RGBA(56, 96, 178, 1)
+            Font: =Font.'Open Sans'
+            HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(56, 96, 178, 1), -20%)
+            OnTimerEnd: |-
+              =Set( _comp_selected_date , Blank() ) ; 
+              Set(_comp_selected_item_gallery1_40 , Blank() ) ; 
+              Set( _comp_selected_month , Month(Today()) ) ; 
+              Set( _comp_selected_year , Year(Today()) ) ; 
+              Set( _comp_first_date , Date( _comp_selected_year , _comp_selected_month , 1)) ; 
+
+              ClearCollect(
+                  _col_tab_1 , 
+                  Table(
+                      {
+                          _id : 1 , 
+                          _on : 0 
+                      }
+                  )
+              ); 
+
+
+              // 여백 변수 설정
+              Set(_comp_spacing_xs, comp_popup_right.Size_Font * 0.25);
+              Set(_comp_spacing_sm, comp_popup_right.Size_Font * 0.5);
+              Set(_comp_spacing_md, comp_popup_right.Size_Font * 1);
+              Set(_comp_spacing_lg, comp_popup_right.Size_Font * 1.5);
+              Set(_comp_spacing_xl, comp_popup_right.Size_Font * 2);
+            PressedBorderColor: =Self.Fill
+            PressedColor: =Self.Fill
+            PressedFill: =Self.Color
+            Start: =comp_popup_right.Start_Timer
+            Visible: =false
+            X: =40
+            Y: =40
+      - Timer_4_Animation:
+          Control: Timer@2.1.0
+          Properties:
+            AutoPause: =false
+            BorderColor: =ColorFade(Self.Fill, -15%)
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =ColorFade(Self.BorderColor, 70%)
+            DisabledColor: =ColorFade(Self.Fill, 90%)
+            DisabledFill: =ColorFade(Self.Fill, 70%)
+            Duration: =Parent.Duration_Timer
+            Fill: =RGBA(56, 96, 178, 1)
+            Font: =Font.'Open Sans'
+            HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(56, 96, 178, 1), -20%)
+            PressedBorderColor: =Self.Fill
+            PressedColor: =Self.Fill
+            PressedFill: =Self.Color
+            Start: =comp_popup_right.Start_Timer
+            Visible: =false
+      - Container49:
+          Control: GroupContainer@1.4.0
+          Variant: ManualLayout
+          Properties:
+            DropShadow: =DropShadow.ExtraBold
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =Parent.Height- Self.Y*2
+            RadiusBottomLeft: =15
+            RadiusBottomRight: =0
+            RadiusTopLeft: =15
+            RadiusTopRight: =0
+            Width: =Parent.Width - Self.X
+            X: =40
+            Y: =15
+          Children:
+            - Container50:
+                Control: GroupContainer@1.4.0
+                Variant: ManualLayout
+                Properties:
+                  DropShadow: =DropShadow.None
+                  Height: =Parent.Height - Self.Y - Self.X
+                  Width: =Parent.Width*0.96
+                  X: =Parent.Width/2 - Self.Width/2
+                  Y: =Container34_1.Y + Container34_1.Height + Self.X/2
+                Children:
+                  - Container1_35:
+                      Control: GroupContainer@1.4.0
+                      Variant: ManualLayout
+                      Properties:
+                        DropShadow: =DropShadow.None
+                        Height: =comp_popup_right.Size_Font*3
+                        RadiusBottomLeft: =0
+                        RadiusBottomRight: =0
+                        RadiusTopLeft: =0
+                        RadiusTopRight: =0
+                        Width: =Parent.Width*0.98
+                        X: =Parent.Width/2 - Self.Width/2
+                        Y: =Parent.Height- Self.Height - Self.X
+                      Children:
+                        - Gallery3_49:
+                            Control: Gallery@2.15.0
+                            Variant: Horizontal
+                            Properties:
+                              BorderColor: =RGBA(0, 18, 107, 1)
+                              Height: =Parent.Height*0.8
+                              Items: =Sequence(3)
+                              ShowScrollbar: =false
+                              TemplatePadding: =0
+                              TemplateSize: =Self.Width/Self.AllItemsCount
+                              Visible: '=IsBlank(_comp_selected_item_gallery1_40) '
+                              Width: =Parent.Width*0.99
+                              Y: =Parent.Height/2 - Self.Height/2
+                            Children:
+                              - TextInput3_36:
+                                  Control: Classic/TextInput@2.3.2
+                                  Properties:
+                                    Align: =Align.Center
+                                    BorderColor: =RGBA(0, 0, 0, 0)
+                                    BorderThickness: =0
+                                    Color: "=Switch( ThisItem.Value , 1 , \nColorValue(\"#ffffff\") , \n \n3 , \nColorValue(\"#222222\")\n)"
+                                    Default: "=Switch(\n    ThisItem.Value,\n    1,\n    \"추가\",\n   \n    3 , \n    \"닫기\"\n)"
+                                    Fill: |-
+                                      =Switch( ThisItem.Value , 1 , 
+                                      ColorValue("#f65810") , 
+                                      2 , 
+                                      ColorValue("#ffffff") , 
+                                      3 , 
+                                      ColorValue("#ffffff")
+                                      )
+                                    Font: =Font.'Open Sans'
+                                    FontWeight: =FontWeight.Bold
+                                    Height: =Parent.TemplateHeight/10*9
+                                    HoverBorderColor: =RGBA(0, 18, 107, 1)
+                                    HoverFill: =RGBA(186, 202, 226, 1)
+                                    OnSelect: =Select(Parent)
+                                    PaddingBottom: =0
+                                    PaddingLeft: =0
+                                    PaddingRight: =0
+                                    PaddingTop: =0
+                                    RadiusBottomLeft: =7
+                                    RadiusBottomRight: =7
+                                    RadiusTopLeft: =7
+                                    RadiusTopRight: =7
+                                    Size: =comp_popup_right.Size_Font*0.8
+                                    Underline: |-
+                                      =Switch( ThisItem.Value ,
+                                      3 , 
+                                      true
+                                      )
+                                    Visible: '=!IsBlank(Self.Text) '
+                                    Width: =Parent.TemplateWidth/10*7
+                                    X: =Parent.TemplateWidth/2 - Self.Width/2
+                                    Y: =Parent.TemplateHeight/2 - Self.Height/2
+                              - Rectangle2_235:
+                                  Control: Rectangle@2.3.0
+                                  Properties:
+                                    BorderColor: =RGBA(0, 18, 107, 1)
+                                    Fill: =RGBA(0, 0, 0, 0)
+                                    Height: =Parent.TemplateHeight
+                                    OnSelect: "=Switch(\r\n    ThisItem.Value , \r\n    1 , \r\n    comp_popup_right.OnSelect_Add() ,\r\n   \r\n    3 , \r\n    comp_popup_right.OnSelect_Cancel() \r\n) "
+                                    Width: =Parent.TemplateWidth
+                                    X: =Parent.TemplateWidth/2 - Self.Width/2
+                                    Y: =Parent.TemplateHeight/2 - Self.Height/2
+                        - Gallery3_62:
+                            Control: Gallery@2.15.0
+                            Variant: Horizontal
+                            Properties:
+                              BorderColor: =RGBA(0, 18, 107, 1)
+                              Height: =Parent.Height*0.8
+                              Items: =Sequence(3)
+                              ShowScrollbar: =false
+                              TemplatePadding: =0
+                              TemplateSize: =Self.Width/Self.AllItemsCount
+                              Visible: =!IsBlank(_comp_selected_item_gallery1_40)
+                              Width: =Parent.Width*0.99
+                              Y: =Parent.Height/2 - Self.Height/2
+                            Children:
+                              - TextInput3_37:
+                                  Control: Classic/TextInput@2.3.2
+                                  Properties:
+                                    Align: =Align.Center
+                                    BorderColor: |-
+                                      =Switch( ThisItem.Value , 1 , 
+                                      ColorValue("#00514A") , 
+                                      2 , 
+                                      ColorValue("#f65810") , 
+                                      3 , 
+                                      ColorValue("#ffffff")
+                                      )
+                                    BorderThickness: =1
+                                    Color: |-
+                                      =Switch( ThisItem.Value , 
+                                      1 , 
+                                      ColorValue("#ffffff") , 
+                                      2 , 
+                                      ColorValue("#f65810") , 
+                                      3 , 
+                                      ColorValue("#f65810") 
+                                      )
+                                    Default: |-
+                                      =Switch(
+                                          ThisItem.Value,
+                                          1,
+                                          "수정",
+                                          2,
+                                          "삭제",
+                                          3 , 
+                                          "닫기"
+                                      )
+                                    Fill: |-
+                                      =Switch( ThisItem.Value , 1 , 
+                                      ColorValue("#00514A") , 
+                                      2 , 
+                                      ColorValue("#ffffff") , 
+                                      3 , 
+                                      ColorValue("#ffffff")
+                                      )
+                                    Font: =Font.'Open Sans'
+                                    FontWeight: =FontWeight.Bold
+                                    Height: =Parent.TemplateHeight/10*9
+                                    HoverBorderColor: =RGBA(0, 18, 107, 1)
+                                    HoverFill: =RGBA(186, 202, 226, 1)
+                                    OnSelect: =Select(Parent)
+                                    PaddingBottom: =0
+                                    PaddingLeft: =0
+                                    PaddingRight: =0
+                                    PaddingTop: =0
+                                    RadiusBottomLeft: =7
+                                    RadiusBottomRight: =7
+                                    RadiusTopLeft: =7
+                                    RadiusTopRight: =7
+                                    Size: =comp_popup_right.Size_Font*0.8
+                                    Underline: |-
+                                      =Switch( ThisItem.Value ,
+                                      3 , 
+                                      true
+                                      )
+                                    Visible: '=!IsBlank(Self.Text) '
+                                    Width: =Parent.TemplateWidth/10*7
+                                    X: =Parent.TemplateWidth/2 - Self.Width/2
+                                    Y: =Parent.TemplateHeight/2 - Self.Height/2
+                              - Rectangle2_236:
+                                  Control: Rectangle@2.3.0
+                                  Properties:
+                                    BorderColor: =RGBA(0, 18, 107, 1)
+                                    Fill: =RGBA(0, 0, 0, 0)
+                                    Height: =Parent.TemplateHeight
+                                    OnSelect: "=Switch(\n    ThisItem.Value , \n    1 , \n    comp_popup_right.OnSelect_Edit() ,\n    1 , \n    comp_popup_right.OnSelect_Remove() ,\n    3 , \n    comp_popup_right.OnSelect_Cancel() \n) "
+                                    Width: =Parent.TemplateWidth
+                                    X: =Parent.TemplateWidth/2 - Self.Width/2
+                                    Y: =Parent.TemplateHeight/2 - Self.Height/2
+                  - Container7_41:
+                      Control: GroupContainer@1.4.0
+                      Variant: ManualLayout
+                      Properties:
+                        BorderColor: =RGBA(102, 102, 102, 1)
+                        BorderThickness: =1
+                        DropShadow: =DropShadow.None
+                        Fill: =ColorFade( ColorValue("#f65810") , 50% )
+                        Height: =Container7_40.Height
+                        RadiusBottomLeft: =15
+                        RadiusBottomRight: =15
+                        RadiusTopLeft: =15
+                        RadiusTopRight: =15
+                        Visible: =false
+                        Width: =Container7_40.Width
+                        X: =Container7_40.X + 5
+                        Y: =Container7_40.Y + 5
+                  - Container7_40:
+                      Control: GroupContainer@1.4.0
+                      Variant: ManualLayout
+                      Properties:
+                        BorderColor: =RGBA(102, 102, 102, 1)
+                        DropShadow: =DropShadow.None
+                        Fill: =RGBA(255, 255, 255, 1)
+                        Height: =Parent.Height - Self.Y - Self.X - Container1_35.Height*1.5
+                        RadiusBottomLeft: =15
+                        RadiusBottomRight: =15
+                        RadiusTopLeft: =15
+                        RadiusTopRight: =15
+                        Width: =Parent.Width*0.98
+                        X: =Parent.Width/2 - Self.Width/2
+                        Y: =Self.X
+                      Children:
+                        - Gallery1_40:
+                            Control: Gallery@2.15.0
+                            Variant: VariableHeight
+                            Properties:
+                              BorderColor: =RGBA(0, 18, 107, 1)
+                              Height: |-
+                                =//Parent.Height - Self.Y - Self.X
+                                //Self.AllItemsCount*Self.TemplateHeight
+
+                                Parent.Height - Self.Y - Self.X
+                              Items: =comp_popup_right.Items_Gallery_Event
+                              ShowScrollbar: =false
+                              TemplatePadding: =0
+                              TemplateSize: =comp_popup_right.Size_Font*3*2.5
+                              Width: =Parent.Width*0.99
+                              X: '=Parent.Width/2 - Self.Width/2 '
+                              Y: =Self.X
+                            Children:
+                              - Rectangle5_45:
+                                  Control: Rectangle@2.3.0
+                                  Properties:
+                                    BorderColor: =RGBA(0, 18, 107, 1)
+                                    Fill: =RGBA(0, 0, 0, 0)
+                                    Height: =5
+                                    OnSelect: '= '
+                                    Width: =Parent.TemplateWidth
+                                    X: =Parent.TemplateWidth/2 - Self.Width/2
+                              - Container18_7:
+                                  Control: GroupContainer@1.4.0
+                                  Variant: ManualLayout
+                                  Properties:
+                                    BorderColor: =RGBA(77, 77, 77, 1)
+                                    BorderThickness: =1
+                                    DropShadow: =DropShadow.None
+                                    Fill: |-
+                                      =If( IsBlank(_comp_selected_item_gallery1_40) , 
+                                          ColorFade(ColorValue(ThisItem.field_11), 50%) ,
+                                          If( 
+                                              _comp_selected_item_gallery1_40.ID = ThisItem.ID ,  
+                                              ColorFade(ColorValue(ThisItem.field_11), 50%) , 
+                                              ColorFade(ColorValue("#959595") , 50%)
+                                      ))
+                                    Height: =Container18_6.Height
+                                    RadiusBottomLeft: =10
+                                    RadiusBottomRight: =10
+                                    RadiusTopLeft: =10
+                                    RadiusTopRight: =10
+                                    Width: =Container18_6.Width
+                                    X: =Container18_6.X + 3
+                                    Y: =Container18_6.Y + 3
+                              - Container18_6:
+                                  Control: GroupContainer@1.4.0
+                                  Variant: ManualLayout
+                                  Properties:
+                                    BorderColor: =RGBA(77, 77, 77, 1)
+                                    BorderThickness: =1
+                                    DropShadow: =DropShadow.None
+                                    Fill: |-
+                                      =If( 
+                                          _comp_selected_item_gallery1_40.ID = ThisItem.ID ,  
+                                          ColorFade(ColorValue(ThisItem.field_11),95%) , 
+                                          Color.White
+                                      )
+                                    Height: =comp_popup_right.Size_Font*6
+                                    RadiusBottomLeft: =10
+                                    RadiusBottomRight: =10
+                                    RadiusTopLeft: =10
+                                    RadiusTopRight: =10
+                                    Width: =Parent.TemplateWidth*0.96
+                                    X: =Parent.TemplateWidth/2 - Self.Width/2
+                                    Y: =Rectangle5_45.Y + Rectangle5_45.Height
+                                  Children:
+                                    - Label10_15:
+                                        Control: Label@2.5.1
+                                        Properties:
+                                          BorderColor: =RGBA(0, 18, 107, 1)
+                                          Color: |-
+                                            =If( IsBlank( _comp_selected_item_gallery1_40 ) , ColorValue("#222222") , 
+                                            If( _comp_selected_item_gallery1_40.ID = ThisItem.ID , 
+                                            ColorValue("#000000") , 
+                                            ColorValue("#959595") 
+                                            ))
+                                          Font: =Font.'Open Sans'
+                                          FontWeight: =FontWeight.Semibold
+                                          Height: =Self.Size*2
+                                          Size: =comp_popup_right.Size_Font*0.7
+                                          Text: |-
+                                            =If( ThisItem.field_9 = ThisItem.field_10 , Text( DateValue(ThisItem.field_9) , "m월 d일 ddd") , 
+                                            Text( DateValue(ThisItem.field_9) , "m월 d일 ddd ") & " ~ " & Text( DateValue(ThisItem.field_10) , "m월 d일 ddd")
+                                            )
+                                          Width: =Parent.Width/10*7
+                                          X: =Container19_6.X + Container19_6.Width + 5
+                                          Y: =Container19_6.Y
+                                    - Label10_16:
+                                        Control: Label@2.5.1
+                                        Properties:
+                                          BorderColor: =RGBA(0, 18, 107, 1)
+                                          Color: |-
+                                            =If( IsBlank( _comp_selected_item_gallery1_40 ) , ColorValue("#222222") , 
+                                            If( _comp_selected_item_gallery1_40.ID = ThisItem.ID , 
+                                            ColorValue("#000000") , 
+                                            ColorValue("#959595") 
+                                            ))
+                                          Font: =Font.'Open Sans'
+                                          Height: =Self.Size*2
+                                          PaddingLeft: =_comp_spacing_xl
+                                          Size: =comp_popup_right.Size_Font*0.8
+                                          Text: =
+                                          Width: =99.5
+                                          Y: =Label10_15.Y
+                                    - Container19_6:
+                                        Control: GroupContainer@1.4.0
+                                        Variant: ManualLayout
+                                        Properties:
+                                          DropShadow: =DropShadow.Semilight
+                                          Fill: =ColorValue(ThisItem.field_11)
+                                          Height: =Parent.Height/10*8
+                                          RadiusBottomLeft: =7
+                                          RadiusBottomRight: =7
+                                          RadiusTopLeft: =7
+                                          RadiusTopRight: =7
+                                          Width: =Self.Height/4
+                                          X: =Parent.Width/60
+                                          Y: =Parent.Height/2 - Self.Height/2
+                                    - Label10_17:
+                                        Control: Label@2.5.1
+                                        Properties:
+                                          BorderColor: =RGBA(0, 18, 107, 1)
+                                          Color: |-
+                                            =If( IsBlank( _comp_selected_item_gallery1_40 ) , ColorValue("#222222") , 
+                                            If( _comp_selected_item_gallery1_40.ID = ThisItem.ID , 
+                                            ColorValue("#000000") , 
+                                            ColorValue("#959595") 
+                                            ))
+                                          Font: =Font.'Open Sans'
+                                          FontWeight: =FontWeight.Bold
+                                          Height: =Self.Size*2.5
+                                          Size: =comp_popup_right.Size_Font*0.8
+                                          Text: =ThisItem.field_7
+                                          VerticalAlign: =VerticalAlign.Top
+                                          Width: =Parent.Width/10*8
+                                          X: =Label10_15.X
+                                          Y: =Label10_15.Y + Label10_15.Height + 5
+                                    - Rectangle14_6:
+                                        Control: Rectangle@2.3.0
+                                        Properties:
+                                          BorderColor: =RGBA(0, 18, 107, 1)
+                                          Fill: =RGBA(0, 0, 0, 0)
+                                          Height: =Parent.Height
+                                          OnSelect: |-
+                                            =If( 
+                                                _comp_selected_item_gallery1_40.ID =ThisItem.ID, 
+                                                Set(_comp_selected_item_gallery1_40 , Blank() ) , 
+                                                Set(_comp_selected_item_gallery1_40 , ThisItem ) 
+                                            )
+                                          Width: =Parent.Width
+                                          X: =Parent.Width/2 - Self.Width/2
+                                          Y: =Parent.Height/2 - Self.Height/2
+                              - Rectangle1_80:
+                                  Control: Rectangle@2.3.0
+                                  Properties:
+                                    BorderColor: =RGBA(0, 18, 107, 1)
+                                    Fill: =RGBA(0, 0, 0, 0)
+                                    Height: =5
+                                    OnSelect: '= '
+                                    Width: =Parent.TemplateWidth
+                                    X: =Parent.TemplateWidth/2 - Self.Width/2
+                                    Y: =Container18_6.Y + Container18_6.Height
+            - Container34_1:
+                Control: GroupContainer@1.4.0
+                Variant: ManualLayout
+                Properties:
+                  DropShadow: =DropShadow.None
+                  Height: =Parent.Height/10*3
+                  Width: =Parent.Width*0.96
+                  X: =Parent.Width/2 - Self.Width/2
+                  Y: =Container51.Y + Container51.Height + Self.X/2
+                Children:
+                  - Container9_36:
+                      Control: GroupContainer@1.4.0
+                      Variant: ManualLayout
+                      Properties:
+                        BorderColor: =RGBA(102, 102, 102, 1)
+                        BorderThickness: =1
+                        DropShadow: =DropShadow.None
+                        Fill: =ColorFade( ColorValue("#f65810") , 50% )
+                        Height: =Container9_30.Height
+                        RadiusBottomLeft: =15
+                        RadiusBottomRight: =15
+                        RadiusTopLeft: =15
+                        RadiusTopRight: =15
+                        Width: =Container9_30.Width
+                        X: =Container9_30.X + 5
+                        Y: =Container9_30.Y + 5
+                  - Container9_30:
+                      Control: GroupContainer@1.4.0
+                      Variant: ManualLayout
+                      Properties:
+                        BorderColor: =RGBA(102, 102, 102, 1)
+                        BorderThickness: =1
+                        DropShadow: =DropShadow.None
+                        Fill: =RGBA(255, 255, 255, 1)
+                        Height: =Parent.Height- Self.Y -Self.X
+                        RadiusBottomLeft: =15
+                        RadiusBottomRight: =15
+                        RadiusTopLeft: =15
+                        RadiusTopRight: =15
+                        Width: =Parent.Width - Self.X*2
+                        X: =Container52.X
+                        Y: '=Container52.Y + Container52.Height + 5 '
+                      Children:
+                        - Gallery7_39:
+                            Control: Gallery@2.15.0
+                            Variant: Vertical
+                            Properties:
+                              Height: =Parent.Height - Self.Y*2
+                              Items: "= \n    ForAll( Sequence(42) , _comp_first_date + Value - Weekday( _comp_first_date , StartOfWeek.Sunday)) "
+                              ShowScrollbar: =false
+                              TemplatePadding: =0
+                              TemplateSize: =Self.Height/6
+                              Width: =Parent.Width - Self.X*2
+                              WrapCount: =7
+                              X: =5
+                              Y: =Self.X
+                            Children:
+                              - Container31_8:
+                                  Control: GroupContainer@1.4.0
+                                  Variant: ManualLayout
+                                  Properties:
+                                    BorderColor: =RGBA(246, 88, 16, 1)
+                                    BorderThickness: |-
+                                      =If( comp_popup_right.Date_Selected_Input = ThisItem.Value , 2 , 
+                                      0 )
+                                    DropShadow: |-
+                                      =If( Self.Fill <> Color.White , 
+                                      DropShadow.Semilight , 
+                                      DropShadow.None
+                                      )
+                                    Fill: |-
+                                      =
+                                      If( Month(ThisItem.Value) <> Month(comp_popup_right.Date_Selected_Input) , ColorValue("#ffffff") , 
+                                      If( 
+                                          comp_popup_right.Date_Selected_Input = ThisItem.Value ,  
+                                          ColorValue("#f0f0f0") , 
+                                          Color.White
+                                      ))
+                                    Height: =Parent.TemplateHeight/10*9.6
+                                    RadiusBottomLeft: =10
+                                    RadiusBottomRight: =10
+                                    RadiusTopLeft: =10
+                                    RadiusTopRight: =10
+                                    Visible: =
+                                    Width: =Parent.TemplateWidth/10*9
+                                    X: =Parent.TemplateWidth/2 - Self.Width/2
+                                    Y: =Parent.TemplateHeight/2 - Self.Height/2
+                              - TextInput8_18:
+                                  Control: Classic/TextInput@2.3.2
+                                  Properties:
+                                    Align: =Align.Center
+                                    BorderThickness: =0
+                                    Color: |
+                                      =If( Month(ThisItem.Value) <> _comp_selected_month , ColorValue("#959595") , 
+                                      If( comp_popup_right.Date_Selected_Input = ThisItem.Value , ColorValue("#222222") , 
+                                      If( ThisItem.Value  = Today(),  ColorValue("#ffffff"),
+                                      If( Weekday(ThisItem.Value) = 1  , ColorValue("#ef497f") , 
+                                      If( Weekday(ThisItem.Value) = 7  , ColorValue("#3a86ff") , 
+                                      Color.Black 
+                                      )))))
+                                    Default: =Text(ThisItem.Value , "d")
+                                    Fill: |+
+                                      =
+                                      If( Month(ThisItem.Value) <> _comp_selected_month , Color.Transparent , 
+                                      If( _comp_selected_month = ThisItem.Value , ColorValue("#f65810") , 
+                                      If( ThisItem.Value  = Today(), ColorValue("#00514a") , 
+                                      Color.Transparent)))
+
+                                    FontWeight: |
+                                      =If( Month(ThisItem.Value) <> _comp_selected_month , FontWeight.Lighter, 
+                                      FontWeight.Semibold 
+                                      )
+                                    Height: =Parent.TemplateHeight*0.7
+                                    Italic: =true
+                                    OnSelect: =Select(Parent)
+                                    PaddingBottom: =0
+                                    PaddingLeft: =0
+                                    PaddingRight: =0
+                                    PaddingTop: =0
+                                    RadiusBottomLeft: =180
+                                    RadiusBottomRight: =180
+                                    RadiusTopLeft: =180
+                                    RadiusTopRight: =180
+                                    Size: =comp_popup_right.Size_Font*0.8
+                                    Width: =Self.Height
+                                    X: =Parent.TemplateWidth - Self.Width - 5
+                                    Y: =2
+                              - Container16_5:
+                                  Control: GroupContainer@1.4.0
+                                  Variant: ManualLayout
+                                  Properties:
+                                    DropShadow: =DropShadow.None
+                                    Fill: |-
+                                      =/*
+                                      If(
+                                          !IsEmpty(
+                                              Filter(
+                                                  _col_event_m,
+                                                  DateValue(field_9) <= ThisItem.Value &&
+                                                  DateValue(field_10)   >= ThisItem.Value
+                                              )
+                                          ),
+                                          ColorValue(
+                                          First(
+                                              Filter(
+                                                  _col_event_m,
+                                                  DateValue(field_9) <= ThisItem.Value &&
+                                                  DateValue(field_10) >= ThisItem.Value
+                                              )
+                                          ).field_11
+                                      ),   // 일정 있을 때 배경
+                                          RGBA(0,0,0,0)            // 없으면 투명
+                                      )
+                                      */
+                                      Color.Transparent
+                                    Height: =TextInput8_18.Height*0.2
+                                    RadiusBottomLeft: |
+                                      =/*
+                                      If(
+                                          !IsEmpty(
+                                              Filter(
+                                                  _col_event_month,
+                                                  DateValue(field_9) = ThisItem.Value
+                                              )
+                                          ),
+                                          10,    // 시작일이면 둥글게
+                                          0
+                                      )
+                                      */
+                                    RadiusBottomRight: |
+                                      =/*
+                                      If(
+                                          !IsEmpty(
+                                              Filter(
+                                                  _col_event_month,
+                                                  DateValue(field_10) = ThisItem.Value
+                                              )
+                                          ),
+                                          10,    // 시작일이면 둥글게
+                                          0
+                                      )
+                                      */
+                                    RadiusTopLeft: |-
+                                      =/*
+                                      If(
+                                          !IsEmpty(
+                                              Filter(
+                                                  _col_event_month,
+                                                  DateValue(field_9) = ThisItem.Value
+                                              )
+                                          ),
+                                          10,    // 시작일이면 둥글게
+                                          0
+                                      )
+                                      */
+                                    RadiusTopRight: |
+                                      =/*
+                                      If(
+                                          !IsEmpty(
+                                              Filter(
+                                                  _col_event_month,
+                                                  DateValue(field_10) = ThisItem.Value
+                                              )
+                                          ),
+                                          10,    // 시작일이면 둥글게
+                                          0
+                                      )
+                                      */
+                                    Visible: |
+                                      =/*
+                                      If(
+                                          !IsEmpty(
+                                              Filter(
+                                                  _col_event,
+                                                  DateValue(field_9) <= ThisItem.Value &&
+                                                  DateValue(field_10)   >= ThisItem.Value
+                                              )
+                                          ),
+                                          true,   // 일정 있을 때 배경
+                                          false         // 없으면 투명
+                                      )
+                                      */
+                                    Width: =Parent.TemplateWidth
+                                    X: |
+                                      =/*
+                                      With(
+                                          {
+                                              isStart: !IsEmpty(Filter(_col_event_month, DateValue(field_9) = ThisItem.Value)),
+                                              isEnd:   !IsEmpty(Filter(_col_event_month, DateValue(field_10) = ThisItem.Value)),
+                                              isSame:  !IsEmpty(Filter(_col_event_month, DateValue(field_9) = DateValue(field_10))) 
+                                          },
+                                          Switch(
+                                              true,
+                                              isSame, (Parent.TemplateWidth - Self.Width)/2 ,
+                                              isEnd,   Parent.TemplateWidth - Self.Width - _var_spacing_xl,
+                                              isStart, _var_spacing_xl
+                                          )
+                                      )
+                                      */
+                                    Y: =Container31_8.Height  - Self.Height/2
+                              - Gallery20:
+                                  Control: Gallery@2.15.0
+                                  Variant: Horizontal
+                                  Properties:
+                                    BorderColor: =RGBA(0, 18, 107, 1)
+                                    Height: =Parent.TemplateHeight/10*2
+                                    Items: |-
+                                      =Filter(  comp_popup_right.Items_Gallery_Event_Month , 
+                                          And(
+                                              DateValue(field_9) <= ThisItem.Value , 
+                                              DateValue(field_10) >= ThisItem.Value
+                                          )
+                                      )
+                                    ShowScrollbar: =false
+                                    TemplatePadding: =0
+                                    TemplateSize: '=IfError( Self.Width/Self.AllItemsCount , 0 ) '
+                                    Width: =Parent.TemplateWidth*0.5
+                                    X: =Parent.TemplateWidth/2 - Self.Width/2
+                                    Y: =Parent.TemplateHeight - Self.Height-2
+                                  Children:
+                                    - Circle2:
+                                        Control: Circle@2.3.0
+                                        Properties:
+                                          BorderColor: =RGBA(0, 18, 107, 1)
+                                          Fill: =ColorFade(ColorValue(ThisItem.field_11),0%)
+                                          Height: =Parent.TemplateHeight*0.8
+                                          OnSelect: =Select(Parent)
+                                          Width: =Self.Height
+                                          X: '=Parent.TemplateWidth/2 - Self.Width/2 '
+                                          Y: =Parent.TemplateHeight/2 - Self.Height/2
+                              - Rectangle9_20:
+                                  Control: Rectangle@2.3.0
+                                  Properties:
+                                    Fill: =RGBA(0, 0, 0, 0)
+                                    Height: =Parent.TemplateHeight
+                                    OnSelect: |-
+                                      =If( _comp_selected_date = ThisItem.Value, 
+                                      Set(_comp_selected_date,Blank()) ; 
+                                      ,
+                                      Set(_comp_selected_date,ThisItem.Value) ;
+                                      );
+                                      Set(_comp_selected_item_gallery1_40 , Blank() );
+                                      comp_popup_right.OnSelect_Date() ;
+                                    Width: =Parent.TemplateWidth
+                  - Container52:
+                      Control: GroupContainer@1.4.0
+                      Variant: ManualLayout
+                      Properties:
+                        DropShadow: =DropShadow.None
+                        Height: |-
+                          =If( Or( IsBlank(_comp_selected_year) , IsBlank(_comp_selected_month)), 
+                          Parent.Height - Self.Y*2 ,
+                          Parent.Height/10*1 )
+                        Width: =Parent.Width*0.96
+                        X: =Parent.Width/2 - Self.Width/2
+                        Y: =_comp_spacing_sm
+                      Children:
+                        - Gallery21:
+                            Control: Gallery@2.15.0
+                            Variant: Vertical
+                            Properties:
+                              BorderColor: =RGBA(0, 18, 107, 1)
+                              Height: =Parent.Height - Self.Y*2
+                              Items: |-
+                                =If( IsBlank(_comp_selected_year) , 
+                                Sequence(9, 2025 - 4 ,1) , 
+                                [
+                                    {Value:_comp_selected_year}
+                                ]
+                                )
+                              ShowScrollbar: =false
+                              TemplatePadding: =
+                              TemplateSize: |-
+                                =If( IsBlank(_comp_selected_year) , Parent.Height/3 , 
+                                Parent.Height
+                                )
+                              Width: |-
+                                =If( IsBlank(_comp_selected_month) , 0 ,
+                                If( IsBlank(_comp_selected_year) , 
+                                Parent.Width , 
+                                Parent.Width/4
+                                ))
+                              WrapCount: =If( IsBlank(_comp_selected_year) , 3 , 1 )
+                              X: =5
+                            Children:
+                              - Label20:
+                                  Control: Label@2.5.1
+                                  Properties:
+                                    Align: =Align.Center
+                                    BorderColor: =RGBA(0, 18, 107, 1)
+                                    Color: |-
+                                      =If( _comp_selected_year = ThisItem.Value ,
+                                          ColorValue("#f65810") , ColorValue("#181818") 
+                                      )
+                                    Font: =Font.'Open Sans'
+                                    FontWeight: |-
+                                      =
+                                      If( _comp_selected_year = ThisItem.Value ,
+                                         FontWeight.Bold , FontWeight.Normal
+                                      )
+                                    Height: =Parent.TemplateHeight
+                                    OnSelect: =Select(Parent)
+                                    Size: =comp_popup_right.Size_Font
+                                    Text: |
+                                      =
+                                          ThisItem.Value & "년"
+                                    Underline: =ThisItem.Value = _comp_selected_year
+                                    Width: =Parent.TemplateWidth
+                                    Y: |
+                                      =0
+                              - Rectangle35:
+                                  Control: Rectangle@2.3.0
+                                  Properties:
+                                    BorderColor: =RGBA(0, 18, 107, 1)
+                                    Fill: =RGBA(0, 0, 0, 0)
+                                    Height: =Parent.TemplateHeight
+                                    OnSelect: |-
+                                      =If( _comp_selected_year = ThisItem.Value ,
+                                      Set( _comp_selected_year , Blank() ) , 
+                                      Set( _comp_selected_year , ThisItem.Value )
+                                      ) ; 
+
+                                      Set( _comp_first_date , Date( _comp_selected_year , _comp_selected_month , 1 )) ; 
+
+                                      comp_popup_right.OnSelect_Year()
+                                    Width: =Parent.TemplateWidth
+                        - Gallery21_1:
+                            Control: Gallery@2.15.0
+                            Variant: Vertical
+                            Properties:
+                              BorderColor: =RGBA(0, 18, 107, 1)
+                              Height: =Parent.Height - Self.Y*2
+                              Items: |-
+                                =If( IsBlank(_comp_selected_month) , 
+                                Sequence(12) , 
+                                [
+                                    {Value:_comp_selected_month}
+                                ]
+                                )
+                              ShowScrollbar: =false
+                              TemplatePadding: =
+                              TemplateSize: |-
+                                =If( IsBlank(_comp_selected_month) , Parent.Height/3 , 
+                                Parent.Height
+                                )
+                              Visible: =If( IsBlank( _comp_selected_year) , false , true )
+                              Width: |-
+                                =If( IsBlank(_comp_selected_month) , 
+                                Parent.Width , 
+                                Parent.Width/4
+                                )
+                              WrapCount: =If( IsBlank(_comp_selected_month) , 4 , 1 )
+                              X: |-
+                                =If( IsBlank(_comp_selected_month) , Gallery21.X , 
+                                Parent.Width - Self.Width
+                                )
+                            Children:
+                              - Label20_1:
+                                  Control: Label@2.5.1
+                                  Properties:
+                                    Align: =Align.Center
+                                    BorderColor: =RGBA(0, 18, 107, 1)
+                                    Color: |-
+                                      =If( _comp_selected_month = ThisItem.Value ,
+                                          ColorValue("#f65810") , ColorValue("#181818") 
+                                      )
+                                    Font: =Font.'Open Sans'
+                                    FontWeight: |-
+                                      =
+                                      If( _comp_selected_month = ThisItem.Value ,
+                                         FontWeight.Bold , FontWeight.Normal
+                                      )
+                                    Height: =Parent.TemplateHeight
+                                    OnSelect: =Select(Parent)
+                                    Size: =comp_popup_right.Size_Font
+                                    Text: |-
+                                      =
+                                      ThisItem.Value & "월"
+                                    Underline: =ThisItem.Value = _comp_selected_month
+                                    Width: =Parent.TemplateWidth
+                                    Y: |
+                                      =0
+                              - Rectangle35_1:
+                                  Control: Rectangle@2.3.0
+                                  Properties:
+                                    BorderColor: =RGBA(0, 18, 107, 1)
+                                    Fill: =RGBA(0, 0, 0, 0)
+                                    Height: =Parent.TemplateHeight
+                                    OnSelect: |-
+                                      =If( _comp_selected_month = ThisItem.Value ,
+                                      Set( _comp_selected_month , Blank() ) , 
+                                      Set( _comp_selected_month , ThisItem.Value )
+                                      ) ; 
+
+                                      Set( _comp_first_date , Date( _comp_selected_year , _comp_selected_month , 1 )) ; 
+                                      comp_popup_right.OnSelect_Month()
+                                    Width: =Parent.TemplateWidth
+            - Container51:
+                Control: GroupContainer@1.4.0
+                Variant: ManualLayout
+                Properties:
+                  DropShadow: =DropShadow.None
+                  Height: =comp_popup_right.Size_Font*2.5
+                  Width: =Parent.Width - Self.X*2
+                  X: =_comp_spacing_md
+                  Y: =Self.X/2
+                Children:
+                  - Label2_14:
+                      Control: Label@2.5.1
+                      Properties:
+                        BorderColor: =RGBA(0, 18, 107, 1)
+                        DisplayMode: =DisplayMode.View
+                        Font: =Font.'Open Sans'
+                        FontWeight: =FontWeight.Bold
+                        Height: =Self.Size*2.5
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =comp_popup_right.Size_Font*1*1
+                        Text: ="일정관리"
+                        Width: =Container9_30.Width
+                        X: |
+                          =0
+                        Y: =Self.X/2
+                  - Rectangle34:
+                      Control: Rectangle@2.3.0
+                      Properties:
+                        BorderColor: =RGBA(0, 18, 107, 1)
+                        Fill: =RGBA(102, 102, 102, 1)
+                        Height: =2
+                        Width: =Parent.Width
+                        X: =Parent.Width*0
+                        Y: =Parent.Height - Self.Height

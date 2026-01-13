@@ -1,0 +1,11 @@
+{
+  "Components": [
+    {
+      "Name": "bar_menu_top",
+      "TemplateName": "54fed2ad3da24221b809dbe70c9cffe7",
+      "Description": "",
+      "AllowCustomization": true,
+      "AllowAccessToGlobals": false
+    }
+  ]
+}

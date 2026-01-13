@@ -1,0 +1,11 @@
+{
+  "Components": [
+    {
+      "Name": "comp_chart_line_1_v01",
+      "TemplateName": "cacc9802376547faa651c250771b8695",
+      "Description": "",
+      "AllowCustomization": true,
+      "AllowAccessToGlobals": false
+    }
+  ]
+}

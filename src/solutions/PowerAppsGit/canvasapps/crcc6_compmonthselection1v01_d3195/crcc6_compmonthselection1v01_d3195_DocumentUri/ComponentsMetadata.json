@@ -1,0 +1,11 @@
+{
+  "Components": [
+    {
+      "Name": "comp_month_selection1_v01",
+      "TemplateName": "2b76a3759da74c3ba92fe848b099f946",
+      "Description": "",
+      "AllowCustomization": true,
+      "AllowAccessToGlobals": false
+    }
+  ]
+}

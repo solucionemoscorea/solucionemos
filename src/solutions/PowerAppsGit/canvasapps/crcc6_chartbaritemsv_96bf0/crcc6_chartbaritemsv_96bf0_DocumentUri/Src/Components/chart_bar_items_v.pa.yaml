@@ -1,0 +1,400 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps should only be used to review changes made within Power Apps Studio and for minor edits (Preview).
+# Use the maker portal to create and edit your Power Apps.
+# 
+# The schema file for Canvas Apps is available at https://go.microsoft.com/fwlink/?linkid=2304907
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+ComponentDefinitions:
+  chart_bar_items_v:
+    DefinitionType: CanvasComponent
+    AllowCustomization: true
+    CustomProperties:
+      Fill_BackGround:
+        PropertyKind: Input
+        DisplayName: Fill_BackGround
+        Description: 사용자 지정 속성
+        DataType: Color
+        Default: =ColorValue("#6a6a6a")
+      IsTrue_DarkMode:
+        PropertyKind: Input
+        DisplayName: IsTrue_DarkMode
+        Description: 사용자 지정 속성
+        DataType: Boolean
+        Default: =true
+      IsTrue_DropShadow:
+        PropertyKind: Input
+        DisplayName: IsTrue_DropShadow
+        Description: 사용자 지정 속성
+        DataType: Boolean
+        Default: =false
+      Items_2_Show:
+        PropertyKind: Input
+        DisplayName: Items_2_Show
+        Description: 사용자 지정 속성
+        DataType: Table
+        Default: |
+          =Table(
+              { ChartItem: "생산", ChartValue: 120 },
+              { ChartItem: "품질", ChartValue: 85 },
+              { ChartItem: "출하", ChartValue: 150 },
+              { ChartItem: "재고", ChartValue: 60 }
+          )
+      Length_Bar:
+        PropertyKind: Input
+        DisplayName: Length_Bar
+        Description: 사용자 지정 속성
+        DataType: Number
+        Default: =100
+      OnSelect_Chart:
+        PropertyKind: Event
+        DisplayName: OnSelect_Chart
+        Description: 사용자 지정 속성
+        ReturnType: None
+        Default: =
+      Size_Font:
+        PropertyKind: Input
+        DisplayName: Size_Font
+        Description: 사용자 지정 속성
+        DataType: Number
+        Default: =13
+      Title_Chart:
+        PropertyKind: Input
+        DisplayName: Title_Chart
+        Description: 사용자 지정 속성
+        DataType: Text
+        Default: ="차트 제목"
+      Width_Item:
+        PropertyKind: Input
+        DisplayName: Width_Item
+        Description: 사용자 지정 속성
+        DataType: Number
+        Default: =100
+      _selected_item_input:
+        PropertyKind: Input
+        DisplayName: _selected_item_input
+        Description: 사용자 지정 속성
+        DataType: Text
+        Default: ="텍스트"
+      _selected_item_output:
+        PropertyKind: Output
+        DisplayName: _selected_item_output
+        Description: 사용자 지정 속성
+        DataType: Text
+    Properties:
+      Fill: =Color.Transparent
+      Height: =App.DesignHeight/10*4
+      _selected_item_output: =_var_selected_item_chart
+    Children:
+      - Container3_6:
+          Control: GroupContainer@1.4.0
+          Variant: ManualLayout
+          Properties:
+            BorderColor: =RGBA(116, 116, 116, 1)
+            BorderThickness: =1
+            Fill: =RGBA(246, 88, 16, 0.7)
+            Height: =Container3.Height
+            RadiusBottomLeft: =10
+            RadiusBottomRight: =10
+            RadiusTopLeft: =10
+            RadiusTopRight: =10
+            Visible: |-
+              =If( chart_bar_items_v.IsTrue_DarkMode , false , 
+                  If( chart_bar_items_v.IsTrue_DropShadow , false,  true ))
+            Width: =Container3.Width
+            X: =Container3.X + 5
+            Y: =Container3.Y + 5
+      - Container3:
+          Control: GroupContainer@1.4.0
+          Variant: ManualLayout
+          Properties:
+            BorderColor: =RGBA(116, 116, 116, 1)
+            BorderThickness: =If( chart_bar_items_v.IsTrue_DropShadow , 0  , 1 )
+            DropShadow: =DropShadow.Regular
+            Fill: =If( chart_bar_items_v.IsTrue_DarkMode , ColorFade( chart_bar_items_v.Fill_BackGround , -40%) , Color.White )
+            Height: =Parent.Height - Self.Y - Self.X
+            RadiusBottomLeft: =10
+            RadiusBottomRight: =10
+            RadiusTopLeft: =10
+            RadiusTopRight: =10
+            Width: =Parent.Width - Self.X*2
+            X: =7.5
+            Y: =Label7.Y + Label7.Height
+          Children:
+            - Gallery15:
+                Control: Gallery@2.15.0
+                Variant: VariableHeight
+                Properties:
+                  BorderColor: =RGBA(0, 18, 107, 1)
+                  Fill: =Color.Transparent
+                  Height: =Parent.Height - Self.Y*2
+                  Items: =Sort( chart_bar_items_v.Items_2_Show , Sum(ChartValue), SortOrder.Descending )
+                  ShowScrollbar: =false
+                  TemplatePadding: =0
+                  TemplateSize: =chart_bar_items_v.Size_Font*3
+                  Width: =Parent.Width - Self.X*2
+                  X: |
+                    =5
+                  Y: =5
+                Children:
+                  - Rectangle37:
+                      Control: Rectangle@2.3.0
+                      Properties:
+                        BorderColor: =RGBA(0, 18, 107, 1)
+                        Fill: |-
+                          =If( chart_bar_items_v.IsTrue_DarkMode ,
+                              If(
+                                  IsBlank(chart_bar_items_v._selected_item_input), 
+                                  Color.Transparent ,
+                                  If(
+                                      chart_bar_items_v._selected_item_input = ThisItem.ChartItem , ColorFade(chart_bar_items_v.Fill_BackGround,-60%), Color.Transparent
+                                  )
+                              )
+                              ,
+                              If(
+                                  IsBlank(chart_bar_items_v._selected_item_input), 
+                                  Color.Transparent ,
+                                  If(
+                                      chart_bar_items_v._selected_item_input = ThisItem.ChartItem , ColorFade(ColorValue("#f65810"),95%), ColorFade(ColorValue("#e0e0e0"),95%)
+                                  )
+                              )
+                          )
+                        Height: =Parent.TemplateHeight
+                        OnSelect: =Select(Parent)
+                        Width: =Parent.TemplateWidth
+                  - chartitem:
+                      Control: Label@2.5.1
+                      Properties:
+                        BorderColor: =RGBA(0, 18, 107, 1)
+                        Color: |-
+                          =If( chart_bar_items_v.IsTrue_DarkMode , 
+                              If( IsBlank(chart_bar_items_v._selected_item_input) , 
+                                  ColorValue("#ffffff") ,
+                                  If( chart_bar_items_v._selected_item_input = ThisItem.ChartItem , 
+                                  ColorValue("#ffffff") , 
+                                  ColorValue("#e0e0e0")
+                                  )
+                              )
+                              ,
+                              If( IsBlank(chart_bar_items_v._selected_item_input) , 
+                                  ColorValue("#222222") ,
+                                  If( chart_bar_items_v._selected_item_input = ThisItem.ChartItem , 
+                                  ColorValue("#000000") , 
+                                  ColorValue("#959595")
+                                  )
+                              )
+                          )
+                        Font: =Font.'Open Sans'
+                        FontWeight: |-
+                          =
+                          If( IsBlank(chart_bar_items_v._selected_item_input) , 
+                              FontWeight.Normal ,
+                              If( chart_bar_items_v._selected_item_input = ThisItem.ChartItem , 
+                              FontWeight.Bold , 
+                              FontWeight.Normal
+                              )
+                          )
+                        Height: =Parent.TemplateHeight
+                        OnSelect: =Select(Parent)
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: |-
+                          =If( IsBlank(chart_bar_items_v._selected_item_input) , 
+                              chart_bar_items_v.Size_Font ,
+                              If( chart_bar_items_v._selected_item_input = ThisItem.ChartItem , 
+                              chart_bar_items_v.Size_Font*1.1 , 
+                              chart_bar_items_v.Size_Font*0.9
+                              )
+                          )
+                        Text: |-
+                          =If( IsBlank(chart_bar_items_v._selected_item_input) , 
+                          " " , 
+                          If( chart_bar_items_v._selected_item_input = ThisItem.ChartItem , 
+                          " ✅  " , " " ))
+                          &
+                           ThisItem.ChartItem
+                        Width: =chart_bar_items_v.Width_Item
+                  - bar_rear:
+                      Control: Classic/TextInput@2.3.2
+                      Properties:
+                        BorderColor: =RGBA(106, 106, 106, 1)
+                        BorderThickness: =1
+                        Default: =
+                        Fill: =ColorFade( bar_front.Fill , 50% )
+                        Font: =Font.'Open Sans'
+                        Height: =Parent.TemplateHeight/10*2
+                        HoverBorderColor: =RGBA(0, 18, 107, 1)
+                        HoverFill: =RGBA(186, 202, 226, 1)
+                        OnSelect: =Select(Parent)
+                        RadiusBottomLeft: =0
+                        RadiusBottomRight: =bar_front.RadiusBottomRight
+                        RadiusTopLeft: =0
+                        RadiusTopRight: =bar_front.RadiusTopRight
+                        Visible: =!chart_bar_items_v.IsTrue_DropShadow
+                        Width: =bar_front.Width
+                        X: =bar_front.X + 2
+                        Y: =bar_front.Y - 2
+                  - bar_front:
+                      Control: Classic/TextInput@2.3.2
+                      Properties:
+                        BorderColor: |-
+                          =If( 
+                              chart_bar_items_v.IsTrue_DarkMode , 
+                              ColorValue("#ffffff")  , 
+                              ColorValue("#6a6a6a")
+                          )
+                        BorderThickness: =1
+                        Color: =
+                        Default: =
+                        Fill: |-
+                          =If( chart_bar_items_v.IsTrue_DarkMode , 
+                              If( IsBlank(chart_bar_items_v._selected_item_input) , 
+                                  ColorValue("#00E676") ,
+                                  If( chart_bar_items_v._selected_item_input = ThisItem.ChartItem , 
+                                  ColorValue("#00E676") , 
+                                  ColorValue("#959595")
+                                  )
+                              )
+                              ,
+                              If( IsBlank(chart_bar_items_v._selected_item_input) , 
+                                  ColorValue("#f65810") ,
+                                  If( chart_bar_items_v._selected_item_input = ThisItem.ChartItem , 
+                                  ColorValue("#f65810") , 
+                                  ColorValue("#959595")
+                                  )
+                              )
+                          )
+                        Font: =Font.'Open Sans'
+                        Height: |
+                          =If( IsBlank(chart_bar_items_v._selected_item_input) , 
+                              Parent.TemplateHeight/10*3 ,
+                              If( chart_bar_items_v._selected_item_input = ThisItem.ChartItem , 
+                              Parent.TemplateHeight/10*3*1.1 , 
+                              Parent.TemplateHeight/10*3*0.6
+                              )
+                          )
+                        HoverBorderColor: =RGBA(0, 18, 107, 1)
+                        HoverFill: =RGBA(186, 202, 226, 1)
+                        OnSelect: =Select(Parent)
+                        RadiusBottomLeft: =0
+                        RadiusBottomRight: =3
+                        RadiusTopLeft: =0
+                        RadiusTopRight: =3
+                        Width: =IfError(ThisItem.ChartValue/Sum(chart_bar_items_v.Items_2_Show,ChartValue),0)*(chart_bar_items_v.Length_Bar)
+                        X: '=chartitem.X + chartitem.Width '
+                        Y: =chartitem.Y + chartitem.Height/2 - Self.Height/2
+                  - line:
+                      Control: Classic/TextInput@2.3.2
+                      Properties:
+                        BorderColor: =RGBA(0, 18, 107, 1)
+                        BorderThickness: =0
+                        Default: =
+                        Fill: |-
+                          =If( chart_bar_items_v.IsTrue_DarkMode , 
+                              Color.White , 
+                              Color.Black
+                          )
+                        Font: =Font.'Open Sans'
+                        Height: =1
+                        HoverBorderColor: =RGBA(0, 18, 107, 1)
+                        HoverFill: =RGBA(186, 202, 226, 1)
+                        OnSelect: =Select(Parent)
+                        RadiusBottomLeft: =0
+                        RadiusBottomRight: =0
+                        RadiusTopLeft: =0
+                        RadiusTopRight: =0
+                        Width: =bar_front.Width/10*3
+                        X: '=bar_front.X + bar_front.Width '
+                        Y: =bar_front.Y + bar_front.Height/2 - Self.Height/2
+                  - circle:
+                      Control: Circle@2.3.0
+                      Properties:
+                        BorderColor: |-
+                          =
+                              ColorValue("#ffffff")
+                        BorderThickness: =1
+                        Fill: =If( chart_bar_items_v.IsTrue_DarkMode , Color.White , Color.Black )
+                        Height: =chart_bar_items_v.Size_Font*0.7
+                        OnSelect: =Select(Parent)
+                        Width: =Self.Height
+                        X: =line.X + line.Width
+                        Y: =line.Y + line.Height/2 - Self.Height/2
+                  - chartvalue:
+                      Control: Label@2.5.1
+                      Properties:
+                        Align: =Align.Right
+                        BorderColor: =RGBA(0, 18, 107, 1)
+                        Color: =chartitem.Color
+                        Font: =Font.'Open Sans'
+                        FontWeight: =chartitem.FontWeight
+                        Height: =Parent.TemplateHeight
+                        OnSelect: =Select(Parent)
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =chartitem.Size*0.9
+                        Text: =Text( ThisItem.ChartValue , "#,# ")
+                        Width: =Parent.TemplateWidth/10*2
+                        X: =circle.X + circle.Width*1.5
+                  - chartvalue_percent:
+                      Control: Label@2.5.1
+                      Properties:
+                        BorderColor: =RGBA(0, 18, 107, 1)
+                        Color: =chartitem.Color
+                        Font: =Font.'Open Sans'
+                        FontWeight: =chartitem.FontWeight
+                        Height: =chartvalue.Height
+                        OnSelect: =Select(Parent)
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =chartitem.Size*0.7
+                        Text: =Text(IfError(ThisItem.ChartValue/Sum(chart_bar_items_v.Items_2_Show,ChartValue)*100,0),"(0.00%)")
+                        Width: =Parent.TemplateWidth/10*2
+                        X: =chartvalue.X + chartvalue.Width
+                  - Rectangle36:
+                      Control: Rectangle@2.3.0
+                      Properties:
+                        BorderColor: =RGBA(0, 18, 107, 1)
+                        Fill: |-
+                          =If( chart_bar_items_v.IsTrue_DarkMode , 
+                              ColorFade( chart_bar_items_v.Fill_BackGround , 10%) , ColorFade( chart_bar_items_v.Fill_BackGround , 80%)
+                          )
+                        Height: =1
+                        OnSelect: =Select(Parent)
+                        Width: =Parent.TemplateWidth
+                        Y: =chartitem.Y + chartitem.Height - Self.Height
+                  - Rectangle25:
+                      Control: Rectangle@2.3.0
+                      Properties:
+                        BorderColor: =RGBA(0, 18, 107, 1)
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =Parent.TemplateHeight
+                        OnSelect: |-
+                          =If( _var_selected_item_chart = ThisItem.ChartItem , 
+                              Set( _var_selected_item_chart , Blank() ) , 
+                              Set( _var_selected_item_chart , ThisItem.ChartItem )
+                          );
+
+                          chart_bar_items_v.OnSelect_Chart() ;
+                        Width: =Parent.TemplateWidth
+                        X: =Parent.Height*0
+                        Y: =Parent.Height*0
+      - Label7:
+          Control: Label@2.5.1
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: '=If( chart_bar_items_v.IsTrue_DarkMode , Color.White , Color.Black ) '
+            Font: =Font.'Open Sans'
+            FontWeight: =FontWeight.Bold
+            Height: =Self.Size*2
+            Size: =Parent.Size_Font*1.1
+            Text: =Parent.Title_Chart
+            Width: =Parent.Width - Self.X*2
+            X: =7.5
+            Y: =Self.X/2

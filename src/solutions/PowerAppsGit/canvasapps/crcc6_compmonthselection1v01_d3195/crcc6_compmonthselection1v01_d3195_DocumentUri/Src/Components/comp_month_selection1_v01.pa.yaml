@@ -1,0 +1,332 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps should only be used to review changes made within Power Apps Studio and for minor edits (Preview).
+# Use the maker portal to create and edit your Power Apps.
+# 
+# The schema file for Canvas Apps is available at https://go.microsoft.com/fwlink/?linkid=2304907
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+ComponentDefinitions:
+  comp_month_selection1_v01:
+    DefinitionType: CanvasComponent
+    AllowCustomization: true
+    CustomProperties:
+      Color_Container_Front:
+        PropertyKind: Input
+        DisplayName: Color_Container_Front
+        Description: A custom property
+        DataType: Text
+        Default: ="#ffffff"
+      Color_Container_Rear:
+        PropertyKind: Input
+        DisplayName: Color_Container_Rear
+        Description: A custom property
+        DataType: Text
+        Default: ="#8a8a8a"
+      Color_Fill_DarkMode:
+        PropertyKind: Input
+        DisplayName: Color_Fill_DarkMode
+        Description: 사용자 지정 속성
+        DataType: Color
+        Default: =ColorValue("#6a6a6a")
+      Color_Fill_LightMode:
+        PropertyKind: Input
+        DisplayName: Color_Fill_LightMode
+        Description: 사용자 지정 속성
+        DataType: Color
+        Default: =RGBA(0, 0, 0, 1)
+      Color_Fill_Selected:
+        PropertyKind: Input
+        DisplayName: Color_Fill_Selected
+        Description: A custom property
+        DataType: Color
+        Default: =RGBA(0, 0, 0, 1)
+      Color_Font_DarkMode:
+        PropertyKind: Input
+        DisplayName: Color_Font_DarkMode
+        Description: 사용자 지정 속성
+        DataType: Color
+        Default: =ColorValue("#ffffff")
+      Color_Font_LightMode:
+        PropertyKind: Input
+        DisplayName: Color_Font_LightMode
+        Description: 사용자 지정 속성
+        DataType: Color
+        Default: =ColorValue("#6a6a6a")
+      Color_Font_Selected:
+        PropertyKind: Input
+        DisplayName: Color_Font_Selected
+        Description: A custom property
+        DataType: Color
+        Default: =RGBA(0, 0, 0, 1)
+      IsTrue_DarkMode:
+        PropertyKind: Input
+        DisplayName: IsTrue_DarkMode
+        Description: 사용자 지정 속성
+        DataType: Boolean
+        Default: =true
+      IsTrue_DropShadow:
+        PropertyKind: Input
+        DisplayName: IsTrue_DropShadow
+        Description: 사용자 지정 속성
+        DataType: Boolean
+        Default: =false
+      Items_Month:
+        PropertyKind: Input
+        DisplayName: Items_Month
+        Description: A custom property
+        DataType: Table
+        Default: |-
+          =Table(
+              {
+                  CompMonth: 1 , 
+                  CompItem : "Item" , 
+                  CompValue : 10 , 
+                  CompStatus: "Completed" 
+              }
+          )
+      OnChange_Month:
+        PropertyKind: Event
+        DisplayName: OnChange_Month
+        Description: A custom property
+        ReturnType: None
+        Default: =
+      OnChange_Year:
+        PropertyKind: Event
+        DisplayName: OnChange_Year
+        Description: A custom property
+        ReturnType: None
+        Default: =
+      Selected_Month_Input:
+        PropertyKind: Input
+        DisplayName: Selected_Month_Input
+        Description: A custom property
+        DataType: Number
+        Default: =10
+      Selected_Month_Output:
+        PropertyKind: Output
+        DisplayName: Selected_Month_Output
+        Description: A custom property
+        DataType: Number
+      Selected_Year_Input:
+        PropertyKind: Input
+        DisplayName: Selected_Year_Input
+        Description: A custom property
+        DataType: Number
+        Default: =2026
+      Selected_Year_Output:
+        PropertyKind: Output
+        DisplayName: Selected_Year_Output
+        Description: A custom property
+        DataType: Number
+      Size_Font:
+        PropertyKind: Input
+        DisplayName: Size_Font
+        Description: 사용자 지정 속성
+        DataType: Number
+        Default: =13
+      Text_Title:
+        PropertyKind: Input
+        DisplayName: Text_Title
+        Description: 사용자 지정 속성
+        DataType: Text
+        Default: ="제목을 입력하세요"
+    Properties:
+      Fill: =Color.Transparent
+      Selected_Month_Output: =_comp_selected_month
+      Selected_Year_Output: =_comp_selected_year
+      Width: =App.DesignWidth
+    Children:
+      - container_rear_10:
+          Control: GroupContainer@1.4.0
+          Variant: ManualLayout
+          Properties:
+            BorderColor: =If(comp_month_selection1_v01.IsTrue_DarkMode, ColorFade(comp_month_selection1_v01.Color_Font_DarkMode , 40%),  ColorFade(comp_month_selection1_v01.Color_Font_LightMode , 40%))
+            BorderThickness: =If( comp_month_selection1_v01.IsTrue_DropShadow , 0 , 1 )
+            DropShadow: =DropShadow.Regular
+            Fill: =ColorValue(comp_month_selection1_v01.Color_Container_Rear)
+            Height: =container_front_10.Height
+            RadiusBottomLeft: =10
+            RadiusBottomRight: =10
+            RadiusTopLeft: =10
+            RadiusTopRight: =10
+            Width: =container_front_10.Width
+            X: =container_front_10.X + 5
+            Y: =container_front_10.Y + 5
+      - container_front_10:
+          Control: GroupContainer@1.4.0
+          Variant: ManualLayout
+          Properties:
+            BorderColor: =If(comp_month_selection1_v01.IsTrue_DarkMode, ColorFade(comp_month_selection1_v01.Color_Font_DarkMode , 40%),  ColorFade(comp_month_selection1_v01.Color_Font_LightMode , 40%))
+            BorderThickness: =If( comp_month_selection1_v01.IsTrue_DropShadow , 0 , 1 )
+            DropShadow: =DropShadow.Regular
+            Fill: =ColorValue(comp_month_selection1_v01.Color_Container_Front)
+            Height: =Parent.Height - Self.Y - Self.X
+            RadiusBottomLeft: =10
+            RadiusBottomRight: =10
+            RadiusTopLeft: =10
+            RadiusTopRight: =10
+            Width: =Parent.Width - Self.X*2
+            X: =Label7_6.X
+            Y: =Label7_6.Y*2 + Label7_6.Height
+          Children:
+            - Gallery3_6:
+                Control: Gallery@2.15.0
+                Variant: Horizontal
+                Properties:
+                  BorderColor: =RGBA(0, 18, 107, 1)
+                  Height: =Parent.Height - Self.Y - Self.X
+                  Items: =Sequence(13,0)
+                  ShowScrollbar: =false
+                  TemplatePadding: =0
+                  TemplateSize: =Self.Width/13
+                  Width: =Parent.Width - Self.X*2
+                  X: =Container39.X
+                  Y: =Container39.Y*5 + Container39.Height
+                Children:
+                  - Container37:
+                      Control: GroupContainer@1.4.0
+                      Variant: ManualLayout
+                      Properties:
+                        BorderColor: =RGBA(138, 138, 138, 1)
+                        BorderThickness: =1
+                        DropShadow: =DropShadow.None
+                        Fill: "=If( ThisItem.Value = comp_month_selection1_v01.Selected_Month_Input , \n            comp_month_selection1_v01.Color_Fill_Selected ,\n            If( comp_month_selection1_v01.IsTrue_DarkMode , \n                comp_month_selection1_v01.Color_Fill_DarkMode , \n                comp_month_selection1_v01.Color_Fill_LightMode\n            )\n)\n       "
+                        Height: =Parent.TemplateHeight*0.9
+                        RadiusBottomLeft: =15
+                        RadiusBottomRight: =15
+                        RadiusTopLeft: =15
+                        RadiusTopRight: =15
+                        Width: =Parent.TemplateWidth*0.9
+                        X: =Parent.TemplateWidth/2 - Self.Width/2
+                        Y: =Parent.TemplateHeight/2 - Self.Height/2
+                      Children:
+                        - TextInput3_10:
+                            Control: Classic/TextInput@2.3.2
+                            Properties:
+                              Align: =Align.Center
+                              BorderColor: =RGBA(202, 202, 202, 1)
+                              BorderThickness: =0
+                              Color: "=If( ThisItem.Value = comp_month_selection1_v01.Selected_Month_Input , \n            comp_month_selection1_v01.Color_Font_Selected ,\n            If( comp_month_selection1_v01.IsTrue_DarkMode , \n                comp_month_selection1_v01.Color_Font_DarkMode , \n                comp_month_selection1_v01.Color_Font_LightMode\n            )\n)\n       "
+                              Default: =If( ThisItem.Value = 0 , "All" , ThisItem.Value&"월" )
+                              Fill: =Color.Transparent
+                              Font: =Font.'Open Sans'
+                              FontWeight: =FontWeight.Bold
+                              Height: =Parent.Height/10*9
+                              HoverBorderColor: =RGBA(0, 18, 107, 1)
+                              HoverFill: =RGBA(186, 202, 226, 1)
+                              OnSelect: =
+                              PaddingBottom: =Self.Size/60
+                              PaddingLeft: =Self.Size/30
+                              PaddingRight: =Self.Size/60
+                              PaddingTop: =Self.Size/30
+                              Size: =comp_month_selection1_v01.Size_Font*1.2
+                              Visible: '=!IsBlank(Self.Text) '
+                              Width: =Parent.Width/10*9
+                              X: =Parent.Width/2 - Self.Width/2
+                              Y: =Parent.Height/2 - Self.Height/2
+                        - Label1_35:
+                            Control: Label@2.5.1
+                            Properties:
+                              Align: =Align.Center
+                              BorderColor: =RGBA(0, 18, 107, 1)
+                              Color: =TextInput3_10.Color
+                              Font: =Font.'Open Sans'
+                              FontWeight: =FontWeight.Semibold
+                              Height: =comp_month_selection1_v01.Size_Font*2
+                              OnSelect: =
+                              PaddingBottom: =0
+                              PaddingLeft: =0
+                              PaddingRight: =0
+                              PaddingTop: =0
+                              Size: =comp_month_selection1_v01.Size_Font*0.8
+                              Text: "=\nIf( \nThisItem.Value = 0,\n\"( \" & \nCountRows(Filter( comp_month_selection1_v01.Items_Month,CompStatus=\"Completed\")) & \" / \" & \nCountRows(comp_month_selection1_v01.Items_Month) & \" )\" \n, \n// 25-08-16 변경\n/*\nIf( CountRows(Filter(_col_history_order_year, Month(field_48) = Value(ThisItem.Value))) = 0 , Blank(), \n CountRows(Filter(_col_history_order_year, Month(field_48) = Value(ThisItem.Value))) \n))\n*/\n\"( \" & \nCountRows(Filter(comp_month_selection1_v01.Items_Month, CompMonth = Value(ThisItem.Value) && CompStatus=\"Completed\" )) & \" / \" & \nCountRows(Filter(comp_month_selection1_v01.Items_Month,  CompMonth = Value(ThisItem.Value))) & \" )\" \n) "
+                              Width: =TextInput3_10.Width
+                              X: =TextInput3_10.X
+                              Y: =TextInput3_10.Y + TextInput3_10.Height - Self.Height - Self.Size/30
+                        - Rectangle2_38:
+                            Control: Rectangle@2.3.0
+                            Properties:
+                              BorderColor: =RGBA(0, 18, 107, 1)
+                              Fill: =RGBA(0, 0, 0, 0)
+                              Height: =Parent.Height
+                              OnSelect: "=If(\n    _comp_selected_month = ThisItem.Value,\n    Set(\n        _comp_selected_month,\n        0\n    );\n    ,\n    Set(\n        _comp_selected_month,\n        ThisItem.Value\n    );\n    \n);\n\ncomp_month_selection1_v01.OnChange_Month(); "
+                              Width: =Parent.Width
+                              X: =Parent.Width/2 - Self.Width/2
+                              Y: =Parent.Height/2 - Self.Height/2
+            - Container39:
+                Control: GroupContainer@1.4.0
+                Variant: ManualLayout
+                Properties:
+                  DropShadow: =DropShadow.None
+                  Fill: |-
+                    =If( comp_month_selection1_v01.IsTrue_DarkMode , 
+                                    comp_month_selection1_v01.Color_Fill_DarkMode , 
+                                    comp_month_selection1_v01.Color_Fill_LightMode
+                                )
+                  Height: =Parent.Height/10*2
+                  RadiusBottomLeft: =5
+                  RadiusBottomRight: =5
+                  RadiusTopLeft: =5
+                  RadiusTopRight: =5
+                  Width: =Self.Height*5
+                  X: =comp_month_selection1_v01.Size_Font
+                  Y: =Self.X
+                Children:
+                  - Dropdown1_4:
+                      Control: Classic/DropDown@2.3.1
+                      Properties:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        ChevronBackground: =Self.Fill
+                        ChevronFill: =Self.Color
+                        ChevronHoverBackground: =RGBA(106, 106, 106, 1)
+                        ChevronHoverFill: =RGBA(255, 255, 255, 1)
+                        Color: |-
+                          =If( comp_month_selection1_v01.IsTrue_DarkMode , 
+                                          comp_month_selection1_v01.Color_Font_DarkMode , 
+                                          comp_month_selection1_v01.Color_Font_LightMode
+                                      )
+                        Default: =comp_month_selection1_v01.Selected_Year_Input
+                        Fill: |-
+                          =If( _comp_show_selection , 
+                              If( comp_month_selection1_v01.IsTrue_DarkMode , 
+                                          comp_month_selection1_v01.Color_Fill_DarkMode , 
+                                          comp_month_selection1_v01.Color_Fill_LightMode
+                                      )
+                               , Color.Transparent)
+                        Font: =Font.'Open Sans'
+                        FontWeight: =FontWeight.Bold
+                        Height: =Parent.Height
+                        HoverBorderColor: =
+                        HoverFill: =RGBA(74, 74, 74, 1)
+                        Items: =[2023,2024,2025,2026,2027,2028]
+                        Items.Value: =Value
+                        OnChange: |
+                          =Set(_comp_show_selection, false) ;  
+                          Set(_comp_selected_year,Self.Selected.Value) ;
+
+                          comp_month_selection1_v01.OnChange_Year() ; 
+                        OnSelect: '=Set(_comp_show_selection, true) '
+                        PaddingLeft: =20
+                        PressedColor: =RGBA(255, 255, 255, 1)
+                        PressedFill: =RGBA(0, 18, 107, 1)
+                        SelectionColor: =If( comp_month_selection1_v01.IsTrue_DarkMode , ColorValue("#ffffff") , ColorValue("#000000") )
+                        SelectionFill: =RGBA(246, 88, 16, 1)
+                        Size: =comp_month_selection1_v01.Size_Font*1.2
+                        Width: =Parent.Width
+                        X: =Parent.Width/2 - Self.Width/2
+                        Y: =Self.X/2
+      - Label7_6:
+          Control: Label@2.5.1
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: '=If( comp_month_selection1_v01.IsTrue_DarkMode , Color.White , Color.Black ) '
+            Font: =Font.'Open Sans'
+            FontWeight: =FontWeight.Bold
+            Height: =If( !IsBlank(Self.Text) , Self.Size*2 , 0 )
+            Size: =Parent.Size_Font*1.1
+            Text: =Parent.Text_Title
+            Width: =Parent.Width - Self.X*2
+            X: =7.5
+            Y: =Self.X/2

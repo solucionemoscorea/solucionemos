@@ -1,0 +1,158 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps should only be used to review changes made within Power Apps Studio and for minor edits (Preview).
+# Use the maker portal to create and edit your Power Apps.
+# 
+# The schema file for Canvas Apps is available at https://go.microsoft.com/fwlink/?linkid=2304907
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+ComponentDefinitions:
+  tab_menu_style_vertical:
+    DefinitionType: CanvasComponent
+    AllowCustomization: true
+    CustomProperties:
+      Color_Fill_NotSelected:
+        PropertyKind: Input
+        DisplayName: Color_Fill_NotSelected
+        Description: A custom property
+        DataType: Color
+        Default: =RGBA(0, 0, 0, 1)
+      Color_Fill_Selected:
+        PropertyKind: Input
+        DisplayName: Color_Fill_Selected
+        Description: A custom property
+        DataType: Color
+        Default: =RGBA(0, 0, 0, 1)
+      Color_Font_NotSelected:
+        PropertyKind: Input
+        DisplayName: Color_Font_NotSelected
+        Description: A custom property
+        DataType: Color
+        Default: =RGBA(0, 0, 0, 1)
+      Color_Font_Selected:
+        PropertyKind: Input
+        DisplayName: Color_Font_Selected
+        Description: A custom property
+        DataType: Color
+        Default: =RGBA(0, 0, 0, 1)
+      Item_Selected:
+        PropertyKind: Output
+        DisplayName: Item_Selected
+        Description: A custom property
+        DataType: Text
+      Items_Tab_Gallery:
+        PropertyKind: Input
+        DisplayName: Items_Tab_Gallery
+        Description: A custom property
+        DataType: Table
+        Default: |-
+          =Table({Result: "SampleText"})
+      OnSelect_TabMenu:
+        PropertyKind: Event
+        DisplayName: OnSelect_TabMenu
+        Description: A custom property
+        ReturnType: None
+        Default: =
+      Size_Font:
+        PropertyKind: Input
+        DisplayName: Size_Font
+        Description: A custom property
+        DataType: Number
+        Default: =14
+    Properties:
+      Height: =App.DesignHeight
+      Item_Selected: =_var_comp_selected_item
+      Width: =App.DesignWidth
+    Children:
+      - Container14_1:
+          Control: GroupContainer@1.4.0
+          Variant: ManualLayout
+          Properties:
+            DropShadow: =DropShadow.None
+            Height: =Parent.Height - Self.Y*2
+            Width: =Parent.Width - Self.X*2
+            X: =5
+            Y: |
+              =5
+          Children:
+            - Gallery14:
+                Control: Gallery@2.15.0
+                Variant: Vertical
+                Properties:
+                  BorderColor: =RGBA(0, 18, 107, 1)
+                  Height: =Parent.Height - Self.Y*2
+                  Items: =tab_menu_style_vertical.Items_Tab_Gallery
+                  TemplatePadding: =0
+                  TemplateSize: =tab_menu_style_vertical.Size_Font*3*2
+                  Width: =Parent.Width - Self.X*2
+                  X: =5
+                  Y: =5
+                Children:
+                  - Container35_2:
+                      Control: GroupContainer@1.4.0
+                      Variant: ManualLayout
+                      Properties:
+                        BorderColor: =RGBA(202, 202, 202, 1)
+                        BorderThickness: =1
+                        DropShadow: =DropShadow.None
+                        Fill: '=If( _var_comp_selected_item = ThisItem.Result , ColorFade(tab_menu_style_vertical.Color_Font_Selected,50%) , tab_menu_style_vertical.Color_Font_NotSelected ) '
+                        Height: =Container35_3.Height
+                        RadiusBottomLeft: =Container35_3.RadiusBottomLeft
+                        RadiusBottomRight: =Container35_3.RadiusBottomRight
+                        RadiusTopLeft: =Container35_3.RadiusTopLeft
+                        RadiusTopRight: =Container35_3.RadiusTopRight
+                        Width: =Container35_3.Width
+                        X: =Container35_3.X+4
+                        Y: =Container35_3.Y+4
+                  - Container35_3:
+                      Control: GroupContainer@1.4.0
+                      Variant: ManualLayout
+                      Properties:
+                        BorderColor: |-
+                          =If( _var_comp_selected_item = ThisItem.Result , 
+                          tab_menu_style_vertical.Color_Font_Selected , tab_menu_style_vertical.Color_Font_NotSelected )
+                        BorderThickness: |-
+                          =If( IsBlank(_var_comp_selected_item) , 1 , 
+                          If( _var_comp_selected_item = ThisItem.Result , 2 , 1 ))
+                        DropShadow: =DropShadow.None
+                        Fill: =RGBA(255, 255, 255, 1)
+                        Height: =Parent.TemplateHeight - Self.Y*2
+                        RadiusBottomLeft: =7
+                        RadiusBottomRight: =7
+                        RadiusTopLeft: =7
+                        RadiusTopRight: =7
+                        Width: '=Parent.TemplateWidth - Self.X*2 '
+                        X: =5
+                        Y: =5
+                      Children:
+                        - Label1_2:
+                            Control: Label@2.5.1
+                            Properties:
+                              Align: =Align.Center
+                              BorderColor: =RGBA(0, 18, 107, 1)
+                              Color: |-
+                                =If( IsBlank(_var_comp_selected_item) , ColorValue("#222222") , 
+                                If( _var_comp_selected_item = ThisItem.Result , tab_menu_style_vertical.Color_Font_Selected , tab_menu_style_vertical.Color_Font_NotSelected ))
+                              Font: =Font.'Open Sans'
+                              FontWeight: |-
+                                =If( IsBlank(_var_comp_selected_item) , FontWeight.Semibold , 
+                                If( _var_comp_selected_item = ThisItem.Result , FontWeight.Bold , FontWeight.Normal ))
+                              Height: =Parent.Height - Self.Y*2
+                              Size: =tab_menu_style_vertical.Size_Font
+                              Text: =ThisItem.Result
+                              Width: =Parent.Width - Self.X*2
+                              X: =5
+                              Y: =5
+                        - Rectangle21_1:
+                            Control: Rectangle@2.3.0
+                            Properties:
+                              BorderColor: =RGBA(0, 18, 107, 1)
+                              Fill: =RGBA(0, 0, 0, 0)
+                              Height: =Parent.Height
+                              OnSelect: |-
+                                =If( _var_comp_selected_item = ThisItem.Result , 
+                                Set( _var_comp_selected_item , Blank() ) ; ,
+                                Set( _var_comp_selected_item , ThisItem.Result ) ;
+                                );
+                                tab_menu_style_vertical.OnSelect_TabMenu()
+                              Width: =Parent.Width

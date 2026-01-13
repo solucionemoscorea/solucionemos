@@ -1,0 +1,624 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps should only be used to review changes made within Power Apps Studio and for minor edits (Preview).
+# Use the maker portal to create and edit your Power Apps.
+# 
+# The schema file for Canvas Apps is available at https://go.microsoft.com/fwlink/?linkid=2304907
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+ComponentDefinitions:
+  comp_calendar2_v01:
+    DefinitionType: CanvasComponent
+    AllowCustomization: true
+    CustomProperties:
+      Color_Container_Front:
+        PropertyKind: Input
+        DisplayName: Color_Container_Front
+        Description: A custom property
+        DataType: Text
+        Default: ="#ffffff"
+      Color_Container_Rear:
+        PropertyKind: Input
+        DisplayName: Color_Container_Rear
+        Description: A custom property
+        DataType: Text
+        Default: ="#6a6a6a"
+      Color_Fill:
+        PropertyKind: Input
+        DisplayName: Color_Fill
+        Description: 사용자 지정 속성
+        DataType: Text
+        Default: ="#f65810"
+      Color_Font:
+        PropertyKind: Input
+        DisplayName: Color_Font
+        Description: 사용자 지정 속성
+        DataType: Text
+        Default: ="#222222"
+      Date_Calendar_Output:
+        PropertyKind: Output
+        DisplayName: Date_Calendar_Output
+        Description: 사용자 지정 속성
+        DataType: DateAndTime
+      First_Date_Input:
+        PropertyKind: Input
+        DisplayName: First_Date_Input
+        Description: 사용자 지정 속성
+        DataType: DateAndTime
+        Default: =Date(2025, 12, 1)
+      IsTrue_DarkMode:
+        PropertyKind: Input
+        DisplayName: IsTrue_DarkMode
+        Description: 사용자 지정 속성
+        DataType: Boolean
+        Default: =true
+      IsTrue_DropShadow:
+        PropertyKind: Input
+        DisplayName: IsTrue_DropShadow
+        Description: 사용자 지정 속성
+        DataType: Boolean
+        Default: =true
+      Item_Calendar:
+        PropertyKind: Input
+        DisplayName: Item_Calendar
+        Description: 사용자 지정 속성
+        DataType: Table
+        Default: |-
+          =Table({SampleStringField: "SampleText", SampleNumberField: 10, SampleBooleanField: true})
+      Item_Event:
+        PropertyKind: Input
+        DisplayName: Item_Event
+        Description: 사용자 지정 속성
+        DataType: Table
+        Default: |-
+          =Table({
+              DateEvent: "2025-12-11", 
+              Event:"Event"
+              })
+      OnSelect_Date:
+        PropertyKind: Event
+        DisplayName: OnSelect_Date
+        Description: 사용자 지정 속성
+        ReturnType: None
+        Default: =
+      OnSelect_Month:
+        PropertyKind: Event
+        DisplayName: OnSelect_Month
+        Description: 사용자 지정 속성
+        ReturnType: None
+        Default: =
+      OnSelect_Year:
+        PropertyKind: Event
+        DisplayName: OnSelect_Year
+        Description: 사용자 지정 속성
+        ReturnType: None
+        Default: =
+      Selected_Date_Input:
+        PropertyKind: Input
+        DisplayName: Selected_Date_Input
+        Description: 사용자 지정 속성
+        DataType: DateAndTime
+        Default: =Today()
+      Selected_Date_Output:
+        PropertyKind: Output
+        DisplayName: Selected_Date_Output
+        Description: 사용자 지정 속성
+        DataType: DateAndTime
+      Selected_Month_Input:
+        PropertyKind: Input
+        DisplayName: Selected_Month_Input
+        Description: 사용자 지정 속성
+        DataType: Number
+        Default: =12
+      Selected_Month_Output:
+        PropertyKind: Output
+        DisplayName: Selected_Month_Output
+        Description: 사용자 지정 속성
+        DataType: Number
+      Selected_Year_Input:
+        PropertyKind: Input
+        DisplayName: Selected_Year_Input
+        Description: 사용자 지정 속성
+        DataType: Number
+        Default: =2025
+      Selected_Year_Output:
+        PropertyKind: Output
+        DisplayName: Selected_Year_Output
+        Description: 사용자 지정 속성
+        DataType: Number
+      Size_Font:
+        PropertyKind: Input
+        DisplayName: Size_Font
+        Description: 사용자 지정 속성
+        DataType: Number
+        Default: =12
+      Title_Text:
+        PropertyKind: Input
+        DisplayName: Title_Text
+        Description: A custom property
+        DataType: Text
+        Default: ="타이틀을 입력하세요"
+    Properties:
+      Date_Calendar_Output: =_comp_date_calendar
+      Fill: =Color.Transparent
+      Selected_Date_Output: =_comp_selected_date
+      Selected_Month_Output: =_comp_selected_month
+      Selected_Year_Output: =_comp_selected_year
+    Children:
+      - Container9_44:
+          Control: GroupContainer@1.4.0
+          Variant: ManualLayout
+          Properties:
+            BorderColor: =RGBA(102, 102, 102, 1)
+            BorderThickness: =1
+            DropShadow: =DropShadow.None
+            Fill: =ColorValue(comp_calendar2_v01.Color_Container_Rear)
+            Height: =Container9_45.Height
+            RadiusBottomLeft: =15
+            RadiusBottomRight: =15
+            RadiusTopLeft: =15
+            RadiusTopRight: =15
+            Visible: =!comp_calendar2_v01.IsTrue_DropShadow
+            Width: =Container9_45.Width
+            X: =Container9_45.X + 5
+            Y: =Container9_45.Y + 5
+      - Container9_45:
+          Control: GroupContainer@1.4.0
+          Variant: ManualLayout
+          Properties:
+            BorderColor: =RGBA(102, 102, 102, 1)
+            BorderThickness: =If( comp_calendar2_v01.IsTrue_DropShadow , 0 , 1 )
+            DropShadow: =DropShadow.Regular
+            Fill: =ColorValue(comp_calendar2_v01.Color_Container_Front)
+            Height: =Parent.Height- Self.Y -Self.X
+            RadiusBottomLeft: =15
+            RadiusBottomRight: =15
+            RadiusTopLeft: =15
+            RadiusTopRight: =15
+            Width: =Parent.Width - Self.X*2
+            X: =Container52_2.X
+            Y: '=Container52_2.Y + Container52_2.Height + 5 '
+          Children:
+            - Gallery7_41:
+                Control: Gallery@2.15.0
+                Variant: Vertical
+                Properties:
+                  Height: =Parent.Height - Self.Y*2
+                  Items: "= \n    ForAll( Sequence(42) , comp_calendar2_v01.First_Date_Input + Value - Weekday( comp_calendar2_v01.First_Date_Input , StartOfWeek.Sunday)) "
+                  ShowScrollbar: =false
+                  TemplatePadding: =0
+                  TemplateSize: =Self.Height/6
+                  Width: =Parent.Width - Self.X*2
+                  WrapCount: =7
+                  X: =5
+                  Y: =Self.X
+                Children:
+                  - Container31_10:
+                      Control: GroupContainer@1.4.0
+                      Variant: ManualLayout
+                      Properties:
+                        BorderColor: =RGBA(246, 88, 16, 1)
+                        BorderThickness: |-
+                          =If( comp_calendar2_v01.Selected_Date_Input = ThisItem.Value , 2 , 
+                          0 )
+                        DropShadow: |-
+                          =If( Self.Fill <> Color.White , 
+                          DropShadow.Semilight , 
+                          DropShadow.None
+                          )
+                        Fill: |-
+                          =
+                          If( Month(ThisItem.Value) <> Month(comp_calendar2_v01.Selected_Date_Input) , ColorValue("#ffffff") , 
+                          If( 
+                              comp_calendar2_v01.Selected_Date_Input = ThisItem.Value ,  
+                              ColorValue("#f0f0f0") , 
+                              Color.White
+                          ))
+                        Height: =Parent.TemplateHeight/10*9.6
+                        RadiusBottomLeft: =10
+                        RadiusBottomRight: =10
+                        RadiusTopLeft: =10
+                        RadiusTopRight: =10
+                        Visible: =false
+                        Width: =Parent.TemplateWidth/10*9
+                        X: =Parent.TemplateWidth/2 - Self.Width/2
+                        Y: =Parent.TemplateHeight/2 - Self.Height/2
+                  - TextInput8_30:
+                      Control: Classic/TextInput@2.3.2
+                      Properties:
+                        Align: =Align.Center
+                        BorderThickness: =0
+                        Color: |-
+                          =If( comp_calendar2_v01.IsTrue_DarkMode , 
+                          If( Month(ThisItem.Value) <> comp_calendar2_v01.Selected_Month_Input , ColorValue("#959595") , 
+                          If( comp_calendar2_v01.Selected_Date_Input = ThisItem.Value , 
+
+                                      Color.White
+                              , 
+                          If( ThisItem.Value  = Today(),  ColorValue("#ffffff"),
+                          If( Weekday(ThisItem.Value) = 1  , ColorValue("#ef497f") , 
+                          If( Weekday(ThisItem.Value) = 7  , ColorValue("#3a86ff") , 
+                          Color.White 
+                          )))))
+                          ,
+                          If( Month(ThisItem.Value) <> comp_calendar2_v01.Selected_Month_Input , ColorValue("#959595") , 
+                          If( comp_calendar2_v01.Selected_Date_Input = ThisItem.Value , 
+
+                                      ColorValue("#ffffff") 
+                              , 
+                          If( ThisItem.Value  = Today(),  ColorValue("#ffffff"),
+                          If( Weekday(ThisItem.Value) = 1  , ColorValue("#ef497f") , 
+                          If( Weekday(ThisItem.Value) = 7  , ColorValue("#3a86ff") , 
+                          Color.Black 
+                          )))))
+                          )
+                        Default: =Text(ThisItem.Value , "d")
+                        Fill: |+
+                          =
+                          If( Month(ThisItem.Value) <> comp_calendar2_v01.Selected_Month_Input , Color.Transparent , 
+                          If( comp_calendar2_v01.Selected_Date_Input = ThisItem.Value , ColorValue(comp_calendar2_v01.Color_Fill) , 
+                          If( ThisItem.Value  = Today(), ColorValue("#00514a") , 
+                          Color.Transparent)))
+
+                        FontWeight: |
+                          =If( Month(ThisItem.Value) <> comp_calendar2_v01.Selected_Month_Input , FontWeight.Lighter, 
+                          FontWeight.Semibold 
+                          )
+                        Height: =Parent.TemplateHeight*0.7
+                        Italic: =true
+                        OnSelect: =Select(Parent)
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        RadiusBottomLeft: =180
+                        RadiusBottomRight: =180
+                        RadiusTopLeft: =180
+                        RadiusTopRight: =180
+                        Size: =comp_calendar2_v01.Size_Font*1.2
+                        Width: =Self.Height
+                        X: =Parent.TemplateWidth/2 - Self.Width/2
+                        Y: =2
+                  - Container16_7:
+                      Control: GroupContainer@1.4.0
+                      Variant: ManualLayout
+                      Properties:
+                        DropShadow: =DropShadow.None
+                        Fill: |-
+                          =/*
+                          If(
+                              !IsEmpty(
+                                  Filter(
+                                      _col_event_m,
+                                      DateValue(field_9) <= ThisItem.Value &&
+                                      DateValue(field_10)   >= ThisItem.Value
+                                  )
+                              ),
+                              ColorValue(
+                              First(
+                                  Filter(
+                                      _col_event_m,
+                                      DateValue(field_9) <= ThisItem.Value &&
+                                      DateValue(field_10) >= ThisItem.Value
+                                  )
+                              ).field_11
+                          ),   // 일정 있을 때 배경
+                              RGBA(0,0,0,0)            // 없으면 투명
+                          )
+                          */
+                          Color.Transparent
+                        Height: =TextInput8_30.Height*0.2
+                        RadiusBottomLeft: |
+                          =/*
+                          If(
+                              !IsEmpty(
+                                  Filter(
+                                      _col_event_month,
+                                      DateValue(field_9) = ThisItem.Value
+                                  )
+                              ),
+                              10,    // 시작일이면 둥글게
+                              0
+                          )
+                          */
+                        RadiusBottomRight: |
+                          =/*
+                          If(
+                              !IsEmpty(
+                                  Filter(
+                                      _col_event_month,
+                                      DateValue(field_10) = ThisItem.Value
+                                  )
+                              ),
+                              10,    // 시작일이면 둥글게
+                              0
+                          )
+                          */
+                        RadiusTopLeft: |-
+                          =/*
+                          If(
+                              !IsEmpty(
+                                  Filter(
+                                      _col_event_month,
+                                      DateValue(field_9) = ThisItem.Value
+                                  )
+                              ),
+                              10,    // 시작일이면 둥글게
+                              0
+                          )
+                          */
+                        RadiusTopRight: |
+                          =/*
+                          If(
+                              !IsEmpty(
+                                  Filter(
+                                      _col_event_month,
+                                      DateValue(field_10) = ThisItem.Value
+                                  )
+                              ),
+                              10,    // 시작일이면 둥글게
+                              0
+                          )
+                          */
+                        Visible: |
+                          =/*
+                          If(
+                              !IsEmpty(
+                                  Filter(
+                                      _col_event,
+                                      DateValue(field_9) <= ThisItem.Value &&
+                                      DateValue(field_10)   >= ThisItem.Value
+                                  )
+                              ),
+                              true,   // 일정 있을 때 배경
+                              false         // 없으면 투명
+                          )
+                          */
+                        Width: =Parent.TemplateWidth
+                        X: |
+                          =/*
+                          With(
+                              {
+                                  isStart: !IsEmpty(Filter(_col_event_month, DateValue(field_9) = ThisItem.Value)),
+                                  isEnd:   !IsEmpty(Filter(_col_event_month, DateValue(field_10) = ThisItem.Value)),
+                                  isSame:  !IsEmpty(Filter(_col_event_month, DateValue(field_9) = DateValue(field_10))) 
+                              },
+                              Switch(
+                                  true,
+                                  isSame, (Parent.TemplateWidth - Self.Width)/2 ,
+                                  isEnd,   Parent.TemplateWidth - Self.Width - _var_spacing_xl,
+                                  isStart, _var_spacing_xl
+                              )
+                          )
+                          */
+                        Y: =Container31_10.Height  - Self.Height/2
+                  - Gallery20_2:
+                      Control: Gallery@2.15.0
+                      Variant: Horizontal
+                      Properties:
+                        BorderColor: =RGBA(0, 18, 107, 1)
+                        Height: =Parent.TemplateHeight/10*2
+                        Items: "=FirstN(\nFilter(  comp_calendar2_v01.Item_Event , \n    \n        DateValue(DateEvent) = ThisItem.Value  \n         \n),3)"
+                        ShowScrollbar: =false
+                        TemplatePadding: =0
+                        TemplateSize: '=IfError( Self.Width/Self.AllItemsCount , 0 ) '
+                        Visible: =CountRows(Self.AllItems)>0
+                        Width: =Parent.TemplateWidth*0.5
+                        X: =Parent.TemplateWidth/2 - Self.Width/2
+                        Y: =Parent.TemplateHeight - Self.Height-2
+                      Children:
+                        - Circle2_2:
+                            Control: Circle@2.3.0
+                            Properties:
+                              BorderColor: =RGBA(0, 18, 107, 1)
+                              Fill: =ColorFade(ColorValue("#f65810"),0%)
+                              Height: =Parent.TemplateHeight*0.8
+                              OnSelect: =Select(Parent)
+                              Width: =Self.Height
+                              X: '=Parent.TemplateWidth/2 - Self.Width/2 '
+                              Y: =Parent.TemplateHeight/2 - Self.Height/2
+                  - Rectangle9_28:
+                      Control: Rectangle@2.3.0
+                      Properties:
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =Parent.TemplateHeight
+                        OnSelect: |-
+                          =If( _comp_selected_date = ThisItem.Value, 
+                          Set(_comp_selected_date,Blank()) ; 
+                          ,
+                          Set(_comp_selected_date,ThisItem.Value) ;
+                          );
+
+                          Set(_comp_date_calendar, ThisItem.Value ) ; 
+                          comp_calendar2_v01.OnSelect_Date() ;
+                        Width: =Parent.TemplateWidth
+      - Container52_2:
+          Control: GroupContainer@1.4.0
+          Variant: ManualLayout
+          Properties:
+            DropShadow: =DropShadow.None
+            Fill: =Color.Transparent
+            Height: |-
+              =If( Or( IsBlank(comp_calendar2_v01.Selected_Year_Input) , IsBlank(comp_calendar2_v01.Selected_Month_Input)), 
+              Parent.Height - Self.Y*2 ,
+              Parent.Height/10*1 )
+            Width: =Parent.Width - Self.X*2
+            X: =Label5_13.X
+            Y: =Label5_13.Y*2 + Label5_13.Height
+          Children:
+            - Gallery21_4:
+                Control: Gallery@2.15.0
+                Variant: Vertical
+                Properties:
+                  BorderColor: =RGBA(0, 18, 107, 1)
+                  Height: =Parent.Height - Self.Y*2
+                  Items: |-
+                    =If( IsBlank(comp_calendar2_v01.Selected_Year_Input) , 
+                    Sequence(9, 2025 - 4 ,1) , 
+                    [
+                        {Value:comp_calendar2_v01.Selected_Year_Input}
+                    ]
+                    )
+                  ShowScrollbar: =false
+                  TemplatePadding: =
+                  TemplateSize: |-
+                    =If( IsBlank(comp_calendar2_v01.Selected_Year_Input) , Parent.Height/3 , 
+                    Parent.Height
+                    )
+                  Width: |-
+                    =If( IsBlank(comp_calendar2_v01.Selected_Month_Input) , 0 ,
+                    If( IsBlank(comp_calendar2_v01.Selected_Year_Input) , 
+                    Parent.Width , 
+                    Parent.Width/4
+                    ))
+                  WrapCount: =If( IsBlank(comp_calendar2_v01.Selected_Year_Input) , 3 , 1 )
+                  X: =5
+                Children:
+                  - Label20_4:
+                      Control: Label@2.5.1
+                      Properties:
+                        Align: =Align.Center
+                        BorderColor: =RGBA(0, 18, 107, 1)
+                        Color: |-
+                          =If( comp_calendar2_v01.IsTrue_DarkMode , 
+                              If( comp_calendar2_v01.Selected_Year_Input = ThisItem.Value ,
+                                  ColorValue("#ffffff") , ColorValue("#ffffff") 
+                              )
+                              ,
+                              If( comp_calendar2_v01.Selected_Year_Input = ThisItem.Value ,
+                                  ColorValue("#333333") , ColorValue("#181818") 
+                              )
+                          )
+                        Font: =Font.'Open Sans'
+                        FontWeight: |-
+                          =
+                          If( comp_calendar2_v01.Selected_Year_Input = ThisItem.Value ,
+                             FontWeight.Bold , FontWeight.Normal
+                          )
+                        Height: =Parent.TemplateHeight
+                        OnSelect: =Select(Parent)
+                        Size: |-
+                          =If( comp_calendar2_v01.Selected_Year_Input = ThisItem.Value ,
+                          comp_calendar2_v01.Size_Font*1.2 ,comp_calendar2_v01.Size_Font*1.5
+                          )
+                        Text: |
+                          =
+                              ThisItem.Value & "년"
+                        Underline: =ThisItem.Value = comp_calendar2_v01.Selected_Year_Input
+                        Width: =Parent.TemplateWidth
+                        Y: |
+                          =0
+                  - Rectangle35_4:
+                      Control: Rectangle@2.3.0
+                      Properties:
+                        BorderColor: =RGBA(0, 18, 107, 1)
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =Parent.TemplateHeight
+                        OnSelect: |-
+                          =If( _comp_selected_year = ThisItem.Value ,
+                          Set( _comp_selected_year , Blank() ) , 
+                          Set( _comp_selected_year , ThisItem.Value )
+                          ) ; 
+
+                          Set( _comp_first_date , Date( _comp_selected_year , _comp_selected_month , 1 )) ; 
+
+                          comp_calendar2_v01.OnSelect_Year()
+                        Width: =Parent.TemplateWidth
+            - Gallery21_5:
+                Control: Gallery@2.15.0
+                Variant: Vertical
+                Properties:
+                  BorderColor: =RGBA(0, 18, 107, 1)
+                  Height: =Parent.Height - Self.Y*2
+                  Items: |-
+                    =If( IsBlank(comp_calendar2_v01.Selected_Month_Input) , 
+                    Sequence(12) , 
+                    [
+                        {Value:comp_calendar2_v01.Selected_Month_Input}
+                    ]
+                    )
+                  ShowScrollbar: =false
+                  TemplatePadding: =
+                  TemplateSize: |-
+                    =If( IsBlank(comp_calendar2_v01.Selected_Month_Input) , Parent.Height/3 , 
+                    Parent.Height
+                    )
+                  Visible: =If( IsBlank( comp_calendar2_v01.Selected_Year_Input) , false , true )
+                  Width: |-
+                    =If( IsBlank(comp_calendar2_v01.Selected_Month_Input) , 
+                    Parent.Width , 
+                    Parent.Width/4
+                    )
+                  WrapCount: =If( IsBlank(comp_calendar2_v01.Selected_Month_Input) , 4 , 1 )
+                  X: |-
+                    =If( IsBlank(comp_calendar2_v01.Selected_Month_Input) , Gallery21_4.X , 
+                    Parent.Width - Self.Width
+                    )
+                Children:
+                  - Label20_5:
+                      Control: Label@2.5.1
+                      Properties:
+                        Align: =Align.Center
+                        BorderColor: =RGBA(0, 18, 107, 1)
+                        Color: |-
+                          =If( comp_calendar2_v01.IsTrue_DarkMode , 
+                              If( comp_calendar2_v01.Selected_Month_Input = ThisItem.Value ,
+                                  ColorValue("#ffffff") , ColorValue("#ffffff") 
+                              )
+                              ,
+                              If( comp_calendar2_v01.Selected_Month_Input = ThisItem.Value ,
+                                  ColorValue("#222222") , ColorValue("#222222") 
+                              )
+                          )
+                        Font: =Font.'Open Sans'
+                        FontWeight: |-
+                          =
+                          If( comp_calendar2_v01.Selected_Month_Input = ThisItem.Value ,
+                             FontWeight.Bold , FontWeight.Normal
+                          )
+                        Height: =Parent.TemplateHeight
+                        OnSelect: =Select(Parent)
+                        Size: |-
+                          =If( comp_calendar2_v01.Selected_Month_Input = ThisItem.Value ,
+                          comp_calendar2_v01.Size_Font*1.2 ,comp_calendar2_v01.Size_Font*1.5)
+                        Text: |-
+                          =
+                          ThisItem.Value & "월"
+                        Underline: =ThisItem.Value = comp_calendar2_v01.Selected_Month_Input
+                        Width: =Parent.TemplateWidth
+                        Y: |
+                          =0
+                  - Rectangle35_5:
+                      Control: Rectangle@2.3.0
+                      Properties:
+                        BorderColor: =RGBA(0, 18, 107, 1)
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =Parent.TemplateHeight
+                        OnSelect: |-
+                          =If( _comp_selected_month = ThisItem.Value ,
+                          Set( _comp_selected_month , Blank() ) , 
+                          Set( _comp_selected_month , ThisItem.Value )
+                          ) ; 
+
+                          Set( _comp_first_date , Date( _comp_selected_year , _comp_selected_month , 1 )) ; 
+                          comp_calendar2_v01.OnSelect_Month()
+                        Width: =Parent.TemplateWidth
+      - Label5_13:
+          Control: Label@2.5.1
+          Properties:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: '=If( comp_calendar2_v01.IsTrue_DarkMode , ColorValue("#ffffff") ,  ColorValue("#333333") ) '
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(161, 159, 157, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =If( Or(IsBlank(Self.Text) , Self.Text = "" ) , 0 , Self.Size*2 )
+            PaddingLeft: =15
+            Size: =comp_calendar2_v01.Size_Font*1.1
+            Text: =Parent.Title_Text
+            Width: =Parent.Width - Self.X*2
+            X: =10
+            Y: =Self.X/2

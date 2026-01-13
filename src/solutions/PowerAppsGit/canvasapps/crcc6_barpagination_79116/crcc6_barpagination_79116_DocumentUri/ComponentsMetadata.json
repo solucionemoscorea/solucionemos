@@ -1,0 +1,11 @@
+{
+  "Components": [
+    {
+      "Name": "bar_pagination",
+      "TemplateName": "2b8b1744edba4c18a14bd38dd8af52e9",
+      "Description": "",
+      "AllowCustomization": true,
+      "AllowAccessToGlobals": false
+    }
+  ]
+}

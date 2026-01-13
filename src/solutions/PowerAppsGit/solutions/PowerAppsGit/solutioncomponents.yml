@@ -2,4 +2,31 @@ SolutionComponents:
   Component:
   - '@path': /canvasapps/crcc6_1_4d62c
   - '@path': /canvasapps/crcc6__da74b
+  - '@path': /canvasapps/crcc6_barmenutop_28ac8
+  - '@path': /canvasapps/crcc6_barpagination_79116
+  - '@path': /canvasapps/crcc6_charline1v01_c4da1
+  - '@path': /canvasapps/crcc6_charline2v01_67155
+  - '@path': /canvasapps/crcc6_chartbaritemsv_96bf0
+  - '@path': /canvasapps/crcc6_chartdonut_1f7e2
+  - '@path': /canvasapps/crcc6_chartmonthlyh_7ef53
+  - '@path': /canvasapps/crcc6_chartyearlyh_8edda
+  - '@path': /canvasapps/crcc6_chrtbarmonthhv01_70254
+  - '@path': /canvasapps/crcc6_chrtbarmonthhv02_d26f8
+  - '@path': /canvasapps/crcc6_compcalendar2v01_27edd
+  - '@path': /canvasapps/crcc6_compcard1v01_140aa
+  - '@path': /canvasapps/crcc6_compcard2v01_ddf71
+  - '@path': /canvasapps/crcc6_compchartline1v01_1bb4c
+  - '@path': /canvasapps/crcc6_compmonthselection1v01_d3195
+  - '@path': /canvasapps/crcc6_componentdefaultv2601_07a99
+  - '@path': /canvasapps/crcc6_comppopupleft_0e907
+  - '@path': /canvasapps/crcc6_comppopupright_0e0a0
+  - '@path': /canvasapps/crcc6_comppopuptopsettings_839f5
+  - '@path': /canvasapps/crcc6_deletedial_a57c1
+  - '@path': /canvasapps/crcc6_prevnext_60bdd
+  - '@path': /canvasapps/crcc6_tab9menu1hv01_06ad8
+  - '@path': /canvasapps/crcc6_tabmenu5horizontal_801db
+  - '@path': /canvasapps/crcc6_tabmenustylehmonthly_5048c
+  - '@path': /canvasapps/crcc6_tabmenustylehorizontal_ac832
+  - '@path': /canvasapps/crcc6_tabmenustylehweekly_c4886
+  - '@path': /canvasapps/crcc6_tabmenustylevertical_0f188
   - '@path': /publishers/Cra7109

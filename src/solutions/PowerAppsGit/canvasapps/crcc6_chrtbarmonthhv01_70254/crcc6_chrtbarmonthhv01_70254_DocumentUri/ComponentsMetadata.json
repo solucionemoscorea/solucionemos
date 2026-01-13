@@ -1,0 +1,11 @@
+{
+  "Components": [
+    {
+      "Name": "chrt_bar_month_h_v01",
+      "TemplateName": "50fc956c338845c293799ade95cfd53f",
+      "Description": "",
+      "AllowCustomization": true,
+      "AllowAccessToGlobals": false
+    }
+  ]
+}

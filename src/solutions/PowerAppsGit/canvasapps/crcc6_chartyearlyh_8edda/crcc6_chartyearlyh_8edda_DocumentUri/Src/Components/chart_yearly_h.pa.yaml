@@ -1,0 +1,436 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps should only be used to review changes made within Power Apps Studio and for minor edits (Preview).
+# Use the maker portal to create and edit your Power Apps.
+# 
+# The schema file for Canvas Apps is available at https://go.microsoft.com/fwlink/?linkid=2304907
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+ComponentDefinitions:
+  chart_yearly_h:
+    DefinitionType: CanvasComponent
+    AllowCustomization: true
+    CustomProperties:
+      Count_Years:
+        PropertyKind: Input
+        DisplayName: Count_Years
+        Description: 사용자 지정 속성
+        DataType: Number
+        Default: =5
+      Fill_BackGround:
+        PropertyKind: Input
+        DisplayName: Fill_BackGround
+        Description: 사용자 지정 속성
+        DataType: Color
+        Default: =ColorValue("#6a6a6a")
+      IsTrue_DarkMode:
+        PropertyKind: Input
+        DisplayName: IsTrue_DarkMode
+        Description: 사용자 지정 속성
+        DataType: Boolean
+        Default: =true
+      IsTrue_DropShadow:
+        PropertyKind: Input
+        DisplayName: IsTrue_DropShadow
+        Description: 사용자 지정 속성
+        DataType: Boolean
+        Default: =true
+      Item_Chart:
+        PropertyKind: Input
+        DisplayName: Item_Chart
+        Description: 사용자 지정 속성
+        DataType: Table
+        Default: |-
+          =// ForAll & Distinct 로 Key - Value 형식을 맞추세요
+
+          /*
+          DropColumns(
+              Groupby(
+                  ForAll(
+                  "사용자DB" , 
+                  {
+                      Year : Year(DateValue(ThisRecord."날짜열")) , 
+                      ChartValue : Value(ThisRecord."숫자열")
+                  }
+                  ), 
+                  Year,ChartValue, _group
+              ), 
+          _group
+          )
+           ;
+          */ 
+
+          Table({
+              ChartItem: 2025 , 
+              ItemFilter1 : "",
+              ItemFilter2 : "", 
+              ChartValue: 10})
+      Item_Filter_1:
+        PropertyKind: Input
+        DisplayName: Item_Filter_1
+        Description: 사용자 지정 속성
+        DataType: Text
+        Default: ="텍스트"
+      Item_Filter_2:
+        PropertyKind: Input
+        DisplayName: Item_Filter_2
+        Description: 사용자 지정 속성
+        DataType: Text
+        Default: ="텍스트"
+      OnSelect_Year:
+        PropertyKind: Event
+        DisplayName: OnSelect_Year
+        Description: 사용자 지정 속성
+        ReturnType: None
+        Default: =
+      Size_Font:
+        PropertyKind: Input
+        DisplayName: Size_Font
+        Description: 사용자 지정 속성
+        DataType: Number
+        Default: =12
+      StartYear:
+        PropertyKind: Input
+        DisplayName: StartYear
+        Description: 사용자 지정 속성
+        DataType: Number
+        Default: =2025
+      Title_Chart:
+        PropertyKind: Input
+        DisplayName: Title_Chart
+        Description: 사용자 지정 속성
+        DataType: Text
+        Default: ="텍스트"
+      _selected_item_input:
+        PropertyKind: Input
+        DisplayName: _selected_item_input
+        Description: 사용자 지정 속성
+        DataType: Number
+        Default: =100
+      _selected_item_output:
+        PropertyKind: Output
+        DisplayName: _selected_item_output
+        Description: 사용자 지정 속성
+        DataType: Number
+    Properties:
+      Fill: =Color.Transparent
+      Height: =App.DesignHeight/10*4
+      Width: =App.DesignWidth
+      _selected_item_output: =_cmpt_selected_item
+    Children:
+      - Container44_1:
+          Control: GroupContainer@1.4.0
+          Variant: ManualLayout
+          Properties:
+            BorderColor: =RGBA(116, 116, 116, 1)
+            BorderThickness: =1
+            DropShadow: =DropShadow.None
+            Fill: '=ColorFade( ColorValue("#f65810") , 30% ) '
+            Height: =Container44.Height
+            RadiusBottomLeft: =10
+            RadiusBottomRight: =10
+            RadiusTopLeft: =10
+            RadiusTopRight: =10
+            Visible: |-
+              =
+              If( chart_yearly_h.IsTrue_DarkMode , false , 
+                  If( chart_yearly_h.IsTrue_DropShadow , false,  true ))
+            Width: =Container44.Width
+            X: =Container44.X + 5
+            Y: '=Container44.Y + 5 '
+      - Container44:
+          Control: GroupContainer@1.4.0
+          Variant: ManualLayout
+          Properties:
+            BorderColor: =RGBA(116, 116, 116, 1)
+            BorderThickness: =If( chart_yearly_h.IsTrue_DropShadow , 0 , 1 )
+            DropShadow: =DropShadow.Regular
+            Fill: =If( chart_yearly_h.IsTrue_DarkMode , ColorFade( chart_yearly_h.Fill_BackGround , -40%) , Color.White )
+            Height: =Parent.Height - Self.Y - Self.X
+            RadiusBottomLeft: =10
+            RadiusBottomRight: =10
+            RadiusTopLeft: =10
+            RadiusTopRight: =10
+            Width: =Parent.Width - Self.X*2
+            X: =7.5
+            Y: =Label7_2.Y + Label7_2.Height
+          Children:
+            - Gallery17:
+                Control: Gallery@2.15.0
+                Variant: Horizontal
+                Properties:
+                  BorderColor: =RGBA(0, 18, 107, 1)
+                  Fill: =Color.Transparent
+                  Height: =Parent.Height - Self.Y*2
+                  Items: |-
+                    = ForAll(   
+                        Sequence( chart_yearly_h.Count_Years , chart_yearly_h.StartYear , 1 )
+                        , 
+                        {
+                            ChartItem : ThisRecord.Value
+                        }
+                     )
+                  ShowScrollbar: =false
+                  TemplatePadding: =
+                  TemplateSize: =Self.Width/Self.AllItemsCount
+                  Width: =Parent.Width - Self.X*2
+                Children:
+                  - Rectangle37_2:
+                      Control: Rectangle@2.3.0
+                      Properties:
+                        BorderColor: =RGBA(0, 18, 107, 1)
+                        Fill: |-
+                          =If( chart_yearly_h.IsTrue_DarkMode ,
+                              If(
+                                  IsBlank(chart_yearly_h._selected_item_input), 
+                                  Color.Transparent ,
+                                  If(
+                                      chart_yearly_h._selected_item_input = ThisItem.ChartItem , ColorFade(chart_yearly_h.Fill_BackGround,-60%), Color.Transparent
+                                  )
+                              )
+                              ,
+                              If(
+                                  IsBlank(chart_yearly_h._selected_item_input), 
+                                  Color.Transparent ,
+                                  If(
+                                      chart_yearly_h._selected_item_input = ThisItem.ChartItem , ColorFade(ColorValue("#f65810"),95%), ColorFade(ColorValue("#e0e0e0"),95%)
+                                  )
+                              )
+                          )
+                        Height: =Parent.TemplateHeight
+                        OnSelect: =
+                        Width: =Parent.TemplateWidth
+                  - Label11:
+                      Control: Label@2.5.1
+                      Properties:
+                        Align: =Align.Center
+                        BorderColor: =RGBA(0, 18, 107, 1)
+                        Color: |-
+                          =If( chart_yearly_h.IsTrue_DarkMode , 
+                              If( IsBlank(chart_yearly_h._selected_item_input) , 
+                                  ColorValue("#ffffff") ,
+                                  If( chart_yearly_h._selected_item_input = ThisItem.ChartItem , 
+                                  ColorValue("#ffffff") , 
+                                  ColorValue("#e0e0e0")
+                                  )
+                              )
+                              ,
+                              If( IsBlank(chart_yearly_h._selected_item_input) , 
+                                  ColorValue("#222222") ,
+                                  If( chart_yearly_h._selected_item_input = ThisItem.ChartItem , 
+                                  ColorValue("#000000") , 
+                                  ColorValue("#959595")
+                                  )
+                              )
+                          )
+                        Font: =Font.'Open Sans'
+                        FontWeight: |-
+                          =If( IsBlank(chart_yearly_h._selected_item_input) , FontWeight.Semibold , 
+                          If( chart_yearly_h._selected_item_input = ThisItem.ChartItem , FontWeight.Bold , 
+                          FontWeight.Normal
+                          ))
+                        Height: =Self.Size*2
+                        OnSelect: =Select(Parent)
+                        Size: |
+                          =If( IsBlank(chart_yearly_h._selected_item_input) , chart_yearly_h.Size_Font*1.1 , 
+                          If( chart_yearly_h._selected_item_input = ThisItem.ChartItem , chart_yearly_h.Size_Font*1.1*1.2 , 
+                          chart_yearly_h.Size_Font*1.1*0.9
+                          ))
+                        Text: =ThisItem.ChartItem
+                        Width: =Parent.TemplateWidth - Self.X*2
+                        X: =5
+                        Y: =Parent.TemplateHeight - Self.Height
+                  - TextInput6_1:
+                      Control: Classic/TextInput@2.3.2
+                      Properties:
+                        BorderColor: '=ColorValue("#181818") '
+                        BorderThickness: =1
+                        Default: =
+                        Fill: |+
+                          =If( IsBlank(chart_yearly_h._selected_item_input) , ColorFade( ColorValue("#F65810") , 30%) , 
+                          If( chart_yearly_h._selected_item_input = ThisItem.ChartItem , ColorFade( ColorValue("#F65810") , 30%) , 
+                          ColorFade( ColorValue("#959595") , 30% )
+                          ))
+
+
+                        Font: =Font.'Open Sans'
+                        Height: =TextInput6.Height
+                        HoverBorderColor: =RGBA(0, 18, 107, 1)
+                        HoverFill: =RGBA(186, 202, 226, 1)
+                        OnSelect: =Select(Parent)
+                        RadiusBottomLeft: =0
+                        RadiusBottomRight: =0
+                        RadiusTopLeft: =3
+                        RadiusTopRight: =3
+                        Visible: |-
+                          =If( Or( chart_yearly_h.IsTrue_DropShadow , chart_yearly_h.IsTrue_DarkMode) ,  false, 
+
+                              If( Self.Height = 0 , false , true))
+                        Width: =TextInput6.Width
+                        X: =TextInput6.X + 1.5
+                        Y: =Label11.Y - Self.Height - 1.5
+                  - TextInput6:
+                      Control: Classic/TextInput@2.3.2
+                      Properties:
+                        BorderColor: |-
+                          =If( 
+                              chart_yearly_h.IsTrue_DarkMode , 
+                              ColorValue("#ffffff") , 
+                              ColorValue("#6a6a6a")
+                          )
+                        BorderThickness: =1
+                        Default: =
+                        Fill: |-
+                          =If( chart_yearly_h.IsTrue_DarkMode , 
+                              If( IsBlank(chart_yearly_h._selected_item_input) , 
+                                  ColorValue("#00E676")
+                                  ,
+                                  If( chart_yearly_h._selected_item_input = ThisItem.ChartItem , 
+                                  ColorValue("#00E676")
+                                  ,
+                                  ColorValue("#959595")
+                                  )
+                              ), 
+                              If( IsBlank(chart_yearly_h._selected_item_input) , ColorValue("#F65810") , 
+                              If( chart_yearly_h._selected_item_input = ThisItem.ChartItem , ColorValue("#F65810") , 
+                              ColorValue("#959595") 
+                              ))
+                          )
+                        Font: =Font.'Open Sans'
+                        Height: "=IfError( \n    Sum(Filter( chart_yearly_h.Item_Chart , \n\n        If( \n            !IsBlank(chart_yearly_h.Item_Filter_2) && !IsBlank(chart_yearly_h.Item_Filter_1) , \n            ItemFilter2 =  chart_yearly_h.Item_Filter_2  && ItemFilter1 =  chart_yearly_h.Item_Filter_1 && ChartItem = ThisItem.ChartItem , \n            \n            If( IsBlank(chart_yearly_h.Item_Filter_2) && !IsBlank(chart_yearly_h.Item_Filter_1)  , \n            ItemFilter1 =  chart_yearly_h.Item_Filter_1 && ChartItem = ThisItem.ChartItem ,\n            \n            If( IsBlank(chart_yearly_h.Item_Filter_2) && IsBlank(chart_yearly_h.Item_Filter_1) , \n            ChartItem = ThisItem.ChartItem\n            \n        )\n        )\n        )\n\n\n), ChartValue )/Sum(chart_yearly_h.Item_Chart,ChartValue) , 0) * (Parent.Height*0.2)"
+                        HoverBorderColor: =RGBA(0, 18, 107, 1)
+                        HoverFill: =RGBA(186, 202, 226, 1)
+                        OnSelect: =Select(Parent)
+                        RadiusBottomLeft: =0
+                        RadiusBottomRight: =0
+                        RadiusTopLeft: =3
+                        RadiusTopRight: =3
+                        Visible: =!(Self.Height = 0)
+                        Width: =Parent.TemplateWidth/15
+                        X: =Label11.X + Label11.Width/2 - Self.Width/2
+                        Y: =Label11.Y - Self.Height
+                  - Rectangle26:
+                      Control: Rectangle@2.3.0
+                      Properties:
+                        BorderColor: =RGBA(0, 18, 107, 1)
+                        Fill: |-
+                          =If( chart_yearly_h.IsTrue_DarkMode , 
+                              If( IsBlank(_cmpt_selected_item) , 
+                                  ColorValue("#ffffff"), 
+                                  If( _cmpt_selected_item = ThisItem.ChartItem , 
+                                  ColorValue("#ffffff"), ColorValue("#e5e5e5")
+                                  )
+                              ), 
+                              If( IsBlank(_cmpt_selected_item) , 
+                                  ColorValue("#222222"), 
+                                  If( _cmpt_selected_item = ThisItem.ChartItem , 
+                                  ColorValue("#222222"), ColorValue("#959595")
+                                  )
+                              )
+                          )
+                        Height: =TextInput6.Height/10*4
+                        OnSelect: =Select(Parent)
+                        Width: =1
+                        X: =TextInput6.X + TextInput6.Width/2 - Self.Width/2
+                        Y: =TextInput6.Y - Self.Height
+                  - Circle3:
+                      Control: Circle@2.3.0
+                      Properties:
+                        BorderColor: =RGBA(255, 255, 255, 1)
+                        BorderThickness: =1
+                        Fill: |-
+                          =If( chart_yearly_h.IsTrue_DarkMode , 
+                              If( IsBlank(chart_yearly_h._selected_item_input) , 
+                                  ColorValue("#ffffff")
+                                  ,
+                                  If( chart_yearly_h._selected_item_input = ThisItem.ChartItem , ColorValue("#ffffff")
+                              )) , 
+                              If( TextInput6.Fill = ColorValue("#f65810") , ColorValue("#222222") , ColorValue("#959595") )
+                          )
+                        Height: =chart_yearly_h.Size_Font*0.7
+                        OnSelect: =Select(Parent)
+                        Visible: =TextInput6.Visible
+                        Width: =Self.Height
+                        X: =Rectangle26.X + Rectangle26.Width/2 - Self.Width/2
+                        Y: =Rectangle26.Y -Self.Height
+                  - Label11_1:
+                      Control: Label@2.5.1
+                      Properties:
+                        Align: =Align.Center
+                        BorderColor: =RGBA(0, 18, 107, 1)
+                        Color: =Label11.Color
+                        Font: =Font.'Open Sans'
+                        FontWeight: |-
+                          =If( IsBlank(chart_yearly_h._selected_item_input) , FontWeight.Semibold , 
+                          If( chart_yearly_h._selected_item_input = ThisItem.ChartItem , FontWeight.Bold , 
+                          FontWeight.Normal
+                          ))
+                        Height: =Self.Size*1.5
+                        OnSelect: =Select(Parent)
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: |
+                          =If( IsBlank(chart_yearly_h._selected_item_input) , chart_yearly_h.Size_Font*0.8 , 
+                          If( chart_yearly_h._selected_item_input = ThisItem.ChartItem , chart_yearly_h.Size_Font*0.8*1.2 , 
+                          chart_yearly_h.Size_Font*0.8*0.9
+                          ))
+                        Text: "=Text( IfError( \n    Sum(\n        Filter(chart_yearly_h.Item_Chart,\n        If( \n            !IsBlank(chart_yearly_h.Item_Filter_2) , \n            ItemFilter2 =  chart_yearly_h.Item_Filter_2  && ItemFilter1 =  chart_yearly_h.Item_Filter_1 && ChartItem = ThisItem.ChartItem , \n            If( IsBlank(chart_yearly_h.Item_Filter_2) , \n            ItemFilter1 =  chart_yearly_h.Item_Filter_1 && ChartItem = ThisItem.ChartItem ,\n            If( IsBlank(chart_yearly_h.Item_Filter_1) , ChartItem = ThisItem.ChartItem\n            ))))\n            \n    , ChartItem )/Sum( chart_yearly_h.Item_Chart , ChartItem) , 0) *100 , \"(0.00%)\")"
+                        VerticalAlign: =VerticalAlign.Top
+                        Visible: =TextInput6.Visible
+                        Width: =Parent.TemplateWidth - Self.X*2
+                        X: =10
+                        Y: =Circle3.Y - Self.Height - 5
+                  - Label11_2:
+                      Control: Label@2.5.1
+                      Properties:
+                        Align: =Align.Center
+                        BorderColor: =RGBA(0, 18, 107, 1)
+                        Color: =Label11.Color
+                        Font: =Font.'Open Sans'
+                        FontWeight: |-
+                          =If( IsBlank(chart_yearly_h._selected_item_input) , FontWeight.Semibold , 
+                          If( chart_yearly_h._selected_item_input = ThisItem.ChartItem , FontWeight.Bold , 
+                          FontWeight.Normal
+                          ))
+                        Height: =Self.Size*2
+                        OnSelect: =Select(Parent)
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: |
+                          =If( IsBlank(chart_yearly_h._selected_item_input) , chart_yearly_h.Size_Font , 
+                          If( chart_yearly_h._selected_item_input = ThisItem.ChartItem , chart_yearly_h.Size_Font*1.2 , 
+                          chart_yearly_h.Size_Font*0.9
+                          ))
+                        Text: "=Text( Sum(Filter( chart_yearly_h.Item_Chart , \n    If( \n        !IsBlank(chart_yearly_h.Item_Filter_2) , \n        ItemFilter2 =  chart_yearly_h.Item_Filter_2  && ItemFilter1 =  chart_yearly_h.Item_Filter_1 && ChartItem = ThisItem.ChartItem , \n        If( IsBlank(chart_yearly_h.Item_Filter_2) , \n        ItemFilter1 =  chart_yearly_h.Item_Filter_1 && ChartItem = ThisItem.ChartItem ,\n        If( IsBlank(chart_yearly_h.Item_Filter_1) , ChartItem = ThisItem.ChartItem)\n    )))\n                , ChartValue \n \n    ) , \"#,# \") "
+                        VerticalAlign: =VerticalAlign.Bottom
+                        Visible: =TextInput6.Visible
+                        Width: =Parent.TemplateWidth - Self.X*2
+                        X: =20
+                        Y: =Label11_1.Y - Self.Height - 5
+                  - Rectangle27:
+                      Control: Rectangle@2.3.0
+                      Properties:
+                        BorderColor: =RGBA(0, 18, 107, 1)
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =Parent.TemplateHeight
+                        OnSelect: "=\nIf( _cmpt_selected_item = ThisItem.ChartItem , \n    Set(_cmpt_selected_item , Blank() )   ,\n    Set(_cmpt_selected_item , ThisItem.ChartItem) \n) ; \n\nchart_yearly_h.OnSelect_Year() "
+                        Width: =Parent.TemplateWidth
+                        X: =Parent.Width*0
+                        Y: =Self.X
+      - Label7_2:
+          Control: Label@2.5.1
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: '=If( chart_yearly_h.IsTrue_DarkMode , Color.White , Color.Black ) '
+            Font: =Font.'Open Sans'
+            FontWeight: =FontWeight.Bold
+            Height: =Self.Size*2
+            Size: =Parent.Size_Font*1.1
+            Text: =Parent.Title_Chart
+            Width: =Parent.Width - Self.X*2
+            X: =7.5
+            Y: =Self.X/2

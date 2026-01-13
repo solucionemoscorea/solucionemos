@@ -1,0 +1,11 @@
+{
+  "Components": [
+    {
+      "Name": "comp_card2_v01",
+      "TemplateName": "d6d4e112741246d6b7953676a37c7c22",
+      "Description": "",
+      "AllowCustomization": true,
+      "AllowAccessToGlobals": false
+    }
+  ]
+}

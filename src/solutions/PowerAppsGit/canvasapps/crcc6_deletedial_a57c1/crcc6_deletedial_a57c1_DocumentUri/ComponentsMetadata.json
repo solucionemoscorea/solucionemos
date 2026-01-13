@@ -1,0 +1,11 @@
+{
+  "Components": [
+    {
+      "Name": "DeleteDial",
+      "TemplateName": "196c20c42960470bb0dd2c70bdc2e608",
+      "Description": "",
+      "AllowCustomization": true,
+      "AllowAccessToGlobals": false
+    }
+  ]
+}

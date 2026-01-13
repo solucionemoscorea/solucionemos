@@ -1,0 +1,11 @@
+{
+  "Components": [
+    {
+      "Name": "component_default_v26.1",
+      "TemplateName": "a1a98bc2a2484733b72a88e6ca0c05ae",
+      "Description": "",
+      "AllowCustomization": true,
+      "AllowAccessToGlobals": false
+    }
+  ]
+}

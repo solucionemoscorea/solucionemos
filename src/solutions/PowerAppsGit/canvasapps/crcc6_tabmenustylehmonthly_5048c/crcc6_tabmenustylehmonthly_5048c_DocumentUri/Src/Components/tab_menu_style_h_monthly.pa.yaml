@@ -1,0 +1,236 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps should only be used to review changes made within Power Apps Studio and for minor edits (Preview).
+# Use the maker portal to create and edit your Power Apps.
+# 
+# The schema file for Canvas Apps is available at https://go.microsoft.com/fwlink/?linkid=2304907
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+ComponentDefinitions:
+  tab_menu_style_h_monthly:
+    DefinitionType: CanvasComponent
+    AllowCustomization: true
+    CustomProperties:
+      Color_Fill_Normal:
+        PropertyKind: Input
+        DisplayName: Color_Fill_Normal
+        Description: 사용자 지정 속성
+        DataType: Color
+        Default: =RGBA(0, 0, 0, 1)
+      Color_Fill_NotSelected:
+        PropertyKind: Input
+        DisplayName: Color_Fill_NotSelected
+        Description: A custom property
+        DataType: Color
+        Default: =RGBA(0, 0, 0, 1)
+      Color_Fill_Selected:
+        PropertyKind: Input
+        DisplayName: Color_Fill_Selected
+        Description: A custom property
+        DataType: Color
+        Default: =RGBA(0, 0, 0, 1)
+      Color_Font_Normal:
+        PropertyKind: Input
+        DisplayName: Color_Font_Normal
+        Description: 사용자 지정 속성
+        DataType: Color
+        Default: =RGBA(0, 0, 0, 1)
+      Color_Font_NotSelected:
+        PropertyKind: Input
+        DisplayName: Color_Font_NotSelected
+        Description: A custom property
+        DataType: Color
+        Default: =RGBA(0, 0, 0, 1)
+      Color_Font_Selected:
+        PropertyKind: Input
+        DisplayName: Color_Font_Selected
+        Description: A custom property
+        DataType: Color
+        Default: =RGBA(0, 0, 0, 1)
+      Height_Component:
+        PropertyKind: Input
+        DisplayName: Height_Component
+        Description: A custom property
+        DataType: Number
+        Default: =100
+      Item_Selected:
+        PropertyKind: Output
+        DisplayName: Item_Selected
+        Description: A custom property
+        DataType: Number
+      Item_Selected_Input:
+        PropertyKind: Input
+        DisplayName: Item_Selected_Input
+        Description: 사용자 지정 속성
+        DataType: Number
+        Default: =100
+      Items_CountRows:
+        PropertyKind: Input
+        DisplayName: Items_CountRows
+        Description: 사용자 지정 속성
+        DataType: Table
+        Default: |-
+          =// ForAll(Distinct( 당신의 컬렉션 , "날짜열"),{MonthValue: Month(ThisRecord.Value) }) 
+          // 월별로 레코드 수를 나타내고 싶은 컬렉션을 넣고, 해당 컬렉션의 "날짜열"을 입력하세요
+          Table({MonthValue: 10})
+      Items_Tab_Gallery:
+        PropertyKind: Input
+        DisplayName: Items_Tab_Gallery
+        Description: A custom property
+        DataType: Table
+        Default: =Sequence(13,0)
+      OnSelect_TabMenu:
+        PropertyKind: Event
+        DisplayName: OnSelect_TabMenu
+        Description: A custom property
+        ReturnType: None
+        Default: =
+      Size_Font:
+        PropertyKind: Input
+        DisplayName: Size_Font
+        Description: A custom property
+        DataType: Number
+        Default: =14
+      Width_Component:
+        PropertyKind: Input
+        DisplayName: Width_Component
+        Description: A custom property
+        DataType: Number
+        Default: =App.DesignWidth
+    Properties:
+      Height: =Self.Height_Component
+      Item_Selected: =_var_comp_selected_item
+      Width: =Self.Width_Component
+    Children:
+      - Container14_2:
+          Control: GroupContainer@1.4.0
+          Variant: ManualLayout
+          Properties:
+            DropShadow: =DropShadow.None
+            Height: =Parent.Height - Self.Y*2
+            Width: =Parent.Width - Self.X*2
+            X: =5
+            Y: |
+              =5
+          Children:
+            - Gallery5_1:
+                Control: Gallery@2.15.0
+                Variant: Horizontal
+                Properties:
+                  BorderColor: =RGBA(0, 18, 107, 1)
+                  Height: =Parent.Height - Self.Y*1.5
+                  Items: =tab_menu_style_h_monthly.Items_Tab_Gallery
+                  ShowScrollbar: =false
+                  TemplatePadding: =0
+                  TemplateSize: =Self.Width/13
+                  Width: =Parent.Width - Self.X*2
+                Children:
+                  - Container35_5:
+                      Control: GroupContainer@1.4.0
+                      Variant: ManualLayout
+                      Properties:
+                        BorderColor: |-
+                          =If( tab_menu_style_h_monthly.Item_Selected_Input = ThisItem.Value , 
+                          ColorFade( tab_menu_style_h_monthly.Color_Font_Selected , 10% ) , ColorFade( tab_menu_style_h_monthly.Color_Font_NotSelected , 10%) )
+                        BorderThickness: =1
+                        DropShadow: =DropShadow.None
+                        Fill: '=If( tab_menu_style_h_monthly.Item_Selected_Input = ThisItem.Value , ColorFade(tab_menu_style_h_monthly.Color_Font_Selected,50%) , ColorFade(tab_menu_style_h_monthly.Color_Font_NotSelected , 50% ) ) '
+                        Height: =Container35_4.Height
+                        RadiusBottomLeft: =Container35_4.RadiusBottomLeft
+                        RadiusBottomRight: =Container35_4.RadiusBottomRight
+                        RadiusTopLeft: =Container35_4.RadiusTopLeft
+                        RadiusTopRight: =Container35_4.RadiusTopRight
+                        Width: =Container35_4.Width
+                        X: =Container35_4.X+3
+                        Y: =Container35_4.Y+3
+                  - Container35_4:
+                      Control: GroupContainer@1.4.0
+                      Variant: ManualLayout
+                      Properties:
+                        BorderColor: |-
+                          =If( IsBlank(tab_menu_style_h_monthly.Item_Selected_Input) , ColorValue("#222222") , 
+                          If( tab_menu_style_h_monthly.Item_Selected_Input = ThisItem.Value , 
+                          tab_menu_style_h_monthly.Color_Font_Selected , tab_menu_style_h_monthly.Color_Font_NotSelected ))
+                        BorderThickness: |-
+                          =If( IsBlank(tab_menu_style_h_monthly.Item_Selected_Input) , 1 , 
+                          If( _var_comp_selected_item = ThisItem.Value , 2 , 1 ))
+                        DropShadow: =DropShadow.None
+                        Fill: =RGBA(255, 255, 255, 1)
+                        Height: =Parent.TemplateHeight - Self.Y*2
+                        RadiusBottomLeft: =7
+                        RadiusBottomRight: =7
+                        RadiusTopLeft: =7
+                        RadiusTopRight: =7
+                        Width: '=Parent.TemplateWidth - Self.X*2 '
+                        X: =5
+                        Y: =5
+                      Children:
+                        - Label1_18:
+                            Control: Label@2.5.1
+                            Properties:
+                              Align: =Align.Center
+                              BorderColor: =RGBA(0, 18, 107, 1)
+                              Color: |-
+                                =If( IsBlank(tab_menu_style_h_monthly.Item_Selected_Input) , ColorValue("#222222") , 
+                                If( _var_comp_selected_item = ThisItem.Value , tab_menu_style_h_monthly.Color_Font_Selected , tab_menu_style_h_monthly.Color_Font_NotSelected ))
+                              Font: =Font.'Open Sans'
+                              FontWeight: |-
+                                =If( IsBlank(tab_menu_style_h_monthly.Item_Selected_Input) , FontWeight.Semibold , 
+                                If( _var_comp_selected_item = ThisItem.Value , FontWeight.Bold , FontWeight.Normal ))
+                              Height: =Parent.Height/2
+                              PaddingTop: =0
+                              Size: =tab_menu_style_h_monthly.Size_Font
+                              Text: |-
+                                =If( 
+                                ThisItem.Value = 0 , 
+                                    "("&
+                                    CountRows(tab_menu_style_h_monthly.Items_CountRows)
+                                    &")" , 
+                                    "("&
+                                    CountRows(Filter(tab_menu_style_h_monthly.Items_CountRows , ThisItem.Value = MonthValue  ))
+                                    &")"
+                                )
+                              Width: =Parent.Width - Self.X*2
+                              X: =3
+                              Y: =Label1_16.Y + Label1_16.Height
+                        - Label1_16:
+                            Control: Label@2.5.1
+                            Properties:
+                              Align: =Align.Center
+                              BorderColor: =RGBA(0, 18, 107, 1)
+                              Color: |-
+                                =If( IsBlank(tab_menu_style_h_monthly.Item_Selected_Input) , ColorValue("#222222") , 
+                                If( _var_comp_selected_item = ThisItem.Value , tab_menu_style_h_monthly.Color_Font_Selected , tab_menu_style_h_monthly.Color_Font_NotSelected ))
+                              Font: =Font.'Open Sans'
+                              FontWeight: |-
+                                =If( IsBlank(tab_menu_style_h_monthly.Item_Selected_Input) , FontWeight.Semibold , 
+                                If( _var_comp_selected_item = ThisItem.Value , FontWeight.Bold , FontWeight.Normal ))
+                              Height: =Parent.Height/2
+                              PaddingBottom: =0
+                              Size: =tab_menu_style_h_monthly.Size_Font
+                              Text: |-
+                                =If( 
+                                ThisItem.Value = 0 , "All" , ThisItem.Value & "월")
+                              Width: =Parent.Width - Self.X*2
+                              X: =3
+                              Y: =Parent.Height/2 - Self.Height
+                        - Rectangle21_2:
+                            Control: Rectangle@2.3.0
+                            Properties:
+                              BorderColor: =RGBA(0, 18, 107, 1)
+                              Fill: =RGBA(0, 0, 0, 0)
+                              Height: =Parent.Height
+                              OnSelect: |-
+                                =// 콤포넌트 환경
+                                If( tab_menu_style_h_monthly.Item_Selected = ThisItem.Value , 
+                                Set( _var_comp_selected_item , 0 ) ; ,
+                                Set( _var_comp_selected_item , ThisItem.Value ) ;
+                                );
+
+                                // App 환경
+                                tab_menu_style_h_monthly.OnSelect_TabMenu()
+                                // 1 컬렉션 생성
+                                // 2 아래 그룹 변수들 초기화
+                              Width: =Parent.Width
+                              X: =Parent.X*0
+                              Y: =Self.X

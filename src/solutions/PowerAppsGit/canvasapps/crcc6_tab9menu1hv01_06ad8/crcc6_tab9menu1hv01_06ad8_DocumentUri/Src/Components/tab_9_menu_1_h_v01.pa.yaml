@@ -1,0 +1,481 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps should only be used to review changes made within Power Apps Studio and for minor edits (Preview).
+# Use the maker portal to create and edit your Power Apps.
+# 
+# The schema file for Canvas Apps is available at https://go.microsoft.com/fwlink/?linkid=2304907
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+ComponentDefinitions:
+  tab_9_menu_1_h_v01:
+    DefinitionType: CanvasComponent
+    AllowCustomization: true
+    CustomProperties:
+      Fill_BackGround:
+        PropertyKind: Input
+        DisplayName: Fill_BackGround
+        Description: 사용자 지정 속성
+        DataType: Color
+        Default: =RGBA(0, 0, 0, 1)
+      IsTrue_DarkMode:
+        PropertyKind: Input
+        DisplayName: IsTrue_DarkMode
+        Description: 사용자 지정 속성
+        DataType: Boolean
+        Default: =true
+      IsTrue_DropShadow:
+        PropertyKind: Input
+        DisplayName: IsTrue_DropShadow
+        Description: 사용자 지정 속성
+        DataType: Boolean
+        Default: =true
+      IsTrue_Selected_Item:
+        PropertyKind: Input
+        DisplayName: IsTrue_Selected_Item
+        Description: 사용자 지정 속성
+        DataType: Boolean
+        Default: =false
+      Items_Tab_Gallery:
+        PropertyKind: Input
+        DisplayName: Items_Tab_Gallery
+        Description: A custom property
+        DataType: Table
+        Default: =Sequence(9)
+      OnSelect_1:
+        PropertyKind: Event
+        DisplayName: OnSelect_1
+        Description: 사용자 지정 속성
+        ReturnType: None
+        Default: =
+      OnSelect_2:
+        PropertyKind: Event
+        DisplayName: OnSelect_2
+        Description: 사용자 지정 속성
+        ReturnType: None
+        Default: =
+      OnSelect_3:
+        PropertyKind: Event
+        DisplayName: OnSelect_3
+        Description: 사용자 지정 속성
+        ReturnType: None
+        Default: =
+      OnSelect_4:
+        PropertyKind: Event
+        DisplayName: OnSelect_4
+        Description: 사용자 지정 속성
+        ReturnType: None
+        Default: =
+      OnSelect_5:
+        PropertyKind: Event
+        DisplayName: OnSelect_5
+        Description: 사용자 지정 속성
+        ReturnType: None
+        Default: =
+      OnSelect_6:
+        PropertyKind: Event
+        DisplayName: OnSelect_6
+        Description: 사용자 지정 속성
+        ReturnType: None
+        Default: =
+      OnSelect_7:
+        PropertyKind: Event
+        DisplayName: OnSelect_7
+        Description: 사용자 지정 속성
+        ReturnType: None
+        Default: =
+      OnSelect_8:
+        PropertyKind: Event
+        DisplayName: OnSelect_8
+        Description: 사용자 지정 속성
+        ReturnType: None
+        Default: =
+      OnSelect_9:
+        PropertyKind: Event
+        DisplayName: OnSelect_9
+        Description: 사용자 지정 속성
+        ReturnType: None
+        Default: =
+      Size_Font:
+        PropertyKind: Input
+        DisplayName: Size_Font
+        Description: A custom property
+        DataType: Number
+        Default: =14
+      Wrap_Items:
+        PropertyKind: Input
+        DisplayName: Wrap_Items
+        Description: 사용자 지정 속성
+        DataType: Number
+        Default: =9
+    Properties:
+      Fill: =Color.Transparent
+      Height: =App.DesignHeight/10
+      Width: =App.DesignWidth
+    Children:
+      - Timer2:
+          Control: Timer@2.1.0
+          Properties:
+            AutoStart: =true
+            BorderColor: =RGBA(0, 120, 212, 1)
+            BorderStyle: =BorderStyle.None
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(242, 242, 241, 0)
+            DisabledColor: =RGBA(161, 159, 157, 1)
+            DisabledFill: =RGBA(242, 242, 241, 0)
+            Duration: =500
+            Fill: =RGBA(0, 120, 212, 1)
+            Font: =Font.'Segoe UI'
+            HoverBorderColor: =RGBA(16, 110, 190, 1)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =RGBA(16, 110, 190, 1)
+            OnTimerEnd: =Set( _comp_is_add ,true) ;  Set( _comp_is_edit ,false) ;
+            PressedBorderColor: =RGBA(16, 110, 190, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =RGBA(16, 110, 190, 1)
+            Visible: =false
+            X: =40
+            Y: =40
+      - Container14_4:
+          Control: GroupContainer@1.4.0
+          Variant: ManualLayout
+          Properties:
+            DropShadow: =DropShadow.None
+            Height: =Parent.Height
+            Width: =Parent.Width
+            X: =5
+            Y: |
+              =5
+          Children:
+            - menu_selected:
+                Control: Gallery@2.15.0
+                Variant: Horizontal
+                Properties:
+                  BorderColor: =RGBA(0, 18, 107, 1)
+                  Height: =Parent.Height
+                  Items: =tab_9_menu_1_h_v01.Items_Tab_Gallery
+                  ShowScrollbar: =false
+                  TemplatePadding: =0
+                  TemplateSize: =Self.Width/tab_9_menu_1_h_v01.Wrap_Items
+                  Visible: =tab_9_menu_1_h_v01.IsTrue_Selected_Item
+                  Width: =Parent.Width
+                  X: =Parent.Width/2 - Self.Width/2
+                  Y: =Self.X
+                Children:
+                  - Container35_15:
+                      Control: GroupContainer@1.4.0
+                      Variant: ManualLayout
+                      Properties:
+                        BorderColor: =
+                        BorderThickness: =
+                        DropShadow: =DropShadow.None
+                        Fill: =Color.Transparent
+                        Height: =Parent.TemplateHeight*0.9
+                        RadiusBottomLeft: =7
+                        RadiusBottomRight: =7
+                        RadiusTopLeft: =7
+                        RadiusTopRight: =7
+                        Width: =Parent.TemplateWidth*0.96
+                        X: =Parent.TemplateWidth/2 - Self.Width/2
+                        Y: =Parent.TemplateHeight/2 - Self.Height/2
+                      Children:
+                        - Label1_38:
+                            Control: Label@2.5.1
+                            Properties:
+                              Align: =Align.Center
+                              BorderColor: =RGBA(0, 18, 107, 1)
+                              Color: =ColorValue("#222222")
+                              Font: =Font.'Open Sans'
+                              FontWeight: =FontWeight.Semibold
+                              Height: =Parent.Height/10*3
+                              PaddingBottom: =0
+                              PaddingLeft: =0
+                              PaddingRight: =0
+                              PaddingTop: =0
+                              Size: =tab_9_menu_1_h_v01.Size_Font*0.9
+                              Text: |-
+                                =Switch(ThisItem.Value, 
+                                1, 
+                                    "출하지시",
+                                2, 
+                                    "작업지시", 
+                                4,
+                                    "수정", 
+                                6, 
+                                    "취소",
+                                8,
+                                    "새로고침",
+                                9, 
+                                    "일정관리"
+                                )
+                              Width: =Parent.Width*0.98
+                              X: =Parent.Width/2 - Self.Width/2
+                              Y: =Parent.Height- Self.Height - Parent.Height/20
+                        - Image5_4:
+                            Control: Image@2.2.3
+                            Properties:
+                              BorderColor: =RGBA(0, 18, 107, 1)
+                              Height: =tab_9_menu_1_h_v01.Size_Font*3
+                              Image: |-
+                                =Switch(ThisItem.Value, 
+                                1,
+                                    "data:image/svg+xml;utf8," & 
+                                    EncodeUrl("<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'><path fill='currentColor' d='M17 10H7v2h10zm2-7h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m0 16H5V8h14zm-5-5H7v2h7z'/></svg>")
+                                ,
+                                2, 
+                                    "data:image/svg+xml;utf8," & 
+                                    EncodeUrl("<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'><path fill='currentColor' d='M17 10H7v2h10zm2-7h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m0 16H5V8h14zm-5-5H7v2h7z'/></svg>")
+                                ,
+                                4, 
+                                    "data:image/svg+xml;utf8," & 
+                                        EncodeUrl("
+                                        <svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'><g fill='none' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'><path d='M7 7H6a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2-2v-1'/><path d='M20.385 6.585a2.1 2.1 0 0 0-2.97-2.97L9 12v3h3zM16 5l3 3'/></g></svg>
+                                        ")
+                                ,
+                                6, 
+                                    "data:image/svg+xml;utf8," &
+                                    EncodeUrl(
+                                        "<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'><path fill='currentColor' d='M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10s10-4.47 10-10S17.53 2 12 2m0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8s8 3.59 8 8s-3.59 8-8 8m3.59-13L12 10.59L8.41 7L7 8.41L10.59 12L7 15.59L8.41 17L12 13.41L15.59 17L17 15.59L13.41 12L17 8.41z'/></svg>"
+                                    ),
+                                8,
+                                    "data:image/svg+xml;utf8," & 
+                                    EncodeUrl("
+                                    <svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'><g fill='none' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'><path d='M19.933 13.041a8 8 0 1 1-9.925-8.788c3.899-1 7.935 1.007 9.425 4.747'/><path d='M20 4v5h-5'/></g></svg>
+                                    ")
+                                ,
+                                9, 
+                                    "data:image/svg+xml;utf8," & 
+                                    EncodeUrl("<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'><path fill='currentColor' d='M17 10H7v2h10zm2-7h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m0 16H5V8h14zm-5-5H7v2h7z'/></svg>")
+                                )
+                              Width: =Self.Height
+                              X: =Parent.Width/2 - Self.Width/2
+                              Y: =Parent.Height/50
+                        - Rectangle21_9:
+                            Control: Rectangle@2.3.0
+                            Properties:
+                              BorderColor: =RGBA(0, 18, 107, 1)
+                              Fill: =RGBA(0, 0, 0, 0)
+                              Height: =Parent.Height
+                              OnSelect: "=Switch(\r\n    ThisItem.Value,\r\n    1, \r\n    tab_9_menu_1_h_v01.OnSelect_1(),\r\n    2, \r\n    tab_9_menu_1_h_v01.OnSelect_2(),\r\n    3, \r\n    tab_9_menu_1_h_v01.OnSelect_3(),\r\n    4, \r\n    tab_9_menu_1_h_v01.OnSelect_4(),\r\n    5, \r\n    tab_9_menu_1_h_v01.OnSelect_5(),\r\n    6, \r\n    tab_9_menu_1_h_v01.OnSelect_6(),\r\n    7, \r\n    tab_9_menu_1_h_v01.OnSelect_7()\r\n)\r\n     "
+                              Width: =Parent.Width
+                              X: =Parent.X*0
+                              Y: =Self.X
+            - menu_edit:
+                Control: Gallery@2.15.0
+                Variant: Horizontal
+                Properties:
+                  BorderColor: =RGBA(0, 18, 107, 1)
+                  Height: =Parent.Height
+                  Items: =tab_9_menu_1_h_v01.Items_Tab_Gallery
+                  ShowScrollbar: =false
+                  TemplatePadding: =0
+                  TemplateSize: =Self.Width/tab_9_menu_1_h_v01.Wrap_Items
+                  Visible: =And( !_comp_is_add , _comp_is_edit)
+                  Width: =Parent.Width
+                  X: =Parent.Width/2 - Self.Width/2
+                  Y: =Self.X
+                Children:
+                  - Container35_14:
+                      Control: GroupContainer@1.4.0
+                      Variant: ManualLayout
+                      Properties:
+                        BorderColor: =
+                        BorderThickness: =
+                        DropShadow: =DropShadow.None
+                        Fill: =Color.Transparent
+                        Height: =Parent.TemplateHeight*0.9
+                        RadiusBottomLeft: =7
+                        RadiusBottomRight: =7
+                        RadiusTopLeft: =7
+                        RadiusTopRight: =7
+                        Width: =Parent.TemplateWidth*0.96
+                        X: =Parent.TemplateWidth/2 - Self.Width/2
+                        Y: =Parent.TemplateHeight/2 - Self.Height/2
+                      Children:
+                        - Label1_37:
+                            Control: Label@2.5.1
+                            Properties:
+                              Align: =Align.Center
+                              BorderColor: =RGBA(0, 18, 107, 1)
+                              Color: =ColorValue("#222222")
+                              Font: =Font.'Open Sans'
+                              FontWeight: =FontWeight.Semibold
+                              Height: =Parent.Height/10*3
+                              PaddingBottom: =0
+                              PaddingLeft: =0
+                              PaddingRight: =0
+                              PaddingTop: =0
+                              Size: =tab_9_menu_1_h_v01.Size_Font*0.9
+                              Text: |-
+                                =Switch(
+                                    ThisItem.Value,
+                                    1,
+                                    "출하지시",
+                                    2,
+                                    "작업지시",
+                                    4,
+                                    "저장",
+                                    6,
+                                    "취소",
+                                    8,
+                                    "새로고침",
+                                    9,
+                                    "일정관리"
+                                )
+                              Width: =Parent.Width*0.98
+                              X: =Parent.Width/2 - Self.Width/2
+                              Y: =Parent.Height- Self.Height - Parent.Height/20
+                        - Image5_3:
+                            Control: Image@2.2.3
+                            Properties:
+                              BorderColor: =RGBA(0, 18, 107, 1)
+                              Height: =tab_9_menu_1_h_v01.Size_Font*3
+                              Image: |-
+                                =Switch(ThisItem.Value, 
+                                1,
+                                    "data:image/svg+xml;utf8," & 
+                                    EncodeUrl("<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'><path fill='currentColor' d='M17 10H7v2h10zm2-7h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m0 16H5V8h14zm-5-5H7v2h7z'/></svg>")
+                                ,
+                                2, 
+                                    "data:image/svg+xml;utf8," & 
+                                    EncodeUrl("<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'><path fill='currentColor' d='M17 10H7v2h10zm2-7h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m0 16H5V8h14zm-5-5H7v2h7z'/></svg>")
+                                ,
+                                4
+                                ,
+                                    "data:image/svg+xml;utf8," & 
+                                        EncodeUrl("
+                                        <svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'><path fill='currentColor' d='M21 12.4V7l-4-4H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h7.4l2-2H5V5h11.17L19 7.83v6.57zM15 15c0 1.66-1.34 3-3 3s-3-1.34-3-3s1.34-3 3-3s3 1.34 3 3M6 6h9v4H6zm13.99 10.25l1.77 1.77L16.77 23H15v-1.77zm3.26.26l-.85.85l-1.77-1.77l.85-.85c.2-.2.51-.2.71 0l1.06 1.06c.2.2.2.52 0 .71'/></svg>
+                                        ")
+                                        ,
+                                6, 
+                                    "data:image/svg+xml;utf8," &
+                                    EncodeUrl(
+                                        "<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'><path fill='currentColor' d='M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10s10-4.47 10-10S17.53 2 12 2m0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8s8 3.59 8 8s-3.59 8-8 8m3.59-13L12 10.59L8.41 7L7 8.41L10.59 12L7 15.59L8.41 17L12 13.41L15.59 17L17 15.59L13.41 12L17 8.41z'/></svg>"
+                                    ),
+                                8,
+                                    "data:image/svg+xml;utf8," & 
+                                    EncodeUrl("
+                                    <svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'><g fill='none' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'><path d='M19.933 13.041a8 8 0 1 1-9.925-8.788c3.899-1 7.935 1.007 9.425 4.747'/><path d='M20 4v5h-5'/></g></svg>
+                                    ")
+                                ,
+                                9, 
+                                    "data:image/svg+xml;utf8," & 
+                                    EncodeUrl("<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'><path fill='currentColor' d='M17 10H7v2h10zm2-7h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m0 16H5V8h14zm-5-5H7v2h7z'/></svg>")
+                                )
+                              Width: =Self.Height
+                              X: =Parent.Width/2 - Self.Width/2
+                              Y: =Parent.Height/50
+                        - Rectangle21_7:
+                            Control: Rectangle@2.3.0
+                            Properties:
+                              BorderColor: =RGBA(0, 18, 107, 1)
+                              Fill: =RGBA(0, 0, 0, 0)
+                              Height: =Parent.Height
+                              OnSelect: "=Switch(\r\n    ThisItem.Value,\r\n    1, \r\n    tab_9_menu_1_h_v01.OnSelect_1(),\r\n    2, \r\n    tab_9_menu_1_h_v01.OnSelect_2(),\r\n    3, \r\n    tab_9_menu_1_h_v01.OnSelect_3(),\r\n    4, \r\n    tab_9_menu_1_h_v01.OnSelect_4(),\r\n    5, \r\n    tab_9_menu_1_h_v01.OnSelect_5(),\r\n    6, \r\n    tab_9_menu_1_h_v01.OnSelect_6(); \r\n    Set(_comp_is_add, true ) ; \r\n    Set(_comp_is_edit, false) ; \r\n    ,\r\n    7, \r\n    tab_9_menu_1_h_v01.OnSelect_7()\r\n)\r\n     "
+                              Width: =Parent.Width
+                              X: =Parent.X*0
+                              Y: =Self.X
+            - menu_add:
+                Control: Gallery@2.15.0
+                Variant: Horizontal
+                Properties:
+                  BorderColor: =RGBA(0, 18, 107, 1)
+                  Height: =Parent.Height
+                  Items: =tab_9_menu_1_h_v01.Items_Tab_Gallery
+                  ShowScrollbar: =false
+                  TemplatePadding: =0
+                  TemplateSize: =Self.Width/tab_9_menu_1_h_v01.Wrap_Items
+                  Visible: =And( _comp_is_add , !_comp_is_edit)
+                  Width: =Parent.Width - Self.X*2
+                Children:
+                  - Container35_9:
+                      Control: GroupContainer@1.4.0
+                      Variant: ManualLayout
+                      Properties:
+                        BorderColor: =
+                        BorderThickness: =
+                        DropShadow: =DropShadow.None
+                        Fill: =Color.Transparent
+                        Height: =Parent.TemplateHeight*0.9
+                        RadiusBottomLeft: =7
+                        RadiusBottomRight: =7
+                        RadiusTopLeft: =7
+                        RadiusTopRight: =7
+                        Width: =Parent.TemplateWidth*0.96
+                        X: =Parent.TemplateWidth/2 - Self.Width/2
+                        Y: =Parent.TemplateHeight/2 - Self.Height/2
+                      Children:
+                        - Label1_30:
+                            Control: Label@2.5.1
+                            Properties:
+                              Align: =Align.Center
+                              BorderColor: =RGBA(0, 18, 107, 1)
+                              Color: =ColorValue("#222222")
+                              Font: =Font.'Open Sans'
+                              FontWeight: =FontWeight.Semibold
+                              Height: =Parent.Height/10*3
+                              PaddingBottom: =0
+                              PaddingLeft: =0
+                              PaddingRight: =0
+                              PaddingTop: =0
+                              Size: =tab_9_menu_1_h_v01.Size_Font*0.9
+                              Text: "=Switch(\n    ThisItem.Value,\n    1,\n        \n        \"출하지시\",\n    2,\n        \"작업지시\",\n    4,\n        If( _comp_is_add, \n            \"추가\",\n        If( _comp_is_edit,\n            \"저장\" ,\n            \"수정\"\n        )),\n    5,\n        \"편집\",\n    8,\n        \"새로고침\",\n    9,\n        \"일정관리\"\n)"
+                              Width: =Parent.Width*0.98
+                              X: =Parent.Width/2 - Self.Width/2
+                              Y: =Parent.Height- Self.Height - Parent.Height/20
+                        - Image5:
+                            Control: Image@2.2.3
+                            Properties:
+                              BorderColor: =RGBA(0, 18, 107, 1)
+                              Height: =tab_9_menu_1_h_v01.Size_Font*3
+                              Image: |-
+                                =Switch(ThisItem.Value, 
+                                1,
+                                    "data:image/svg+xml;utf8," & 
+                                    EncodeUrl("<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'><path fill='currentColor' d='M17 10H7v2h10zm2-7h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m0 16H5V8h14zm-5-5H7v2h7z'/></svg>") , 
+                                2, 
+                                    "data:image/svg+xml;utf8," & 
+                                    EncodeUrl("<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'><path fill='currentColor' d='M17 10H7v2h10zm2-7h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m0 16H5V8h14zm-5-5H7v2h7z'/></svg>")
+                                ,
+                                4, 
+                                    "data:image/svg+xml;utf8," & 
+                                        EncodeUrl("
+                                        <svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'><path fill='none' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 8H5m0 4h9m-3 4H5m10 0h6m-3-3v6'/></svg>
+                                        ")
+                                ,
+                                5, 
+                                    "data:image/svg+xml;utf8," & 
+                                        EncodeUrl("
+                                        <svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'><g fill='none' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'><path d='M7 7H6a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2-2v-1'/><path d='M20.385 6.585a2.1 2.1 0 0 0-2.97-2.97L9 12v3h3zM16 5l3 3'/></g></svg>
+                                        "),
+                                8,
+                                    "data:image/svg+xml;utf8," & 
+                                    EncodeUrl("
+                                    <svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'><g fill='none' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'><path d='M19.933 13.041a8 8 0 1 1-9.925-8.788c3.899-1 7.935 1.007 9.425 4.747'/><path d='M20 4v5h-5'/></g></svg>
+                                    ")
+                                ,
+                                9, 
+                                    "data:image/svg+xml;utf8," & 
+                                    EncodeUrl("<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'><path fill='currentColor' d='M17 10H7v2h10zm2-7h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m0 16H5V8h14zm-5-5H7v2h7z'/></svg>")
+                                )
+                              Width: =Self.Height
+                              X: =Parent.Width/2 - Self.Width/2
+                              Y: =Parent.Height/50
+                        - Rectangle21_4:
+                            Control: Rectangle@2.3.0
+                            Properties:
+                              BorderColor: =RGBA(0, 18, 107, 1)
+                              Fill: =RGBA(0, 0, 0, 0)
+                              Height: =Parent.Height
+                              OnSelect: "=Switch(\r\n    ThisItem.Value,\r\n    1, \r\n    tab_9_menu_1_h_v01.OnSelect_1(),\r\n    2, \r\n    tab_9_menu_1_h_v01.OnSelect_2(),\r\n    3, \r\n    tab_9_menu_1_h_v01.OnSelect_3(),\r\n    4, \r\n    tab_9_menu_1_h_v01.OnSelect_4(),\r\n    5, \r\n    Set(_comp_is_add , false) ;\r\n    Set(_comp_is_edit , true) ; \r\n    tab_9_menu_1_h_v01.OnSelect_5(),\r\n    6, \r\n    tab_9_menu_1_h_v01.OnSelect_6(),\r\n    7, \r\n    tab_9_menu_1_h_v01.OnSelect_7(), \r\n    8, \r\n    tab_9_menu_1_h_v01.OnSelect_8(),\r\n    9, \r\n    tab_9_menu_1_h_v01.OnSelect_9()\r\n)\r\n     "
+                              Width: =Parent.Width
+                              X: =Parent.X*0
+                              Y: =Self.X
+            - Rectangle38_1:
+                Control: Rectangle@2.3.0
+                Properties:
+                  BorderColor: =RGBA(0, 18, 107, 1)
+                  Fill: =RGBA(77, 77, 77, 1)
+                  Height: =1
+                  Width: =Parent.Width
+                  X: |
+                    =0

@@ -1,0 +1,523 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps should only be used to review changes made within Power Apps Studio and for minor edits (Preview).
+# Use the maker portal to create and edit your Power Apps.
+# 
+# The schema file for Canvas Apps is available at https://go.microsoft.com/fwlink/?linkid=2304907
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+ComponentDefinitions:
+  tab_menu_5_horizontal:
+    DefinitionType: CanvasComponent
+    AllowCustomization: true
+    CustomProperties:
+      Color_Icon:
+        PropertyKind: Input
+        DisplayName: Color_Icon
+        Description: 사용자 지정 속성
+        DataType: Color
+        Default: =RGBA(0, 0, 0, 1)
+      Fill_BackGround:
+        PropertyKind: Input
+        DisplayName: Fill_BackGround
+        Description: A custom property
+        DataType: Color
+        Default: =RGBA(0, 0, 0, 1)
+      Icon_1st:
+        PropertyKind: Input
+        DisplayName: Icon_1st
+        Description: 사용자 지정 속성
+        DataType: Text
+        Default: ="<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'><path fill='none' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 8H5m0 4h9m-3 4H5m10 0h6m-3-3v6'/></svg>"
+      Icon_2nd:
+        PropertyKind: Input
+        DisplayName: Icon_2nd
+        Description: 사용자 지정 속성
+        DataType: Text
+        Default: ="<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'><g fill='none' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'><path d='M7 7H6a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2-2v-1'/><path d='M20.385 6.585a2.1 2.1 0 0 0-2.97-2.97L9 12v3h3zM16 5l3 3'/></g></svg>"
+      Icon_3rd:
+        PropertyKind: Input
+        DisplayName: Icon_3rd
+        Description: 사용자 지정 속성
+        DataType: Text
+        Default: ="텍스트"
+      Icon_4th:
+        PropertyKind: Input
+        DisplayName: Icon_4th
+        Description: 사용자 지정 속성
+        DataType: Text
+        Default: ="텍스트"
+      Icon_5th:
+        PropertyKind: Input
+        DisplayName: Icon_5th
+        Description: 사용자 지정 속성
+        DataType: Text
+        Default: ="<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'><g fill='none' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'><path d='M19.933 13.041a8 8 0 1 1-9.925-8.788c3.899-1 7.935 1.007 9.425 4.747'/><path d='M20 4v5h-5'/></g></svg>"
+      Icon_Edit_1st:
+        PropertyKind: Input
+        DisplayName: Icon_Edit_1st
+        Description: 사용자 지정 속성
+        DataType: Text
+        Default: |
+          ="<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'><g fill='none' fill-rule='evenodd'><path d='m12.594 23.258l-.012.002l-.071.035l-.02.004l-.014-.004l-.071-.036q-.016-.004-.024.006l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.016-.018m.264-.113l-.014.002l-.184.093l-.01.01l-.003.011l.018.43l.005.012l.008.008l.201.092q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.003-.011l.018-.43l-.003-.012l-.01-.01z'/><path fill='currentColor' d='M15.586 3A2 2 0 0 1 17 3.586L19.414 6A2 2 0 0 1 20 7.414V19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zM8 5H5v14h2v-5a2 2 0 0 1 2-2h5a2 2 0 0 1 2 2v5h2V7.414L15.586 5H15v2.5A1.5 1.5 0 0 1 13.5 9h-4A1.5 1.5 0 0 1 8 7.5zm6 9H9v5h5zm-1-9h-3v2h3z'/></g></svg>
+          "
+      Icon_Edit_2nd:
+        PropertyKind: Input
+        DisplayName: Icon_Edit_2nd
+        Description: 사용자 지정 속성
+        DataType: Text
+        Default: ="<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'><path fill='currentColor' d='M14.12 10.47L12 12.59l-2.13-2.12l-1.41 1.41L10.59 14l-2.12 2.12l1.41 1.41L12 15.41l2.12 2.12l1.41-1.41L13.41 14l2.12-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4zM6 19a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V7H6zM8 9h8v10H8z'/></svg>"
+      Icon_Edit_3rd:
+        PropertyKind: Input
+        DisplayName: Icon_Edit_3rd
+        Description: 사용자 지정 속성
+        DataType: Text
+        Default: ="텍스트"
+      Icon_Edit_4th:
+        PropertyKind: Input
+        DisplayName: Icon_Edit_4th
+        Description: 사용자 지정 속성
+        DataType: Text
+        Default: ="텍스트"
+      Icon_Edit_5th:
+        PropertyKind: Input
+        DisplayName: Icon_Edit_5th
+        Description: 사용자 지정 속성
+        DataType: Text
+        Default: ="<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'><path fill='currentColor' d='M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2m0 16H5V5h14zM17 8.4L13.4 12l3.6 3.6l-1.4 1.4l-3.6-3.6L8.4 17L7 15.6l3.6-3.6L7 8.4L8.4 7l3.6 3.6L15.6 7z'/></svg>"
+      IsTrue_DarkMode:
+        PropertyKind: Input
+        DisplayName: IsTrue_DarkMode
+        Description: A custom property
+        DataType: Boolean
+        Default: =true
+      IsTrue_DropShadow:
+        PropertyKind: Input
+        DisplayName: IsTrue_DropShadow
+        Description: A custom property
+        DataType: Boolean
+        Default: =true
+      IsTrue_Edit:
+        PropertyKind: Input
+        DisplayName: IsTrue_Edit
+        Description: 사용자 지정 속성
+        DataType: Boolean
+        Default: =false
+      OnSelect_1st:
+        PropertyKind: Event
+        DisplayName: OnSelect_1st
+        Description: 사용자 지정 속성
+        ReturnType: None
+        Default: =
+      OnSelect_2nd:
+        PropertyKind: Event
+        DisplayName: OnSelect_2nd
+        Description: 사용자 지정 속성
+        ReturnType: None
+        Default: =
+      OnSelect_3rd:
+        PropertyKind: Event
+        DisplayName: OnSelect_3rd
+        Description: 사용자 지정 속성
+        ReturnType: None
+        Default: =
+      OnSelect_4th:
+        PropertyKind: Event
+        DisplayName: OnSelect_4th
+        Description: 사용자 지정 속성
+        ReturnType: None
+        Default: =
+      OnSelect_5th:
+        PropertyKind: Event
+        DisplayName: OnSelect_5th
+        Description: 사용자 지정 속성
+        ReturnType: None
+        Default: =
+      OnSelect_Edit_1st:
+        PropertyKind: Event
+        DisplayName: OnSelect_Edit_1st
+        Description: 사용자 지정 속성
+        ReturnType: None
+        Default: ="<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'><path fill='currentColor' d='M20 7.423v10.962q0 .69-.462 1.153T18.384 20H5.616q-.691 0-1.153-.462T4 18.384V5.616q0-.691.463-1.153T5.616 4h10.961zm-1 .427L16.15 5H5.616q-.27 0-.443.173T5 5.616v12.769q0 .269.173.442t.443.173h12.769q.269 0 .442-.173t.173-.443zm-7 8.688q.827 0 1.414-.586T14 14.538t-.587-1.413T12 12.539t-1.413.586T10 14.538t.587 1.414t1.413.586M6.77 9.77h7.422v-3H6.77zM5 7.85V19V5z'/></svg>"
+      OnSelect_Edit_2nd:
+        PropertyKind: Event
+        DisplayName: OnSelect_Edit_2nd
+        Description: 사용자 지정 속성
+        ReturnType: None
+        Default: =
+      OnSelect_Edit_3rd:
+        PropertyKind: Event
+        DisplayName: OnSelect_Edit_3rd
+        Description: 사용자 지정 속성
+        ReturnType: None
+        Default: =
+      OnSelect_Edit_4th:
+        PropertyKind: Event
+        DisplayName: OnSelect_Edit_4th
+        Description: 사용자 지정 속성
+        ReturnType: None
+        Default: =
+      OnSelect_Edit_5th:
+        PropertyKind: Event
+        DisplayName: OnSelect_Edit_5th
+        Description: 사용자 지정 속성
+        ReturnType: None
+        Default: =
+      Size_Font:
+        PropertyKind: Input
+        DisplayName: Size_Font
+        Description: A custom property
+        DataType: Number
+        Default: =14
+      Text_1st:
+        PropertyKind: Input
+        DisplayName: Text_1st
+        Description: 사용자 지정 속성
+        DataType: Text
+        Default: ="텍스트"
+      Text_2nd:
+        PropertyKind: Input
+        DisplayName: Text_2nd
+        Description: 사용자 지정 속성
+        DataType: Text
+        Default: ="텍스트"
+      Text_3rd:
+        PropertyKind: Input
+        DisplayName: Text_3rd
+        Description: 사용자 지정 속성
+        DataType: Text
+        Default: ="텍스트"
+      Text_4th:
+        PropertyKind: Input
+        DisplayName: Text_4th
+        Description: 사용자 지정 속성
+        DataType: Text
+        Default: ="텍스트"
+      Text_5th:
+        PropertyKind: Input
+        DisplayName: Text_5th
+        Description: 사용자 지정 속성
+        DataType: Text
+        Default: ="텍스트"
+      Text_Edit_1st:
+        PropertyKind: Input
+        DisplayName: Text_Edit_1st
+        Description: 사용자 지정 속성
+        DataType: Text
+        Default: ="텍스트"
+      Text_Edit_2nd:
+        PropertyKind: Input
+        DisplayName: Text_Edit_2nd
+        Description: 사용자 지정 속성
+        DataType: Text
+        Default: ="텍스트"
+      Text_Edit_3rd:
+        PropertyKind: Input
+        DisplayName: Text_Edit_3rd
+        Description: 사용자 지정 속성
+        DataType: Text
+        Default: ="텍스트"
+      Text_Edit_4th:
+        PropertyKind: Input
+        DisplayName: Text_Edit_4th
+        Description: 사용자 지정 속성
+        DataType: Text
+        Default: ="텍스트"
+      Text_Edit_5th:
+        PropertyKind: Input
+        DisplayName: Text_Edit_5th
+        Description: 사용자 지정 속성
+        DataType: Text
+        Default: ="텍스트"
+    Properties:
+      Fill: =Color.Transparent
+      Height: =App.DesignHeight/10
+      Width: =App.DesignWidth
+    Children:
+      - Container14_5:
+          Control: GroupContainer@1.4.0
+          Variant: ManualLayout
+          Properties:
+            DropShadow: =DropShadow.None
+            Height: =Parent.Height
+            Width: =1366
+          Children:
+            - Gallery5_17:
+                Control: Gallery@2.15.0
+                Variant: Horizontal
+                Properties:
+                  BorderColor: =RGBA(0, 18, 107, 1)
+                  Height: =Parent.Height
+                  Items: =Sequence(5)
+                  ShowScrollbar: =false
+                  TemplatePadding: =0
+                  TemplateSize: =Self.Width/Self.AllItemsCount
+                  Visible: =!tab_menu_5_horizontal.IsTrue_Edit
+                  Width: =Parent.Width - Self.X*2
+                  X: =Parent.X
+                  Y: =Parent.Y
+                Children:
+                  - Container35_10:
+                      Control: GroupContainer@1.4.0
+                      Variant: ManualLayout
+                      Properties:
+                        BorderColor: =
+                        BorderThickness: =
+                        DropShadow: =DropShadow.None
+                        Fill: =Color.Transparent
+                        Height: =Parent.TemplateHeight*0.9
+                        RadiusBottomLeft: =7
+                        RadiusBottomRight: =7
+                        RadiusTopLeft: =7
+                        RadiusTopRight: =7
+                        Width: =Parent.TemplateWidth*0.96
+                        X: =Parent.TemplateWidth/2 - Self.Width/2
+                        Y: =Parent.TemplateHeight/2 - Self.Height/2
+                      Children:
+                        - Image5_1:
+                            Control: Image@2.2.3
+                            Properties:
+                              BorderColor: =RGBA(0, 18, 107, 1)
+                              Height: =Parent.Height/10*6
+                              Image: |-
+                                =If(
+                                    tab_menu_5_horizontal.IsTrue_DarkMode,
+                                        Switch(ThisItem.Value, 
+                                        1,
+                                                EncodeUrl(
+                                                    Substitute(
+                                                    tab_menu_5_horizontal.Icon_1st
+                                                    ,
+                                                    "currentColor", 
+                                                    "#ffffff"
+                                                    )
+                                                ),
+                                        2, 
+                                                EncodeUrl(
+                                                    Substitute(
+                                                    tab_menu_5_horizontal.Icon_2nd
+                                                    ,
+                                                    "currentColor", 
+                                                    "#ffffff"
+                                                    )
+                                                ),
+                                        3, 
+                                                EncodeUrl(
+                                                    Substitute(
+                                                    tab_menu_5_horizontal.Icon_3rd
+                                                    ,
+                                                    "currentColor", 
+                                                    "#ffffff"
+                                                    )
+                                                ),
+                                        4, 
+                                                EncodeUrl(
+                                                    Substitute(
+                                                    tab_menu_5_horizontal.Icon_4th
+                                                    ,
+                                                    "currentColor", 
+                                                    "#ffffff"
+                                                    )
+                                                ),
+                                        5,
+                                                "data:image/svg+xml;utf8," & 
+                                                EncodeUrl(
+                                                    Substitute(
+                                                    tab_menu_5_horizontal.Icon_5th
+                                                    ,
+                                                    "currentColor", 
+                                                    "#ffffff"
+                                                    )
+                                                )
+                                        )
+                                        ,
+                                        Switch(ThisItem.Value, 
+                                        1,
+                                                EncodeUrl(
+                                                    Substitute(
+                                                    tab_menu_5_horizontal.Icon_1st
+                                                    ,
+                                                    "currentColor", 
+                                                    "#6a6a6a"
+                                                    )
+                                                ),
+                                        2, 
+                                                EncodeUrl(
+                                                    Substitute(
+                                                    tab_menu_5_horizontal.Icon_2nd
+                                                    ,
+                                                    "currentColor", 
+                                                    "#6a6a6a"
+                                                    )
+                                                ),
+                                        3, 
+                                                EncodeUrl(
+                                                    Substitute(
+                                                    tab_menu_5_horizontal.Icon_3rd
+                                                    ,
+                                                    "currentColor", 
+                                                    "#6a6a6a"
+                                                    )
+                                                ),
+                                        4, 
+                                                EncodeUrl(
+                                                    Substitute(
+                                                    tab_menu_5_horizontal.Icon_4th
+                                                    ,
+                                                    "currentColor", 
+                                                    "#6a6a6a"
+                                                    )
+                                                ),
+                                        5,
+                                                "data:image/svg+xml;utf8," & 
+                                                EncodeUrl(
+                                                    Substitute(
+                                                    tab_menu_5_horizontal.Icon_5th
+                                                    ,
+                                                    "currentColor", 
+                                                    "#6a6a6a"
+                                                    )
+                                                )
+                                        )
+                                )
+                              Width: =Self.Height
+                              X: =Parent.Width/3 - Self.Width
+                              Y: =Parent.Height/2 - Self.Height/2
+                        - Label1_31:
+                            Control: Label@2.5.1
+                            Properties:
+                              BorderColor: =RGBA(0, 18, 107, 1)
+                              Color: |-
+                                =If(
+                                    tab_menu_5_horizontal.IsTrue_DarkMode , 
+                                    ColorValue("#ffffff") , 
+                                    ColorValue("#222222")
+                                )
+                              Font: =Font.'Open Sans'
+                              FontWeight: =FontWeight.Semibold
+                              Height: =Parent.Height/10*3
+                              PaddingBottom: =0
+                              PaddingRight: =0
+                              PaddingTop: =0
+                              Size: =tab_menu_5_horizontal.Size_Font
+                              Text: |-
+                                =Switch(ThisItem.Value, 
+                                1, 
+                                    tab_menu_5_horizontal.Text_1st ,
+                                2,
+                                    tab_menu_5_horizontal.Text_2nd ,
+                                3,
+                                    tab_menu_5_horizontal.Text_3rd ,
+                                4,
+                                    tab_menu_5_horizontal.Text_4th ,
+                                5,
+                                    tab_menu_5_horizontal.Text_5th 
+
+                                )
+                              Width: =Parent.Width - Self.X
+                              X: =Image5_1.X + Image5_1.Width
+                              Y: =Image5_1.Y + Image5_1.Height/2 - Self.Height/2
+                        - Rectangle21_5:
+                            Control: Rectangle@2.3.0
+                            Properties:
+                              BorderColor: =RGBA(0, 18, 107, 1)
+                              Fill: =RGBA(0, 0, 0, 0)
+                              Height: =Parent.Height
+                              OnSelect: "=Switch(\r\n    ThisItem.Value,\r\n    1, \r\n    tab_menu_5_horizontal.OnSelect_1st(),\r\n    2,\r\n    tab_menu_5_horizontal.OnSelect_2nd(), \r\n    3, \r\n    tab_menu_5_horizontal.OnSelect_3rd(),\r\n    4, \r\n    tab_menu_5_horizontal.OnSelect_4th(),\r\n    5, \r\n    tab_menu_5_horizontal.OnSelect_5th()\r\n)\r\n     "
+                              Width: =Parent.Width
+                              X: =Parent.X*0
+                              Y: =Self.X
+            - Gallery5_18:
+                Control: Gallery@2.15.0
+                Variant: Horizontal
+                Properties:
+                  BorderColor: =RGBA(0, 18, 107, 1)
+                  Height: =Parent.Height
+                  Items: =Sequence(5)
+                  ShowScrollbar: =false
+                  TemplatePadding: =0
+                  TemplateSize: =Self.Width/Self.AllItemsCount
+                  Visible: =tab_menu_5_horizontal.IsTrue_Edit
+                  Width: =Parent.Width - Self.X*2
+                  X: =Parent.X
+                  Y: =Parent.Y
+                Children:
+                  - Container35_11:
+                      Control: GroupContainer@1.4.0
+                      Variant: ManualLayout
+                      Properties:
+                        BorderColor: =
+                        BorderThickness: =
+                        DropShadow: =DropShadow.None
+                        Fill: =Color.Transparent
+                        Height: =Parent.TemplateHeight*0.9
+                        RadiusBottomLeft: =7
+                        RadiusBottomRight: =7
+                        RadiusTopLeft: =7
+                        RadiusTopRight: =7
+                        Width: =Parent.TemplateWidth*0.96
+                        X: =Parent.TemplateWidth/2 - Self.Width/2
+                        Y: =Parent.TemplateHeight/2 - Self.Height/2
+                      Children:
+                        - Image5_2:
+                            Control: Image@2.2.3
+                            Properties:
+                              BorderColor: =RGBA(0, 18, 107, 1)
+                              Height: =Parent.Height/10*6
+                              Image: "=Switch(ThisItem.Value, \n1,\n        tab_menu_5_horizontal.Icon_Edit_1st,\n2, \n        tab_menu_5_horizontal.Icon_Edit_2nd,\n3, \n        tab_menu_5_horizontal.Icon_Edit_3rd,\n4, \n        tab_menu_5_horizontal.Icon_Edit_4th,\n5,\n        tab_menu_5_horizontal.Icon_Edit_5th\n        \n)"
+                              Width: =Self.Height
+                              X: =Parent.Width/3 - Self.Width
+                              Y: =Parent.Height/2 - Self.Height/2
+                        - Label1_32:
+                            Control: Label@2.5.1
+                            Properties:
+                              BorderColor: =RGBA(0, 18, 107, 1)
+                              Color: |-
+                                =If(
+                                    tab_menu_5_horizontal.IsTrue_DarkMode , 
+                                    ColorValue("#ffffff") , 
+                                    ColorValue("#222222")
+                                )
+                              Font: =Font.'Open Sans'
+                              FontWeight: =FontWeight.Semibold
+                              Height: =Parent.Height/10*3
+                              PaddingBottom: =0
+                              PaddingRight: =0
+                              PaddingTop: =0
+                              Size: =tab_menu_5_horizontal.Size_Font
+                              Text: |-
+                                =Switch(ThisItem.Value, 
+                                1, 
+                                    tab_menu_5_horizontal.Text_Edit_1st ,
+                                2,
+                                    tab_menu_5_horizontal.Text_Edit_2nd ,
+                                3,
+                                    tab_menu_5_horizontal.Text_Edit_3rd ,
+                                4,
+                                    tab_menu_5_horizontal.Text_Edit_4th ,
+                                5,
+                                    tab_menu_5_horizontal.Text_Edit_5th 
+
+                                )
+                              Width: =Parent.Width - Self.X
+                              X: =Image5_2.X + Image5_2.Width
+                              Y: =Image5_2.Y + Image5_2.Height/2 - Self.Height/2
+                        - Rectangle21_6:
+                            Control: Rectangle@2.3.0
+                            Properties:
+                              BorderColor: =RGBA(0, 18, 107, 1)
+                              Fill: =RGBA(0, 0, 0, 0)
+                              Height: =Parent.Height
+                              OnSelect: "=Switch(\r\n    ThisItem.Value,\r\n    1, \r\n    tab_menu_5_horizontal.OnSelect_Edit_1st(),\r\n    2,\r\n    tab_menu_5_horizontal.OnSelect_Edit_2nd(), \r\n    3, \r\n    tab_menu_5_horizontal.OnSelect_Edit_3rd(),\r\n    4, \r\n    tab_menu_5_horizontal.OnSelect_Edit_4th(),\r\n    5, \r\n    tab_menu_5_horizontal.OnSelect_Edit_5th()\r\n)\r\n     "
+                              Width: =Parent.Width
+                              X: =Parent.X*0
+                              Y: =Self.X
+            - Rectangle38_2:
+                Control: Rectangle@2.3.0
+                Properties:
+                  BorderColor: =RGBA(0, 18, 107, 1)
+                  Fill: =RGBA(224, 224, 224, 1)
+                  Height: =1
+                  Width: =Parent.Width
+                  X: |
+                    =0
